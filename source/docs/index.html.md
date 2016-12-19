@@ -21,6 +21,8 @@ includes:
   - errors
 
 search: true
+
+layout: docs
 ---
 # Introduction
 
