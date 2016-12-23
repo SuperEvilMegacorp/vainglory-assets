@@ -6,7 +6,7 @@
 
     <% if current_page.url == "/" %>
       <%# This is pretty hacky - We should at least include the original sass too? @BJC %>
-      <%= stylesheet_link_tag :foundation, media: :all %>
+      <%= stylesheet_link_tag :old_site_compiled, media: :all %>
     <% else %>
       <%= stylesheet_link_tag :screen, media: :screen %>
       <%= stylesheet_link_tag :print, media: :print %>
