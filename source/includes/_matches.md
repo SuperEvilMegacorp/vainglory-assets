@@ -1,32 +1,13 @@
 
 # Matches
 
-## Get a set of Matches
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
+## Get a collection of Matches
 
 ```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+curl "https://api.gamelockerapp.com/matches"
+  -H "X-API-KEY: getoffmylawn"
+  -H "X-TITLE-ID: vainglory"
+  -H "Accept: application/vnd.api+json"
 ```
 
 > The above command returns JSON structured like this:
@@ -50,18 +31,18 @@ let kittens = api.kittens.get();
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all matches.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET https://api.gamelockerapp.com/matches`
 
 ### Query Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
 include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+available | true | If set to false, the result will include matches that have already been adopted.
 
 <aside class="success">
 Remember — a happy kitten is an authenticated kitten!
@@ -69,30 +50,11 @@ Remember — a happy kitten is an authenticated kitten!
 
 ## Get a Specific Match
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
 ```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
+curl "https://api.gamelockerapp.com/matches/991839021349012374"
+  -H "X-API-KEY: getoffmylawn"
+  -H "X-TITLE-ID: vainglory"
+  -H "Accept: application/vnd.api+json"
 ```
 
 > The above command returns JSON structured like this:
@@ -113,7 +75,7 @@ This endpoint retrieves a specific kitten.
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET https://api.gamelockerapp.com/matches/<ID>`
 
 ### URL Parameters
 

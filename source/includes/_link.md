@@ -3,30 +3,11 @@
 
 ## Get a Link
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
-
 ```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+curl "https://api.gamelockerapp.com/api/kittens"
+  -H "X-API-KEY: getoffmylawn"
+  -H "X-TITLE-ID: vainglory"
+  -H "Accept: application/vnd.api+json"
 ```
 
 > The above command returns JSON structured like this:
@@ -54,7 +35,7 @@ This endpoint retrieves all kittens.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET https://api.gamelockerapp.com/api/kittens`
 
 ### Query Parameters
 
