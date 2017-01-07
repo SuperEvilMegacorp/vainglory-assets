@@ -2028,7 +2028,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       /**
-       * Get the set of labels associated with a set of radio els in this order
+       * Get the set of labels associated with a collection of radio els in this order
        * 2. The <label> with the attribute `[for="someInputId"]`
        * 3. The `.closest()` <label>
        *

@@ -1,10 +1,27 @@
-
-# Links
+# Links (Coming Soon!)
 
 ## Get a Link
 
 ```shell
-curl "https://api.gamelockerapp.com/api/kittens"
+curl "https://api.dc01.gamelockerapp.com/kittens"
+  -H "X-API-KEY: getoffmylawn"
+  -H "X-TITLE-ID: vainglory"
+  -H "Accept: application/vnd.api+json"
+```
+
+```ruby
+# Unfortunately, there is no example yet.  Feel free to submit one!
+```
+
+```python
+curl "https://api.dc01.gamelockerapp.com/kittens"
+  -H "X-API-KEY: getoffmylawn"
+  -H "X-TITLE-ID: vainglory"
+  -H "Accept: application/vnd.api+json"
+```
+
+```javascript
+curl "https://api.dc01.gamelockerapp.com/kittens"
   -H "X-API-KEY: getoffmylawn"
   -H "X-TITLE-ID: vainglory"
   -H "Accept: application/vnd.api+json"
@@ -35,7 +52,7 @@ This endpoint retrieves all kittens.
 
 ### HTTP Request
 
-`GET https://api.gamelockerapp.com/api/kittens`
+`GET https://api.dc01.gamelockerapp.com/kittens`
 
 ### Query Parameters
 

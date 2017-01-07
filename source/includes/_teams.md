@@ -1,60 +1,66 @@
+# Teams (Coming Soon!)
 
-# Teams
+Team objects contain aggregated lifetime information about each Team.
 
-## Get a set of Teams
+## Get a collection of Teams
 
 ```shell
-curl "https://api.gamelockerapp.com/api/teams"
+curl "https://api.dc01.gamelockerapp.com/teams"
   -H "X-API-KEY: getoffmylawn"
   -H "X-TITLE-ID: vainglory"
   -H "Accept: application/vnd.api+json"
 ```
 
-> The above command returns JSON structured like this:
+```ruby
+# Unfortunately, there is no example yet.  Feel free to submit one!
+```
 
-```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
+```python
+# Unfortunately, there is no example yet.  Feel free to submit one!
+```
+
+```javascript
+// Unfortunately, there is no example yet.  Feel free to submit one!
 ```
 
 This endpoint retrieves all teams.
 
+<aside class="warning">
+Important - Team resources are not yet available in the API.
+</aside>
+
 ### HTTP Request
 
-`GET https://api.gamelockerapp.com/api/teams`
+`GET https://api.dc01.gamelockerapp.com/teams`
 
 ### Query Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include teams that have already been adopted.
 
 <aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+Remember — a happy team is an authenticated team!
 </aside>
 
-## Get a Specific Team
+## Get a single Team
 
 ```shell
-curl "https://api.gamelockerapp.com/api/teams/2"
+curl "https://api.dc01.gamelockerapp.com/teams/2"
   -H "X-API-KEY: getoffmylawn"
   -H "X-TITLE-ID: vainglory"
   -H "Accept: application/vnd.api+json"
+```
+
+```ruby
+# Unfortunately, there is no example yet.  Feel free to submit one!
+```
+
+```python
+# Unfortunately, there is no example yet.  Feel free to submit one!
+```
+
+```javascript
+// Unfortunately, there is no example yet.  Feel free to submit one!
 ```
 
 > The above command returns JSON structured like this:
@@ -69,16 +75,14 @@ curl "https://api.gamelockerapp.com/api/teams/2"
 }
 ```
 
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+This endpoint retrieves a specific team.
 
 ### HTTP Request
 
-`GET https://api.gamelockerapp.com/teams/<ID>`
+`GET https://api.dc01.gamelockerapp.com/teams/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to retrieve
+ID | The ID of the team to retrieve
