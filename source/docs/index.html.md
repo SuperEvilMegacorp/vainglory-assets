@@ -19,7 +19,6 @@ includes:
   - titles
   - content_negotiation
   - responses
-  - format
   - matches
   - players
   - teams
