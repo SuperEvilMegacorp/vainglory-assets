@@ -3,7 +3,7 @@
 ## Get a Link
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/kittens"
+curl "https://api.dc01.gamelockerapp.com/link/{id}"
   -H "X-API-KEY: getoffmylawn"
   -H "X-TITLE-ID: vainglory"
   -H "Accept: application/vnd.api+json"
@@ -14,20 +14,14 @@ curl "https://api.dc01.gamelockerapp.com/kittens"
 ```
 
 ```python
-curl "https://api.dc01.gamelockerapp.com/kittens"
-  -H "X-API-KEY: getoffmylawn"
-  -H "X-TITLE-ID: vainglory"
-  -H "Accept: application/vnd.api+json"
+# Unfortunately, there is no example yet.  Feel free to submit one!
 ```
 
 ```javascript
-curl "https://api.dc01.gamelockerapp.com/kittens"
-  -H "X-API-KEY: getoffmylawn"
-  -H "X-TITLE-ID: vainglory"
-  -H "Accept: application/vnd.api+json"
+// Unfortunately, there is no example yet.  Feel free to submit one!
 ```
 
-> The above command returns JSON structured like this:
+<!-- > The above command returns JSON structured like this:
 
 ```json
 [
@@ -46,21 +40,15 @@ curl "https://api.dc01.gamelockerapp.com/kittens"
     "cuteness": 10
   }
 ]
-```
+``` -->
 
-This endpoint retrieves all kittens.
+This endpoint checks to see if a link object exists for a given code.
 
 ### HTTP Request
 
-`GET https://api.dc01.gamelockerapp.com/kittens`
+`GET https://api.dc01.gamelockerapp.com/link`
 
 ### Query Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>

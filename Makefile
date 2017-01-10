@@ -6,7 +6,7 @@ server:
 	docker-compose up
 
 deploy:
-	docker-compose run --rm app middleman build --clean && ./deploy.sh
+	docker-compose run --rm app middleman build --clean && aws --profile=evil s3 sync build s3://developer-vainglorygame-com
 
 lint:
 	@docker-compose run --rm app rubocop
