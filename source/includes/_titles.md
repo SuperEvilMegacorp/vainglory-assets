@@ -4,7 +4,7 @@
 
 ```shell
 # With shell, you can just pass the correct header with each request
-curl "https://api.dc01.gamelockerapp.com"
+curl "https://api.dc01.gamelockerapp.com" \
   -H "X-TITLE-ID: semc-vainglory"
 ```
 
