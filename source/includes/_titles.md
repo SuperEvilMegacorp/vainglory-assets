@@ -5,7 +5,7 @@
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "https://api.dc01.gamelockerapp.com"
-  -H "X-TITLE-ID: vainglory"
+  -H "X-TITLE-ID: semc-vainglory"
 ```
 
 ```ruby
@@ -22,7 +22,7 @@ curl "https://api.dc01.gamelockerapp.com"
 
 All endpoints require an `X-TITLE-ID` header in order to return data.  It looks like the following:
 
-`X-TITLE-ID: vainglory`
+`X-TITLE-ID: semc-vainglory`
 
 <aside class="notice">
 No no, this isn't a hint at more Super Evil game titles.  The Vainglory Game Data

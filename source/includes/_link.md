@@ -3,9 +3,9 @@
 ## Get a Link
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/link/{id}"
-  -H "X-API-KEY: getoffmylawn"
-  -H "X-TITLE-ID: semc-vainglory"
+curl "https://api.dc01.gamelockerapp.com/link/{id}" \
+  -H "X-API-KEY: getoffmylawn" \
+  -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 

@@ -5,9 +5,9 @@ Player objects contain aggregated lifetime information about each Player.
 ## Get a collection of Players
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/players"
-  -H "X-API-KEY: getoffmylawn"
-  -H "X-TITLE-ID: semc-vainglory"
+curl "https://api.dc01.gamelockerapp.com/players" \
+  -H "X-API-KEY: getoffmylawn" \
+  -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 
@@ -45,9 +45,9 @@ Remember — a happy player is an authenticated player!
 ## Get a single Player
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/players/2"
-  -H "X-API-KEY: getoffmylawn"
-  -H "X-TITLE-ID: semc-vainglory"
+curl "https://api.dc01.gamelockerapp.com/players/2" \
+  -H "X-API-KEY: getoffmylawn" \
+  -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 

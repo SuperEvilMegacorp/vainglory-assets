@@ -6,13 +6,10 @@ server: .built
 	docker-compose up
 
 deploy:
-	docker-compose run --rm app middleman build --clean && aws --profile=evil s3 sync build s3://developer-vainglorygame-com
+	docker-compose run --rm app middleman build --clean
 
 lint:
 	@docker-compose run --rm app rubocop
-
-# docker-compose-up: deps
-# 	docker-compose up -d
 
 deps: .built
 
@@ -28,6 +25,6 @@ stop:
 	docker-compose stop
 
 #NOTE: This globally stops and deletes *all* running containers in all projects.  Useful :) @BJC
-clean-all:
-	docker stop $$(docker ps -a -q)
-	docker rm $$(docker ps -a -q)
+# clean-all:
+# 	docker stop $$(docker ps -a -q)
+# 	docker rm $$(docker ps -a -q)

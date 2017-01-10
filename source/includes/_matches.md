@@ -70,9 +70,9 @@ not exposed as a standalone resource.
 ## Get a collection of Matches
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/matches"
-  -H "X-API-KEY: getoffmylawn"
-  -H "X-TITLE-ID: semc-vainglory"
+curl "https://api.dc01.gamelockerapp.com/matches" \
+  -H "X-API-KEY: getoffmylawn" \
+  -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 ```ruby
@@ -141,9 +141,9 @@ Remember — a happy match is an authenticated match!
 ## Get a single Match
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/matches/991839021349012374"
-  -H "X-API-KEY: getoffmylawn"
-  -H "X-TITLE-ID: semc-vainglory"
+curl "https://api.dc01.gamelockerapp.com/matches/991839021349012374" \
+  -H "X-API-KEY: getoffmylawn" \
+  -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 
