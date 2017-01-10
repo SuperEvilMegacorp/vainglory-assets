@@ -1,4 +1,4 @@
-VainGlory API
+VainGlory Game Data Server Documentation
 -------------
 
 ### Prerequisites
