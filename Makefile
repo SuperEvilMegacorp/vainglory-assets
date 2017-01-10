@@ -2,7 +2,7 @@
 .PHONY: run, test, fixture
 .DEFAULT_GOAL := test
 
-server:
+server: .built
 	docker-compose up
 
 deploy:
