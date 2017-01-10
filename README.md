@@ -1,4 +1,4 @@
-VainGlory Game Data Server Documentation
+Vainglory Game Data Server Documentation
 -------------
 
 ### Prerequisites
