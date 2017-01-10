@@ -116,154 +116,7 @@ references the same resource:
 A logical collection of resources will always be represented as an array, even if
 it only contains one item or is empty.
 
-
----
-version: 1.1
----
-
-## <a href="#introduction" id="introduction" class="headerlink"></a> Introduction
-
-JSON API is a specification for how a client should request that resources be
-fetched or modified, and how a server should respond to those requests.
-
-JSON API is designed to minimize both the number of requests and the amount of
-data transmitted between clients and servers. This efficiency is achieved
-without compromising readability, flexibility, or discoverability.
-
-JSON API requires use of the JSON API media type
-([`application/vnd.api+json`](http://www.iana.org/assignments/media-types/application/vnd.api+json))
-for exchanging data.
-
-## <a href="#conventions" id="conventions" class="headerlink"></a> Conventions
-
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
-"SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
-interpreted as described in RFC 2119
-[[RFC2119](http://tools.ietf.org/html/rfc2119)].
-
-## <a href="#content-negotiation" id="content-negotiation" class="headerlink"></a> Content Negotiation
-
-### <a href="#content-negotiation-clients" id="content-negotiation-clients" class="headerlink"></a> Client Responsibilities
-
-Clients **MUST** send all JSON API data in request documents with the header
-`Content-Type: application/vnd.api+json` without any media type parameters.
-
-Clients that include the JSON API media type in their `Accept` header **MUST**
-specify the media type there at least once without any media type parameters.
-
-Clients **MUST** ignore any parameters for the `application/vnd.api+json`
-media type received in the `Content-Type` header of response documents.
-
-### <a href="#content-negotiation-servers" id="content-negotiation-servers" class="headerlink"></a> Server Responsibilities
-
-Servers **MUST** send all JSON API data in response documents with the header
-`Content-Type: application/vnd.api+json` without any media type parameters.
-
-Servers **MUST** respond with a `415 Unsupported Media Type` status code if
-a request specifies the header `Content-Type: application/vnd.api+json`
-with any media type parameters.
-
-Servers **MUST** respond with a `406 Not Acceptable` status code if a
-request's `Accept` header contains the JSON API media type and all instances
-of that media type are modified with media type parameters.
-
-> Note: The content negotiation requirements exist to allow future versions
-of this specification to use media type parameters for extension negotiation
-and versioning.
-
-## <a href="#document-structure" id="document-structure" class="headerlink"></a> Document Structure
-
-This section describes the structure of a JSON API document, which is identified
-by the media type [`application/vnd.api+json`](http://www.iana.org/assignments/media-types/application/vnd.api+json).
-JSON API documents are defined in JavaScript Object Notation (JSON)
-[[RFC7159](http://tools.ietf.org/html/rfc7159)].
-
-Although the same media type is used for both request and response documents,
-certain aspects are only applicable to one or the other. These differences are
-called out below.
-
-Unless otherwise noted, objects defined by this specification **MUST NOT**
-contain any additional members. Client and server implementations **MUST**
-ignore members not recognized by this specification.
-
-> Note: These conditions allow this specification to evolve through additive
-changes.
-
-### <a href="#document-top-level" id="document-top-level" class="headerlink"></a> Top Level
-
-A JSON object **MUST** be at the root of every JSON API request and response
-containing data. This object defines a document's "top level".
-
-A document **MUST** contain at least one of the following top-level members:
-
-* `data`: the document's "primary data"
-* `errors`: an array of [error objects](#errors)
-* `meta`: a [meta object][meta] that contains non-standard
-  meta-information.
-
-The members `data` and `errors` **MUST NOT** coexist in the same document.
-
-A document **MAY** contain any of these top-level members:
-
-* `jsonapi`: an object describing the server's implementation
-* `links`: a [links object][links] related to the primary data.
-* `included`: an array of [resource objects] that are related to the primary
-  data and/or each other ("included resources").
-
-If a document does not contain a top-level `data` key, the `included` member
-**MUST NOT** be present either.
-
-The top-level [links object][links] **MAY** contain the following members:
-
-* `self`: the [link][links] that generated the current response document.
-* `related`: a [related resource link] when the primary data represents a
-  resource relationship.
-* [pagination] links for the primary data.
-
-The document's "primary data" is a representation of the resource or collection
-of resources targeted by a request.
-
-Primary data **MUST** be either:
-
-* a single [resource object][resource objects], a single [resource identifier object], or `null`,
-  for requests that target single resources
-* an array of [resource objects], an array of
-  [resource identifier objects][resource identifier object], or
-  an empty array (`[]`), for requests that target resource collections
-
-For example, the following primary data is a single resource object:
-
-```json
-{
-  "data": {
-    "type": "articles",
-    "id": "1",
-    "attributes": {
-      // ... this article's attributes
-    },
-    "relationships": {
-      // ... this article's relationships
-    }
-  }
-}
-```
-
-The following primary data is a single [resource identifier object] that
-references the same resource:
-
-```json
-{
-  "data": {
-    "type": "articles",
-    "id": "1"
-  }
-}
-```
-
-A logical collection of resources **MUST** be represented as an array, even if
-it only contains one item or is empty.
-
-### <a href="#document-resource-objects" id="document-resource-objects" class="headerlink"></a> Resource Objects
+<!-- # <a href="#document-resource-objects" id="document-resource-objects" class="headerlink"></a> Resource Objects
 
 "Resource objects" appear in a JSON API document to represent resources.
 
@@ -281,8 +134,6 @@ In addition, a resource object **MAY** contain any of these top-level members:
 * `relationships`: a [relationships object][relationships] describing relationships between
  the resource and other JSON API resources.
 * `links`: a [links object][links] containing links related to the resource.
-* `meta`: a [meta object][meta] containing non-standard meta-information about a
-  resource that can not be represented as an attribute or relationship.
 
 Here's how an article (i.e. a resource of type "articles") might appear in a document:
 
@@ -1128,32 +979,6 @@ data, regardless of the request type. For instance, a server could support
 the inclusion of related resources along with a `POST` request to create a
 resource or relationship.
 
-### <a href="#fetching-sparse-fieldsets" id="fetching-sparse-fieldsets" class="headerlink"></a> Sparse Fieldsets
-
-A client **MAY** request that an endpoint return only specific [fields] in the
-response on a per-type basis by including a `fields[TYPE]` parameter.
-
-The value of the `fields` parameter **MUST** be a comma-separated (U+002C
-COMMA, ",") list that refers to the name(s) of the fields to be returned.
-
-If a client requests a restricted set of [fields] for a given resource type,
-an endpoint **MUST NOT** include additional [fields] in resource objects of
-that type in its response.
-
-```http
-GET /articles?include=author&fields[articles]=title,body&fields[people]=name HTTP/1.1
-Accept: application/vnd.api+json
-```
-
-> Note: The above example URI shows unencoded `[` and `]` characters simply for
-readability. In practice, these characters must be percent-encoded, per the
-requirements [in RFC 3986](http://tools.ietf.org/html/rfc3986#section-3.4).
-
-> Note: This section applies to any endpoint that responds with resources as
-primary or included data, regardless of the request type. For instance, a
-server could support sparse fieldsets along with a `POST` request to create
-a resource.
-
 ### <a href="#fetching-sorting" id="fetching-sorting" class="headerlink"></a> Sorting
 
 A server **MAY** choose to support requests to sort resource collections
@@ -1256,7 +1081,8 @@ collection as primary data, regardless of the request type.
 
 ### <a href="#fetching-filtering" id="fetching-filtering" class="headerlink"></a> Filtering
 
-The `filter` query parameter is reserved for filtering data. Servers and clients
+The `filter` query parameter is reserved for filtering data. Filters are views on collections,
+and can Servers and clients
 **SHOULD** use this key for filtering operations.
 
 > Note: JSON API is agnostic about the strategies supported by a server. The
@@ -1276,4 +1102,4 @@ conventions above, and the server does not know how to process it as a query
 parameter from this specification, it **MUST** return `400 Bad Request`.
 
 > Note: This is to preserve the ability of JSON API to make additive additions
-to standard query parameters without conflicting with existing implementations.
+to standard query parameters without conflicting with existing implementations. -->
