@@ -8,9 +8,9 @@ language_tabs:
   - javascript
 
 toc_footers:
-  - <a href='#'>Checkout the feature roadmap!</a>
-  - <a href='https://gamedevslack.herokuapp.com/'>Chat in Slack (&#35;vaingloryapi!</a>
-  - <a href='https://github.com/madglory/gamelocker-'>Help add to our documentation!</a>
+  - <a href='https://trello.com/b/3J3rN95m/vainglory-api-roadmap'>Checkout the feature roadmap!</a>
+  - <a href='https://gamedevslack.herokuapp.com/'>Chat in Slack (&#35;vaingloryapi)!</a>
+  - <a href='https://github.com/madglory/gamelocker-vainglory-docs'>Help add to our documentation!</a>
 
 includes:
   - datacenters
@@ -41,9 +41,8 @@ test the interface, and provide feedback to our development team.
 
 While we initially took a different approach, based on community feedback
 the Server now makes every attempt to implement the required features of the
-[JSON-API](http://jsonapi.org/) specification.  
-Where a deviation occurs, it is likely unintentional and can
-be reported to the team in our [Slack (#vaingloryapi)](gamedevelopment.slack.com).
+[JSON-API](http://jsonapi.org/) specification. Where a deviation occurs, it is likely
+unintentional and can be reported to the team in our [Slack (#vaingloryapi)](gamedevelopment.slack.com).
 
 We show example language bindings using CURL and plan to add libraries for Ruby,
 NodeJS, Java, Python and more.  Community contributions are welcome and rewarded with good

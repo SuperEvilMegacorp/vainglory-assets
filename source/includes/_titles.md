@@ -20,7 +20,7 @@ curl "https://api.dc01.gamelockerapp.com" \
 // Unfortunately, there is no example yet.  Feel free to submit one!
 ```
 
-All endpoints require an `X-TITLE-ID` header in order to return data.  It looks like the following:
+All endpoints require the following `X-TITLE-ID` header in order for us to respond to a request.
 
 `X-TITLE-ID: semc-vainglory`
 
