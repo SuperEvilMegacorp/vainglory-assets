@@ -10,7 +10,7 @@ curl "https://api.dc01.gamelockerapp.com" \
 
 > Make sure to replace `getoffmylawn` with your API key. (For now though, just use it.  It's alive!)
 
-We require the API key to be included in all API requests to the server in a header that looks like the following:
+We require an API key to be included in all API requests to the server in a header that looks like the following:
 
 `X-API-KEY: getoffmylawn`
 

@@ -1,7 +1,7 @@
 
 # Matches
 
-Matches records are created every time a players complete a game session. Each Match
+Matches records are created every time players complete a game session. Each Match
 contains high level information about the game session, including info like
 duration, gameMode, and more.  Each Match has two Rosters.   
 
