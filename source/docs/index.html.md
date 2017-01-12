@@ -21,6 +21,7 @@ includes:
   - cors
   - jsonp
   - sorting
+  - pagination
   - responses
   - matches
   - players
