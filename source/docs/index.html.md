@@ -20,6 +20,7 @@ includes:
   - content_negotiation
   - cors
   - jsonp
+  - sorting
   - responses
   - matches
   - players
