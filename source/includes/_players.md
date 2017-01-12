@@ -6,7 +6,7 @@ Player objects contain aggregated lifetime information about each Player.
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/players" \
-  -H "Authorization: Bearer getoffmylawn" \
+  -H "Authorization: Bearer aaa.bbb.ccc" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
@@ -46,7 +46,7 @@ Remember — a happy player is an authenticated player!
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/players/2" \
-  -H "Authorization: Bearer getoffmylawn" \
+  -H "Authorization: Bearer aaa.bbb.ccc" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```

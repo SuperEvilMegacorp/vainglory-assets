@@ -71,7 +71,7 @@ not exposed as a standalone resource.
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/matches" \
-  -H "Authorization: Bearer getoffmylawn" \
+  -H "Authorization: Bearer aaa.bbb.ccc" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
@@ -142,7 +142,7 @@ Remember — a happy match is an authenticated match!
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/matches/0123b560-d74c-11e6-b845-0671096b3e30" \
-  -H "Authorization: Bearer getoffmylawn" \
+  -H "Authorization: Bearer aaa.bbb.ccc" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
