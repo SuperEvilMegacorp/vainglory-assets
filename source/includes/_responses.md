@@ -1,4 +1,6 @@
-# Responses
+# Receiving Responses
+
+## Payload
 
 All Server responses contain a root JSON object.  
 
@@ -51,3 +53,11 @@ references the same resource:
 
 A logical collection of resources will always be represented as an array, even if
 it only contains one item or is empty.
+
+## Rate Limits
+Be nice. If you're sending too many requests too quickly, we'll send back a
+`429` error code (server unavailable).
+
+We're still working on deciding what limits will actually be in place when
+we go live.  Let us know what you'd like to build and we'll plan
+accordingly.

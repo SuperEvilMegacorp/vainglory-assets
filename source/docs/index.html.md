@@ -14,14 +14,9 @@ toc_footers:
 
 includes:
   - datacenters
-  - rate_limits
   - authentication
   - titles
-  - content_negotiation
-  - cors
-  - jsonp
-  - sorting
-  - pagination
+  - requests
   - responses
   - matches
   - players
