@@ -131,7 +131,6 @@ Parameter | Default | Description
 --------- | ------- | -----------
 page[offset] | 0 | Allows paging over results
 page[limit] | 50 | The default (and current maximum) is 50.  Values less than 50 and great than 2 are supported.
-filter[region] | * | Filters results by region.  By default, queries return all regions within the Datacenter.
 sort | createdAt | By default, Matches are sorted by creation time ascending.
 
 <aside class="success">
