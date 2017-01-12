@@ -18,6 +18,8 @@ includes:
   - authentication
   - titles
   - content_negotiation
+  - cors
+  - jsonp
   - responses
   - matches
   - players
