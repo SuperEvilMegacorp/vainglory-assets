@@ -8,9 +8,10 @@ language_tabs:
   - javascript
 
 toc_footers:
-  - <a href='https://trello.com/b/3J3rN95m/vainglory-api-roadmap'>Checkout the feature roadmap!</a>
+  - <a href='https://github.com/madglory/gamelocker-vainglory/milestones'>Build the Roadmap!</a>
   - <a href='https://gamedevslack.herokuapp.com/'>Chat in Slack (&#35;vaingloryapi)!</a>
-  - <a href='https://github.com/madglory/gamelocker-vainglory-docs'>Help add to our documentation!</a>
+  - <a href='https://github.com/madglory/gamelocker-vainglory'>Peep the Docs!</a>
+  - <a href='https://github.com/madglory/gamelocker-vainglory/issues'>Log a bug!</a>
 
 includes:
   - datacenters
