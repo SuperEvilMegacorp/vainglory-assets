@@ -51,3 +51,13 @@ you can switch the programming language of the examples with the tabs in the
 top right.
 
 We're planning to roll out Version 1.0 Q1 2017.
+
+## Versioning
+
+We following SEMVER standards, using a MAJOR.MINOR.PATCH verionsing scheme.
+
+  * MAJOR version when you make incompatible API changes,
+  * MINOR version when you add functionality in a backwards-compatible manner, and
+  * PATCH version when you make backwards-compatible bug fixes.
+  
+You can see the current version and deploy date by viewing the [Status](https://api.dc01.gamelockerapp.com/status) endpoint.
