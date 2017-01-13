@@ -8,16 +8,16 @@ language_tabs:
   - javascript
 
 toc_footers:
-  - <a href='https://trello.com/b/3J3rN95m/vainglory-api-roadmap'>Checkout the feature roadmap!</a>
+  - <a href='https://github.com/madglory/gamelocker-vainglory/milestones'>Build the Roadmap!</a>
   - <a href='https://gamedevslack.herokuapp.com/'>Chat in Slack (&#35;vaingloryapi)!</a>
-  - <a href='https://github.com/madglory/gamelocker-vainglory-docs'>Help add to our documentation!</a>
+  - <a href='https://github.com/madglory/gamelocker-vainglory'>Peep the Docs!</a>
+  - <a href='https://github.com/madglory/gamelocker-vainglory/issues'>Log a bug!</a>
 
 includes:
   - datacenters
-  - rate_limits
   - authentication
   - titles
-  - content_negotiation
+  - requests
   - responses
   - matches
   - players
@@ -51,3 +51,13 @@ you can switch the programming language of the examples with the tabs in the
 top right.
 
 We're planning to roll out Version 1.0 Q1 2017.
+
+## Versioning
+
+We following SEMVER standards, using a MAJOR.MINOR.PATCH verionsing scheme.
+
+  * MAJOR version when you make incompatible API changes,
+  * MINOR version when you add functionality in a backwards-compatible manner, and
+  * PATCH version when you make backwards-compatible bug fixes.
+  
+You can see the current version and deploy date by viewing the [Status](https://api.dc01.gamelockerapp.com/status) endpoint.

@@ -71,7 +71,7 @@ not exposed as a standalone resource.
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/matches" \
-  -H "X-API-KEY: getoffmylawn" \
+  -H "Authorization: Bearer aaa.bbb.ccc" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
@@ -131,7 +131,6 @@ Parameter | Default | Description
 --------- | ------- | -----------
 page[offset] | 0 | Allows paging over results
 page[limit] | 50 | The default (and current maximum) is 50.  Values less than 50 and great than 2 are supported.
-filter[region] | * | Filters results by region.  By default, queries return all regions within the Datacenter.
 sort | createdAt | By default, Matches are sorted by creation time ascending.
 
 <aside class="success">
@@ -142,7 +141,7 @@ Remember — a happy match is an authenticated match!
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/matches/0123b560-d74c-11e6-b845-0671096b3e30" \
-  -H "X-API-KEY: getoffmylawn" \
+  -H "Authorization: Bearer aaa.bbb.ccc" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
