@@ -41,7 +41,10 @@
   // instead of displaying an ugly animation
   function animate() {
     setTimeout(function() {
-      toc.setOption('showEffectSpeed', 180);
+      if (toc !== undefined) {
+        toc.setOption('showEffectSpeed', 180);
+      }
+
     }, 50);
   }
 
@@ -50,8 +53,9 @@
     animate();
     setupLanguages($('body').data('languages'));
     $('.content').imagesLoaded( function() {
-      global.toc.calculateHeights();
+      if (toc !== undefined) {
+        global.toc.calculateHeights();
+      }
     });
   });
 })(window);
-
