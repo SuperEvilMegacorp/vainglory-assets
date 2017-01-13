@@ -132,7 +132,10 @@ Parameter | Default | Description
 page[offset] | 0 | Allows paging over results
 page[limit] | 50 | The default (and current maximum) is 50.  Values less than 50 and great than 2 are supported.
 sort | createdAt | By default, Matches are sorted by creation time ascending.
-
+filter[createdAt-start] | current time - 3hrs | by default, querys search the last 3 hrs. Format is iso8601 i.e. filter[createdAt-end]=2017-01-01T13:25:30Z 2017-01-01T13:25:30Z
+filter[createdAt-end] | current time | by default, querys search the last 3 hrs. Format is iso8601 i.e. filter[createdAt-end]=2017-01-01T13:25:30Z
+filter[playerName] | "" | Querys players in the same matches. i.e. filter[playerName]= player1,player2,...
+filter[teamName] | "" | Querys teams in the same matches. i.e. filter[teamName]= team1,team2,...
 <aside class="success">
 Remember — a happy match is an authenticated match!
 </aside>
