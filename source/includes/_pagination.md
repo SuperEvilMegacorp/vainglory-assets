@@ -6,7 +6,7 @@ to the query portion of the request using the limit and offset parameters.
 To fetch items 11 through 30 you would specify a limit of 10 and an offset of 10:
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/matches?limit=20&offset=10" \
+curl "https://api.dc01.gamelockerapp.com/shards/na/matches?limit=20&offset=10" \
   -H "Authorization: Bearer aaa.bbb.ccc" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"

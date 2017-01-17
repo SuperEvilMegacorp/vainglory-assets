@@ -70,7 +70,7 @@ not exposed as a standalone resource.
 ## Get a collection of Matches
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/matches" \
+curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
   -H "Authorization: Bearer aaa.bbb.ccc" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
@@ -123,7 +123,7 @@ This endpoint retrieves all matches.
 
 ### HTTP Request
 
-`GET https://api.dc01.gamelockerapp.com/matches`
+`GET https://api.dc01.gamelockerapp.com/shards/na/matches`
 
 ### Query Parameters
 
@@ -144,7 +144,7 @@ Remember — a happy match is an authenticated match!
 ## Get a single Match
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/matches/0123b560-d74c-11e6-b845-0671096b3e30" \
+curl "https://api.dc01.gamelockerapp.com/shards/na/matches/0123b560-d74c-11e6-b845-0671096b3e30" \
   -H "Authorization: Bearer aaa.bbb.ccc" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
@@ -196,7 +196,7 @@ This endpoint retrieves a specific match.
 
 ### HTTP Request
 
-`GET https://api.dc01.gamelockerapp.com/matches/<ID>`
+`GET https://api.dc01.gamelockerapp.com/shards/na/matches/<ID>`
 
 ### URL Parameters
 

@@ -5,7 +5,7 @@ Team objects contain aggregated lifetime information about each Team.
 ## Get a collection of Teams
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/teams" \
+curl "https://api.dc01.gamelockerapp.com/shards/na/teams" \
   -H "Authorization: Bearer aaa.bbb.ccc" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"

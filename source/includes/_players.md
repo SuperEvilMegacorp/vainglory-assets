@@ -7,7 +7,7 @@ as it becomes available.
 ## Get a single Player
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/players/6abb30de-7cb8-11e4-8bd3-06eb725f8a76" \
+curl "https://api.dc01.gamelockerapp.com/shards/na/players/6abb30de-7cb8-11e4-8bd3-06eb725f8a76" \
   -H "Authorization: Bearer aaa.bbb.ccc" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
@@ -55,7 +55,7 @@ moves from the `attributes.stats` object to the main `attributes` object.
 
 ### HTTP Request
 
-`GET https://api.dc01.gamelockerapp.com/players/<ID>`
+`GET https://api.dc01.gamelockerapp.com/shards/na/players/<ID>`
 
 ### URL Parameters
 

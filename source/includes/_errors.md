@@ -4,11 +4,11 @@ The server will stop processing if a problem is encountered and return the corre
 HTTP error status code.  Errors may additionally include error objects, which are
 returned as an array keyed by `errors` in the top level of a JSON API document.
 
-An error objects will have the following members:
+An error objects have the following members:
 
-* `status`: the HTTP status code applicable to this problem, expressed as a
+* `title`: (Required) the HTTP status code applicable to this problem, expressed as a
   string value.
-* `title`: a short summary of the problem
+* `description`: (Optional) a short summary of the problem
 
 The Server uses the following error codes:
 
