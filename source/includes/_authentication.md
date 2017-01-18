@@ -7,6 +7,10 @@
 curl "https://api.dc01.gamelockerapp.com" \
   -H "Authorization: Bearer aaa.bbb.ccc"
 ```
+```python
+# Pass the token to the Gamelocker class
+api = gamelocker.Gamelocker("aaa.bbb.ccc")
+```
 
 > Make sure to replace `aaa.bbb.ccc` with your API key. (For now though, just use it.  It's alive!)
 

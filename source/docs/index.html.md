@@ -52,6 +52,12 @@ top right.
 
 We're planning to roll out Version 1.0 Q1 2017.
 
+```python
+# requires you to install `python-gamelocker` via pip
+# https://pypi.python.org/pypi/python-gamelocker/
+import gamelocker
+```
+
 ## Versioning
 
 We following [SEMVER](http://semver.org/) standards, using a MAJOR.MINOR.PATCH versioning scheme. This means that we will increment versioning in the following way:

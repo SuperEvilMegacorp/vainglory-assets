@@ -22,6 +22,10 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches?limit=20&offset=10" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
+```python
+api.matches(limit=20, offset=10)
+# limits above the maximum will be split into multiple requests automatically
+```
 
 If not specified, the server will default `limit=50` and `offset=0`.
 
@@ -40,6 +44,9 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=createdAt" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
+```python
+api.matches(limit=20, offset=10, sort="createdAt")
+```
 
 The above example should return the oldest articles first, meaning that
 the default sort order is always ascending. Ascending corresponds to the
@@ -54,6 +61,9 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=-createdAt" \
   -H "Authorization: Bearer aaa.bbb.ccc" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
+```
+```python
+api.matches(limit=20, offset=10, sort="-createdAt")
 ```
 
 The above example should return the newest articles first.
