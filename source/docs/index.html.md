@@ -65,18 +65,17 @@ You can see the current version and deploy date by viewing the [Status](https://
 
 ## Community API's
 
-Community contributions are welcome and rewarded with good
-karma (and swag!) If you are currently working on an API, let us know in the Slack channel and we 
-will add a link! 
+Community contributions are welcome and rewarded with good karma (and swag!) 
+If you are currently working on an API, let us know in the Slack channel and we will add a link! 
 
 **Java**
 
-* [DominicGunn] (http://github.com/DominicGunn/flicker) A Java adaptation of the Vainglory API.
+* [DominicGunn/flicker] (http://github.com/DominicGunn/flicker) A Java adaptation of the Vainglory API.
 
 **Python**
 
-* [schneefux] (http://github.com/schneefux/python-gamelocker) Python 3 wrapper for the Gamelocker API.
+* [schneefux/python-gamelocker] (http://github.com/schneefux/python-gamelocker) Python 3 wrapper for the Gamelocker API.
 
 **JavaScript**
 
-* [seripap] (https://github.com/seripap/vainglory) A JavaScript API client.
+* [seripap/vainglory] (https://github.com/seripap/vainglory) A JavaScript API client.
