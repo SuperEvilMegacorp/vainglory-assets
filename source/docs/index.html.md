@@ -10,7 +10,7 @@ language_tabs:
 toc_footers:
   - <a href='https://github.com/shards/na/madglory/gamelocker-vainglory/milestones'>Build the Roadmap!</a>
   - <a href='https://gamedevslack.herokuapp.com/'>Chat in Slack (&#35;vaingloryapi)!</a>
-  - <a href='https://github.com/shards/na/madglory/gamelocker-vainglory'>Peep the Docs!</a>
+  - <a href='https://github.com/madglory/gamelocker-vainglory'>Peep the Docs!</a>
   - <a href='https://github.com/shards/na/madglory/gamelocker-vainglory/issues'>Log a bug!</a>
 
 includes:
@@ -45,21 +45,12 @@ the Server now makes every attempt to implement the required features of the
 unintentional and can be reported to the team in our [Slack (#vaingloryapi)](gamedevelopment.slack.com).
 
 We show example language bindings using CURL and plan to add libraries for Ruby,
-NodeJS, Java, Python and more.  Community contributions are welcome and rewarded with good
-karma (and swag!) You can view code examples in the dark area to the right, and
+NodeJS, Java, Python and more. You can view code examples in the dark area to the right, and
 you can switch the programming language of the examples with the tabs in the
 top right.
 
 We're planning to roll out Version 1.0 Q1 2017.
 
-In progress community SDK's:
-
-- [Java] (http://github.com/DominicGunn/flicker)
-
-- [Python] (http://github.com/schneefux/python-gamelocker)
-
-If you are currently working on a SDK, let us know in the Slack channel and we 
-will add a link!
 
 ## Versioning
 
@@ -70,3 +61,22 @@ We following [SEMVER](http://semver.org/) standards, using a MAJOR.MINOR.PATCH v
   * PATCH version when we make backwards-compatible bug fixes.
 
 You can see the current version and deploy date by viewing the [Status](https://api.dc01.gamelockerapp.com/status) endpoint.
+
+
+## Community API's
+
+Community contributions are welcome and rewarded with good
+karma (and swag!) If you are currently working on an API, let us know in the Slack channel and we 
+will add a link! 
+
+**Java**
+
+* [DominicGunn] (http://github.com/DominicGunn/flicker) A Java adaptation of the Vainglory API.
+
+**Python**
+
+* [schneefux] (http://github.com/schneefux/python-gamelocker) Python 3 wrapper for the Gamelocker API.
+
+**JavaScript**
+
+* [seripap] (https://github.com/seripap/vainglory) A JavaScript API client.
