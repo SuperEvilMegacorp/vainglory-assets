@@ -34,7 +34,7 @@ layout: docs
 The first version of the Vainglory Game Data Service is an exciting step forward
 towards making it easier for users to have open access to in-game data.
 
-Build something great!
+Build something great! 
 
 At the moment this Service is in **Alpha Preview** mode.  You can see sample data,
 test the interface, and provide feedback to our development team.  
@@ -51,6 +51,15 @@ you can switch the programming language of the examples with the tabs in the
 top right.
 
 We're planning to roll out Version 1.0 Q1 2017.
+
+In progress community SDK's:
+
+- [Java] (http://github.com/DominicGunn/flicker)
+
+- [Python] (http://github.com/schneefux/python-gamelocker)
+
+If you are currently working on a SDK, let us know in the Slack channel and we 
+will add a link!
 
 ## Versioning
 
