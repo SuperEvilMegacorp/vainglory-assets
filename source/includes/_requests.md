@@ -9,6 +9,11 @@ since it is the default for many popular client libraries.
 The Server will respond with a `Content-Type` header that mirrors the format
 requested by the Client.
 
+## GZIP
+
+Clients can specify the header `Content-Encoding: gzip` and the server will compress responses.
+Given the size of matches, this can have significant performance benefits.
+
 ## Pagination
 
 Where applicable, the server allows requests to limit the number of results
