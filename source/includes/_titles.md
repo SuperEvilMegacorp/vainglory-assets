@@ -13,7 +13,7 @@ curl "https://api.dc01.gamelockerapp.com" \
 ```
 
 ```python
-# Unfortunately, there is no example yet.  Feel free to submit one!
+api = gamelocker.Gamelocker.Vainglory()
 ```
 
 ```javascript

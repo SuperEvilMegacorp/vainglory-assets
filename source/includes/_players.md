@@ -18,7 +18,13 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players/6abb30de-7cb8-11e4-8b
 ```
 
 ```python
-# Unfortunately, there is no example yet.  Feel free to submit one!
+>>> p = api.player("6abb30de-7cb8-11e4-8bd3-06eb725f8a76")
+>>> p
+<gamelocker.datatypes.Player object at 0x7fe4814ede48>
+>>> p.stats.lifetimeGold
+10536.0
+>>> p.name
+'boombastic04'
 ```
 
 ```javascript

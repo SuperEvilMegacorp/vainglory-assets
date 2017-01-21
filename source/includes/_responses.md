@@ -4,6 +4,10 @@
 
 All Server responses contain a root JSON object.  
 
+```python
+# Server responses will be parsed into objects or lists of objects.
+```
+
 A response will contain at least one of the following top-level members:
 
   * `data`: the response's “primary data”

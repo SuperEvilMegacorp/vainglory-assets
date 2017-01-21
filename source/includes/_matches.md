@@ -12,6 +12,11 @@ matchmaking as a team, the Roster will have a related Team.  Rosters have many P
 objects, one for each member of the Roster. Roster objects are only meaningful
 within the context of a Match and are not exposed as a standalone resource.
 
+```python
+>>> match = api.match("eca49808-d510-11e6-bf26-cec0c932ce01")
+>>> match.rosters[0].stats.gold
+32344
+```
 ```json
 {
   "type": "roster",
@@ -50,6 +55,14 @@ is a registered Player, the Participant will have a single Player relationship.
 Participant objects are only meaningful within the context of a Match and are
 not exposed as a standalone resource.
 
+```python
+>>> match = api.match("eca49808-d510-11e6-bf26-cec0c932ce01")
+>>> participant_left_1 = match.rosters[0].participants[0]
+>>> participant_left_1.stats.farm
+49.25
+>>> participant_left_1.actor.pretty()
+'Skye'
+```
 ```json
 {
   "type": "participant",
@@ -80,7 +93,12 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
 ```
 
 ```python
-# Unfortunately, there is no example yet.  Feel free to submit one!
+>>> m = api.matches()
+[<gamelocker.datatypes.Match object at 0x7fe47abc7668>, <gamelocker.datatypes.Match object at 0x7fe47b6f80b8>, ...]
+>>> m[0].createdAt
+'2017-01-11T02:38:35Z'
+>>> m[0].rosters[0]
+<gamelocker.datatypes.Roster object at 0x7fe47abb0a90>
 ```
 
 ```javascript
@@ -155,7 +173,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches/0123b560-d74c-11e6-b8
 ```
 
 ```python
-# Unfortunately, there is no example yet.  Feel free to submit one!
+api.match("0123b560-d74c-11e6-b845-0671096b3e30")
 ```
 
 ```javascript
