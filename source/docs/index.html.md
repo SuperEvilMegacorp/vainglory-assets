@@ -1,5 +1,5 @@
 ---
-title: VainGlory Game Data Service Reference
+title: Vainglory Game Data Service Reference
 
 language_tabs:
   - shell
