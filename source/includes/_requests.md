@@ -12,6 +12,7 @@ requested by the Client.
 ## GZIP
 
 Clients can specify the header `Content-Encoding: gzip` and the server will compress responses.
+
 Given the size of matches, this can have significant performance benefits.
 
 ## Pagination
