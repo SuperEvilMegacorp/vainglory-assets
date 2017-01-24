@@ -5,7 +5,7 @@
 All Server responses contain a root JSON object.  
 
 ```python
-# Server responses will be parsed into objects or lists of objects.
+# First level attributes (currently `createdAt`, `gameMode` and more) from the responses will be parsed into an object, second level attributes (currently `stats`) will be available in a dictionary - see the examples.
 ```
 
 A response will contain at least one of the following top-level members:

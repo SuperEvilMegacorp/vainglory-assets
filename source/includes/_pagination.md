@@ -12,8 +12,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches?limit=20&offset=10" \
   -H "Accept: application/vnd.api+json"
 ```
 ```python
-api.matches(limit=20, offset=10)
-# limits above the maximum will be split into multiple requests automatically
+api.matches({"page[limit]": 20, "page[offset]": 10})
 ```
 
 If not specified, the server will default `limit=50` and `offset=0`.
