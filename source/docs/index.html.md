@@ -9,7 +9,7 @@ language_tabs:
 
 toc_footers:
   - <a href='https://github.com/shards/na/madglory/gamelocker-vainglory/milestones'>Build the Roadmap!</a>
-  - <a href='https://gamedevslack.herokuapp.com/'>Chat in Slack (&#35;vaingloryapi)!</a>
+  - <a href='http://discord.com/vaingloryapi'>Chat on Discord!</a>
   - <a href='https://github.com/madglory/gamelocker-vainglory'>Peep the Docs!</a>
   - <a href='https://github.com/shards/na/madglory/gamelocker-vainglory/issues'>Log a bug!</a>
 
@@ -42,7 +42,7 @@ test the interface, and provide feedback to our development team.
 While we initially took a different approach, based on community feedback
 the Server now makes every attempt to implement the required features of the
 [JSON-API](http://jsonapi.org/) specification. Where a deviation occurs, it is likely
-unintentional and can be reported to the team in our [Slack (#vaingloryapi)](gamedevelopment.slack.com).
+unintentional and can be reported to the team in the [Vainglory API community Discord](discord.me/vaingloryapi).
 
 We show example language bindings using CURL and plan to add libraries for Ruby,
 NodeJS, Java, Python and more. You can view code examples in the dark area to the right, and
@@ -71,7 +71,7 @@ You can see the current version and deploy date by viewing the [Status](https://
 ## Community API's
 
 Community contributions are welcome and rewarded with good karma (and swag!) 
-If you are currently working on an API, let us know in the Slack channel and we will add a link! 
+If you are currently working on an API, let us know on the Discord server and we will add a link! 
 
 **Java**
 
