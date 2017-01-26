@@ -9,6 +9,12 @@ since it is the default for many popular client libraries.
 The Server will respond with a `Content-Type` header that mirrors the format
 requested by the Client.
 
+## GZIP
+
+Clients can specify the header `Content-Encoding: gzip` and the server will compress responses.
+
+Given the size of matches, this can have significant performance benefits.
+
 ## Pagination
 
 Where applicable, the server allows requests to limit the number of results
@@ -23,8 +29,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches?limit=20&offset=10" \
   -H "Accept: application/vnd.api+json"
 ```
 ```python
-api.matches(limit=20, offset=10)
-# limits above the maximum will be split into multiple requests automatically
+api.matches({"page[limit]": 20, "page[offset]": 10})
 ```
 
 If not specified, the server will default `limit=50` and `offset=0`.
@@ -45,7 +50,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=createdAt" \
   -H "Accept: application/vnd.api+json"
 ```
 ```python
-api.matches(limit=20, offset=10, sort="createdAt")
+api.matches({"page[limit]": 20, "page[offset]": 10, "sort": "createdAt"})
 ```
 
 The above example should return the oldest articles first, meaning that
@@ -63,7 +68,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=-createdAt" \
   -H "Accept: application/vnd.api+json"
 ```
 ```python
-api.matches(limit=20, offset=10, sort="-createdAt")
+api.matches({"page{limit}": 20, "page[offset]": 10, "sort": "-createdAt"})
 ```
 
 The above example should return the newest articles first.
