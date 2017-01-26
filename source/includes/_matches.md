@@ -14,7 +14,7 @@ within the context of a Match and are not exposed as a standalone resource.
 
 ```python
 >>> match = api.match("eca49808-d510-11e6-bf26-cec0c932ce01")
->>> match.rosters[0].stats.gold
+>>> match.rosters[0].stats["gold"]
 32344
 ```
 ```json
