@@ -70,8 +70,8 @@ You can see the current version and deploy date by viewing the [Status](https://
 
 ## Community API's
 
-Community contributions are welcome and rewarded with good karma (and swag!) 
-If you are currently working on an API, let us know on the Discord server and we will add a link! 
+Community contributions are welcome and rewarded with good karma (and swag!)
+If you are currently working on an API, let us know on the Discord server and we will add a link!
 
 **Java**
 
@@ -88,3 +88,7 @@ If you are currently working on an API, let us know on the Discord server and we
 **R**
 
 * [nathancarter/rvgapi] (https://github.com/nathancarter/rvgapi) A project providing R6 classes (for the R language) for accessing the API.
+
+**Go**
+
+* [madglory/vainglory-go-client] (https://github.com/madglory/vainglory-go-client) A proof of concept go client for the Vainglory Developer API.
