@@ -34,7 +34,7 @@ layout: docs
 The first version of the Vainglory Game Data Service is an exciting step forward
 towards making it easier for users to have open access to in-game data.
 
-Build something great! 
+Build something great!
 
 At the moment this Service is in **Alpha Preview** mode.  You can see sample data,
 test the interface, and provide feedback to our development team.  
@@ -70,8 +70,8 @@ You can see the current version and deploy date by viewing the [Status](https://
 
 ## Community API's
 
-Community contributions are welcome and rewarded with good karma (and swag!) 
-If you are currently working on an API, let us know in the Slack channel and we will add a link! 
+Community contributions are welcome and rewarded with good karma (and swag!)
+If you are currently working on an API, let us know in the Slack channel and we will add a link!
 
 **Java**
 
@@ -84,3 +84,7 @@ If you are currently working on an API, let us know in the Slack channel and we 
 **JavaScript**
 
 * [seripap/vainglory] (https://github.com/seripap/vainglory) A JavaScript API client.
+
+**R**
+
+* [nathancarter/rvgapi] (https://github.com/nathancarter/rvgapi) A project providing R6 classes (for the R language) for accessing the API.
