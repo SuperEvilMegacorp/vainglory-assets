@@ -6,6 +6,7 @@ language_tabs:
   - ruby
   - python
   - javascript
+  - go
 
 toc_footers:
   - <a href='https://github.com/shards/na/madglory/gamelocker-vainglory/milestones'>Build the Roadmap!</a>
@@ -55,6 +56,11 @@ We're planning to roll out Version 1.0 Q1 2017.
 # requires you to install `python-gamelocker` via pip
 # https://pypi.python.org/pypi/python-gamelocker/
 import gamelocker
+```
+
+```go
+// You need to import the following URL
+import v "github.com/madglory/vainglory-go-client"
 ```
 
 ## Versioning

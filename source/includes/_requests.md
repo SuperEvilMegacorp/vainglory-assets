@@ -15,6 +15,11 @@ Clients can specify the header `Content-Encoding: gzip` and the server will comp
 
 Given the size of matches, this can have significant performance benefits.
 
+```go
+//Already implemented in NewClient
+```
+
+
 ## Pagination
 
 Where applicable, the server allows requests to limit the number of results
@@ -28,9 +33,19 @@ curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?page[limit]=3&page
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
+
 ```python
 api.matches({"page[limit]": 20, "page[offset]": 10})
 ```
+
+```go
+//The QueryRequest has usable queries attached
+>>> q := new(v.QueryRequest)
+>>> q.Limit = "3"
+>>> q.Offset = "0"
+>>> client := v.NewClient(apikey, q)
+```
+
 
 If not specified, the server will default `limit=50` and `offset=0`.
 
@@ -53,6 +68,11 @@ curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=createdAt" \
 api.matches({"page[limit]": 20, "page[offset]": 10, "sort": "createdAt"})
 ```
 
+```go
+>>> q := new(v.QueryRequest)
+>>> q.SortField = "createdAt"
+```
+
 The above example should return the oldest articles first, meaning that
 the default sort order is always ascending. Ascending corresponds to the
 standard order of numbers and letters, i.e. A to Z, 0 to 9).  For dates and times,
@@ -69,6 +89,11 @@ curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=-createdAt" \
 ```
 ```python
 api.matches({"page{limit}": 20, "page[offset]": 10, "sort": "-createdAt"})
+```
+
+```go
+>>> q := new(v.QueryRequest)
+>>> q.SortField = "-createdAt"
 ```
 
 The above example should return the newest articles first.

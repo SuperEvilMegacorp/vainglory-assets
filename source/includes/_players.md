@@ -31,6 +31,10 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players/6abb30de-7cb8-11e4-8b
 // Unfortunately, there is no example yet.  Feel free to submit one!
 ```
 
+```go
+>>> player, _, _ := client.GetPlayerByID(playerID)
+>>> player.name
+```
 > The above command returns JSON structured like this:
 
 ```json
