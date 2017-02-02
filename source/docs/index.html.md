@@ -11,7 +11,7 @@ toc_footers:
   - <a href='https://github.com/shards/na/madglory/gamelocker-vainglory/milestones'>Build the Roadmap!</a>
   - <a href='http://discord.me/vaingloryapi'>Chat on Discord!</a>
   - <a href='https://github.com/madglory/gamelocker-vainglory'>Peep the Docs!</a>
-  - <a href='https://github.com/shards/na/madglory/gamelocker-vainglory/issues'>Log a bug!</a>
+  - <a href='https://github.com/madglory/gamelocker-vainglory/issues'>Log a bug!</a>
 
 includes:
   - datacenters
