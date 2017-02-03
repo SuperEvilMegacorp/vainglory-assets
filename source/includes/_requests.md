@@ -11,7 +11,8 @@ requested by the Client.
 
 ## GZIP
 
-Clients can specify the header `Content-Encoding: gzip` and the server will compress responses.
+Clients can specify the header `Accept-Encoding: gzip` and the server will compress responses.  
+Responses will be returns with `Content-Encoding: gzip`.
 
 Given the size of matches, this can have significant performance benefits.
 
