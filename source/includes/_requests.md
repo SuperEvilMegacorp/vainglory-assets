@@ -16,6 +16,11 @@ Responses will be returns with `Content-Encoding: gzip`.
 
 Given the size of matches, this can have significant performance benefits.
 
+```go
+//Already implemented in NewClient
+```
+
+
 ## Pagination
 
 Where applicable, the server allows requests to limit the number of results
@@ -24,14 +29,24 @@ to the query portion of the request using the limit and offset parameters.
 To fetch items 11 through 30 you would specify a limit of 10 and an offset of 10:
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/shards/na/matches?limit=20&offset=10" \
+curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?page[limit]=3&page[offset]=0" \
   -H "Authorization: Bearer aaa.bbb.ccc" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
+
 ```python
 api.matches({"page[limit]": 20, "page[offset]": 10})
 ```
+
+```go
+//The QueryRequest has usable queries attached
+>>> q := new(v.QueryRequest)
+>>> q.Limit = "3"
+>>> q.Offset = "0"
+>>> client := v.NewClient(apikey, q)
+```
+
 
 If not specified, the server will default `limit=50` and `offset=0`.
 
@@ -45,13 +60,18 @@ All resource collections have a default sort order.  In addition, some resources
 provide the ability to sort according to one or more criteria ("sort fields").
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=createdAt" \
+curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=createdAt" \
   -H "Authorization: Bearer aaa.bbb.ccc" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 ```python
 api.matches({"page[limit]": 20, "page[offset]": 10, "sort": "createdAt"})
+```
+
+```go
+>>> q := new(v.QueryRequest)
+>>> q.SortField = "createdAt"
 ```
 
 The above example should return the oldest articles first, meaning that
@@ -63,13 +83,18 @@ ahead of 1/1/2001.
 If sort fields are is prefixed with a minus, the order will be changed to descending.
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=-createdAt" \
+curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=-createdAt" \
   -H "Authorization: Bearer aaa.bbb.ccc" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 ```python
 api.matches({"page{limit}": 20, "page[offset]": 10, "sort": "-createdAt"})
+```
+
+```go
+>>> q := new(v.QueryRequest)
+>>> q.SortField = "-createdAt"
 ```
 
 The above example should return the newest articles first.
@@ -79,7 +104,7 @@ The above example should return the newest articles first.
 You can send a ?callback parameter to any GET call to have the results wrapped in a JSON function. This is typically used when browsers want to embed content in web pages by getting around cross domain issues. The response includes the same data output as the regular API, plus the relevant HTTP Header information.
 
 ```shell
-curl https://api.dc01.gamelockerapp.com/status?callback=foo
+curl -g https://api.dc01.gamelockerapp.com/status?callback=foo
 ```
 
 ```javascript

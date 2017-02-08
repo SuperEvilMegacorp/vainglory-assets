@@ -5,6 +5,7 @@ Matches records are created every time players complete a game session. Each Mat
 contains high level information about the game session, including info like
 duration, gameMode, and more.  Each Match has two Rosters.   
 
+
 ## Rosters
 
 Rosters track the scores of each opposing group of Participants. If players entered
@@ -17,6 +18,13 @@ within the context of a Match and are not exposed as a standalone resource.
 >>> match.rosters[0].stats["gold"]
 32344
 ```
+
+```go
+>>> match,_,_ := client.GetMatchByID(matchID)
+>>> match.Rosters[0].Stats["gold"]
+49951
+```
+
 ```json
 {
   "type": "roster",
@@ -63,6 +71,14 @@ not exposed as a standalone resource.
 >>> participant_left_1.actor.pretty()
 'Skye'
 ```
+
+```go
+>>> match, _, _ := client.GetMatchByID(matchID)
+>>> participantLeft1 := match.Rosters[0].Participants[0]
+>>> participantLeft1.Actor
+Kestrel
+```
+
 ```json
 {
   "type": "participant",
@@ -106,6 +122,11 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
 ```
 
 > The above command returns JSON structured like this:
+
+```go
+>>> matches,_,_ := client.GetMatches()
+>>> matches[0].CreatedAt
+```
 
 ```json
 {
@@ -180,6 +201,11 @@ api.match("0123b560-d74c-11e6-b845-0671096b3e30")
 // Unfortunately, there is no example yet.  Feel free to submit one!
 ```
 
+```go
+>>> match,_,_ := client.GetMatchByID(matchID)
+>>> match.GameMode
+Casual
+```
 > The above command returns JSON structured like this:
 
 ```json

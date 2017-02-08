@@ -20,6 +20,11 @@ api = gamelocker.Gamelocker.Vainglory()
 // Unfortunately, there is no example yet.  Feel free to submit one!
 ```
 
+```go
+// Create a client and pass in the api key and any query requests
+>>> client := v.NewClient(apikey, query)
+```
+
 All endpoints require the following `X-TITLE-ID` header in order for us to respond to a request.
 
 `X-TITLE-ID: semc-vainglory`

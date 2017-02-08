@@ -6,6 +6,7 @@ language_tabs:
   - ruby
   - python
   - javascript
+  - go
 
 toc_footers:
   - <a href='https://github.com/shards/na/madglory/gamelocker-vainglory/milestones'>Build the Roadmap!</a>
@@ -57,6 +58,11 @@ We're planning to roll out Version 1.0 Q1 2017.
 import gamelocker
 ```
 
+```go
+// You need to import the following URL
+import v "github.com/madglory/vainglory-go-client"
+```
+
 ## Versioning
 
 We following [SEMVER](http://semver.org/) standards, using a MAJOR.MINOR.PATCH versioning scheme. This means that we will increment versioning in the following way:
@@ -70,8 +76,8 @@ You can see the current version and deploy date by viewing the [Status](https://
 
 ## Community API's
 
-Community contributions are welcome and rewarded with good karma (and swag!) 
-If you are currently working on an API, let us know on the Discord server and we will add a link! 
+Community contributions are welcome and rewarded with good karma (and swag!)
+If you are currently working on an API, let us know on the Discord server and we will add a link!
 
 **Java**
 
@@ -88,3 +94,7 @@ If you are currently working on an API, let us know on the Discord server and we
 **R**
 
 * [nathancarter/rvgapi] (https://github.com/nathancarter/rvgapi) A project providing R6 classes (for the R language) for accessing the API.
+
+**Go**
+
+* [madglory/vainglory-go-client] (https://github.com/madglory/vainglory-go-client) A proof of concept go client for the Vainglory Developer API.

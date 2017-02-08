@@ -12,6 +12,11 @@ curl "https://api.dc01.gamelockerapp.com" \
 api = gamelocker.Gamelocker("aaa.bbb.ccc")
 ```
 
+```go
+// Create a client object and pass in the api key and any query requests
+client := v.NewClient(apikey,query)
+```
+
 > Make sure to replace `aaa.bbb.ccc` with your API key. (For now though, just use it.  It's alive!)
 
 We require a JSON Web Token ([JWT](https://jwt.io/)) be sent along with your request via the `Authorization` header.  
