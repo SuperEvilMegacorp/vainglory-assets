@@ -1,4 +1,4 @@
-## How to contribute to the VainGlory Game Data Service Documentation
+## How to contribute to the Vainglory Game Data Service Documentation
 
 #### **Did you find a bug?**
 
@@ -14,6 +14,6 @@
 
 #### **Do you have questions about to use that Game Data Service?**
 
-* Ask any question about how to use in the [Slack Channel (#vaingloryapi)](href='https://gamedevslack.herokuapp.com/).
+* Ask any question about how to use on the [Vainglory API Community Discord server](http://discord.me/vaingloryapi).
 
 Thanks! :heart: :heart: :heart:
