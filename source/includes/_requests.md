@@ -42,6 +42,23 @@ api.matches({"page[limit]": 20, "page[offset]": 10})
 >>> client := v.NewClient(apikey, q)
 ```
 
+```javascript
+/* defaults */
+const options = {
+  page: {
+    offset: 0,
+    limit: 50,
+  },
+  sort: 'createdAt',
+  filters: {
+    started: '3hrs ago',
+    ended: 'Now',
+    playerNames: [],
+    teamNames: [],
+  }
+}
+```
+
 Where applicable, the server allows requests to limit the number of results
 returned via pagination. To paginate the primary data, supply pagination information
 to the query portion of the request using the limit and offset parameters.  

@@ -5,6 +5,7 @@ language_tabs:
   - shell
   - java
   - python
+  - javascript
   - go
 
 
@@ -41,6 +42,17 @@ import gamelocker
 //Import the following URL
 import v "github.com/madglory/vainglory-go-client"
 ```
+
+```javascript
+$ yarn add vainglory
+or
+$ npm install vainglory
+
+import Vainglory from 'vainglory';
+```
+
+
+
 The first version of the Vainglory Game Data Service is an exciting step forward
 towards making it easier for users to have open access to in-game data.
 

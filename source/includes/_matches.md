@@ -120,6 +120,28 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
 >>> matches[0].CreatedAt
 ```
 
+```javascript
+/* defaults */
+const options = {
+  page: {
+    offset: 0,
+    limit: 50,
+  },
+  sort: 'createdAt',
+  filters: {
+    started: '3hrs ago',
+    ended: 'Now',
+    playerNames: [],
+    teamNames: [],
+  }
+}
+vainglory.matches.collection(options).then((matches) => {
+    // matches is the raw data represntation from the query.
+}).catch((errorMsg) => {
+  console.error(errorMsg);
+});
+```
+
 ```json
 {
   "data": [
@@ -193,6 +215,17 @@ api.match("0123b560-d74c-11e6-b845-0671096b3e30")
 Casual
 ```
 > The above command returns JSON structured like this:
+
+```javascript
+const matchId = '0123b560-d74c-11e6-b845-0671096b3e30';
+
+vainglory.matches.single(matchId).then((match) => {
+  console.log(match.id);
+  console.log(match.stats);
+}).catch((errorMsg) => {
+  console.error(errorMsg);
+});
+```
 
 ```json
 {
