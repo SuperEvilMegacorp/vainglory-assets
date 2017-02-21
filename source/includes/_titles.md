@@ -8,16 +8,8 @@ curl "https://api.dc01.gamelockerapp.com" \
   -H "X-TITLE-ID: semc-vainglory"
 ```
 
-```ruby
-# Unfortunately, there is no example yet.  Feel free to submit one!
-```
-
 ```python
 api = gamelocker.Gamelocker.Vainglory()
-```
-
-```javascript
-// Unfortunately, there is no example yet.  Feel free to submit one!
 ```
 
 ```go

@@ -3,10 +3,10 @@ title: Vainglory Game Data Service Reference
 
 language_tabs:
   - shell
-  - ruby
+  - java
   - python
-  - javascript
   - go
+
 
 toc_footers:
   - <a href='https://github.com/shards/na/madglory/gamelocker-vainglory/milestones'>Build the Roadmap!</a>
@@ -31,7 +31,16 @@ search: true
 layout: docs
 ---
 # Introduction
+```python
+# requires you to install `python-gamelocker` via pip
+# https://pypi.python.org/pypi/python-gamelocker/
+import gamelocker
+```
 
+```go
+//Import the following URL
+import v "github.com/madglory/vainglory-go-client"
+```
 The first version of the Vainglory Game Data Service is an exciting step forward
 towards making it easier for users to have open access to in-game data.
 
@@ -52,16 +61,6 @@ top right.
 
 We're planning to roll out Version 1.0 Q1 2017.
 
-```python
-# requires you to install `python-gamelocker` via pip
-# https://pypi.python.org/pypi/python-gamelocker/
-import gamelocker
-```
-
-```go
-// You need to import the following URL
-import v "github.com/madglory/vainglory-go-client"
-```
 
 ## Versioning
 
