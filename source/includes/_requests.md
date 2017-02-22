@@ -23,11 +23,6 @@ Given the size of matches, this can have significant performance benefits.
 
 ## Pagination
 
-Where applicable, the server allows requests to limit the number of results
-returned via pagination. To paginate the primary data, supply pagination information
-to the query portion of the request using the limit and offset parameters.  
-To fetch items 11 through 30 you would specify a limit of 10 and an offset of 10:
-
 ```shell
 curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?page[limit]=3&page[offset]=0" \
   -H "Authorization: Bearer aaa.bbb.ccc" \
@@ -47,6 +42,28 @@ api.matches({"page[limit]": 20, "page[offset]": 10})
 >>> client := v.NewClient(apikey, q)
 ```
 
+```javascript
+/* defaults */
+const options = {
+  page: {
+    offset: 0,
+    limit: 50,
+  },
+  sort: 'createdAt',
+  filters: {
+    started: '3hrs ago',
+    ended: 'Now',
+    playerNames: [],
+    teamNames: [],
+  }
+}
+```
+
+Where applicable, the server allows requests to limit the number of results
+returned via pagination. To paginate the primary data, supply pagination information
+to the query portion of the request using the limit and offset parameters.  
+To fetch items 11 through 30 you would specify a limit of 10 and an offset of 10:
+
 
 If not specified, the server will default `limit=50` and `offset=0`.
 
@@ -55,9 +72,6 @@ Important - Currently the server will not allow responses with over 50 primary d
 </aside>
 
 ## Sorting
-
-All resource collections have a default sort order.  In addition, some resources
-provide the ability to sort according to one or more criteria ("sort fields").
 
 ```shell
 curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=createdAt" \
@@ -74,13 +88,8 @@ api.matches({"page[limit]": 20, "page[offset]": 10, "sort": "createdAt"})
 >>> q.SortField = "createdAt"
 ```
 
-The above example should return the oldest articles first, meaning that
-the default sort order is always ascending. Ascending corresponds to the
-standard order of numbers and letters, i.e. A to Z, 0 to 9).  For dates and times,
-ascending means that earlier values precede later ones e.g. 1/1/2000 will sort
-ahead of 1/1/2001.
-
-If sort fields are is prefixed with a minus, the order will be changed to descending.
+All resource collections have a default sort order.  In addition, some resources
+provide the ability to sort according to one or more criteria ("sort fields").
 
 ```shell
 curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=-createdAt" \
@@ -97,34 +106,26 @@ api.matches({"page{limit}": 20, "page[offset]": 10, "sort": "-createdAt"})
 >>> q.SortField = "-createdAt"
 ```
 
+The above example should return the oldest articles first, meaning that
+the default sort order is always ascending. Ascending corresponds to the
+standard order of numbers and letters, i.e. A to Z, 0 to 9).  For dates and times,
+ascending means that earlier values precede later ones e.g. 1/1/2000 will sort
+ahead of 1/1/2001.
+
+If sort fields are is prefixed with a minus, the order will be changed to descending.
+
 The above example should return the newest articles first.
 
 ## JSON-P Callbacks
-
-You can send a ?callback parameter to any GET call to have the results wrapped in a JSON function. This is typically used when browsers want to embed content in web pages by getting around cross domain issues. The response includes the same data output as the regular API, plus the relevant HTTP Header information.
 
 ```shell
 curl -g https://api.dc01.gamelockerapp.com/status?callback=foo
 ```
 
-```javascript
-foo({
-  "meta": {  
-    "content-length":34,
-    "content-type":"application/json; charset=utf-8",
-    "status":200
-  },
-  "data": {
-    ...  // the data
-  }
-})
-```
+You can send a ?callback parameter to any GET call to have the results wrapped in a JSON function. This is typically used when browsers want to embed content in web pages by getting around cross domain issues. The response includes the same data output as the regular API, plus the relevant HTTP Header information.
+
 
 ## Cross Origin Resource Sharing
-The API supports Cross Origin Resource Sharing (CORS) for AJAX requests from any origin.
-You can read the CORS W3C Recommendation, or this intro from the HTML 5 Security Guide.
-
-Here's a sample request sent from a browser hitting http://example.com:
 
 ```shell
 curl -i https://api.dc01.gamelockerapp.com/status -H "Origin: http://example.com"
@@ -144,3 +145,8 @@ curl -i https://api.dc01.gamelockerapp.com/status -H "Origin: http://example.com
   Access-Control-Allow-Origin: *
   Access-Control-Max-Age: 86400
 ```
+
+The API supports Cross Origin Resource Sharing (CORS) for AJAX requests from any origin.
+You can read the CORS W3C Recommendation, or this intro from the HTML 5 Security Guide.
+
+Here's a sample request sent from a browser hitting http://example.com:

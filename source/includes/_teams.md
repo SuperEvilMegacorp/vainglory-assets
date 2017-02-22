@@ -11,17 +11,10 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/teams" \
   -H "Accept: application/vnd.api+json"
 ```
 
-```ruby
-# Unfortunately, there is no example yet.  Feel free to submit one!
-```
-
 ```python
 # Unfortunately, there is no example yet.  Feel free to submit one!
 ```
 
-```javascript
-// Unfortunately, there is no example yet.  Feel free to submit one!
-```
 
 This endpoint retrieves all teams.
 
@@ -51,16 +44,8 @@ curl "https://api.dc01.gamelockerapp.com/teams/2" \
   -H "Accept: application/vnd.api+json"
 ```
 
-```ruby
-# Unfortunately, there is no example yet.  Feel free to submit one!
-```
-
 ```python
 # Unfortunately, there is no example yet.  Feel free to submit one!
-```
-
-```javascript
-// Unfortunately, there is no example yet.  Feel free to submit one!
 ```
 
 > The above command returns JSON structured like this:

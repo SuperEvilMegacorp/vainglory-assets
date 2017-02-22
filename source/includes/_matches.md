@@ -8,11 +8,6 @@ duration, gameMode, and more.  Each Match has two Rosters.
 
 ## Rosters
 
-Rosters track the scores of each opposing group of Participants. If players entered
-matchmaking as a team, the Roster will have a related Team.  Rosters have many Participants
-objects, one for each member of the Roster. Roster objects are only meaningful
-within the context of a Match and are not exposed as a standalone resource.
-
 ```python
 >>> match = api.match("eca49808-d510-11e6-bf26-cec0c932ce01")
 >>> match.rosters[0].stats["gold"]
@@ -56,13 +51,12 @@ within the context of a Match and are not exposed as a standalone resource.
 }
 ```
 
-## Participants
-Participant objects track each member in a Roster.  Participants may be
-anonymous Players, registered Players, or bots. In the case where the Participant
-is a registered Player, the Participant will have a single Player relationship.
-Participant objects are only meaningful within the context of a Match and are
-not exposed as a standalone resource.
+Rosters track the scores of each opposing group of Participants. If players entered
+matchmaking as a team, the Roster will have a related Team.  Rosters have many Participants
+objects, one for each member of the Roster. Roster objects are only meaningful
+within the context of a Match and are not exposed as a standalone resource.
 
+## Participants
 ```python
 >>> match = api.match("eca49808-d510-11e6-bf26-cec0c932ce01")
 >>> participant_left_1 = match.rosters[0].participants[0]
@@ -95,6 +89,11 @@ Kestrel
   }
 }
 ```
+Participant objects track each member in a Roster.  Participants may be
+anonymous Players, registered Players, or bots. In the case where the Participant
+is a registered Player, the Participant will have a single Player relationship.
+Participant objects are only meaningful within the context of a Match and are
+not exposed as a standalone resource.
 
 ## Get a collection of Matches
 
@@ -103,9 +102,6 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
   -H "Authorization: Bearer aaa.bbb.ccc" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
-```
-```ruby
-# Unfortunately, there is no example yet.  Feel free to submit one!
 ```
 
 ```python
@@ -117,15 +113,33 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
 <gamelocker.datatypes.Roster object at 0x7fe47abb0a90>
 ```
 
-```javascript
-// Unfortunately, there is no example yet.  Feel free to submit one!
-```
-
 > The above command returns JSON structured like this:
 
 ```go
 >>> matches,_,_ := client.GetMatches()
 >>> matches[0].CreatedAt
+```
+
+```javascript
+/* defaults */
+const options = {
+  page: {
+    offset: 0,
+    limit: 50,
+  },
+  sort: 'createdAt',
+  filters: {
+    started: '3hrs ago',
+    ended: 'Now',
+    playerNames: [],
+    teamNames: [],
+  }
+}
+vainglory.matches.collection(options).then((matches) => {
+    // matches is the raw data represntation from the query.
+}).catch((errorMsg) => {
+  console.error(errorMsg);
+});
 ```
 
 ```json
@@ -189,17 +203,11 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches/0123b560-d74c-11e6-b8
   -H "Accept: application/vnd.api+json"
 ```
 
-```ruby
-# Unfortunately, there is no example yet.  Feel free to submit one!
-```
 
 ```python
 api.match("0123b560-d74c-11e6-b845-0671096b3e30")
 ```
 
-```javascript
-// Unfortunately, there is no example yet.  Feel free to submit one!
-```
 
 ```go
 >>> match,_,_ := client.GetMatchByID(matchID)
@@ -207,6 +215,17 @@ api.match("0123b560-d74c-11e6-b845-0671096b3e30")
 Casual
 ```
 > The above command returns JSON structured like this:
+
+```javascript
+const matchId = '0123b560-d74c-11e6-b845-0671096b3e30';
+
+vainglory.matches.single(matchId).then((match) => {
+  console.log(match.id);
+  console.log(match.stats);
+}).catch((errorMsg) => {
+  console.error(errorMsg);
+});
+```
 
 ```json
 {

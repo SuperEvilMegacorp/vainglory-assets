@@ -17,6 +17,10 @@ api = gamelocker.Gamelocker("aaa.bbb.ccc")
 client := v.NewClient(apikey,query)
 ```
 
+```javascript
+const vainglory = new Vainglory('api-key');
+```
+
 > Make sure to replace `aaa.bbb.ccc` with your API key. (For now though, just use it.  It's alive!)
 
 We require a JSON Web Token ([JWT](https://jwt.io/)) be sent along with your request via the `Authorization` header.  

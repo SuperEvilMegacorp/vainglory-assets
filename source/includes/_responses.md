@@ -7,6 +7,29 @@ All Server responses contain a root JSON object.
 ```python
 # First level attributes (currently `createdAt`, `gameMode` and more) from the responses will be parsed into an object, second level attributes (currently `stats`) will be available in a dictionary - see the examples.
 ```
+~~~.language-json
+{
+  "data": {
+    "type": "match",
+    "id": "skarn",
+    "attributes": {
+      // ... this matches attributes
+    },
+    "relationships": {
+      // ... this matches relationships
+    }
+  }
+}
+~~~
+
+~~~.language-json
+{
+  "data": {
+    "type": "match",
+    "id": "1"
+  }
+}
+~~~
 
 A response will contain at least one of the following top-level members:
 
@@ -28,40 +51,18 @@ Primary data will be either:
 
 For example, the following primary data is a single resource object:
 
-~~~.language-json
-{
-  "data": {
-    "type": "match",
-    "id": "skarn",
-    "attributes": {
-      // ... this matches attributes
-    },
-    "relationships": {
-      // ... this matches relationships
-    }
-  }
-}
-~~~
 
 The following primary data is a single [resource identifier object] that
 references the same resource:
 
-~~~.language-json
-{
-  "data": {
-    "type": "match",
-    "id": "1"
-  }
-}
-~~~
 
 A logical collection of resources will always be represented as an array, even if
 it only contains one item or is empty.
 
 ## Rate Limits
-Be nice. If you're sending too many requests too quickly, we'll send back a
+Be nice. If you're sending too many requests too quickly, we'll send back a  
 `429` error code (server unavailable).
 
-We're still working on deciding what limits will actually be in place when
-we go live.  Let us know what you'd like to build and we'll plan
-accordingly.
+<aside class="notice">
+Free for non-commercial use for up to 10 requests per minute! To increase your rate limit, please contact api@superevilmegacorp.com
+</aside>
