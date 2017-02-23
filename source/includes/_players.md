@@ -1,8 +1,6 @@
 # Players (Coming Soon!)
 
-Player objects contain aggregated lifetime information about each Player.  At this
-time Players are fairly sparse, but there are plans to add much richer data
-as it becomes available.
+Player objects contain aggregated lifetime information about each Player. At this time Players are fairly sparse, but there are plans to add much richer data as it becomes available.
 
 ## Get a single Player
 

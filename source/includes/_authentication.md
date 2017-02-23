@@ -28,6 +28,7 @@ JWTs are passed as bearer tokens in the Authorization header, and look like the 
 
 `Authorization: <Enter your API Key>`
 
+
 There's no need to create JWTs manually, they will be created for you when you register for the API.
 For now anything is accepted.
 
