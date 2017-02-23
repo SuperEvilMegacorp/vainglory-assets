@@ -25,7 +25,7 @@ Given the size of matches, this can have significant performance benefits.
 
 ```shell
 curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?page[limit]=3&page[offset]=0" \
-  -H "Authorization: Bearer aaa.bbb.ccc" \
+  -H "Authorization: api-key" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
@@ -58,11 +58,17 @@ const options = {
   }
 }
 ```
+```java
+
+public List<Match> getSortedMatchesForPlayer(String playerName, Shard shard) {
+        return flickerApi.getMatches(new MatchRequest.Builder().playerName(playerName).shard(shard).sortField("-creationDate").build());
+    }
+```
 
 Where applicable, the server allows requests to limit the number of results
 returned via pagination. To paginate the primary data, supply pagination information
 to the query portion of the request using the limit and offset parameters.  
-To fetch items 11 through 30 you would specify a limit of 10 and an offset of 10:
+To fetch items 2 through 10 you would specify a limit of 8 and an offset of 2:
 
 
 If not specified, the server will default `limit=50` and `offset=0`.
@@ -75,7 +81,7 @@ Important - Currently the server will not allow responses with over 50 primary d
 
 ```shell
 curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=createdAt" \
-  -H "Authorization: Bearer aaa.bbb.ccc" \
+  -H "Authorization: api-key" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
@@ -93,7 +99,7 @@ provide the ability to sort according to one or more criteria ("sort fields").
 
 ```shell
 curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=-createdAt" \
-  -H "Authorization: Bearer aaa.bbb.ccc" \
+  -H "Authorization: api-key" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```

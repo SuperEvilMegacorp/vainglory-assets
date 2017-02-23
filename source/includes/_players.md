@@ -1,4 +1,4 @@
-# Players
+# Players (Coming Soon!)
 
 Player objects contain aggregated lifetime information about each Player.  At this
 time Players are fairly sparse, but there are plans to add much richer data
@@ -6,12 +6,12 @@ as it becomes available.
 
 ## Get a single Player
 
-```shell
+<!-- ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/players/6abb30de-7cb8-11e4-8bd3-06eb725f8a76" \
-  -H "Authorization: Bearer aaa.bbb.ccc" \
+  -H "Authorization: Bearer api-key" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
-```
+``` -->
 
 
 ```python
@@ -40,6 +40,12 @@ vainglory.players.single(playerId).then((player) => {
 }).catch((errorMsg) => {
   console.error(errorMsg);
 });
+```
+
+```java
+public Player getProfileForPlayer(String playerId, Shard shard) {
+        return flickerApi.getPlayerById(playerId, shard);
+    }
 ```
 
 > The above command returns JSON structured like this:

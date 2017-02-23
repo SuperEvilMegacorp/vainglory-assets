@@ -60,6 +60,11 @@ A logical collection of resources will always be represented as an array, even i
 it only contains one item or is empty.
 
 ## Rate Limits
+~~~
+X-RateLimit-Limit - Request limit per day / per minute
+X-RateLimit-Remaining - The number of requests left for the time window
+X-RateLimit-Reset - The remaining window before the rate limit is refilled in UTC epoch seconds. Limit tokens are incrementally filled.
+~~~
 Be nice. If you're sending too many requests too quickly, we'll send back a  
 `429` error code (server unavailable).
 
