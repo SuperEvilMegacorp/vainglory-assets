@@ -98,8 +98,8 @@ not exposed as a standalone resource.
 ## Get a collection of Matches
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
-  -H "Authorization: Bearer xxx.yyy.zzz" \
+curl "https://api.dc01.gamelockerapp.com/shards/na/matches?page[limit]=3&page[offset]=0" \" \
+  -H "Authorization: api-key" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
@@ -114,11 +114,6 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
 ```
 
 > The above command returns JSON structured like this:
-
-```go
->>> matches,_,_ := client.GetMatches()
->>> matches[0].CreatedAt
-```
 
 ```javascript
 /* defaults */
@@ -142,6 +137,16 @@ vainglory.matches.collection(options).then((matches) => {
 });
 ```
 
+```java
+public List<Match> getMatchesForPlayer(String playerName, Shard shard) {
+        return flickerApi.getMatches(new MatchRequest.Builder().playerName(playerName).shard(shard).build());
+    }
+
+public List<Match> getRecentMatchesForPlayer(String playerName, Shard shard, Date recentDate) {
+        return flickerApi.getMatches(new MatchRequest.Builder().playerName(playerName).shard(shard).createdAfter(recentDate).build());
+    }
+
+```
 ```json
 {
   "data": [
@@ -172,7 +177,7 @@ vainglory.matches.collection(options).then((matches) => {
 }
 ```
 
-This endpoint retrieves all matches.
+This endpoint retrieves all matches. Should be used with filters for optimal performance!
 
 ### HTTP Request
 
@@ -198,7 +203,7 @@ Remember — a happy match is an authenticated match!
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/matches/0123b560-d74c-11e6-b845-0671096b3e30" \
-  -H "Authorization: Bearer xxx.yyy.zzz" \
+  -H "Authorization: api-key" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
