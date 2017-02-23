@@ -99,7 +99,7 @@ not exposed as a standalone resource.
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/matches?page[limit]=3&page[offset]=0" \" \
-  -H "Authorization: Bearer api-key" \
+  -H "Authorization: api-key" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```

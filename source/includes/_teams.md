@@ -6,7 +6,7 @@ Team objects contain aggregated lifetime information about each Team.
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/teams" \
-  -H "Authorization: Bearer api-key" \
+  -H "Authorization: api-key" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```

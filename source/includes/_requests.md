@@ -25,11 +25,7 @@ Given the size of matches, this can have significant performance benefits.
 
 ```shell
 curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?page[limit]=3&page[offset]=0" \
-<<<<<<< HEAD
   -H "Authorization: api-key" \
-=======
-  -H "Authorization: Bearer xxx.yyy.zzz" \
->>>>>>> master
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
@@ -65,8 +61,9 @@ const options = {
 ```java
 
 public List<Match> getSortedMatchesForPlayer(String playerName, Shard shard) {
-        return flickerApi.getMatches(new MatchRequest.Builder().playerName(playerName).shard(shard).sortField("-creationDate").build());
+        return flickerApi.getMatches(new MatchRequest.Builder().playerName(playerName).shard(shard).sortField("-createdAt").build());
     }
+
 ```
 
 Where applicable, the server allows requests to limit the number of results
@@ -85,11 +82,7 @@ Important - Currently the server will not allow responses with over 50 primary d
 
 ```shell
 curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=createdAt" \
-<<<<<<< HEAD
   -H "Authorization: api-key" \
-=======
-  -H "Authorization: Bearer xxx.yyy.zzz" \
->>>>>>> master
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
@@ -107,11 +100,7 @@ provide the ability to sort according to one or more criteria ("sort fields").
 
 ```shell
 curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=-createdAt" \
-<<<<<<< HEAD
   -H "Authorization: api-key" \
-=======
-  -H "Authorization: Bearer xxx.yyy.zzz" \
->>>>>>> master
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
