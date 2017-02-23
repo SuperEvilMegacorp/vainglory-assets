@@ -8,7 +8,7 @@ as it becomes available.
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/players/6abb30de-7cb8-11e4-8bd3-06eb725f8a76" \
-  -H "Authorization: Bearer aaa.bbb.ccc" \
+  -H "Authorization: Bearer xxx.yyy.zzz" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
