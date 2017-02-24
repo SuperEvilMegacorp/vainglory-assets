@@ -23,8 +23,6 @@ includes:
   - responses
   - matches
   - players
-  - teams
-  - link
   - errors
 
 search: true
