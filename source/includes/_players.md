@@ -1,34 +1,49 @@
-# Players
+# Players (Coming Soon!)
 
-Player objects contain aggregated lifetime information about each Player.  At this
-time Players are fairly sparse, but there are plans to add much richer data
-as it becomes available.
+Player objects contain aggregated lifetime information about each Player. At this time Players are fairly sparse, but there are plans to add much richer data as it becomes available.
 
 ## Get a single Player
 
-```shell
+<!-- ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/players/6abb30de-7cb8-11e4-8bd3-06eb725f8a76" \
-  -H "Authorization: Bearer aaa.bbb.ccc" \
+  -H "Authorization: Bearer api-key" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
-```
+``` -->
 
-```ruby
-# Unfortunately, there is no example yet.  Feel free to submit one!
-```
 
 ```python
 >>> p = api.player("6abb30de-7cb8-11e4-8bd3-06eb725f8a76")
 >>> p
 <gamelocker.datatypes.Player object at 0x7fe4814ede48>
->>> p.stats.lifetimeGold
+>>> p.stats["lifetimeGold"]
 10536.0
 >>> p.name
 'boombastic04'
 ```
 
+
+```go
+>>> player, _, _ := client.GetPlayerByID(playerID)
+>>> player.name
+```
+
 ```javascript
-// Unfortunately, there is no example yet.  Feel free to submit one!
+
+const playerId = '6abb30de-7cb8-11e4-8bd3-06eb725f8a76';
+
+vainglory.players.single(playerId).then((player) => {
+  console.log(player.id);
+  console.log(player.stats);
+}).catch((errorMsg) => {
+  console.error(errorMsg);
+});
+```
+
+```java
+public Player getProfileForPlayer(String playerId, Shard shard) {
+        return flickerApi.getPlayerById(playerId, shard);
+    }
 ```
 
 > The above command returns JSON structured like this:
@@ -61,10 +76,21 @@ moves from the `attributes.stats` object to the main `attributes` object.
 
 ### HTTP Request
 
+***The second endpoint is used for query by player name! We currently only support single player name lookup.***
+
 `GET https://api.dc01.gamelockerapp.com/shards/na/players/<ID>`
+
+`GET https://api.dc01.gamelockerapp.com/shards/na/players`
+
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
 ID | The ID of the player to retrieve
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+filter[playerNames] | none | Filters by a single player name. Usage: filter[playerNames]=player1

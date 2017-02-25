@@ -4,7 +4,7 @@
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/link/{id}" \
-  -H "Authorization: Bearer aaa.bbb.ccc" \
+  -H "Authorization: api-key" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
