@@ -111,6 +111,9 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches?page[limit]=3&page[of
 '2017-01-11T02:38:35Z'
 >>> m[0].rosters[0]
 <gamelocker.datatypes.Roster object at 0x7fe47abb0a90>
+>>> # specify the region
+>>> api.matches(region="eu")
+[...]
 ```
 
 > The above command returns JSON structured like this:
