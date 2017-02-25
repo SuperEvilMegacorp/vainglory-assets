@@ -9,7 +9,7 @@ duration, gameMode, and more.  Each Match has two Rosters.
 ## Rosters
 
 ```python
->>> match = api.match("eca49808-d510-11e6-bf26-cec0c932ce01")
+>>> match = api.match("800aa130-f8a9-11e6-ba38-0667892d829e")
 >>> match.rosters[0].stats["gold"]
 32344
 ```
@@ -58,12 +58,12 @@ within the context of a Match and are not exposed as a standalone resource.
 
 ## Participants
 ```python
->>> match = api.match("eca49808-d510-11e6-bf26-cec0c932ce01")
+>>> match = api.match("800aa130-f8a9-11e6-ba38-0667892d829e")
 >>> participant_left_1 = match.rosters[0].participants[0]
->>> participant_left_1.stats.farm
-49.25
->>> participant_left_1.actor.pretty()
-'Skye'
+>>> participant_left_1.stats["farm"]
+52
+>>> participant_left_1.actor
+'*Ringo*'
 ```
 
 ```go
@@ -210,7 +210,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches/0123b560-d74c-11e6-b8
 
 
 ```python
-api.match("0123b560-d74c-11e6-b845-0671096b3e30")
+api.match("800aa130-f8a9-11e6-ba38-0667892d829e")
 ```
 
 
