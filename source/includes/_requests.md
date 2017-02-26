@@ -50,9 +50,9 @@ const options = {
     limit: 50,
   },
   sort: 'createdAt',
-  filters: {
-    started: '3hrs ago',
-    ended: 'Now',
+  filter: {
+    'createdAt-start': '3hrs ago',
+    'createdAt-end': 'Now',
     playerNames: [],
     teamNames: [],
   }

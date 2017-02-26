@@ -123,15 +123,16 @@ const options = {
     limit: 50,
   },
   sort: 'createdAt',
-  filters: {
-    started: '3hrs ago',
-    ended: 'Now',
+  filter: {
+    'createdAt-start': '3hrs ago',
+    'createdAt-end': 'Now',
     playerNames: [],
     teamNames: [],
   }
 }
 vainglory.matches.collection(options).then((matches) => {
-    // matches is the raw data represntation from the query.
+    // matches is an object representation of that dataset;
+    // matches.match[n -> limit].rosters
 }).catch((errorMsg) => {
   console.error(errorMsg);
 });

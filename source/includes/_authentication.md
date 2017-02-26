@@ -9,7 +9,7 @@ curl "https://api.dc01.gamelockerapp.com" \
 ```
 ```python
 # Pass the token to the Gamelocker class
-api = gamelocker.Gamelocker("api-key")
+api = gamelocker.Gamelocker("xxx.yyy.zzz")
 ```
 
 ```go
@@ -18,7 +18,7 @@ client := v.NewClient(apikey,query)
 ```
 
 ```javascript
-const vainglory = new Vainglory('api-key');
+const vainglory = new Vainglory('xxx.yyy.zzz');
 ```
 
 > Make sure to replace `xxx.yyy.zzz` with your API key.
