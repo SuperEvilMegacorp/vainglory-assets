@@ -5,6 +5,7 @@ language_tabs:
   - shell
   - java
   - python
+  - ruby
   - javascript
   - go
 
@@ -23,6 +24,9 @@ includes:
   - responses
   - matches
   - players
+  - samples
+  - telemetry
+  - teams
   - errors
 
 search: true
@@ -31,22 +35,12 @@ layout: docs
 ---
 # Introduction
 ```python
-# requires you to install `python-gamelocker` via pip
-# https://pypi.python.org/pypi/python-gamelocker/
-import gamelocker
 ```
 
 ```go
-//Import the following URL
-import v "github.com/madglory/vainglory-go-client"
 ```
 
 ```javascript
-$ yarn add vainglory
-or
-$ npm install vainglory
-
-import Vainglory from 'vainglory';
 ```
 
 
@@ -81,29 +75,3 @@ We following [SEMVER](http://semver.org/) standards, using a MAJOR.MINOR.PATCH v
   * PATCH version when we make backwards-compatible bug fixes.
 
 You can see the current version and deploy date by viewing the [Status](https://api.dc01.gamelockerapp.com/status) endpoint.
-
-
-## Community API's
-
-Community contributions are welcome and rewarded with good karma (and swag!)
-If you are currently working on an API, let us know on the Discord server and we will add a link!
-
-**Java**
-
-* [DominicGunn/flicker] (http://github.com/DominicGunn/flicker) A Java adaptation of the Vainglory API.
-
-**Python**
-
-* [schneefux/python-gamelocker] (http://github.com/schneefux/python-gamelocker) Python 3 wrapper for the Gamelocker API.
-
-**JavaScript**
-
-* [seripap/vainglory] (https://github.com/seripap/vainglory) A JavaScript API client.
-
-**R**
-
-* [nathancarter/rvgapi] (https://github.com/nathancarter/rvgapi) A project providing R6 classes (for the R language) for accessing the API.
-
-**Go**
-
-* [madglory/vainglory-go-client] (https://github.com/madglory/vainglory-go-client) A proof of concept go client for the Vainglory Developer API.

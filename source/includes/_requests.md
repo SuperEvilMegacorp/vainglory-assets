@@ -9,6 +9,21 @@ since it is the default for many popular client libraries.
 The Server will respond with a `Content-Type` header that mirrors the format
 requested by the Client.
 
+
+## Regions
+
+```shell
+curl "https://api.dc01.gamelockerapp.com/shards/<region>/"
+```
+
+The Vainglory Game Data Service currently supports the following regions:
+
+* North America: na
+* Europe: eu
+* South America: sa
+* East Asia: ea
+* Southeast Asia (SEA): sg
+
 ## GZIP
 
 Clients can specify the header `Accept-Encoding: gzip` and the server will compress responses.  
@@ -17,7 +32,6 @@ Responses will be returns with `Content-Encoding: gzip`.
 Given the size of matches, this can have significant performance benefits.
 
 ```go
-//Already implemented in NewClient
 ```
 
 
@@ -25,45 +39,21 @@ Given the size of matches, this can have significant performance benefits.
 
 ```shell
 curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?page[limit]=3&page[offset]=0" \
-  -H "Authorization: api-key" \
+  -H "Authorization: Bearer <api-key>" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 
 ```python
-api.matches({"page[limit]": 20, "page[offset]": 10})
 ```
 
 ```go
-//The QueryRequest has usable queries attached
->>> q := new(v.QueryRequest)
->>> q.Limit = "3"
->>> q.Offset = "0"
->>> client := v.NewClient(apikey, q)
 ```
 
 ```javascript
-/* defaults */
-const options = {
-  page: {
-    offset: 0,
-    limit: 50,
-  },
-  sort: 'createdAt',
-  filters: {
-    started: '3hrs ago',
-    ended: 'Now',
-    playerNames: [],
-    teamNames: [],
-  }
-}
 ```
+
 ```java
-
-public List<Match> getSortedMatchesForPlayer(String playerName, Shard shard) {
-        return flickerApi.getMatches(new MatchRequest.Builder().playerName(playerName).shard(shard).sortField("-createdAt").build());
-    }
-
 ```
 
 Where applicable, the server allows requests to limit the number of results
@@ -82,17 +72,16 @@ Important - Currently the server will not allow responses with over 50 primary d
 
 ```shell
 curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=createdAt" \
-  -H "Authorization: api-key" \
+  -H "Authorization: Bearer <api-key>" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 ```python
-api.matches({"page[limit]": 20, "page[offset]": 10, "sort": "createdAt"})
+
 ```
 
 ```go
->>> q := new(v.QueryRequest)
->>> q.SortField = "createdAt"
+
 ```
 
 All resource collections have a default sort order.  In addition, some resources
@@ -100,17 +89,16 @@ provide the ability to sort according to one or more criteria ("sort fields").
 
 ```shell
 curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=-createdAt" \
-  -H "Authorization: api-key" \
+  -H "Authorization: Bearer <api-key>" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 ```python
-api.matches({"page{limit}": 20, "page[offset]": 10, "sort": "-createdAt"})
+
 ```
 
 ```go
->>> q := new(v.QueryRequest)
->>> q.SortField = "-createdAt"
+
 ```
 
 The above example should return the oldest articles first, meaning that
@@ -126,7 +114,7 @@ The above example should return the newest articles first.
 ## JSON-P Callbacks
 
 ```shell
-curl -g https://api.dc01.gamelockerapp.com/status?callback=foo
+curl -g "https://api.dc01.gamelockerapp.com/status?callback=foo"
 ```
 
 You can send a ?callback parameter to any GET call to have the results wrapped in a JSON function. This is typically used when browsers want to embed content in web pages by getting around cross domain issues. The response includes the same data output as the regular API, plus the relevant HTTP Header information.
