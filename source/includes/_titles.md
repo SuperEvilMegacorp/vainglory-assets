@@ -9,23 +9,12 @@ curl "https://api.dc01.gamelockerapp.com" \
 ```
 
 ```python
-api = gamelocker.Gamelocker.Vainglory()
 ```
 
 ```go
-// Create a client and pass in the api key and any query requests
->>> client := v.NewClient(apikey, query)
 ```
 
 ```javascript
-
-/* defaults */
-const options = {
-  host: 'https://api.dc01.gamelockerapp.com/shards/na/',
-  title: 'semc-vainglory',
-};
-
-const vainglory = new Vainglory('api-key', options);
 ```
 
 All endpoints require the following `X-TITLE-ID` header in order for us to respond to a request.

@@ -6,13 +6,12 @@ Team objects contain aggregated lifetime information about each Team.
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/teams" \
-  -H "Authorization: api-key" \
+  -H "Authorization: Bearer <api-key>" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 
 ```python
-# Unfortunately, there is no example yet.  Feel free to submit one!
 ```
 
 
@@ -39,13 +38,12 @@ Remember — a happy team is an authenticated team!
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/teams/2" \
-  -H "Authorization: api-key" \
+  -H "Authorization: Bearer <api-key>" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 
 ```python
-# Unfortunately, there is no example yet.  Feel free to submit one!
 ```
 
 > The above command returns JSON structured like this:

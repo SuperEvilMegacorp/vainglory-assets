@@ -1,4 +1,4 @@
-## Errors
+# Errors
 
 The server will stop processing if a problem is encountered and return the correct
 HTTP error status code.  Errors may additionally include error objects, which are
