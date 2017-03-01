@@ -21,11 +21,28 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players/6abb30de-7cb8-11e4-8b
 ```python
 ```
 
-
 ```go
 ```
 
 ```javascript
+const playerId = '6abb30de-7cb8-11e4-8bd3-06eb725f8a76';
+const playerName = 'famous';
+
+vainglory.players.getById(playerId).then((player) => {
+  if (player.errors) return;
+  console.log(player.id);
+  console.log(player.stats);
+}).catch((errorMsg) => {
+  console.error(errorMsg);
+});
+
+vainglory.players.getByName(playerName).then((player) => {
+  if (player.errors) return;
+  console.log(player.id);
+  console.log(player.stats);
+}).catch((errorMsg) => {
+  console.error(errorMsg);
+});
 ```
 
 ```java

@@ -14,6 +14,15 @@ duration, gameMode, and more.  Each Match has two Rosters.
 ```go
 ```
 
+```javascript
+vainglory.matches.single(matchId).then((match) => {
+  if (match.errors) return;
+  console.log(match.rosters[0].stats.gold);
+}).catch((errors) => {
+  console.log(errors);
+});
+```
+
 ```json
 {
   "type": "roster",
@@ -57,6 +66,15 @@ within the context of a Match and are not exposed as a standalone resource.
 ```go
 ```
 
+```javascript
+vainglory.matches.single(matchId).then((match) => {
+  if (match.errors) return;
+  console.log(match.rosters[0].participants[0]);
+}).catch((errors) => {
+  console.log(errors);
+});
+```
+
 ```json
 {
   "type": "participant",
@@ -91,10 +109,17 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches?page[limit]=3&page[of
 ```python
 ```
 
-> The above command returns JSON structured like this:
-
 ```javascript
+vainglory.matches.collection().then((matches) => {
+    if (matches.errors) return;
+    // matches is an object representation of that dataset;
+    // matches.match[n -> limit].rosters
+}).catch((errorMsg) => {
+  console.error(errorMsg);
+});
 ```
+
+> The above command returns JSON structured like this:
 
 ```java
 
@@ -160,17 +185,31 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches/0123b560-d74c-11e6-b8
   -H "Accept: application/vnd.api+json"
 ```
 
-
 ```python
 ```
 
+```javascript
+vainglory.matches.single(matchId).then((match) => {
+    if (match.errors) return;
+    console.log(match);
+}).catch((errorMsg) => {
+  console.error(errorMsg);
+});
+```
 
 ```go
 ```
+
 > The above command returns JSON structured like this:
 
-```javascript
+
+```go
+>>> match,_,_ := client.GetMatchByID(matchID)
+>>> match.GameMode
+Casual
 ```
+
+> The above command returns JSON structured like this:
 
 ```json
 {

@@ -51,6 +51,22 @@ curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?page[limit]=3&page
 ```
 
 ```javascript
+/* defaults */
+const options = {
+  page: {
+    offset: 0,
+    limit: 50,
+  },
+}
+
+vainglory.matches.collection().then((matches) => {}).catch(errs => errs);
+```
+
+```java
+
+public List<Match> getSortedMatchesForPlayer(String playerName, Shard shard) {
+        return flickerApi.getMatches(new MatchRequest.Builder().playerName(playerName).shard(shard).sortField("-createdAt").build());
+    }
 ```
 
 ```java
