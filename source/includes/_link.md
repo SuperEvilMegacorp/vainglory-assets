@@ -1,10 +1,10 @@
-# Links (Coming Soon!)
+<!-- # Links (Coming Soon!)
 
 ## Get a Link
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/link/{id}" \
-  -H "Authorization: api-key" \
+  -H "Authorization: Bearer <api-key>" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
@@ -18,4 +18,4 @@ This endpoint checks to see if a link object exists for a given code.
 ### Query Parameters
 
 Parameter | Default | Description
---------- | ------- | -----------
+--------- | ------- | ----------- -->

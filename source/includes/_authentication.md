@@ -13,8 +13,6 @@ api = gamelocker.Gamelocker("xxx.yyy.zzz")
 ```
 
 ```go
-// Create a client object and pass in the api key and any query requests
-client := v.NewClient(apikey,query)
 ```
 
 ```javascript

@@ -9,15 +9,9 @@ duration, gameMode, and more.  Each Match has two Rosters.
 ## Rosters
 
 ```python
->>> match = api.match("eca49808-d510-11e6-bf26-cec0c932ce01")
->>> match.rosters[0].stats["gold"]
-32344
 ```
 
 ```go
->>> match,_,_ := client.GetMatchByID(matchID)
->>> match.Rosters[0].Stats["gold"]
-49951
 ```
 
 ```javascript
@@ -67,19 +61,9 @@ within the context of a Match and are not exposed as a standalone resource.
 
 ## Participants
 ```python
->>> match = api.match("eca49808-d510-11e6-bf26-cec0c932ce01")
->>> participant_left_1 = match.rosters[0].participants[0]
->>> participant_left_1.stats.farm
-49.25
->>> participant_left_1.actor.pretty()
-'Skye'
 ```
 
 ```go
->>> match, _, _ := client.GetMatchByID(matchID)
->>> participantLeft1 := match.Rosters[0].Participants[0]
->>> participantLeft1.Actor
-Kestrel
 ```
 
 ```javascript
@@ -117,25 +101,17 @@ not exposed as a standalone resource.
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/matches?page[limit]=3&page[offset]=0" \" \
-  -H "Authorization: api-key" \
+  -H "Authorization: Bearer <api-key>" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 
 ```python
->>> m = api.matches()
-[<gamelocker.datatypes.Match object at 0x7fe47abc7668>, <gamelocker.datatypes.Match object at 0x7fe47b6f80b8>, ...]
->>> m[0].createdAt
-'2017-01-11T02:38:35Z'
->>> m[0].rosters[0]
-<gamelocker.datatypes.Roster object at 0x7fe47abb0a90>
 ```
-
-> The above command returns JSON structured like this:
 
 ```javascript
 vainglory.matches.collection().then((matches) => {
-    if (match.errors) return;
+    if (matches.errors) return;
     // matches is an object representation of that dataset;
     // matches.match[n -> limit].rosters
 }).catch((errorMsg) => {
@@ -143,14 +119,9 @@ vainglory.matches.collection().then((matches) => {
 });
 ```
 
-```java
-public List<Match> getMatchesForPlayer(String playerName, Shard shard) {
-        return flickerApi.getMatches(new MatchRequest.Builder().playerName(playerName).shard(shard).build());
-    }
+> The above command returns JSON structured like this:
 
-public List<Match> getRecentMatchesForPlayer(String playerName, Shard shard, Date recentDate) {
-        return flickerApi.getMatches(new MatchRequest.Builder().playerName(playerName).shard(shard).createdAfter(recentDate).build());
-    }
+```java
 
 ```
 ```json
@@ -209,25 +180,28 @@ Remember — a happy match is an authenticated match!
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/matches/0123b560-d74c-11e6-b845-0671096b3e30" \
-  -H "Authorization: api-key" \
+  -H "Authorization: Bearer <api-key>" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 
 ```python
-api.match("0123b560-d74c-11e6-b845-0671096b3e30")
 ```
 
 ```javascript
-const matchId = '0123b560-d74c-11e6-b845-0671096b3e30';
-
 vainglory.matches.single(matchId).then((match) => {
-  console.log(match.id);
-  console.log(match.stats);
+    if (match.errors) return;
+    console.log(match);
 }).catch((errorMsg) => {
   console.error(errorMsg);
 });
 ```
+
+```go
+```
+
+> The above command returns JSON structured like this:
+
 
 ```go
 >>> match,_,_ := client.GetMatchByID(matchID)
