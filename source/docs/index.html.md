@@ -42,9 +42,7 @@ import v "github.com/madglory/vainglory-go-client"
 ```
 
 ```javascript
-$ yarn add vainglory
-or
-$ npm install vainglory
+$ npm add --save vainglory
 
 import Vainglory from 'vainglory';
 ```

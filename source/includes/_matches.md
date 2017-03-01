@@ -20,6 +20,15 @@ duration, gameMode, and more.  Each Match has two Rosters.
 49951
 ```
 
+```javascript
+vainglory.matches.single(matchId).then((match) => {
+  if (match.errors) return;
+  console.log(match.rosters[0].stats.gold);
+}).catch((errors) => {
+  console.log(errors);
+});
+```
+
 ```json
 {
   "type": "roster",
@@ -73,6 +82,15 @@ within the context of a Match and are not exposed as a standalone resource.
 Kestrel
 ```
 
+```javascript
+vainglory.matches.single(matchId).then((match) => {
+  if (match.errors) return;
+  console.log(match.rosters[0].participants[0]);
+}).catch((errors) => {
+  console.log(errors);
+});
+```
+
 ```json
 {
   "type": "participant",
@@ -116,21 +134,8 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches?page[limit]=3&page[of
 > The above command returns JSON structured like this:
 
 ```javascript
-/* defaults */
-const options = {
-  page: {
-    offset: 0,
-    limit: 50,
-  },
-  sort: 'createdAt',
-  filter: {
-    'createdAt-start': '3hrs ago',
-    'createdAt-end': 'Now',
-    playerNames: [],
-    teamNames: [],
-  }
-}
-vainglory.matches.collection(options).then((matches) => {
+vainglory.matches.collection().then((matches) => {
+    if (match.errors) return;
     // matches is an object representation of that dataset;
     // matches.match[n -> limit].rosters
 }).catch((errorMsg) => {
@@ -209,18 +214,9 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches/0123b560-d74c-11e6-b8
   -H "Accept: application/vnd.api+json"
 ```
 
-
 ```python
 api.match("0123b560-d74c-11e6-b845-0671096b3e30")
 ```
-
-
-```go
->>> match,_,_ := client.GetMatchByID(matchID)
->>> match.GameMode
-Casual
-```
-> The above command returns JSON structured like this:
 
 ```javascript
 const matchId = '0123b560-d74c-11e6-b845-0671096b3e30';
@@ -232,6 +228,14 @@ vainglory.matches.single(matchId).then((match) => {
   console.error(errorMsg);
 });
 ```
+
+```go
+>>> match,_,_ := client.GetMatchByID(matchID)
+>>> match.GameMode
+Casual
+```
+
+> The above command returns JSON structured like this:
 
 ```json
 {

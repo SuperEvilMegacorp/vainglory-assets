@@ -49,15 +49,11 @@ const options = {
     offset: 0,
     limit: 50,
   },
-  sort: 'createdAt',
-  filter: {
-    'createdAt-start': '3hrs ago',
-    'createdAt-end': 'Now',
-    playerNames: [],
-    teamNames: [],
-  }
 }
+
+vainglory.matches.collection().then((matches) => {}).catch(errs => errs);
 ```
+
 ```java
 
 public List<Match> getSortedMatchesForPlayer(String playerName, Shard shard) {

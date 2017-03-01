@@ -22,7 +22,6 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players/6abb30de-7cb8-11e4-8b
 'boombastic04'
 ```
 
-
 ```go
 >>> player, _, _ := client.GetPlayerByID(playerID)
 >>> player.name
@@ -33,6 +32,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players/6abb30de-7cb8-11e4-8b
 const playerId = '6abb30de-7cb8-11e4-8bd3-06eb725f8a76';
 
 vainglory.players.single(playerId).then((player) => {
+  if (player.errors) return;
   console.log(player.id);
   console.log(player.stats);
 }).catch((errorMsg) => {
