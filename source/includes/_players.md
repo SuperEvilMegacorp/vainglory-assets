@@ -14,23 +14,18 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players/6abb30de-7cb8-11e4-8b
     -H "Authorization: Bearer <api-key>" \
     -H "X-TITLE-ID: semc-vainglory" \
     -H "Accept: application/vnd.api+json"
-
 ```
-
-
+```java
+//There are a variety of Java HTTP libraries that support query-parameters.
+```
 ```python
 ```
-
-
-```go
+```ruby
 ```
-
 ```javascript
 ```
-
-```java
+```go
 ```
-
 > The above command returns JSON structured like this:
 
 ```json
@@ -52,7 +47,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players/6abb30de-7cb8-11e4-8b
 
 This endpoint retrieves a specific player.
 
-<aside class="warning">
+<aside class="notice">
 Changes Coming! - Player resources are not fully defined at this point, but are
 included so that consumers can get basic info (name, etc.)  This object will have
 additional data added over the next few months, and may change slightly as data
@@ -67,6 +62,13 @@ moves from the `attributes.stats` object to the main `attributes` object.
 
 `GET https://api.dc01.gamelockerapp.com/shards/na/players`
 
+<aside class="warning">
+There is a bug with the current player filter:</aside>
+**/shards/na/players/?filter[playerName]=playerName**
+
+**Will be changing to:**
+
+**/shards/na/players?filter[playerNames]=playerName**
 
 ### URL Parameters
 

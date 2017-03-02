@@ -11,21 +11,17 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/samples" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
-
-
+```java
+//There are a variety of Java HTTP libraries that support query-parameters.
+```
 ```python
 ```
-
-
-```go
+```ruby
 ```
-
 ```javascript
 ```
-
-```java
+```go
 ```
-
 > The above command returns JSON structured like this:
 
 ```json

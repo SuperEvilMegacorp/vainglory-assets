@@ -4,9 +4,6 @@
 
 All Server responses contain a root JSON object.  
 
-```python
-```
-
 ~~~.language-json
 {
   "data": {
@@ -60,6 +57,8 @@ A logical collection of resources will always be represented as an array, even i
 it only contains one item or is empty.
 
 ## Rate Limits
+>The rate limit headers are defined as follows:
+
 ~~~
 X-RateLimit-Limit - Request limit per day / per minute
 X-RateLimit-Remaining - The number of requests left for the time window

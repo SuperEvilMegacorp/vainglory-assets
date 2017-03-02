@@ -11,10 +11,6 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/teams" \
   -H "Accept: application/vnd.api+json"
 ```
 
-```python
-```
-
-
 This endpoint retrieves all teams.
 
 <aside class="warning">

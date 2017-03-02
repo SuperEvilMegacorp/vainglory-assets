@@ -8,12 +8,6 @@ duration, gameMode, and more.  Each Match has two Rosters.
 
 ## Rosters
 
-```python
-```
-
-```go
-```
-
 ```json
 {
   "type": "roster",
@@ -22,7 +16,7 @@ duration, gameMode, and more.  Each Match has two Rosters.
     "stats": {
       "acesEarned": 2,
       "gold": 32344,
-      ...
+      "etc..."
     }
   },
   "relationships": {
@@ -38,7 +32,7 @@ duration, gameMode, and more.  Each Match has two Rosters.
           "type": "participant",
           "id": "eca49a7e-d510-11e6-bf26-cec0c932ce01"
         },
-        ...
+        "etc..."
       ]
     }
   }
@@ -51,11 +45,6 @@ objects, one for each member of the Roster. Roster objects are only meaningful
 within the context of a Match and are not exposed as a standalone resource.
 
 ## Participants
-```python
-```
-
-```go
-```
 
 ```json
 {
@@ -68,7 +57,7 @@ within the context of a Match and are not exposed as a standalone resource.
       "crystalMineCaptures": 1,
       "deaths": 2,
       "farm": 49.25,
-      ...
+      "etc..."
     }
   }
 }
@@ -82,23 +71,31 @@ not exposed as a standalone resource.
 ## Get a collection of Matches
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/shards/na/matches?page[limit]=3&page[offset]=0" \" \
+curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=createdAt&page[limit]=3&filter[createdAt-start]=2017-02-27T13:25:30Z&filter[playerNames]=<playerName>" \
   -H "Authorization: Bearer <api-key>" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
-
+```java
+//There are a variety of Java HTTP libraries that support query-parameters.
+```
 ```python
 ```
-
-> The above command returns JSON structured like this:
-
+```ruby
+```
 ```javascript
 ```
-
-```java
-
+```go
+q := req.URL.Query()
+q.Add("sort", "createdAt")
+q.Add("filter[playerNames]", "<playerName>")
+q.Add("filter[createdAt-start]", "2017-02-27T13:25:30Z")
+q.Add("page[limit]", "3")
+req.URL.RawQuery = q.Encode()
+res, _ := client.Do(req)
 ```
+> The above command returns JSON structured like this:
+
 ```json
 {
   "data": [
@@ -111,7 +108,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches?page[limit]=3&page[of
         "gameMode": "casual",
         "patchVersion": "1.0.0",
         "region": "na",
-        "stats": ...
+        "stats": "acesEarned: 3, etc..."
       },
       "relationships": {
         "rosters": {
@@ -129,7 +126,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches?page[limit]=3&page[of
 }
 ```
 
-This endpoint retrieves all matches. Should be used with filters for optimal performance!
+This endpoint retrieves data from matches.
 
 ### HTTP Request
 
@@ -154,23 +151,24 @@ Remember — a happy match is an authenticated match!
 ## Get a single Match
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/shards/na/matches/0123b560-d74c-11e6-b845-0671096b3e30" \
+curl "https://api.dc01.gamelockerapp.com/shards/na/matches/<matchID>" \
   -H "Authorization: Bearer <api-key>" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
-
-
+```java
+//There are a variety of Java HTTP libraries that support URL parameters
+```
 ```python
 ```
-
-
-```go
+```ruby
 ```
-> The above command returns JSON structured like this:
-
 ```javascript
 ```
+```go
+```
+
+> The above command returns JSON structured like this:
 
 ```json
 {
@@ -183,7 +181,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches/0123b560-d74c-11e6-b8
       "gameMode": "casual",
       "patchVersion": "1.0.0",
       "region": "na",
-      "stats": ...
+      "stats": "acesEarned: 3, etc..."
     },
     "relationships": {
       "rosters": {

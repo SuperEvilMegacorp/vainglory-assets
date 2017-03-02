@@ -12,8 +12,25 @@ requested by the Client.
 
 ## Regions
 
+> To specify the regions, use this code:
+
 ```shell
-curl "https://api.dc01.gamelockerapp.com/shards/<region>/"
+"...gamelockerapp.com/shards/<region>/..."
+```
+```java
+"...gamelockerapp.com/shards/<region>/..."
+```
+```python
+"...gamelockerapp.com/shards/<region>/..."
+```
+```ruby
+"...gamelockerapp.com/shards/<region>/..."
+```
+```javascript
+"...gamelockerapp.com/shards/<region>/..."
+```
+```go
+"...gamelockerapp.com/shards/<region>/..."
 ```
 
 The Vainglory Game Data Service currently supports the following regions:
@@ -24,43 +41,42 @@ The Vainglory Game Data Service currently supports the following regions:
 * East Asia: ea
 * Southeast Asia (SEA): sg
 
+**Choosing a specific region is currently required**
+
 ## GZIP
+
+> To specify the header Accept-Encoding, use this code:
+
+```shell
+-H "Accept-Encoding: gzip"
+```
+```java
+conn.setRequestProperty("Accept-Encoding","gzip");
+
+```
+```python
+```
+```ruby
+```
+```javascript
+```
+```go
+req.Header.Set("Accept-Encoding", "gzip")
+```
 
 Clients can specify the header `Accept-Encoding: gzip` and the server will compress responses.  
 Responses will be returns with `Content-Encoding: gzip`.
 
 Given the size of matches, this can have significant performance benefits.
 
-```go
-```
-
 
 ## Pagination
 
-```shell
-curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?page[limit]=3&page[offset]=0" \
-  -H "Authorization: Bearer <api-key>" \
-  -H "X-TITLE-ID: semc-vainglory" \
-  -H "Accept: application/vnd.api+json"
-```
-
-```python
-```
-
-```go
-```
-
-```javascript
-```
-
-```java
-```
 
 Where applicable, the server allows requests to limit the number of results
 returned via pagination. To paginate the primary data, supply pagination information
 to the query portion of the request using the limit and offset parameters.  
 To fetch items 2 through 10 you would specify a limit of 8 and an offset of 2:
-
 
 If not specified, the server will default `limit=50` and `offset=0`.
 
@@ -70,46 +86,56 @@ Important - Currently the server will not allow responses with over 50 primary d
 
 ## Sorting
 
-```shell
-curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=createdAt" \
-  -H "Authorization: Bearer <api-key>" \
-  -H "X-TITLE-ID: semc-vainglory" \
-  -H "Accept: application/vnd.api+json"
-```
-```python
-
-```
-
-```go
-
-```
-
-All resource collections have a default sort order.  In addition, some resources
-provide the ability to sort according to one or more criteria ("sort fields").
+>The example below will return the oldest articles first:
 
 ```shell
-curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=-createdAt" \
-  -H "Authorization: Bearer <api-key>" \
-  -H "X-TITLE-ID: semc-vainglory" \
-  -H "Accept: application/vnd.api+json"
+".../matches?sort=createdAt"
+```
+```java
+".../matches?sort=createdAt"
 ```
 ```python
-
+".../matches?sort=createdAt"
 ```
-
+```ruby
+".../matches?sort=createdAt"
+```
+```javascript
+".../matches?sort=createdAt"
+```
 ```go
-
+".../matches?sort=createdAt"
 ```
 
-The above example should return the oldest articles first, meaning that
-the default sort order is always ascending. Ascending corresponds to the
+>The example below will return the newest articles first.
+
+```shell
+".../matches?sort=-createdAt"
+```
+```java
+".../matches?sort=-createdAt"
+```
+```python
+".../matches?sort=-createdAt"
+```
+```ruby
+".../matches?sort=-createdAt"
+```
+```javascript
+".../matches?sort=-createdAt"
+```
+```go
+".../matches?sort=-createdAt"
+```
+The default sort order is always ascending. Ascending corresponds to the
 standard order of numbers and letters, i.e. A to Z, 0 to 9).  For dates and times,
 ascending means that earlier values precede later ones e.g. 1/1/2000 will sort
 ahead of 1/1/2001.
 
-If sort fields are is prefixed with a minus, the order will be changed to descending.
+All resource collections have a default sort order.  In addition, some resources
+provide the ability to sort according to one or more criteria ("sort fields").
 
-The above example should return the newest articles first.
+If sort fields are is prefixed with a minus, the order will be changed to descending.
 
 ## JSON-P Callbacks
 
