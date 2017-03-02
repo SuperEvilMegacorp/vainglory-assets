@@ -1,6 +1,6 @@
 # Authorization
 
-> To specify the Headers key, use this code:
+> To specify the Headers, use this code:
 
 ```shell
   # With shell, you can just pass the correct header with each request
