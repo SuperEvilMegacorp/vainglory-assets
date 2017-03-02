@@ -19,8 +19,21 @@ conn.setRequestMethod("GET");
 conn.setRequestProperty("Authorization","<api-key>");
 conn.setRequestProperty("X-TITLE-ID", "semc-vainglory");
 conn.setRequestProperty("Accept", "application/vnd.api+json");
+
+conn.getInputStream()
 ```
 ```python
+import requests
+
+url = "https://api.dc01.gamelockerapp.com/"
+
+header = {
+    "Authorization": "<api-key>",
+    "X-TITLE-ID": "semc-vainglory",
+    "Accept": "application/vnd.api+json"
+}
+
+r = requests.get(url, headers=header)
 ```
 ```ruby
 ```

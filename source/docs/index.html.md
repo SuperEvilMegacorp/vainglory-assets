@@ -34,16 +34,6 @@ search: true
 layout: docs
 ---
 # Introduction
-```python
-```
-
-```go
-```
-
-```javascript
-```
-
-
 
 The first version of the Vainglory Game Data Service is an exciting step forward
 towards making it easier for users to have open access to in-game data.

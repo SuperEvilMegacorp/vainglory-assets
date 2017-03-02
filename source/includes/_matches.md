@@ -80,6 +80,24 @@ curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=createdAt&pag
 //There are a variety of Java HTTP libraries that support query-parameters.
 ```
 ```python
+import requests
+
+url = "https://api.dc01.gamelockerapp.com/shards/na/matches"
+
+header = {
+    "Authorization": "<api-key>",
+    "X-TITLE-ID": "semc-vainglory",
+    "Accept": "application/vnd.api+json"
+}
+
+query = {
+    "sort": "createdAt",
+    "filter[playerNames]": "<playerName>",
+    "filter[createdAt-start]": "2017-02-28T13:25:30Z",
+    "page[limit]": "3"
+}
+
+r = requests.get(url, headers=header, params=query)
 ```
 ```ruby
 ```

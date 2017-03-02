@@ -55,6 +55,7 @@ conn.setRequestProperty("Accept-Encoding","gzip");
 
 ```
 ```python
+header = {"Accept-Encoding":"gzip"}
 ```
 ```ruby
 ```
