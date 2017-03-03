@@ -27,6 +27,7 @@ includes:
   - samples
   - telemetry
   - teams
+  - sdks
   - errors
 
 search: true

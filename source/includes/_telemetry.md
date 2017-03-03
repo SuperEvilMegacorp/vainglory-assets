@@ -15,7 +15,7 @@
      }
 ```
 
-Live Telemetry data is coming soon! 
+Live Telemetry data is coming soon!
 
 Download sample telemetry data [here!](https://cdn.discordapp.com/attachments/272249149473161216/282627164053176320/telemetry_sample.tgz)
 
