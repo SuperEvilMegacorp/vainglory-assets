@@ -10,7 +10,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players/6abb30de-7cb8-11e4-8b
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 
-  curl "https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=<player>" \
+  curl "https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerName]=<player>" \
     -H "Authorization: Bearer <api-key>" \
     -H "X-TITLE-ID: semc-vainglory" \
     -H "Accept: application/vnd.api+json"
@@ -78,4 +78,4 @@ ID | The ID of the player to retrieve
 
 Parameter | Default | Description
 --------- | ------- | -----------
-filter[playerNames] | none | Filters by a single player name. Usage: filter[playerNames]=<player1>
+filter[playerName] | none | Filters by a single player name. Usage: filter[playerName]=<player1>
