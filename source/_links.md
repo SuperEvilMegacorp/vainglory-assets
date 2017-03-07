@@ -1,4 +1,4 @@
-<!-- # Links (Coming Soon!)
+# Links (Coming Soon!)
 
 ## Get a Link
 
@@ -18,4 +18,4 @@ This endpoint checks to see if a link object exists for a given code.
 ### Query Parameters
 
 Parameter | Default | Description
---------- | ------- | ----------- -->
+--------- | ------- | ----------- 

@@ -56,8 +56,7 @@ JWTs are passed as bearer tokens in the Authorization header, and look like the 
 `Authorization: <Enter your API Key>`
 
 
-There's no need to create JWTs manually, they will be created for you when you register for the API.
-For now anything is accepted.
+There's no need to create JWTs manually, they will be created for you when you register for the API. [Register Here!](https://developer.vainglorygame.com/users/sign_in)
 
 In some cases an `X-API-KEY` will give you more access to information, and in all
  cases it means that you are operating under a per-token rate limit.

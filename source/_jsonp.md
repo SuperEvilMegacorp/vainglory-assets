@@ -5,3 +5,16 @@ You can send a ?callback parameter to any GET call to have the results wrapped i
 ```shell
 curl https://api.dc01.gamelockerapp.com/status?callback=foo
 ```
+
+```javascript
+foo({
+  "meta": {  
+    "content-length":34,
+    "content-type":"application/json; charset=utf-8",
+    "status":200
+  },
+  "data": {
+    ...  // the data
+  }
+})
+```
