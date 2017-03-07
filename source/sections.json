@@ -11,6 +11,7 @@
   "8":  "_samples",
   "9":  "_telemetry",
   "10": "_teams",
-  "11": "_sdks",
-  "12": "_errors",
+  "11": "_links",
+  "12": "_sdks",
+  "13": "_errors",
 }
