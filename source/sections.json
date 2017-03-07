@@ -1,5 +1,4 @@
 {
-
   "0":  "_introduction",
   "1":  "_datacenters",
   "2":  "_authentication",
@@ -13,5 +12,5 @@
   "10": "_teams",
   "11": "_links",
   "12": "_sdks",
-  "13": "_errors",
+  "13": "_errors"
 }
