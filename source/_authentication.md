@@ -9,6 +9,7 @@
   -H "X-TITLE-ID: semc-vainglory"
   -H "Accept: application/vnd.api+json"
 ```
+
 ```java
 import java.io.*;
 import java.net.*;
@@ -22,6 +23,7 @@ conn.setRequestProperty("Accept", "application/vnd.api+json");
 
 conn.getInputStream()
 ```
+
 ```python
 import requests
 
@@ -35,10 +37,13 @@ header = {
 
 r = requests.get(url, headers=header)
 ```
+
 ```ruby
 ```
+
 ```javascript
 ```
+
 ```go
 import "net/http"
 

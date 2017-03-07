@@ -1,3 +1,14 @@
+---
+language_tabs:
+  - shell
+  - java
+  - python
+  - javascript
+  - go
+  - ruby
+  - javascript
+---
+
 # Introduction
 
 The first version of the Vainglory Game Data Service is an exciting step forward
