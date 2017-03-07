@@ -79,7 +79,7 @@ returned via pagination. To paginate the primary data, supply pagination informa
 to the query portion of the request using the limit and offset parameters.  
 To fetch items 2 through 10 you would specify a limit of 8 and an offset of 2:
 
-If not specified, the server will default `limit=50` and `offset=0`.
+If not specified, the server will default for matches to`limit=5` and `offset=0`, and for players/samples to `limit=50` and `offset=0`
 
 <aside class="warning">
 Important - Currently the server will not allow responses with over 50 primary data objects

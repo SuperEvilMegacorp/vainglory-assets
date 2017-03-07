@@ -144,7 +144,7 @@ res, _ := client.Do(req)
 }
 ```
 
-This endpoint retrieves data from matches.
+This endpoint retrieves data from matches. Bulk scraping matches is prohibited.
 
 ### HTTP Request
 
