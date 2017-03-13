@@ -9,39 +9,40 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players/6abb30de-7cb8-11e4-8b
   -H "Authorization: Bearer <api-key>" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
-
-  curl "https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=<player1,player2>" \
-    -H "Authorization: Bearer <api-key>" \
-    -H "X-TITLE-ID: semc-vainglory" \
-    -H "Accept: application/vnd.api+json"
 ```
+
 ```java
 //There are a variety of Java HTTP libraries that support query-parameters.
 ```
+
 ```python
 ```
+
 ```ruby
 ```
+
 ```javascript
 ```
+
 ```go
 ```
+
 > The above command returns JSON structured like this:
 
 ```json
 {
-  "data": {
-    "attributes": {
-        "stats": {
-            "lossStreak": 1,
-            "winStreak": 0,
-            "lifetimeGold": 10536.0
-        },
-        "name": "boombastic04"
-    },
-    "type": "player",
-    "id": "6abb30de-7cb8-11e4-8bd3-06eb725f8a76"
-  }
+"data": {
+  "attributes": {
+      "stats": {
+          "lossStreak": 1,
+          "winStreak": 0,
+          "lifetimeGold": 10536.0
+      },
+      "name": "boombastic04"
+  },
+  "type": "player",
+  "id": "6abb30de-7cb8-11e4-8bd3-06eb725f8a76"
+}
 }
 ```
 
@@ -56,11 +57,8 @@ moves from the `attributes.stats` object to the main `attributes` object.
 
 ### HTTP Request
 
-***The second endpoint is used for query by player name! We currently support lookup for up to six player names.***
-
 `GET https://api.dc01.gamelockerapp.com/shards/na/players/<ID>`
 
-`GET https://api.dc01.gamelockerapp.com/shards/na/players`
 
 ### URL Parameters
 
@@ -68,7 +66,40 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the player to retrieve
 
+
+## Get a collection of players
+
+This endpoint retrieves a collection of up to 6 players, filtered by name.
+
+```shell
+curl "https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=<player1,player2...>" \
+  -H "Authorization: Bearer <api-key>" \
+  -H "X-TITLE-ID: semc-vainglory" \
+  -H "Accept: application/vnd.api+json"
+```
+
+```java
+//There are a variety of Java HTTP libraries that support query-parameters.
+```
+
+```python
+```
+
+```ruby
+```
+
+```javascript
+```
+
+```go
+```
+
+### HTTP Request
+
+`GET https://api.dc01.gamelockerapp.com/shards/na/players`
+
 ### Query Parameters
+
 
 Parameter | Default | Description
 --------- | ------- | -----------
