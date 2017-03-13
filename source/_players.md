@@ -10,7 +10,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players/6abb30de-7cb8-11e4-8b
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 
-  curl "https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=<player>" \
+  curl "https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=<player1,player2>" \
     -H "Authorization: Bearer <api-key>" \
     -H "X-TITLE-ID: semc-vainglory" \
     -H "Accept: application/vnd.api+json"
@@ -56,19 +56,11 @@ moves from the `attributes.stats` object to the main `attributes` object.
 
 ### HTTP Request
 
-***The second endpoint is used for query by player name! We currently only support single player name lookup.***
+***The second endpoint is used for query by player name! We currently support lookup for up to six player names.***
 
 `GET https://api.dc01.gamelockerapp.com/shards/na/players/<ID>`
 
 `GET https://api.dc01.gamelockerapp.com/shards/na/players`
-
-<aside class="warning">
-There is a bug with the current player filter:</aside>
-**/shards/na/players/?filter[playerName]=playerName**
-
-**Will be changing to:**
-
-**/shards/na/players?filter[playerNames]=playerName**
 
 ### URL Parameters
 
@@ -80,4 +72,4 @@ ID | The ID of the player to retrieve
 
 Parameter | Default | Description
 --------- | ------- | -----------
-filter[playerNames] | none | Filters by a single player name. Usage: filter[playerNames]=<player1>
+filter[playerNames] | none | Filters by up to six player names. Usage: filter[playerNames]=<player1,player2>
