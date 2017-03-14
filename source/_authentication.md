@@ -4,7 +4,7 @@
 
 ```shell
   # With shell, you can just pass the correct header with each request
-  curl "https://api.dc01.gamelockerapp.com/" \
+  curl "<endpoint-url>" \
   -H "Authorization: <api-key>"
   -H "X-TITLE-ID: semc-vainglory"
   -H "Accept: application/vnd.api+json"
@@ -14,7 +14,7 @@
 import java.io.*;
 import java.net.*;
 
-URL url = new URL("https://api.dc01.gamelockerapp.com/");
+URL url = new URL("<endpoint-url>");
 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 conn.setRequestMethod("GET");
 conn.setRequestProperty("Authorization","<api-key>");
@@ -27,7 +27,7 @@ conn.getInputStream()
 ```python
 import requests
 
-url = "https://api.dc01.gamelockerapp.com/"
+url = "<endpoint-url>"
 
 header = {
     "Authorization": "<api-key>",
@@ -48,7 +48,7 @@ r = requests.get(url, headers=header)
 import "net/http"
 
 client := &http.Client{}
-req, _ := http.NewRequest("GET","https://api.dc01.gamelockerapp.com/",nil)
+req, _ := http.NewRequest("GET","<endpoint-url>",nil)
 req.Header.Set("Authorization", "<api-key>")
 req.Header.Set("X-TITLE-ID", "semc-vainglory")
 req.Header.Set("Accept", "application/vnd.api+json")
