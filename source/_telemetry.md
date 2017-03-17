@@ -76,7 +76,8 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
           "data": []
         }
       }
-    }, ```
+    }, 
+ ```
 
 
 > You need to look for Assets JSON node which points to telemetry. Check for the following in the response:
