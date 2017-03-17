@@ -30,9 +30,9 @@ A: The API is free for non-commercial use.  For a commercial license, send an em
 
 ######Q: If I have a question regarding the API, what do I do?  
 A: Reach out to api@superevilmegacorp.com and jump into the [Discord](https://discord.me/vaingloryapi).  
-<br>
+
 ### Development/Troubleshooting:  
-<br>
+
 ######Q: The documentation is wrong. What do I do now?  
 A: With the API still in Alpha, it’s very possible the docs are not completely up-to-date. We’re updating the docs as we go! You can also contribute to the docs on [Github](https://developer.vainglorygame.com) if you’d like to make some changes.
 
@@ -45,9 +45,8 @@ A: The API defaults to searching for matches over the last 3 hours. To find any 
 ######Q: Where can I find assets/images to use on my project?  
 A: We are working on a way to have assets available to you directly from Vainglory. In the meantime, the community has put together some great resources for you in [Discord](https://discord.me/vaingloryapi). You can find them in the pinned files in #vaingloryapi-chat.
 
-<br>
 ### API Challenge:  
-<br>
+
 ######Q: How do I enter the API Challenge?  
 A: You can sign up for the API Challenge [Right Here](https://developer.vainglorygame.com/rules).
 
@@ -62,8 +61,8 @@ A: For the API Challenge, you don’t need to tell us what team you’re on. Whe
 
 ######Q:  My team is making a mobile app.  Can we submit that?  
 A:  YES! When submitting a mobile app, we just need to see that it works.  You can have it run on an emulator, Testflight, etc.  If you have specific questions on this reach us at api@superevilmegacorp.com  
-<br>
+
 ### Beyond Alpha:
-<br>
+
 ######Q:  What are some more features we can expect with the API?  
 A:  We are constantly looking to add new features to the API.  In the future you can expect things like account linking, match reservations, and many more!  If you would like to help impact what the API will look like in the future, join the conversation on our public [Discord](discord.me/vaingloryapi) channel! 
