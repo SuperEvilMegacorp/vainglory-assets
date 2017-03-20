@@ -1,6 +1,6 @@
 # Gamelocker Vainglory API Changelog
 
-##Version 4.2.3
+## Version 4.2.3
 - Hero name fixes:
 
 ```
