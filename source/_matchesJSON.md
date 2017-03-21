@@ -13,9 +13,9 @@ Special thanks to Kashz for helping to create this! GitHub: iAm-Kashif
 | gameMode | str | Game Mode |
 | patchVersion | str | Version of API |
 | region | str | Region of match |
-| stats | map | [See Match.stats](#1) |
-| assets | obj | [See Match.assets](#2)  |
-| rosters | obj | [See Rosters](#3) |
+| stats | map | See [Match.stats](#1) |
+| assets | obj | See [Match.assets](#2)  |
+| rosters | obj | See [Rosters](#3) |
 
 ### <a name="1"></a> **Match.stats** **(End of game statistics)**
 
@@ -43,9 +43,9 @@ Special thanks to Kashz for helping to create this! GitHub: iAm-Kashif
 | :---: | :---: | :---: |
 | id | str | ID of Roster |
 | type | str | Roster
-| participants | obj | [See Participants](#4) |
-| stats | obj | [See Rosters.stats](#5) |
-| team | obj | [See Rosters.team](#6) |
+| participants | obj | See [Participants](#4) |
+| stats | obj | See [Rosters.stats](#5) |
+| team | obj | See [Rosters.team](#6) |
 
 ### <a name="5"></a>**Rosters.stats**
 | Variable | Type |
@@ -71,8 +71,8 @@ Special thanks to Kashz for helping to create this! GitHub: iAm-Kashif
 | :---: | :---: | :---: |
 | actor | str | Hero |
 | id | str | Same as ID of Roster |
-| player | obj |[See Participants.player](#7)|
-| stats | map |[See Participants.stats](#8) |
+| player | obj |See [Participants.player](#7)|
+| stats | map |See [Participants.stats](#8) |
 | type | str | participants |
 
 ### <a name="7"></a>**Participants.player**
@@ -81,7 +81,7 @@ Special thanks to Kashz for helping to create this! GitHub: iAm-Kashif
 | :---: | :---: | :---: |
 | id | str | UID of player |
 | name | str | IGN of player |
-| stats | map | [See Participants.player.stats](#9) |
+| stats | map | See [Participants.player.stats](#9) |
 | type | str | player |
 
 ### <a name="8"></a>**Participants.stats**
@@ -111,7 +111,7 @@ Special thanks to Kashz for helping to create this! GitHub: iAm-Kashif
 | wentAfk | bool |
 | winner | bool |
 
-### <a name="9"></a> **Participants.player.stats:**
+### <a name="9"></a> **Participants.player.stats**
 
 | Variable | Type | 
 | :---: | :---: | 
