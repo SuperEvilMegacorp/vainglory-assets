@@ -1,14 +1,14 @@
 # ***Match JSON Breakdown***
 
-Special thanks to Kashz for helping create this! GitHub: iAm-Kashif
+Special thanks to Kashz for helping to create this! GitHub: iAm-Kashif
 
-### **Match Object:**
+### **Match Object**
 
 | Variable | Type | Description |
 | :---: | :---: | :---: |
 | type | str | Match |
 | id | str | Match ID |
-| createdAt | str in iso8601 | Time of Match Played |
+| createdAt | str (iso8601) | Time of Match Played |
 | duration | int | Time of match in seconds |
 | gameMode | str | Game Mode |
 | patchVersion | str | Version of API |
@@ -29,7 +29,7 @@ Special thanks to Kashz for helping create this! GitHub: iAm-Kashif
 | Variable | Type | Description |
 | :---: | :---: |:---: |
 | type | string | asset |
-| createdAt | str in iso8601 format | Time of Telemtry creation
+| createdAt | str (iso8601) | Time of Telemtry creation
 | description | str | "" |
 | filename | str | telemetry.json |
 | id | str | ID of Asset |
@@ -43,21 +43,21 @@ Special thanks to Kashz for helping create this! GitHub: iAm-Kashif
 | :---: | :---: | :---: |
 | id | str | ID of Roster |
 | type | str | Roster
-| participants | obj | [Check Rosters.participants](#4) |
-| stats | obj | [Check Rosters.stats](#5) |
-| team | obj | [Check Rosters.team](#6) |
+| participants | obj | [See Rosters.participants](#4) |
+| stats | obj | [See Rosters.stats](#5) |
+| team | obj | [See Rosters.team](#6) |
 
-### <a name="4"></a>**[4] Rosters.participants:**
+### <a name="4"></a>**Rosters.participants**
 
 | Variable | Type | Description |
 | :---: | :---: | :---: |
 | actor | str | Hero |
 | id | str | Same as ID of Roster |
-| player | obj |[Check Rosters.participants.player](#7)|
-| stats | map |[Check Rosters.participants.stats](#8) |
+| player | obj |[See Rosters.participants.player](#7)|
+| stats | map |[See Rosters.participants.stats](#8) |
 | type | str | participants |
 
-### <a name="5"></a>**[5] Rosters.stats:**
+### <a name="5"></a>**Rosters.stats**
 | Variable | Type |
 | :---: | :---: |
 | acesEarned | int |
@@ -68,23 +68,23 @@ Special thanks to Kashz for helping create this! GitHub: iAm-Kashif
 | turretKills | int |
 | turretRemaining | int |
 
-### <a name="6"></a>**[6] Rosters.team:**
+### <a name="6"></a>**Rosters.team**
 | Variable | Type | Description 
 | :---: | :---: | :---: |
 | id | str | ID of Team or None |
 | name | str | Name of Team or None |
 | type | str | team |
 
-### <a name="7"></a>**[7] Rosters.participants.player:**
+### <a name="7"></a>**Rosters.participants.player**
 
 | Variable | Type |Description |
 | :---: | :---: | :---: |
 | id | str | UID of player |
 | name | str | IGN of player |
-| stats | [Check Rosters.participants.player.stats](#9) |
+| stats | map | [See Rosters.participants.player.stats](#9) |
 | type | str | player |
 
-### <a name="8"></a>**[8] Rosters.participants.stats:**
+### <a name="8"></a>**Rosters.participants.stats**
 
 | Variable |Type |
 | :---: | :---: |
@@ -111,7 +111,7 @@ Special thanks to Kashz for helping create this! GitHub: iAm-Kashif
 | wentAfk | bool |
 | winner | bool |
 
-### <a name="9"></a>**[9] Rosters.participants.player.stats: **
+### <a name="9"></a> **Rosters.participants.player.stats:**
 
 | Variable | Type | 
 | :---: | :---: | 
