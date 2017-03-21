@@ -2,7 +2,7 @@
 
 Special thanks to Kashz for helping to create this! GitHub: iAm-Kashif
 
-### **Match Object**
+## **Match Object**
 
 | Variable | Type | Description |
 | :---: | :---: | :---: |
@@ -37,25 +37,15 @@ Special thanks to Kashz for helping to create this! GitHub: iAm-Kashif
 | name | str | telemetry |
 | url | str | Link to Telemetry.json file |
 
-### <a name="3"></a> **Rosters Object**
+## <a name="3"></a> **Rosters Object**
 
 | Variable | Type | Description |
 | :---: | :---: | :---: |
 | id | str | ID of Roster |
 | type | str | Roster
-| participants | obj | [See Rosters.participants](#4) |
+| participants | obj | [See Participants](#4) |
 | stats | obj | [See Rosters.stats](#5) |
 | team | obj | [See Rosters.team](#6) |
-
-### <a name="4"></a>**Rosters.participants**
-
-| Variable | Type | Description |
-| :---: | :---: | :---: |
-| actor | str | Hero |
-| id | str | Same as ID of Roster |
-| player | obj |[See Rosters.participants.player](#7)|
-| stats | map |[See Rosters.participants.stats](#8) |
-| type | str | participants |
 
 ### <a name="5"></a>**Rosters.stats**
 | Variable | Type |
@@ -75,16 +65,26 @@ Special thanks to Kashz for helping to create this! GitHub: iAm-Kashif
 | name | str | Name of Team or None |
 | type | str | team |
 
-### <a name="7"></a>**Rosters.participants.player**
+## <a name="4"></a>**Participants Object**
+
+| Variable | Type | Description |
+| :---: | :---: | :---: |
+| actor | str | Hero |
+| id | str | Same as ID of Roster |
+| player | obj |[See Participants.player](#7)|
+| stats | map |[See Participants.stats](#8) |
+| type | str | participants |
+
+### <a name="7"></a>**Participants.player**
 
 | Variable | Type |Description |
 | :---: | :---: | :---: |
 | id | str | UID of player |
 | name | str | IGN of player |
-| stats | map | [See Rosters.participants.player.stats](#9) |
+| stats | map | [See Participants.player.stats](#9) |
 | type | str | player |
 
-### <a name="8"></a>**Rosters.participants.stats**
+### <a name="8"></a>**Participants.stats**
 
 | Variable |Type |
 | :---: | :---: |
@@ -111,7 +111,7 @@ Special thanks to Kashz for helping to create this! GitHub: iAm-Kashif
 | wentAfk | bool |
 | winner | bool |
 
-### <a name="9"></a> **Rosters.participants.player.stats:**
+### <a name="9"></a> **Participants.player.stats:**
 
 | Variable | Type | 
 | :---: | :---: | 
