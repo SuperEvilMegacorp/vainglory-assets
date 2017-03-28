@@ -20,4 +20,10 @@ A project providing R6 classes (for the R language) for accessing the API - [nat
 
 ##Go
 
-A proof of concept go client for the Vainglory Developer API - [madglory/vainglory-go-client](https://github.com/madglory/vainglory-go-client) 
+A proof of concept go client for the Vainglory Developer API - [madglory/vainglory-go-client](https://github.com/madglory/vainglory-go-client)
+
+##Ruby
+
+A Ruby gem wrapper for the Vainglory Developer API -
+[Ruby Gem](https://rubygems.org/gems/vainglory-api)
+[Github](https://github.com/cbortz/vainglory-api-ruby)
