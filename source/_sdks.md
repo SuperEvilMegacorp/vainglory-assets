@@ -25,5 +25,5 @@ A proof of concept go client for the Vainglory Developer API - [madglory/vainglo
 ##Ruby
 
 A Ruby gem wrapper for the Vainglory Developer API -
-[Ruby Gem](https://rubygems.org/gems/vainglory-api)
+[Ruby Gem](https://rubygems.org/gems/vainglory-api) | 
 [Github](https://github.com/cbortz/vainglory-api-ruby)
