@@ -69,7 +69,7 @@ ID | The ID of the player to retrieve
 
 ## Get a collection of players
 
-This endpoint retrieves a collection of up to 6 players, filtered by name.
+This endpoint retrieves a collection of up to 6 players, filtered by name. Player names are specific to each region. If a player has changed names, it is possible that there are multiple ID's for a single player name. 
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=<player1,player2...>" \
