@@ -1,13 +1,13 @@
 ### GETTING STARTED:  
 <br>
 ######Q: Where can I sign up for an API key?    
-A: [Right here.](https://developer.vainglorygame.com)
+A: On the [Vainglory API Developer Portal](https://developer.vainglorygame.com)
 
 ######Q: I have my API Key. What do I do now?  
 A: To get started, take a look at the [Documentation](https://developer.vainglorygame.com/docs) where you can learn how to use the API.
 
 ######Q: Where is the documentation?  
-A: Documentation is adequate [right here.](https://developer.vainglorygame.com/docs)
+A: Documentation is [right here.](https://developer.vainglorygame.com/docs)
 
 ######Q: How far along in development is the API?  
 A: The API is currently in Alpha. Alpha software can be unstable and could cause crashes or data loss. Alpha software may not contain all of the features that are planned for the final version.
