@@ -7,7 +7,7 @@ A: [Right here.](https://developer.vainglorygame.com)
 A: To get started, take a look at the [Documentation](https://developer.vainglorygame.com/docs) where you can learn how to use the API.
 
 ######Q: Where is the documentation?  
-A: Documentation is avalible [right here.](https://developer.vainglorygame.com/docs)
+A: Documentation is adequate [right here.](https://developer.vainglorygame.com/docs)
 
 ######Q: How far along in development is the API?  
 A: The API is currently in Alpha. Alpha software can be unstable and could cause crashes or data loss. Alpha software may not contain all of the features that are planned for the final version.
@@ -16,7 +16,7 @@ A: The API is currently in Alpha. Alpha software can be unstable and could cause
 A: Head over to our public [Discord](https://discord.me/vaingloryapi) and chat with some of the developers and designers who are already building tools with the API. Many of them would be happy to help you get started on your project!
 
 ######Q: When I signed up, it said I was enrolled in the Community Free Tier, what does that mean?  
-A: The Community Free Tier allows you to begin developing and testing your app/tool using live data. It comes with a default rate limit of 10 requests per minute that is adaquit for testing purposes. 
+A: The Community Free Tier allows you to begin developing and testing your app/tool using live data. It comes with a default rate limit of 10 requests per minute that is adequate for testing purposes. 
 
 ######Q: My dashboard says that my rate limit is 10 requests per minute. How can I request a higher rate limit?  
 A: The default rate limit of 10 requests per minute is for testing/development purposes only. Once you are ready to launch your tool, you can request a higher rate limit by emailing api@superevilmegacorp.com
