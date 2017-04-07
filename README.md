@@ -8,7 +8,7 @@ Special Thanks
 --------------------
   * BrianGlory!
   * Dom
-  * nullPoint3r
+  * nullPoint3r [vgminer.com] (http://www.vgminer.com) :: IGN nullPoint3r (NA)
   * stormcaller
   * skill4killz
   * SpiesWithin
