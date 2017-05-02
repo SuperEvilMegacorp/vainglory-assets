@@ -11,21 +11,27 @@
                             "type": "string"
                         },
                         "duration": {
-                            "type": "number"
+                            "type": "integer",
+                            "min": 0,
+                            "max": 16777215
                         },
                         "gameMode": {
-                            "type": "string"
+                            "type": "string",
+                            "enum": ["casual", "ranked", "blitz_pvp_ranked", "casual_aral", "private", "private_party_draft_match", "private_party_blitz_match", "private_party_aral_match"]
                         },
                         "patchVersion": {
-                            "type": "string"
+                            "type": "string",
+                            "enum": [""]
                         },
                         "stats": {
                             "properties": {
                                 "endGameReason": {
-                                    "type": "string"
+                                    "type": "string",
+                                    "enum": ["victory", "surrender"]
                                 },
                                 "queue": {
-                                    "type": "string"
+                                    "type": "string",
+                                    "enum": ["casual", "ranked"]
                                 }
                             },
                             "type": "object"
@@ -34,7 +40,8 @@
                     "type": "object"
                 },
                 "id": {
-                    "type": "string"
+                    "type": "string",
+                    "pattern": "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
                 },
                 "relationships": {
                     "properties": {
@@ -48,25 +55,38 @@
                                                     "stats": {
                                                         "properties": {
                                                             "acesEarned": {
-                                                                "type": "integer"
+                                                                "type": "integer",
+                                                                "min": 0,
+                                                                "max": 255
                                                             },
                                                             "gold": {
-                                                                "type": "integer"
+                                                                "type": "integer",
+                                                                "min": 0,
+                                                                "max": 16777215
                                                             },
                                                             "heroKills": {
-                                                                "type": "integer"
+                                                                "type": "integer",
+                                                                "min": 0,
+                                                                "max": 65535
                                                             },
                                                             "krakenCaptures": {
-                                                                "type": "integer"
+                                                                "type": "integer",
+                                                                "min": 0,
+                                                                "max": 255
                                                             },
                                                             "side": {
-                                                                "type": "string"
+                                                                "type": "string",
+                                                                "enum": ["right/red", "left/blue"]
                                                             },
                                                             "turretKills": {
-                                                                "type": "integer"
+                                                                "type": "integer",
+                                                                "min": 0,
+                                                                "max": 5
                                                             },
                                                             "turretsRemaining": {
-                                                                "type": "integer"
+                                                                "type": "integer",
+                                                                "min": 0,
+                                                                "max": 5
                                                             }
                                                         },
                                                         "type": "object"
@@ -87,27 +107,40 @@
                                                                         "attributes": {
                                                                             "properties": {
                                                                                 "actor": {
-                                                                                    "type": "string"
+                                                                                    "type": "string",
+                                                                                    "enum": ["*Adagio*", "*Alpha*", "*Ardan*", "*Baron*", "*Baptiste*", "*Blackfeather*", "*Catherine*", "*Celeste*", "*Flicker*", "*Fortress*", "*Glaive*", "*Grumpjaw*", "*Gwen*", "*Krul*", "*Skaarf*", "*Rona*", "*Idris*", "*Joule*", "*Kestrel*", "*Koshka*", "*Lance*", "*Lyra*", "*Ozo*", "*Petal*", "*Phinn*", "*Reim*", "*Ringo*", "*SAW*", "*Samuel*", "*Taka*", "*Skye*", "*Vox*"]
                                                                                 },
                                                                                 "stats": {
                                                                                     "properties": {
                                                                                         "assists": {
-                                                                                            "type": "integer"
+                                                                                            "type": "integer",
+                                                                                            "min": 0,
+                                                                                            "max": 65535
                                                                                         },
                                                                                         "crystalMineCaptures": {
-                                                                                            "type": "integer"
+                                                                                            "type": "integer",
+                                                                                            "min": 0,
+                                                                                            "max": 65535
                                                                                         },
                                                                                         "deaths": {
-                                                                                            "type": "integer"
+                                                                                            "type": "integer",
+                                                                                            "min": 0,
+                                                                                            "max": 65535
                                                                                         },
                                                                                         "farm": {
-                                                                                            "type": "number"
+                                                                                            "type": "number",
+                                                                                            "min": 0,
+                                                                                            "max": 16777215
                                                                                         },
                                                                                         "firstAfkTime": {
-                                                                                            "type": "integer"
+                                                                                            "type": "integer",
+                                                                                            "min": -1,
+                                                                                            "max": 16777215
                                                                                         },
                                                                                         "goldMineCaptures": {
-                                                                                            "type": "integer"
+                                                                                            "type": "integer",
+                                                                                            "min": 0,
+                                                                                            "max": 65535
                                                                                         },
                                                                                         "itemGrants": {
                                                                                             "properties": {
@@ -129,36 +162,53 @@
                                                                                         },
                                                                                         "items": {
                                                                                             "items": {
-                                                                                                "type": "string"
+                                                                                                "type": "string",
+                                                                                                "enum": ["*Item_Aegis*", "*Item_Aftershock*", "*Item_AlternatingCurrent*", "*Item_AtlasPauldron*", "*Item_BarbedNeedle*", "*Item_BlazingSalvo*", "*Item_Bonesaw*", "*Item_BookOfEulogies*", "*Item_BreakingPoint*", "*Item_BrokenMyth*", "*Item_CandyShop_Kissy*", "*Item_CandyShop_Taunt*", "*Item_CandyShop_VOTaunt*", "*Item_Chronograph*", "*Item_Clockwork*", "*Item_CoatOfPlates*", "*Item_Contraption*", "*Item_Crucible*", "*Item_CrystalBit*", "*Item_CrystalInfusion*", "*Item_DragonbloodContract*", "*Item_Dragonheart*", "*Item_Echo*", "*Item_EclipsePrism*", "*Item_EnergyBattery*", "*Item_EveOfHarvest*", "*Item_Flare*", "*Item_Flaregun*", "*Item_FountainOfRenewal*", "*Item_Frostburn*", "*Item_HalcyonChargers*", "*Item_HalcyonPotion*", "*Item_HeavyPrism*", "*Item_HeavySteel*", "*Item_Hourglass*", "*Item_IronguardContract*", "*Item_JourneyBoots*", "*Item_KineticShield*", "*Item_Lifespring*", "*Item_LightArmor*", "*Item_LightShield*", "*Item_LuckyStrike*", "*Item_MetalJacket*", "*Item_MinionCandy*", "*Item_MinionsFoot*", "*Item_NullwaveGauntlet*", "*Item_Oakheart*", "*Item_PiercingShard*", "*Item_PiercingSpear*", "*Item_PoisonedShiv*", "*Item_ProtectorContract*", "*Item_ReflexBlock*", "*Item_ScoutTrap*", "*Item_SerpentMask*", "*Item_Shatterglass*", "*Item_Shiversteel*", "*Item_SixSins*", "*Item_SlumberingHusk*", "*Item_Sorrowblade*", "*Item_SprintBoots*", "*Item_Stormcrown*", "*Item_StormguardBanner*", "*Item_SwiftShooter*", "*Item_TensionBow*", "*Item_TornadoTrigger*", "*Item_TravelBoots*", "*Item_TyrantsMonocle*", "*Item_VoidBattery*", "*Item_WarTreads*", "*Item_WeaponBlade*", "*Item_WeaponInfusion*"]
                                                                                             },
                                                                                             "type": "array"
                                                                                         },
                                                                                         "jungleKills": {
-                                                                                            "type": "integer"
+                                                                                            "type": "integer",
+                                                                                            "min": 0,
+                                                                                            "max": 16777215
                                                                                         },
                                                                                         "karmaLevel": {
-                                                                                            "type": "integer"
+                                                                                            "type": "integer",
+                                                                                            "min": 0,
+                                                                                            "max": 2
                                                                                         },
                                                                                         "kills": {
-                                                                                            "type": "integer"
+                                                                                            "type": "integer",
+                                                                                            "min": 0,
+                                                                                            "max": 65535
                                                                                         },
                                                                                         "krakenCaptures": {
-                                                                                            "type": "integer"
+                                                                                            "type": "integer",
+                                                                                            "min": 0,
+                                                                                            "max": 65535
                                                                                         },
                                                                                         "level": {
-                                                                                            "type": "integer"
+                                                                                            "type": "integer",
+                                                                                            "min": 0,
+                                                                                            "max": 12
                                                                                         },
                                                                                         "minionKills": {
-                                                                                            "type": "integer"
+                                                                                            "type": "integer",
+                                                                                            "min": 0,
+                                                                                            "max": 16777215
                                                                                         },
                                                                                         "nonJungleMinionKills": {
-                                                                                            "type": "integer"
+                                                                                            "type": "integer",
+                                                                                            "min": 0,
+                                                                                            "max": 16777215
                                                                                         },
                                                                                         "skinKey": {
                                                                                             "type": "string"
                                                                                         },
                                                                                         "turretCaptures": {
-                                                                                            "type": "integer"
+                                                                                            "type": "integer",
+                                                                                            "min": 0,
+                                                                                            "max": 5
                                                                                         },
                                                                                         "wentAfk": {
                                                                                             "type": "boolean"
@@ -167,7 +217,9 @@
                                                                                             "type": "boolean"
                                                                                         },
                                                                                         "wins": {
-                                                                                            "type": "integer"
+                                                                                            "type": "integer",
+                                                                                            "min": 0,
+                                                                                            "max": 65535
                                                                                         }
                                                                                     },
                                                                                     "type": "object"
@@ -204,7 +256,8 @@
                                                                                                     "type": "object"
                                                                                                 },
                                                                                                 "id": {
-                                                                                                    "type": "string"
+                                                                                                    "type": "string",
+                                                                                                    "pattern": "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
                                                                                                 },
                                                                                                 "type": {
                                                                                                     "type": "string"
@@ -239,7 +292,8 @@
                                                                         "type": "object"
                                                                     },
                                                                     "id": {
-                                                                        "type": "string"
+                                                                        "type": "string",
+                                                                        "pattern": "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
                                                                     },
                                                                     "type": {
                                                                         "type": "string"
