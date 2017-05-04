@@ -5,13 +5,13 @@ Team objects contain aggregated lifetime information about each Team.
 ## Get a collection of Teams
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/shards/na/teams" \
+curl "https://api.dc01.gamelockerapp.com/shards/na/teams?filter[teamNames]=team1" \
   -H "Authorization: Bearer <api-key>" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 
-This endpoint retrieves all teams.
+This endpoint retrieves a collection of up to 6 teams.
 
 <aside class="warning">
 Important - Team resources are not yet available in the API.
@@ -25,6 +25,8 @@ Important - Team resources are not yet available in the API.
 
 Parameter | Default | Description
 --------- | ------- | -----------
+filter[teamNames] | none | Filters by team name. Usage: filter[teamNames]=team1
+filter[teamIds] | none | Filter by team id. Usage: filter[teamIds]=12345
 
 <aside class="success">
 Remember — a happy team is an authenticated team!
@@ -33,7 +35,7 @@ Remember — a happy team is an authenticated team!
 ## Get a single Team
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/teams/2" \
+curl "https://api.dc01.gamelockerapp.com/teams/<ID>" \
   -H "Authorization: Bearer <api-key>" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
