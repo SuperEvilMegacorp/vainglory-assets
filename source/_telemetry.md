@@ -198,6 +198,21 @@ When a player buys an item.
   }
 ```
 
+### SellItem
+When a player sells an item.
+```json
+  {
+    "time": "2017-03-31T02:49:37+0000",
+    "type": "SellItem",
+    "payload": {
+      "Team": "Left",
+      "Actor": "*Lyra*",
+      "Item": "Flare",
+      "Cost": 15
+    }
+  }
+```
+
 ### LearnAbility
 When a player puts a point into one of the abilities. Please note there can be a time difference between when a player gains a level and learns an ability
 ```json
@@ -232,6 +247,30 @@ This event is recorded when a player uses an ability and it will hold informatio
   },
 ```
 
+### UseItemAbility
+This event is recorded when a player uses an activatable item or a charm/taunt.
+```json
+  {
+    "time": "2017-03-31T03:10:17+0000",
+    "type": "UseItemAbility",
+    "payload": {
+      "Team": "Left",
+      "Actor": "*Lyra*",
+      "Ability": "Travel Boots",
+      "Position": [
+        -17.51,
+        0.01,
+        41.63
+      ],
+      "TargetActor": "None",
+      "TargetPosition": [
+        -17.51,
+        0.01,
+        41.63
+      ]
+    }
+  }
+```
 
 ### EarnXP
 This event is recorded when a player gains XP from any source. it could be killing a minion, miner or a hero.
@@ -247,6 +286,25 @@ This event is recorded when a player gains XP from any source. it could be killi
       "Shared With": 1
     }
   },
+```
+
+### DealDamage
+This event is recorded when any actor (player, turret, minion, etc.) deals damage to any other.
+```json
+  {
+    "time": "2017-03-31T02:47:34+0000",
+    "type": "DealDamage",
+    "payload": {
+      "Team": "Left",
+      "Actor": "*Skaarf*",
+      "Target": "*Vox*",
+      "Source": "Unknown",
+      "Damage": 105,
+      "Delt": 80,
+      "IsHero": 1,
+      "TargetIsHero": 1
+    }
+ }
 ```
 
 ### KillActor
@@ -273,6 +331,70 @@ This event is recorded when a player kills anything in game. it could be a a min
   },
 ```
 
+### NPCkillNPC
+When one non-player actor kills another, such as the Kraken or a minion killing a turret.
+```json
+  {
+    "time": "2017-03-31T03:07:21+0000",
+    "type": "NPCkillNPC",
+    "payload": {
+      "Team": "Left",
+      "Actor": "*Kraken_Captured*",
+      "Killed": "*Turret*",
+      "KilledTeam": "Right",
+      "Gold": "300",
+      "IsHero": 0,
+      "TargetIsHero": 0,
+      "Position": [
+        54,
+        0,
+        2.92
+      ]
+    }
+  }
+```
+
+### GoldFromTowerKill
+When a player earns gold from the destruction of a turret belonging to the enemy team.
+```json
+  {
+    "time": "2017-03-31T02:57:02+0000",
+    "type": "GoldFromTowerKill",
+    "payload": {
+      "Team": "Left",
+      "Actor": "*Idris*",
+      "Amount": 300
+    }
+  }
+```
+
+### GoldFromGoldMine
+When a player earns gold from his or her team capturing the gold miner.
+```json
+  {
+    "time": "2017-03-31T03:00:43+0000",
+    "type": "GoldFromGoldMine",
+    "payload": {
+      "Team": "Left",
+      "Actor": "*Idris*",
+      "Amount": 300
+    }
+  }
+```
+
+### GoldFromKrakenKill
+When a player earns gold from his or her team killing a Kraken released by the enemy team.
+```json
+  {
+    "time": "2017-03-31T03:07:43+0000",
+    "type": "GoldFromKrakenKill",
+    "payload": {
+      "Team": "Right",
+      "Actor": "*Kestrel*",
+      "Amount": 500
+    }
+  }
+```
 
 Download sample telemetry data [here!](https://cdn.discordapp.com/attachments/272249149473161216/282627164053176320/telemetry_sample.tgz)
 
