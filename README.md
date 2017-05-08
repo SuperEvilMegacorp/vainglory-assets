@@ -14,7 +14,14 @@ This documentation was built with love by the Vainglory Developer Community.
 * Player Profiles
 * Sample Sets
 
-### Planned Features
+### In-Development Features
+
+* Better Data Validation - Open source JSON schema, which is used on backend and shared with community
+* Armory - Stats for in-game items, heros, abilitys, etc.
+* Guilds Data
+* Expanded Team Data
+
+### Requested Features
 
 [![Feature Requests](http://feathub.com/madglory/gamelocker-vainglory?format=svg)](http://feathub.com/madglory/gamelocker-vainglory)
 
