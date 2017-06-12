@@ -310,8 +310,7 @@ El siguiente enlace `self` es simplemente un URL:
 }
 ```
 
-The following `related` link includes a URL as well as meta-information
-about a related resource collection:
+El siguiente enlace `related` incluye una URL además de información-meta sobre una colección de un recurso relacionado:
 
 ```json
 "links": {
@@ -323,20 +322,16 @@ about a related resource collection:
   }
 }
 ```
+> Note: Se pueden especificar miembros adicionales para los enlaces de objetos y vínculos Objetos en el futuro. También es posible que los valores Miembros adicionales serán expandidos (e.g. a `collection` link may support an array of values, whereas a `self` link does not).
 
-> Note: Additional members may be specified for links objects and link
-objects in the future. It is also possible that the allowed values of
-additional members will be expanded (e.g. a `collection` link may support an
-array of values, whereas a `self` link does not).
 
-### <a href="#document-jsonapi-object" id="document-jsonapi-object" class="headerlink"></a> JSON API Object
+### <a href="#document-jsonapi-object" id="document-jsonapi-object" class="headerlink"></a> JSON API Objeto
 
-A JSON API document **MAY** include information about its implementation
-under a top level `jsonapi` member. If present, the value of the `jsonapi`
-member **MUST** be an object (a "jsonapi object"). The jsonapi object **MAY**
-contain a `version` member whose value is a string indicating the highest JSON
-API version supported. This object **MAY** also contain a `meta` member, whose
-value is a [meta] object that contains non-standard meta-information.
+Un documento de JSON API **PUEDE** incluir información de el implementación
+En un nivel alto  `jsonapi` miembro. Si está presente, el valor del `jsonapi`
+miembro **DEBE** ser un objeto (a "jsonapi object"). El objeto de jsonapi **PUEDE**
+contener un `versión` Un miembro cuyo valor es una cadena que indica la más alta JSON
+API versión soportado. Este objeto **PUEDE** contener un `meta` miembro, cuyo valor es un [meta] objeto que contiene non-standard meta-información.
 
 ```json
 {
@@ -346,104 +341,89 @@ value is a [meta] object that contains non-standard meta-information.
 }
 ```
 
-If the `version` member is not present, clients should assume the server
-implements at least version 1.0 of the specification.
+Si el `version` miembro no está presente, los clientes deben asumir el servidor implementa al menos la versión 1.0 de la especificación.
 
-> Note: Because JSON API is committed to making additive changes only, the
-version string primarily indicates which new features a server may support.
+> Nota: Por qué JSON API está comprometido a hacer solo cambios aditivos, la versión primeramente indica cuáles nuevas características puede soportar un servidor.
 
-### <a href="#document-member-names" id="document-member-names" class="headerlink"></a> Member Names
+### <a href="#document-member-names" id="document-member-names" class="headerlink"></a> Nombre De Miembros 
 
-All member names used in a JSON API document **MUST** be treated as case sensitive
-by clients and servers, and they **MUST** meet all of the following conditions:
+Todos los nombres de miembros usados en el documento  JSON API **DEBEN** ser tratados como un caso sensible por clientes y servidores, y ellos **DEBEN** conocer todas las condiciones siguientes:
 
-- Member names **MUST** contain at least one character.
-- Member names **MUST** contain only the allowed characters listed below.
-- Member names **MUST** start and end with a "globally allowed character",
-  as defined below.
+- Nombres de miembros **DEBEN** contener al menos un carácter.
+- Nombres de miembros **DEBEN** contener sólo los caracteres permitidos en la siguiente lista.
+- Nombres de miembros **DEBEN** empezar y terminar con un “caracteres permitidos globalmenter”, como se    define abajo.
 
-To enable an easy mapping of member names to URLs, it is **RECOMMENDED** that
-member names use only non-reserved, URL safe characters specified in [RFC 3986](http://tools.ietf.org/html/rfc3986#page-13).
+Para habilitar un fácil mapeo de nombres de miembros para URLs, Es **RECOMENDADO** que nombres de miembros usen solamente no-reservados, URL caracteres seguros especificados en [RFC 3986](http://tools.ietf.org/html/rfc3986#page-13).
 
-#### <a href="#document-member-names-allowed-characters" id="document-member-names-allowed-characters" class="headerlink"></a> Allowed Characters
+#### <a href="#document-member-names-allowed-characters" id="document-member-names-allowed-characters" class="headerlink"></a> Caracteres Permitidos
 
-The following "globally allowed characters" **MAY** be used anywhere in a member name:
-
+Los siguientes “caracteres permitidos globalmente” **PUEDEN** ser usados donde sea en un nombre de miembro:
+ 
 - U+0061 to U+007A, "a-z"
 - U+0041 to U+005A, "A-Z"
 - U+0030 to U+0039, "0-9"
-- U+0080 and above (non-ASCII Unicode characters; _not recommended, not URL safe_)
+- U+0080 y más (non-ASCII Unicode caracteres; _no recomendado, no seguro URL_)
+ 
+Adicionalmente, los siguientes caracteres están permitidos en nombres de miembros, excepto como el primer o último carácter: 
+ 
+- U+002D GUIÓN-MENOS, "-"
+- U+005F LINEA BAJA, "_"
+- U+0020 ESPACIO, " " _(no recomendado, no seguro URL)_
 
-Additionally, the following characters are allowed in member names, except as the
-first or last character:
+#### <a href="#document-member-names-reserved-characters" id="document-member-names-reserved-characters" class="headerlink"></a> Caracteres Reservados
 
-- U+002D HYPHEN-MINUS, "-"
-- U+005F LOW LINE, "_"
-- U+0020 SPACE, " " _(not recommended, not URL safe)_
+Los siguientes caracteres **NO DEBEN** ser usados en nombres de miembros: 
 
-#### <a href="#document-member-names-reserved-characters" id="document-member-names-reserved-characters" class="headerlink"></a> Reserved Characters
-
-The following characters **MUST NOT** be used in member names:
-
-- U+002B PLUS SIGN, "+" _(used for ordering)_
-- U+002C COMMA, "," _(used as a separator between relationship paths)_
-- U+002E PERIOD, "." _(used as a separator within relationship paths)_
-- U+005B LEFT SQUARE BRACKET, "[" _(used in sparse fieldsets)_
-- U+005D RIGHT SQUARE BRACKET, "]" _(used in sparse fieldsets)_
-- U+0021 EXCLAMATION MARK, "!"
+- U+002B SÍMBOLO DE MÁS, "+" _(utilizado para ordenar)_
+- U+002C COMA, "," _(utilizado como un separador entre caminos de relaciones)_
+- U+002E PUNTO, "." _(utilizado como un separador entre caminos de relaciones)_
+- U+005B CORCHETE IZQUIERDO, "[" _(utilizado en conjuntos de campos escasos)_
+- U+005D CORCHETE DERECHO, "]" _(utilizado en conjuntos de campos escasos)_
+- U+0021 SIGNO DE EXCLAMACIÓN, "!"
 - U+0022 QUOTATION MARK, '"'
-- U+0023 NUMBER SIGN, "#"
-- U+0024 DOLLAR SIGN, "$"
-- U+0025 PERCENT SIGN, "%"
+- U+0023 SÍMBOLO DE NÚMERO, "#"
+- U+0024 SÍMBOLO DOLLAR, "$"
+- U+0025 SÍMBOLO DE PORCENTAJE, "%"
 - U+0026 AMPERSAND, "&"
-- U+0027 APOSTROPHE, "'"
-- U+0028 LEFT PARENTHESIS, "("
-- U+0029 RIGHT PARENTHESIS, ")"
-- U+002A ASTERISK, "&#x2a;"
+- U+0027 APÓSTROFE, "'"
+- U+0028 PARÉNTESIS IZQUIERDA, "("
+- U+0029 PARÉNTESIS DERECHA, ")"
+- U+002A ASTERISCO, "&#x2a;"
 - U+002F SOLIDUS, "/"
-- U+003A COLON, ":"
-- U+003B SEMICOLON, ";"
-- U+003C LESS-THAN SIGN, "<"
-- U+003D EQUALS SIGN, "="
-- U+003E GREATER-THAN SIGN, ">"
-- U+003F QUESTION MARK, "?"
-- U+0040 COMMERCIAL AT, "@"
-- U+005C REVERSE SOLIDUS, "\"
-- U+005E CIRCUMFLEX ACCENT, "^"
-- U+0060 GRAVE ACCENT, "&#x60;"
-- U+007B LEFT CURLY BRACKET, "{"
-- U+007C VERTICAL LINE, "|"
-- U+007D RIGHT CURLY BRACKET, "}"
-- U+007E TILDE, "~"
-- U+007F DELETE
-- U+0000 to U+001F (C0 Controls)
+- U+003A COLÓN, ":"
+- U+003B PUNTO Y COMA, ";"
+- U+003C SÍMBOLO ED MENOS QUÉ, "<"
+- U+003D SÍMBOLO DE IGUAL, "="
+- U+003E SÍMBOLO DE MÁS QUE, ">"
+- U+003F SÍMBOLO DE PREGUNTA, "?"
+- U+0040 ARROBA, "@"
+- U+005C SOLIDUS REVERSO, "\"
+- U+005E ACENTO CIRCUNFLEJO, "^"
+- U+0060 ACENTO GRAVE, "&#x60;"
+- U+007B PARÉNTESIS CURVADA IZQUIERDA, "{"
+- U+007C LINEA VERTICAL, "|"
+- U+007D PARÉNTESIS CURVADA DERECHA, "}"
+- U+007E TÍLDE, "~"
+- U+007F ELIMINAR
+- U+0000 a U+001F (C0 Controles)
 
-#### <a href="#document-member-names-at-members" id="document-member-names-at-members" class="headerlink"></a> @-Members
+#### <a href="#document-member-names-at-members" id="document-member-names-at-members" class="headerlink"></a> @-Miembros
 
-Member names **MAY** also begin with an at sign (U+0040 COMMERCIAL AT, "@").
-Members named this way are called "@-Members". @-Members **MAY** appear
-anywhere in a JSON API document.
+Nombres de miembros también **PUEDEN** pueden empezar con una arroba (U+0040 ARROBA, "@").
+Miembros llamados de esta manera son llamados "@-Miembros". @-Miembros **PUEDEN** aparecer en cualquier parte en un documento JSON API.
+ 
+Sin embargo, procesadores JSON API **DEBEN** ignorar completamente @-Miembros (es decir. No tratarlos como datos JSON API).
+ 
+Además, las existencias de @-Members **DEBEN** ser ignoradas cuando interpretando todas las definiciones JSON API y procesando instrucciones dadas fuera de esta subsección. Por ejemplo, un [attribute][attributes] es definido arriba como cualquier miembro del objeto atributos. Sin embargo, porque @-Miembros debe ser ignorado cuando interpretando esa definición, un @-Miembro que ocurre en el objeto de un atributo no es un atributo.
+ 
+> Nota: Junto a otras cosas, “@” miembros puede ser usado para añadir JSON-LD data a un documento JSON API. Estos documentos deberían ser entregados con [un encabezado extra] (http://www.w3.org/TR/json-id/#interpreting-json-as-id) para transmitir a clientes JSON-LD que contengan JSON-LD data. 
 
-However, JSON API processors **MUST** completely ignore @-Members (i.e. not
-treat them as JSON API data).
+## <a href="#fetching" id="fetching" class="headerlink"></a> Recuperación de Data 
 
-Moreover, the existence of @-Members **MUST** be ignored when interpreting all
-JSON API definitions and processing instructions given outside of this
-subsection. For example, an [attribute][attributes] is defined above as any
-member of the attributes object. However, because @-Members must be ignored
-when interpreting that definition, an @-Member that occurs in an attributes
-object is not an attribute.
+Data, Incluidos recursos y relaciones, pueden ser recuperadas al enviar `GET` petición a un punto final. 
+ 
+Respuestas pueden ser más refinadas con las características opcionales describidas abajo:
 
-> Note: Among other things, "@" members can be used to add JSON-LD data to a
-JSON API document. Such documents should be served with [an extra header](http://www.w3.org/TR/json-ld/#interpreting-json-as-json-ld)
-to convey to JSON-LD clients that they contain JSON-LD data.
-
-## <a href="#fetching" id="fetching" class="headerlink"></a> Fetching Data
-
-Data, including resources and relationships, can be fetched by sending a
-`GET` request to an endpoint.
-
-Responses can be further refined with the optional features described below.
 
 ### <a href="#fetching-resources" id="fetching-resources" class="headerlink"></a> Fetching Resources
 
@@ -478,14 +458,11 @@ Accept: application/vnd.api+json
 
 ##### <a href="#fetching-resources-responses-200" id="fetching-resources-responses-200" class="headerlink"></a> 200 OK
 
-A server **MUST** respond to a successful request to fetch an individual
-resource or resource collection with a `200 OK` response.
-
-A server **MUST** respond to a successful request to fetch a resource
-collection with an array of [resource objects] or an empty array (`[]`) as
-the response document's primary data.
-
-For example, a `GET` request to a collection of articles could return:
+Un servidor **DEBE** respinder a una petición exitosa para buscar un recurso individual o una colección de recursos con una respuesta `200 OK`.
+ 
+Un servidor **DEBE** responder a una petición exitosa para buscar una colección de recursos con un arreglo de [recurso de objetos] o un arreglo vacío (`[]`) como los datos primarios de del documento de respuesta.
+ 
+Por ejemplo, una petición  `GET` a una colección de artículos podría regresar: 
 
 ```http
 HTTP/1.1 200 OK
@@ -510,8 +487,7 @@ Content-Type: application/vnd.api+json
   }]
 }
 ```
-
-A similar response representing an empty collection would be:
+Una respuesta similar  representando una colección vacía sería:
 
 ```http
 HTTP/1.1 200 OK
@@ -525,20 +501,15 @@ Content-Type: application/vnd.api+json
 }
 ```
 
-A server **MUST** respond to a successful request to fetch an individual
-resource with a [resource object][resource objects] or `null` provided as
-the response document's primary data.
-
-`null` is only an appropriate response when the requested URL is one that
-might correspond to a single resource, but doesn't currently.
-
-> Note: Consider, for example, a request to fetch a to-one related resource link.
-This request would respond with `null` when the relationship is empty (such that
-the link is corresponding to no resources) but with the single related resource's
-[resource object][resource objects] otherwise.
-
-For example, a `GET` request to an individual article could return:
-
+Un servidor **MUST**  responder a una petición exitosa a un recurso individual con un  [resource object][resource objects] o `null` provisto como la respuesta a la información primaria del documento.
+ 
+`null`  es solo una respuesta apropiada cuando la URL buscada es una que puede corresponder a un solo recurso, pero actualmente no.
+ 
+> Nota: Considera,por ejemplo, una petición para buscar un a uno enlace de recurso relacionado. 
+Esta petición respondería con `null` cuando la relación está vacía (tal que el enlace está correspondiendo a ningún recurso) pero con recursos únicos relacionados [resource object][resource objects] de otra manera.
+ 
+Por ejemplo una petición  `GET` a un artículo individual puede regresar:
+ 
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
@@ -564,8 +535,7 @@ Content-Type: application/vnd.api+json
 }
 ```
 
-If the above article's author is missing, then a `GET` request to that related
-resource would return:
+Si faltara el autor del autor del artículo anterior, entonces una petición  `GET` a ese recurso relacionado se devolverá.
 
 ```http
 HTTP/1.1 200 OK
@@ -579,11 +549,9 @@ Content-Type: application/vnd.api+json
 }
 ```
 
-##### <a href="#fetching-resources-responses-404" id="fetching-resources-responses-404" class="headerlink"></a> 404 Not Found
+##### <a href="#fetching-resources-responses-404" id="fetching-resources-responses-404" class="headerlink"></a> 404 No Encontrado
 
-A server **MUST** respond with `404 Not Found` when processing a request to
-fetch a single resource that does not exist, except when the request warrants a
-`200 OK` response with `null` as the primary data (as described above).
+Un servidor **DEBE** responder con  `404 No Encontrado` cuando se está procesando una búsqueda a un solo recurso que no existe, excepto cuando la petición garantiza una respuesta   `200 OK` con`null` como la información primaria ( tal cual descrito anteriormente).
 
 ##### <a href="#fetching-resources-responses-other" id="fetching-resources-responses-other" class="headerlink"></a> Other Responses
 
