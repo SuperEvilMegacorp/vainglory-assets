@@ -85,6 +85,15 @@ If not specified, the server will default for matches to`limit=5` and `offset=0`
 Important - Currently the server will not allow responses with over 50 primary data objects
 </aside>
 
+## Time
+
+* The max search time span between createdAt-start and createdAt-end is 28 days
+* If you don't specify either createdAt-start, or createdAt-end, the default is: current time - 28 days
+* If you specify only createdAt-start, createdAt-end is 28 days after or current time, whichever hits first
+* If you specify only createdAt-end, createdAt-start is 28 days prior
+
+
+
 ## Sorting
 
 >The example below will return the oldest articles first:
