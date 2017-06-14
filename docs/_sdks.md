@@ -10,6 +10,8 @@ A Java adaptation of the Vainglory API - [DominicGunn/flicker](http://github.com
 
 Python 3 wrapper for the Gamelocker API - [schneefux/python-gamelocker](http://github.com/schneefux/python-gamelocker)
 
+Python 3 wrapper for the Gamelocker API - [ClarkThyLord/madglory-ezl](https://github.com/ClarkThyLord/madglory-ezl)
+
 ##JavaScript
 
 A JavaScript API client - [seripap/vainglory](https://github.com/seripap/vainglory)

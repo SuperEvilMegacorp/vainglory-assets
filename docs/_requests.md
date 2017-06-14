@@ -35,11 +35,25 @@ requested by the Client.
 
 The Vainglory Game Data Service currently supports the following regions:
 
-* North America: na
-* Europe: eu
-* South America: sa
-* East Asia: ea
-* Southeast Asia (SEA): sg
+***General Region Shards***
+
+To find data regarding live servers, where all data is found, please use the following shards.
+
+* **North America:** ```na```
+* **Europe:** ```eu```
+* **South America:** ```sa```
+* **East Asia:** ```ea```
+* **Southeast Asia (SEA):** ```sg```
+
+***Tournament Region Shards***
+
+To find data regarding professional eSport, which take place on the private client only, please use the following shards.
+
+* **North America Tournaments:** ```tournament-na```
+* **Europe Tournaments:** ```tournament-eu```
+* **South America Tournaments:** ```tournament-sa```
+* **East Asia Tournaments:** ```tournament-ea```
+* **Southeast Asia Tournaments:** ```tournament-sg```
 
 **Choosing a specific region is currently required**
 
