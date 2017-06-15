@@ -105,7 +105,7 @@ Important - Currently the server will not allow responses with over 50 primary d
 * If you don't specify either createdAt-start, or createdAt-end, the default is: current time - 28 days
 * If you specify only createdAt-start, createdAt-end is 28 days after or current time, whichever hits first
 * If you specify only createdAt-end, createdAt-start is 28 days prior
-
+* If you specify a future time, and are within the 28 day limit, the createdAt-end will default to current time
 
 
 ## Sorting
