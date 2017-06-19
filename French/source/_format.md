@@ -1,23 +1,22 @@
-# <a href="#document-resource-objects" id="document-resource-objects" class="headerlink"></a> Resource Objects
+# <a href="#document-resource-objects" id="document-resource-objects" class="headerlink"></a> Objets De Ressource
 
-"Resource objects" appear in a JSON API document to represent resources.
+Les “Objets de ressources” apparaissent dans un document de l'API JSON pour représenter les ressources.
 
-A resource object **MUST** contain at least the following top-level members:
+Un objet ressource **DOIT** contenir au moins les membres de niveau supérieur suivants:
 
 * `id`
 * `type`
 
-Exception: The `id` member is not required when the resource object originates at
-the client and represents a new resource to be created on the server.
+Exception: le membre `id` n'est pas requis lorsque l'objet ressource est originaire du client et représente une nouvelle ressource à créer sur le serveur.
 
-In addition, a resource object **MAY** contain any of these top-level members:
+En outre, un objet ressource **PEUT** contenir un de ces membres de niveau supérieur:
 
-* `attributes`: an [attributes object][attributes] representing some of the resource's data.
-* `relationships`: a [relationships object][relationships] describing relationships between
- the resource and other JSON API resources.
-* `links`: a [links object][links] containing links related to the resource.
+* `Attributes`: un [objet attribut] [attributes] représentant certaines des données de la ressource.
+* `Relations`: un [objet relationnel] [relationships] décrivant les relations entre
+La ressource et autres ressources JASON API
+*`Links`: un [objet liens] [links] contenant des liens liés à la ressource.
 
-Here's how an article (i.e. a resource of type "articles") might appear in a document:
+Voici comment un article (c'est-à-dire une ressource de type "articles") pourrait apparaître dans un document:
 
 ```json
 // ...
@@ -42,115 +41,101 @@ Here's how an article (i.e. a resource of type "articles") might appear in a doc
 
 #### <a href="#document-resource-object-identification" id="document-resource-object-identification" class="headerlink"></a> Identification
 
-Every [resource object][resource objects] **MUST** contain an `id` member and a `type` member.
-The values of the `id` and `type` members **MUST** be strings.
+Chaque [objet de ressource] [resource objects] **DOIT** contenir un membre `id` et un membre` type`.
+Les valeurs des membres `id` et` type` **DOIVENT** être des chaînes.
 
-Within a given API, each resource object's `type` and `id` pair **MUST**
-identify a single, unique resource. (The set of URIs controlled by a server,
-or multiple servers acting as one, constitute an API.)
+Dans une API donnée, la paire `type` et `id` de chaque objet ressource **DOIT**
+Identifiez une ressource unique. (L'ensemble des URI contrôlés par un serveur, ou plusieurs serveurs agissant comme un seul, constituent un API.)
 
-The `type` member is used to describe [resource objects] that share common
-attributes and relationships.
+Le membre `type` est utilisé pour décrire [resource objects] qui partagent en commun les attributs et les relations.
 
-The values of `type` members **MUST** adhere to the same constraints as
-[member names].
+Les valeurs des membres `type` **DOIVENT** respecter les mêmes contraintes que
+[Nom de membre].
 
-> Note: This spec is agnostic about inflection rules, so the value of `type`
-can be either plural or singular. However, the same value should be used
-consistently throughout an implementation.
+> Remarque: Cette spécification est agnostique au sujet des règles d'inflexion, donc la valeur de `type`
+Peut être pluriel ou singulier. Cependant, la même valeur devrait être utilisée
+De manière constante tout au long de la mise en œuvre.
 
-#### <a href="#document-resource-object-fields" id="document-resource-object-fields" class="headerlink"></a> Fields
+#### <a href="#document-resource-object-fields" id="document-resource-object-fields" class="headerlink"></a> Champs
 
-A resource object's [attributes] and its [relationships] are collectively called
-its "[fields]".
+Les [attributs] et les [relations] de l'objet ressource sont collectivement appelés
+ces "[fields]".
 
-Fields for a [resource object][resource objects] **MUST** share a common namespace with each
-other and with `type` and `id`. In other words, a resource can not have an
-attribute and relationship with the same name, nor can it have an attribute
-or relationship named `type` or `id`.
+Les champs pour un [objet ressource] [resource objects] **DOIVENT** partager un espace de noms commun avec chacun
+Autres et avec `type` et `id`. En d'autres termes, une ressource ne peut pas avoir
+une attribution et relation avec le le même nom, et ne peut pas non plus avoir un attribut ou une relation nommé `type` ou `id`.
 
-#### <a href="#document-resource-object-attributes" id="document-resource-object-attributes" class="headerlink"></a> Attributes
+#### <a href="#document-resource-object-attributes" id="document-resource-object-attributes" class="headerlink"></a> Les Attributs
 
-The value of the `attributes` key **MUST** be an object (an "attributes
-object"). Members of the attributes object ("attributes") represent information
-about the [resource object][resource objects] in which it's defined.
+La valeur de la touche `attributes` **DOIT** être un objet (un "attributs objet"). Les membres de l'objet attributs (" attributs ") représentent des informations
+À propos de [objet ressource] [resource objects] dans lequel il sont défini
 
-Attributes may contain any valid JSON value.
+Les attributs peuvent contenir n’importe quelle valeur JSON valide.
 
-Complex data structures involving JSON objects and arrays are allowed as
-attribute values. However, any object that constitutes or is contained in an
-attribute **MUST NOT** contain a `relationships` or `links` member, as those
-members are reserved by this specification for future use.
+Des structures de données complexes impliquant des objets JSON et des tableaux sont autorisées comme valeurs d'attribut. Toutefois, tout objet qui constitue ou est contenu dans un attribut **NE DOIT PAS** contenir un membre `relationships` ou `links`, Étant donné que ces membres sont réservés par cette spécification pour une utilisation future.
+  
 
-Although has-one foreign keys (e.g. `author_id`) are often stored internally
-alongside other information to be represented in a resource object, these keys
-**SHOULD NOT** appear as attributes.
+Bien que has-one #fix des clés étrangères (par exemple, `author_id`) sont souvent stockées en interne
+Aux côtés d'autres informations à représenter dans un objet ressource, ces clés
+**NE DOIT PAS** apparaître comme des attributs.
 
-> Note: See [fields] and [member names] for more restrictions on this container.
+> Remarque: voir [champs] et [noms des membres] pour plus de restrictions sur ce conteneur.
 
-#### <a href="#document-resource-object-relationships" id="document-resource-object-relationships" class="headerlink"></a> Relationships
+#### <a href="#document-resource-object-relationships" id="document-resource-object-relationships" class="headerlink"></a> Relations
 
-The value of the `relationships` key **MUST** be an object (a "relationships
-object"). Members of the relationships object ("relationships") represent
-references from the [resource object][resource objects] in which it's defined to other resource
-objects.
+La valeur de la clé `relationships` **DOIT** être un objet (un "objet de relations
+"). Les membres de l'objet relation ("relationships") représentent
+Des références à partir du [objet ressource][resource objects] dans lesquels il est défini à d’autre objets ressource
+.
 
-Relationships may be to-one or to-many.
+Les relations peuvent être à-un ou à-beaucoup.
 
-A "relationship object" **MUST** contain at least one of the following:
+Un “objet relationnel” **DOIT** contenir au moins l'un des éléments suivants:
 
-* `links`: a [links object][links] containing at least one of the following:
-  * `self`: a link for the relationship itself (a "relationship link"). This
-    link allows the client to directly manipulate the relationship. For example,
-    removing an `author` through an `article`'s relationship URL would disconnect
-    the person from the `article` without deleting the `people` resource itself.
-    When fetched successfully, this link returns the [linkage][resource linkage]
-    for the related resources as its primary data.
-    (See [Fetching Relationships](#fetching-relationships).)
-  * `related`: a [related resource link]
-* `data`: [resource linkage]
-* `meta`: a [meta object][meta] that contains non-standard meta-information about the
-  relationship.
+* `links`: un [objet de lien] [links] contenant au moins l'un des éléments suivants:
+* `self`: un lien pour la relation elle-même (un "lien de relation"). Ce
+    Lien permet au client de manipuler directement la relation. Par exemple,
+Supprimer un ‘author’ par l'URL de relation ‘article’ déconnecterait
+La personne de l’ `article` sans supprimer la ressource `people` elle-même.
+   Lorsqu'il est acheminé avec succès, ce lien renvoie [lien] [resource linkage]
+Pour les ressources associées en tant que données principales.
+(Voir [Récupération des relations](# fetching-relations).)
+* `related`: un [lien de ressource connexe]
+* `data`: [lien de ressource]
+* `meta`: un [Meta objet] [meta] qui contient des méta-informations non standard sur la
+relation.
 
-A relationship object that represents a to-many relationship **MAY** also contain
-[pagination] links under the `links` member, as described below.
+> Remarque: voir [champs] et [noms des membres] pour plus de restrictions sur ce conteneur.
 
-> Note: See [fields] and [member names] for more restrictions on this container.
+#### <a href="#document-resource-object-related-resource-links" id="document-resource-object-related-resource-links" class="headerlink"></a> Liens de Ressources Connexes
 
-#### <a href="#document-resource-object-related-resource-links" id="document-resource-object-related-resource-links" class="headerlink"></a> Related Resource Links
+Un “lien de ressource connexe” permet d'accéder à [objets de ressource] [resource objects] [liés] [links]
+ 
+Dans une [relation] [relationships]. Lorsque récupérés, les objets ressource liés sont retournés comme les données principales de la réponse.
+ 
+Par exemple, Les `comments` d’un `article` [relation] [relationships] pourrait spécifiez un [lien] [links] qui renvoie une collection de commentaires [objets de ressource] lorsqu'il est récupéré via une requête `GET`.
 
-A "related resource link" provides access to [resource objects][resource objects] [linked][links]
-in a [relationship][relationships]. When fetched, the related resource object(s)
-are returned as the response's primary data.
+Si présent, un lien de ressource connexe **DOIT** faire référence à une URL valide, même si
+La relation n'est actuellement associée à aucune ressource cible. De plus,
+Un lien de ressource connexe **NE DOIT PAS** changer parce que le contenu de sa relation
+change.
 
-For example, an `article`'s `comments` [relationship][relationships] could
-specify a [link][links] that returns a collection of comment [resource objects]
-when retrieved through a `GET` request.
+#### <a href="#document-resource-object-linkage" id="document-resource-object-linkage" class="headerlink"></a> Lien De Ressource
 
-If present, a related resource link **MUST** reference a valid URL, even if the
-relationship isn't currently associated with any target resources. Additionally,
-a related resource link **MUST NOT** change because its relationship's content
-changes.
+Le lien de ressource dans un [compound document] permet à un client de lier ensemble
+tout les [objets de ressource] inclus sans avoir à `GET` toutes les URL via [links].
 
-#### <a href="#document-resource-object-linkage" id="document-resource-object-linkage" class="headerlink"></a> Resource Linkage
+Le lien de ressource **DOIT** être représenté comme l'un des éléments suivants:
 
-Resource linkage in a [compound document] allows a client to link together all
-of the included [resource objects] without having to `GET` any URLs via [links].
+* `null` pour les relations vide-à-un.
 
-Resource linkage **MUST** be represented as one of the following:
-
-* `null` for empty to-one relationships.
-* an empty array (`[]`) for empty to-many relationships.
-* a single [resource identifier object] for non-empty to-one relationships.
-* an array of [resource identifier objects][resource identifier object] for non-empty to-many relationships.
-
-> Note: The spec does not impart meaning to order of resource identifier
-objects in linkage arrays of to-many relationships, although implementations
-may do that. Arrays of resource identifier objects may represent ordered
-or unordered relationships, and both types can be mixed in one response
-object.
-
-For example, the following article is associated with an `author`:
+* Un tableau vide (`[]`) des relations à plusieurs.
+* Un seul [objet identificateur de ressource] pour les relations non-vides à un. 
+* Un tableau de [objet identificateur de ressource] [resource identifier object] pour des relations non-vides à plusieurs.
+ 
+> Remarque: La spécification ne donne pas de sens à l'ordre d'identifiant de ressource d'objets dans des tableaux de liaison de plusieurs relations, bien que les implémentations peuvent le faire. Les tableaux d'objets d'identifiant de ressource peuvent représenter des relations ordonnés et des non ordonnées, et les deux types peuvent être mélangés en un seul objet de réponse.
+ 
+Par exemple, l’article ci dessous est associé avec un `auteur` : 
 
 ```json
 // ...
@@ -176,17 +161,13 @@ For example, the following article is associated with an `author`:
 // ...
 ```
 
-The `author` relationship includes a link for the relationship itself (which
-allows the client to change the related author directly), a related resource
-link to fetch the resource objects, and linkage information.
+La relation `auteur` comprend un lien pour la relation elle-même (qui permet au client de modifier l'auteur concerné directement), un lien ressource connexe pour récupérer les objets de ressource et les informations de liaison
 
-#### <a href="#document-resource-object-links" id="document-resource-object-links" class="headerlink"></a> Resource Links
+#### <a href="#document-resource-object-links" id="document-resource-object-links" class="headerlink"></a> Liens De Ressources
 
-The optional `links` member within each [resource object][resource objects] contains [links]
-related to the resource.
+Les `liens` facultatif du membre dans chaque [resource object][resource objects] contient [links] relatifs à la ressource.
 
-If present, this links object **MAY** contain a `self` [link][links] that
-identifies the resource represented by the resource object.
+Si présent, ces liens d'objets **PEUVENT** contenir un `propre` [links][links] qui identifient les ressources représentées par les objets des ressources.
 
 ```json
 // ...
@@ -203,42 +184,29 @@ identifies the resource represented by the resource object.
 // ...
 ```
 
-A server **MUST** respond to a `GET` request to the specified URL with a
-response that includes the resource as the primary data.
+Un serveur **DOIT** répondre à une requête `GET` reçue à un URL avec une réponse qui inclut la ressource comme donnée primaire.
 
-### <a href="#document-resource-identifier-objects" id="document-resource-identifier-objects" class="headerlink"></a> Resource Identifier Objects
+### <a href="#document-resource-identifier-objects" id="document-resource-identifier-objects" class="headerlink"></a> Objets Identifiants De Ressources
 
-A "resource identifier object" is an object that identifies an individual
-resource.
+Un "objet identifiant de ressources" est un objet qui identifie une ressource individuelle.
 
-A "resource identifier object" **MUST** contain `type` and `id` members.
+Un "objet identifiant de ressources" **DOIT** contenir les `type` et `id` des membres.
 
-A "resource identifier object" **MAY** also include a `meta` member, whose value is a [meta] object that
-contains non-standard meta-information.
+Un "objet identifiant de ressources" **PEUT** aussi contenir un membre `méta`, cette valeur est un  objet [méta] qui contient des méta-informations non-standards.
 
-### <a href="#document-compound-documents" id="document-compound-documents" class="headerlink"></a> Compound Documents
+### <a href="#document-compound-documents" id="document-compound-documents" class="headerlink"></a> Composé De Documents
 
-To reduce the number of HTTP requests, servers **MAY** allow responses that
-include related resources along with the requested primary resources. Such
-responses are called "compound documents".
+Pour réduire le nombre de requêtes HTTP, les serveurs **PEUVENT** permettre des réponses qui incluent des ressources qui peuvent se rapporter, ainsi que les principales ressources demandées. Ces réponses sont appelés "documents composites".
 
-In a compound document, all included resources **MUST** be represented as an
-array of [resource objects] in a top-level `included` member.
+Dans un document composé, tous les ressources inclus **DOIVENT** être représentés comme un tableau des [objets de ressource] à un membre de niveau supérieur `inclus`.
 
-Compound documents require "full linkage", meaning that every included
-resource **MUST** be identified by at least one [resource identifier object]
-in the same document. These resource identifier objects could either be
-primary data or represent resource linkage contained within primary or
-included resources.
+Les documents composites exigent "couplage complet", ce qui signifie que chaque ressources inclus **DOIT** être identifié par au moins un [objet identificateur de ressource] dans le même document. Ces objets d’identificateur de ressource peuvent être , des donnés principaux, ou représente lien ressources contenue dans le principal ou ressources incluses.
 
-The only exception to the full linkage requirement is when relationship fields
-that would otherwise contain linkage data are excluded via [sparse fieldsets](#fetching-sparse-fieldsets).
+La seule exception à l’exigence de lien complet est quand un champs relation qui dans le cas contraire contiendrait un lien de donné qui sont exclues via [ensembles clairsemés de terrain](#fetching-sparse-fieldsets).
 
-> Note: Full linkage ensures that included resources are related to either
-the primary data (which could be [resource objects] or [resource identifier
-objects][resource identifier object]) or to each other.
+> À Noter : Le lien complet assure que les ressources incluses sont liés soit, dans les données principales (qui pourrait être [objets de ressource] ou [identificateur de ressource objets][objet identificateur de ressource]) ou à l’autre.
 
-A complete example document with multiple included relationships:
+Un document d’exemple complet avec plusieurs relations inclus : 
 
 ```json
 {
@@ -314,26 +282,22 @@ A complete example document with multiple included relationships:
 }
 ```
 
-A [compound document] **MUST NOT** include more than one [resource object][resource objects] for
-each `type` and `id` pair.
+Un [document composé] **NE DOIT PAS**  inclure plus d’un [objet ressource][resource objects] pour chaque paire de `type` et `id`.
 
-> Note: In a single document, you can think of the `type` and `id` as a
-composite key that uniquely references [resource objects] in another part of
-the document.
+> À Noter : En un seul document, vous pouvez penser le `type` et `id` comme une clé composite qui référence uniquement [objets de ressource] dans une autre partie du
+le document.
 
-> Note: This approach ensures that a single canonical [resource object][resource objects] is
-returned with each response, even when the same resource is referenced
-multiple times.
+> À Noter: Cette approche garantit qu’un seul canonique [objet ressource][resource objects] est
+retourné avec chaque réponse, même si la même ressource est référencée
+plusieurs fois.
 
-### <a href="#document-meta" id="document-meta" class="headerlink"></a> Meta Information
+### <a href="#document-meta" id="document-meta" class="headerlink"></a> Meta-information
 
-Where specified, a `meta` member can be used to include non-standard
-meta-information. The value of each `meta` member **MUST** be an object (a
-"meta object").
+Où spécifié, un membre `meta` peut être utilisé pour inclure une information-meta atypique. La valeur de chaque membre `meta` **DOIT** être un objet (a "Objet de meta”).
 
-Any members **MAY** be specified within `meta` objects.
-
-For example:
+Chaque membre **PEUT** être spécifié avec un objet `meta`.
+ 
+Par exemple:
 
 ```json
 {
@@ -352,21 +316,18 @@ For example:
 }
 ```
 
-### <a href="#document-links" id="document-links" class="headerlink"></a> Links
+### <a href="#document-links" id="document-links" class="headerlink"></a> Liens
 
-Where specified, a `links` member can be used to represent links. The value
-of each `links` member **MUST** be an object (a "links object").
+Où spécifié, un membre `links` peut être utilisé pour représenter les liens. La valeur de chaque membre `links` **DOIT** être un objet (a "Objet de lien")
 
-Each member of a links object is a "link". A link **MUST** be represented as
-either:
+Chaque membre d'un objet de lien est un "lien". Un lien **DOIT** être représenté comme tel:  
 
-* a string containing the link's URL.
-* an object ("link object") which can contain the following members:
-  * `href`: a string containing the link's URL.
-  * `meta`: a meta object containing non-standard meta-information about the
-    link.
+* une chaîne qui contient l'URL du lien.
+* un objet ("Objet de lien") qui peut contenir les membres suivants:
+ * `href`: une chaîne contenant l'URL du lien.
+ * `meta`: Un objet méta contenant des méta-informations at atypique à propos du lien.
 
-The following `self` link is simply a URL:
+Le lien `self` suivant est juste une URL:
 
 ```json
 "links": {
@@ -374,8 +335,7 @@ The following `self` link is simply a URL:
 }
 ```
 
-The following `related` link includes a URL as well as meta-information
-about a related resource collection:
+Le lien `related` suivant inclut une URL aussi bien qu'une méta-information à propos d'une collection de ressource apparenté. 
 
 ```json
 "links": {
@@ -388,19 +348,13 @@ about a related resource collection:
 }
 ```
 
-> Note: Additional members may be specified for links objects and link
-objects in the future. It is also possible that the allowed values of
-additional members will be expanded (e.g. a `collection` link may support an
+> À noter: Des membres supplémentaires peuvent être spécifiés pour les objets de liens 
+ à l'avenir. C'est aussi possible que les valeurs autorisés des membres additionnels vont être expansés (e.g. a `collection` link may support an
 array of values, whereas a `self` link does not).
 
-### <a href="#document-jsonapi-object" id="document-jsonapi-object" class="headerlink"></a> JSON API Object
+### <a href="#document-jsonapi-object" id="document-jsonapi-object" class="headerlink"></a> Objet de l'API JSON
 
-A JSON API document **MAY** include information about its implementation
-under a top level `jsonapi` member. If present, the value of the `jsonapi`
-member **MUST** be an object (a "jsonapi object"). The jsonapi object **MAY**
-contain a `version` member whose value is a string indicating the highest JSON
-API version supported. This object **MAY** also contain a `meta` member, whose
-value is a [meta] object that contains non-standard meta-information.
+Un document JSON API **PEUT** inclure des informations à propos de sa mise en oeuvre en dessous d'un membre haut niveau `jsonapi`. Si présent, la valeur du membre `jsonapi` **DOIT** être un objet (a "objet jsonapi").L’objet json api **DEVRAIT** contenir un membre `version` dont la valeur est une chaîne indiquant la plus haute version JSONAPI supportée. Cet objet **DEVRAIT** aussi contenir un membre `meta`, dont la valeur est un objet de [meta] qui contient une information-meta atypique.
 
 ```json
 {
@@ -410,146 +364,132 @@ value is a [meta] object that contains non-standard meta-information.
 }
 ```
 
-If the `version` member is not present, clients should assume the server
-implements at least version 1.0 of the specification.
+Si le membre `version` n'est pas présent, les clients devraient considérer les outils du serveur, au moins la version 1.0 de la spécification. 
 
-> Note: Because JSON API is committed to making additive changes only, the
-version string primarily indicates which new features a server may support.
+> À noter: Parceque JSON API est investi pour faire des changements supplémentaires uniquement, la chaîne de version indique principalement quelles nouveautés un serveur peut supporter.
 
-### <a href="#document-member-names" id="document-member-names" class="headerlink"></a> Member Names
+### <a href="#document-member-names" id="document-member-names" class="headerlink"></a> Noms De Membres
 
-All member names used in a JSON API document **MUST** be treated as case sensitive
-by clients and servers, and they **MUST** meet all of the following conditions:
+Tous les noms de membres utilisés dans un document API JSON **DOIVENT** être traités comme un cas sensible par les clients et les serveurs, et ils **DOIVENT** rencontrer toutes les conditions suivantes: 
 
-- Member names **MUST** contain at least one character.
-- Member names **MUST** contain only the allowed characters listed below.
-- Member names **MUST** start and end with a "globally allowed character",
-  as defined below.
+- Les noms des membres **DOIVENT** contenir au moins un caractère.
+- Les noms des membres **DOIVENT** contenir uniquement  les caractères autorisés, listés ci-dessous.
+- Les noms des membres **DOIVENT** commencer et terminer par un "caractère globalement autorisé", comme définit en dessous.
 
-To enable an easy mapping of member names to URLs, it is **RECOMMENDED** that
-member names use only non-reserved, URL safe characters specified in [RFC 3986](http://tools.ietf.org/html/rfc3986#page-13).
+Pour permettre une configuration des noms des membres en URLs, il est **RECOMMANDÉ** que les noms de membres utilisés soient uniquement des URLs non réservés, les URLs doivent avoir des caractères sûr, spécifiés dans [RFC 3986](http://tools.ietf.org/html/rfc3986#page-13).
 
 #### <a href="#document-member-names-allowed-characters" id="document-member-names-allowed-characters" class="headerlink"></a> Allowed Characters
 
-The following "globally allowed characters" **MAY** be used anywhere in a member name:
+Les "caractères globalement autorisés" suivants **PEUVENT** être utilisés n'importe où dans un nom de membre:
 
-- U+0061 to U+007A, "a-z"
-- U+0041 to U+005A, "A-Z"
-- U+0030 to U+0039, "0-9"
+- U+0061 jusqu’à U+007A, "a-z"
+- U+0041 jusqu’à U+005A, "A-Z"
+- U+0030 jusqu’à U+0039, "0-9"
 - U+0080 and above (non-ASCII Unicode characters; _not recommended, not URL safe_)
 
-Additionally, the following characters are allowed in member names, except as the
-first or last character:
+De plus, les caractères suivant sont autorisés dans les noms de membres, sauf en tant que premier ou dernier caractère:
 
-- U+002D HYPHEN-MINUS, "-"
-- U+005F LOW LINE, "_"
-- U+0020 SPACE, " " _(not recommended, not URL safe)_
-
+- U+002D TIRET-MOINS, "-"
+- U+005F LIGNE BASSE, "_"
+- U+0020 ESPACE, " " _(not recommended, not URL safe)_
+ 
 #### <a href="#document-member-names-reserved-characters" id="document-member-names-reserved-characters" class="headerlink"></a> Reserved Characters
 
-The following characters **MUST NOT** be used in member names:
+Les caractères suivants **NE DOIVENT PAS** être utilisés dans les noms de membres:
 
-- U+002B PLUS SIGN, "+" _(used for ordering)_
-- U+002C COMMA, "," _(used as a separator between relationship paths)_
-- U+002E PERIOD, "." _(used as a separator within relationship paths)_
-- U+005B LEFT SQUARE BRACKET, "[" _(used in sparse fieldsets)_
-- U+005D RIGHT SQUARE BRACKET, "]" _(used in sparse fieldsets)_
-- U+0021 EXCLAMATION MARK, "!"
-- U+0022 QUOTATION MARK, '"'
-- U+0023 NUMBER SIGN, "#"
-- U+0024 DOLLAR SIGN, "$"
-- U+0025 PERCENT SIGN, "%"
-- U+0026 AMPERSAND, "&"
+-U+002B SIGNE PLUS, "+" _(used for ordering)_
+- U+002C VIRGULE, "," _(used as a separator between relationship paths)_
+- U+002E POINT, "." _(used as a separator between relationship paths)_
+- U+005B CROCHET GAUCHE, "[" _(used in sparse fieldsets)_
+- U+005B CROCHET DROITE, "]" _(used in sparse fieldsets)_
+- U+0021 POINT D'EXCLAMATION, "!"
+- U+0022 OUTIL DE CITATION, '"'
+- U+0023 SIGNE DE NOMBRE, "#"
+- U+0024 SIGNE DOLLAR, "$"
+- U+0025 SIGNE POURCENTAGE, "%"
+- U+0026 ESPERLUETTE, "&"
 - U+0027 APOSTROPHE, "'"
-- U+0028 LEFT PARENTHESIS, "("
-- U+0029 RIGHT PARENTHESIS, ")"
-- U+002A ASTERISK, "&#x2a;"
-- U+002F SOLIDUS, "/"
-- U+003A COLON, ":"
-- U+003B SEMICOLON, ";"
-- U+003C LESS-THAN SIGN, "<"
-- U+003D EQUALS SIGN, "="
-- U+003E GREATER-THAN SIGN, ">"
-- U+003F QUESTION MARK, "?"
-- U+0040 COMMERCIAL AT, "@"
-- U+005C REVERSE SOLIDUS, "\"
-- U+005E CIRCUMFLEX ACCENT, "^"
-- U+0060 GRAVE ACCENT, "&#x60;"
-- U+007B LEFT CURLY BRACKET, "{"
-- U+007C VERTICAL LINE, "|"
-- U+007D RIGHT CURLY BRACKET, "}"
+- U+0028 PARENTHESE DE GAUCHE, "("
+- U+0029 PARENTHESE DE DROITE, ")"
+- U+002A ASTÉRISQUE , "&#x2a;"
+- U+002F SLASH, "/"
+- U+003A DEUX-POINTS, ":"
+- U+003B POINT-VIRGULE, ";"
+- U+003C SIGNE INFERIEUR , "<"
+- U+003D SIGNE EGUALE, "="
+- U+003E SIGNE SUPERIEUR, ">"
+- U+003F POINT D'INTERROGATION, "?"
+- U+0040 AROBASE, "@"
+- U+005C SLASH INVERSÉ, "\"
+- U+005E ACCENT CIRCONFLEXE, "^"
+- U+0060 ACCENT GRAVE, "&#x60;"
+- U+007B ACCOLADE GAUCHE, "{"
+- U+007C LIGNE VERTICALE, "|"
+- U+007D ACCOLADE DROITE, "}"
 - U+007E TILDE, "~"
-- U+007F DELETE
-- U+0000 to U+001F (C0 Controls)
+- U+007F SUPPRIMER
+- U+0000 jusqu’à U+001F (C0 Controlls)
 
-#### <a href="#document-member-names-at-members" id="document-member-names-at-members" class="headerlink"></a> @-Members
+#### <a href="#document-member-names-at-members" id="document-member-names-at-members" class="headerlink"></a> @-Membres
 
-Member names **MAY** also begin with an at sign (U+0040 COMMERCIAL AT, "@").
-Members named this way are called "@-Members". @-Members **MAY** appear
-anywhere in a JSON API document.
+Les noms des membres **PEUVENT** aussi débuter avec un signe (U+0040 COMMERCIAL AT, "@"). Les membres appellent cette méthode "@-Membres" . @-Membres **PEUVENT** apparaître n'importe où dans un document JSON API.
 
-However, JSON API processors **MUST** completely ignore @-Members (i.e. not
-treat them as JSON API data).
+Toutefois,  les JSON API processeurs **DOIVENT** complètement ignorer @-Membres (i.e ne pas les traiter comme les données d'un JSON API ).
 
-Moreover, the existence of @-Members **MUST** be ignored when interpreting all
-JSON API definitions and processing instructions given outside of this
-subsection. For example, an [attribute][attributes] is defined above as any
-member of the attributes object. However, because @-Members must be ignored
-when interpreting that definition, an @-Member that occurs in an attributes
-object is not an attribute.
+En plus, l'existence d'un @-Membres **DOIT** être ignoré quand toutes les définitions d'un JSON API sont traités et Lors de l'interprétation de toutes les définitions de l'API JSON et les instructions de traitement données en dehors de cette
+Paragraphe. Par exemple un [attribut][attributes] est défini au dessus comme n’importe membre de l'objet attributs. Cependant, parce que les @-Membres doivent être ignoré Lors de l'interprétation de cette définition, un @-Membre qui se produit dans un objet attribut
+n'est pas un attribut.
 
-> Note: Among other things, "@" members can be used to add JSON-LD data to a
-JSON API document. Such documents should be served with [an extra header](http://www.w3.org/TR/json-ld/#interpreting-json-as-json-ld)
-to convey to JSON-LD clients that they contain JSON-LD data.
+> A Noter : Entre autres choses, “@“  membres peuvent être utilisés pour ajouter des données JSON-LD pour un document de l’API JSON. Ces documents doivent être servis avec [un en-tête supplémentaire](http://www.w3.org/TR/json-ld/#interpreting-json-as-json-ld)
+de transmettre aux clients de JSON-LD qu’ils contiennent des données JSON-LD.
 
 ## <a href="#fetching" id="fetching" class="headerlink"></a> Fetching Data
 
-Data, including resources and relationships, can be fetched by sending a
-`GET` request to an endpoint.
+Extraction de données, y compris les ressources et les relations peuvent être cherchées en envoyant un `GET` demande à un point de terminaison.
 
-Responses can be further refined with the optional features described below.
+Les réponses peuvent être encore affinée avec les caractéristiques facultatives décrites ci-dessous.
 
-### <a href="#fetching-resources" id="fetching-resources" class="headerlink"></a> Fetching Resources
+### <a href="#fetching-resources" id="fetching-resources" class="headerlink"></a> Extraction De Ressources
 
-A server **MUST** support fetching resource data for every URL provided as:
+Un serveur **DOIT** supporter l'extraction de données de ressources pour chaque URL fournie comme :
 
-* a `self` link as part of the top-level links object
-* a `self` link as part of a resource-level links object
-* a `related` link as part of a relationship-level links object
+* un lien `soi` dans le cadre de l’objet de niveau supérieur des liens
+* un lien `soi`dans le cadre d’un objet au niveau des ressources des liens
+* un lien `lien` dans le cadre d’un objet relation niveau des liens
 
-For example, the following request fetches a collection of articles:
+Par exemple, la requête suivante récupère une collection d’articles :
 
 ```http
 GET /articles HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-The following request fetches an article:
+La requête suivante récupère un article :
 
 ```http
 GET /articles/1 HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-And the following request fetches an article's author:
+Et la requête suivante récupère les auteur de l’article :
 
 ```http
 GET /articles/1/author HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-#### <a href="#fetching-resources-responses" id="fetching-resources-responses" class="headerlink"></a> Responses
+#### <a href="#fetching-resources-responses" id="fetching-resources-responses" class="headerlink"></a> Réponses
 
 ##### <a href="#fetching-resources-responses-200" id="fetching-resources-responses-200" class="headerlink"></a> 200 OK
 
-A server **MUST** respond to a successful request to fetch an individual
-resource or resource collection with a `200 OK` response.
+Un serveur ** DOIT** répondre à une demande réussie pour aller chercher une personne
+ressource ou collection de ressources avec un `200 OK` "réponse. 
 
-A server **MUST** respond to a successful request to fetch a resource
-collection with an array of [resource objects] or an empty array (`[]`) as
-the response document's primary data.
+Un serveur ** DOIT ** répondre à une demande réussie pour aller chercher une ressource
+collection avec un tableau de [objets de ressource] ou un tableau vide (`[]`) comme
+données principales du document réponse. 
 
-For example, a `GET` request to a collection of articles could return:
+Par exemple, une demande de `GET` pour une collection d’articles pourrait retourner :
 
 ```http
 HTTP/1.1 200 OK
@@ -575,7 +515,7 @@ Content-Type: application/vnd.api+json
 }
 ```
 
-A similar response representing an empty collection would be:
+Une réponse similaire, ce qui représente une collection vide serait :
 
 ```http
 HTTP/1.1 200 OK
@@ -588,20 +528,14 @@ Content-Type: application/vnd.api+json
   "data": []
 }
 ```
+Un serveur ** DOIT ** répondre à une demande réussie pour aller chercher une personne
+ressource avec un [objet de ressource] [objets de ressource] ou `null` fourni dans les données principaux du document réponse. 
 
-A server **MUST** respond to a successful request to fetch an individual
-resource with a [resource object][resource objects] or `null` provided as
-the response document's primary data.
+`null` est seulement une réponse appropriée lorsque l’URL demandée est l’une qui pourrait correspondre à une seule ressource, mais ne fonctionne pas actuellement.
+ 
+> À Noter : Prenons, par exemple, une demande pour aller chercher un lien à un sur les ressources. Cette demande répondrait avec `null` lorsque la relation est vide (tels que le lien est correspondant à aucune ressource) mais avec de la ressource connexe [objet ressource] [resource objects] dans le cas contraire. 
 
-`null` is only an appropriate response when the requested URL is one that
-might correspond to a single resource, but doesn't currently.
-
-> Note: Consider, for example, a request to fetch a to-one related resource link.
-This request would respond with `null` when the relationship is empty (such that
-the link is corresponding to no resources) but with the single related resource's
-[resource object][resource objects] otherwise.
-
-For example, a `GET` request to an individual article could return:
+Par exemple, une demande de `GET` pour un article pourrait retourner :
 
 ```http
 HTTP/1.1 200 OK
@@ -628,8 +562,7 @@ Content-Type: application/vnd.api+json
 }
 ```
 
-If the above article's author is missing, then a `GET` request to that related
-resource would return:
+Si les relations de l’article ci-dessus est manquant, une requête `AVOIR` à cette ressource liée renvoie donc :
 
 ```http
 HTTP/1.1 200 OK
@@ -643,57 +576,51 @@ Content-Type: application/vnd.api+json
 }
 ```
 
-##### <a href="#fetching-resources-responses-404" id="fetching-resources-responses-404" class="headerlink"></a> 404 Not Found
+##### <a href="#fetching-resources-responses-404" id="fetching-resources-responses-404" class="headerlink"></a> 404 Non Trouvé
 
-A server **MUST** respond with `404 Not Found` when processing a request to
-fetch a single resource that does not exist, except when the request warrants a
-`200 OK` response with `null` as the primary data (as described above).
+Un serveur **DOIT** répondre avec '404 Not Found` lors du traitement d’une demande de extraire une ressource unique qui n’existe pas, sauf si la demande justifie une réponse `200 OK` avec `null` comme les données primaires (comme décrit ci-dessus). 
 
-##### <a href="#fetching-resources-responses-other" id="fetching-resources-responses-other" class="headerlink"></a> Other Responses
+##### <a href="#fetching-resources-responses-other" id="fetching-resources-responses-other" class="headerlink"></a> Autres Réponses
 
-A server **MAY** respond with other HTTP status codes.
+Un serveur **PEUT** répondre avec d’autres codes d’état HTTP.
 
-A server **MAY** include [error details] with error responses.
+Un serveur **PEUT** inclure [détails de l’erreur] avec les réponses d’erreur. 
 
-A server **MUST** prepare responses, and a client **MUST** interpret
-responses, in accordance with
-[`HTTP semantics`](http://tools.ietf.org/html/rfc7231).
+Un serveur **DOIT** préparer des réponses, et un client **DOIT ** interpréter les réponses, conformément avec
+[`Sémantique HTTP`](http://tools.ietf.org/html/rfc7231). 
 
-### <a href="#fetching-relationships" id="fetching-relationships" class="headerlink"></a> Fetching Relationships
+### <a href="#fetching-relationships" id="fetching-relationships" class="headerlink"></a> Extraction De Relations
 
-A server **MUST** support fetching relationship data for every relationship URL
-provided as a `self` link as part of a relationship's `links` object.
+Un serveur **DOIT** supporter l’extraction de données de rapport pour chaque URL de relation fourni sous forme de lien `soi` comme partie d’une relation d’un objet `liens`. 
 
-For example, the following request fetches data about an article's comments:
+Par exemple, la requête suivante extrait les données sur les commentaires d’un article :
 
 ```http
 GET /articles/1/relationships/comments HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-And the following request fetches data about an article's author:
+Et la requête suivante extrait les données sur l’auteur de l’article :
 
 ```http
 GET /articles/1/relationships/author HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-#### <a href="#fetching-relationships-responses" id="fetching-relationships-responses" class="headerlink"></a> Responses
+#### <a href="#fetching-relationships-responses" id="fetching-relationships-responses" class="headerlink"></a> Réponses
 
 ##### <a href="#fetching-relationships-responses-200" id="fetching-relationships-responses-200" class="headerlink"></a> 200 OK
 
-A server **MUST** respond to a successful request to fetch a relationship
-with a `200 OK` response.
+Un serveur **DOIT** répondre à une demande réussie pour aller chercher une relation
+avec un `200 OK` réponse.
 
-The primary data in the response document **MUST** match the appropriate
-value for [resource linkage], as described above for
-[relationship objects][relationships].
+Les données primaires dans le document de réponse **DOIT** correspondre la valeur approprié du [lien ressources], tel que décrit ci-dessus pour [objets relation] [relations]. 
 
-The top-level [links object][links] **MAY** contain `self` and `related` links,
-as described above for [relationship objects][relationships].
+Le niveau supérieur [lie l’objet] [liens] **PEUT** contenir des liens `soi` ainsi que`relation`,
+comme décrit ci-dessus pour les [objets relation] [relations]. 
 
-For example, a `GET` request to a URL from a to-one relationship link could
-return:
+Par exemple, une demande de `AVOIR` vers une URL d’un lien de relation à un pourrait
+retourner :
 
 ```http
 HTTP/1.1 200 OK
@@ -711,8 +638,8 @@ Content-Type: application/vnd.api+json
 }
 ```
 
-If the above relationship is empty, then a `GET` request to the same URL would
-return:
+Si la relation ci-dessus est vide, alors une demande de `GET` vers la même URL serait
+retourner :
 
 ```http
 HTTP/1.1 200 OK
@@ -727,7 +654,7 @@ Content-Type: application/vnd.api+json
 }
 ```
 
-A `GET` request to a URL from a to-many relationship link could return:
+Une demande de ‘AVOIR` vers une URL d’un lien de relation à plusieurs pourrait revenir :
 
 ```http
 HTTP/1.1 200 OK
@@ -745,8 +672,7 @@ Content-Type: application/vnd.api+json
 }
 ```
 
-If the above relationship is empty, then a `GET` request to the same URL would
-return:
+Si la relation ci-dessus est vide, alors une demande de `GET`  vers la même URL aurait retourner :
 
 ```http
 HTTP/1.1 200 OK
@@ -761,127 +687,90 @@ Content-Type: application/vnd.api+json
 }
 ```
 
-##### <a href="#fetching-relationships-responses-404" id="fetching-relationships-responses-404" class="headerlink"></a> 404 Not Found
+##### <a href="#fetching-relationships-responses-404" id="fetching-relationships-responses-404" class="headerlink"></a> Autres Réponses
 
-A server **MUST** return `404 Not Found` when processing a request to fetch
-a relationship link URL that does not exist.
+Un serveur **DOIT** retourner `404 Not Found` lors du traitement d’une demande d’extraction une URL de lien de relation qui n’existe pas.
+ 
+> À Noter: Ceci peut se produire lorsque la ressource de parent de la relation
+n’existe pas. Par exemple, lorsque `/articles/1` n’existe pas, demandes à
+`/articles/1/relations/tags` aurait un retour `404 non trouvent`. 
 
-> Note: This can happen when the parent resource of the relationship
-does not exist. For example, when `/articles/1` does not exist, request to
-`/articles/1/relationships/tags` returns `404 Not Found`.
+Si une lien lien URL existe mais la relation est vide, alors
+`200 OK` **DOIT** être retournée, comme décrit ci-dessus.
 
-If a relationship link URL exists but the relationship is empty, then
-`200 OK` **MUST** be returned, as described above.
+##### <a href="#fetching-relationships-responses-other" id="fetching-relationships-responses-other" class="headerlink"></a> Autres Réponses
 
-##### <a href="#fetching-relationships-responses-other" id="fetching-relationships-responses-other" class="headerlink"></a> Other Responses
+Un serveur **PEUT** répondre avec d’autre codes d’état HTTP.
+ 
+Un serveur **PEUT** inclure [détails d’erreur] avec des réponses d’erreur.
+ 
+Un serveur **DOIT** préparer des réponses, et un client **DOIT** interpreter
+des réponses, conformément à [“sémantique HTTP”](http://tools.ietf.org/html/rfc7231).
 
-A server **MAY** respond with other HTTP status codes.
+### <a href="#fetching-includes" id="fetching-includes" class="headerlink"></a> Inclusion Des Ressources Associées
 
-A server **MAY** include [error details] with error responses.
-
-A server **MUST** prepare responses, and a client **MUST** interpret
-responses, in accordance with
-[`HTTP semantics`](http://tools.ietf.org/html/rfc7231).
-
-### <a href="#fetching-includes" id="fetching-includes" class="headerlink"></a> Inclusion of Related Resources
-
-An endpoint **MAY** return resources related to the primary data by default.
-
-An endpoint **MAY** also support an `include` request parameter to allow the
-client to customize which related resources should be returned.
-
-If an endpoint does not support the `include` parameter, it **MUST** respond
-with `400 Bad Request` to any requests that include it.
-
-If an endpoint supports the `include` parameter and a client supplies it,
-the server **MUST NOT** include unrequested [resource objects] in the `included`
-section of the [compound document].
-
-The value of the `include` parameter **MUST** be a comma-separated (U+002C
-COMMA, ",") list of relationship paths. A relationship path is a dot-separated
-(U+002E FULL-STOP, ".") list of [relationship][relationships] names.
-
-If a server is unable to identify a relationship path or does not support
-inclusion of resources from a path, it **MUST** respond with 400 Bad Request.
-
-> Note: For example, a relationship path could be `comments.author`, where
-`comments` is a relationship listed under a `articles` [resource object][resource objects], and
-`author` is a relationship listed under a `comments` [resource object][resource objects].
-
-For instance, comments could be requested with an article:
-
+Un endpoint **PEUT** retourner les ressources associées aux données par défaut.
+ 
+Un endpoint **PEUT** aussi supporter un paramètre de requête `inclure` pour autoriser le client à choisir quelle ressource associée doit être retournée.
+ 
+Si un endpoint ne supporte pas le paramètre`inclure`, il **DOIT** répondre avec `400 Mauvaise requête` à n’importe quelle requête qui l’inclut.
+ 
+Si un endpoint supporte le paramètre de requête `inclure` et un client l'approvisionne, le serveur **NE DOIT PAS** inclure d’ [objet ressource] non demandé dans la section `inclut` du [document composé].
+ 
+La valeur du paramètre `inclure` **DOIT** être une liste des chemins de relations séparé d’une virgule (U+002C COMMA, “,”). Un chemin de relation est une liste de noms de [relation][relationship] séparés par un point (U+002E POINT, “.”)
+ 
+Si un serveur n’est pas capable d’identifier un chemin de relation ou ne supporte pas l’inclusion de ressources d’un chemin, il **DOIT** répondre avec 400 Mauvaise requête.
+ 
+> Note: par exemple, un chemin de relation peut être `commentaire.auteur`, où `commentaire` est une relation listés sous un `article` [objet ressource][objet ressource] et `auteur` est une relation listée sous un `commentaire` [objet ressour][objet ressource].
+ 
+Par exemple, les `commentaires` peuvent être demandés avec un article.
+ 
 ```http
 GET /articles/1?include=comments HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-In order to request resources related to other resources, a dot-separated path
-for each relationship name can be specified:
+Dans l’optique de demander des ressources associées à d’autres ressources, un chemin séparé d’un point pour les autres noms de relations peuvent être spécifiés:
 
 ```http
 GET /articles/1?include=comments.author HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-> Note: Because [compound documents][compound document] require full linkage
-(except when relationship linkage is excluded by sparse fieldsets), intermediate
-resources in a multi-part path must be returned along with the leaf nodes. For
-example, a response to a request for `comments.author` should include `comments`
-as well as the `author` of each of those `comments`.
-
-> Note: A server may choose to expose a deeply nested relationship such as
-`comments.author` as a direct relationship with an alias such as
-`comment-authors`. This would allow a client to request
-`/articles/1?include=comment-authors` instead of
-`/articles/1?include=comments.author`. By abstracting the nested
-relationship with an alias, the server can still provide full linkage in
-compound documents without including potentially unwanted intermediate
-resources.
-
-Multiple related resources can be requested in a comma-separated list:
+> Note: Comme les [documents ressource][documents ressource] requièrent une liaison complète (Sauf lorsque la liaison relationnelle est exclue par des jeux de champs clairsemés), les ressources intermédiaires dans un chemin à parties multiples Doivent être retournés avec les noeuds des pages.
+Par exemple, une réponse à une requête pour `commentaire.auteur` devrait inclure `commentaire` avec aussi `auteur` de chacun de ces `commentaires`.
+ 
+> Note: Un serveur peut choisir d’exposer une relation profondément imbriquée comme `commentaire.auteur` comme une relation directe avec un faux nom comme `commentaire-auteur`. Ceci autoriserai un client à effectuer une requête de `/articles/1?include=comment-authors` à la place de `/articles/1?include=comment.authors`. En faisant abstraction de imbriquement de la relation avec un faux nom, le serveur peut toujours fournir un lien complet dans document composé sans inclure une potentielle ressource intermédiaire non voulue
+ 
+Les ressources multiples associées peuvent être demandées dans une liste séparée d’une virgule:
 
 ```http
 GET /articles/1?include=author,comments.author HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-Furthermore, related resources can be requested from a relationship endpoint:
-
+Par ailleurs, les ressources associées peuvent être demandée par une relation endpoint
+ 
 ```http
 GET /articles/1/relationships/comments?include=comments.author HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-In this case, the primary data would be a collection of
-[resource identifier objects][resource identifier object] that represent linkage to comments for an article,
-while the full comments and comment authors would be returned as included data.
+Dans ce cas, les données primaires devraient être une collection de [objet ressource identifiant][objet ressource identifiant] qui représente la liaison à commentaire pour un article
+tant que les commentaires complet et commentaire auteurs devraient revenir comme données incluses. 
+ 
+> Note: Cette section s’applique à n’importe quel endpoint qui répond avec les données primaires peu importe le type de requête. Par exemple, un serveur peut supporter l'inclusion d’une ressource associée tout du long avec une requête `POST` pour créer une ressource ou une relation.  
 
-> Note: This section applies to any endpoint that responds with primary
-data, regardless of the request type. For instance, a server could support
-the inclusion of related resources along with a `POST` request to create a
-resource or relationship.
+### <a href="#fetching-filtering" id="fetching-filtering" class="headerlink"></a> Filtrage
 
-### <a href="#fetching-filtering" id="fetching-filtering" class="headerlink"></a> Filtering
+Le paramètre de requête `filter` est réservé pour filtrer les données. Les filtres sont vues sur les collections, et les serveurs et clients **DOIVENT** utilisés cette clef pour des opérations de filtrage.  
 
-The `filter` query parameter is reserved for filtering data. Filters are views on collections,
-and can Servers and clients
-**SHOULD** use this key for filtering operations.
+> À noter: API JSON est agnostique à propos des stratégies supportés par un serveur. Le paramètre de requête `filter` peut être utilisé comme une base pour n'importe quel nombre de stratégie de filtrage
 
-> Note: JSON API is agnostic about the strategies supported by a server. The
-`filter` query parameter can be used as the basis for any number of filtering
-strategies.
+## <a href="#query-parameters" id="query-parameters" class="headerlink"></a> Paramètre De Requête
 
-## <a href="#query-parameters" id="query-parameters" class="headerlink"></a> Query Parameters
+L'implémentation spécifique des paramètres de requête **DOIT** adhérer aux mêmes contraintes que le [Nom des membres] avec les conditions additionnelles qui **DOIVENT** contenir au moins un caractère non a-z (U+0061 to U+007A). Il est **RECOMMANDÉ** qu'un U+002D TIRET, "-", U+005F LIGNE BASSE, "_", ou une lettre capitale est utilisée (e.g. camelCasing).
 
-Implementation specific query parameters **MUST** adhere to the same constraints
-as [member names] with the additional requirement that they **MUST** contain at
-least one non a-z character (U+0061 to U+007A). It is **RECOMMENDED** that a
-U+002D HYPHEN-MINUS, "-", U+005F LOW LINE, "_", or capital letter is used
-(e.g. camelCasing).
+Si un serveur rencontre un paramètre de requête qui ne suit pas la convention d'appellation ci-dessus, et les serveurs ne savent pas comment procéder c'est un paramètre de requête de cette spécification, il **DOIT** renvoyer `400 Bad Request`.
 
-If a server encounters a query parameter that does not follow the naming
-conventions above, and the server does not know how to process it as a query
-parameter from this specification, it **MUST** return `400 Bad Request`.
-
-> Note: This is to preserve the ability of JSON API to make additive additions
-to standard query parameters without conflicting with existing implementations. -->
+>À noter: c'est pour préserver la capacité de l'API JSON pour faire des ajouts supplémentaires afin de standardiser les paramètres de requête sans contradictions avec des implémentations existantes. -->

@@ -425,36 +425,36 @@ Data, Incluidos recursos y relaciones, pueden ser recuperadas al enviar `GET` pe
 Respuestas pueden ser más refinadas con las características opcionales describidas abajo:
 
 
-### <a href="#fetching-resources" id="fetching-resources" class="headerlink"></a> Fetching Resources
+### <a href="#fetching-resources" id="fetching-resources" class="headerlink"></a> Consiguiendo recursos
 
-A server **MUST** support fetching resource data for every URL provided as:
-
-* a `self` link as part of the top-level links object
-* a `self` link as part of a resource-level links object
-* a `related` link as part of a relationship-level links object
-
-For example, the following request fetches a collection of articles:
+Un servidor **DEBE** soportar conseguir datos de recursos por cada URL dada como un:
+ 
+* Un enlace `self` como parte de un top-level objeto de enlace
+* Un enlace `self` como parte de un resource-level objeto de enlace
+* Un enlace `related` como parte de un relationship-level objeto de enlace
+ 
+Por ejemplo, las siguientes solicitudes consiguen una colección de artículos:
 
 ```http
 GET /articles HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-The following request fetches an article:
+Las siguientes solicitudes consiguen un artículo:
 
 ```http
 GET /articles/1 HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-And the following request fetches an article's author:
+Y la siguiente solicitud consigue el autor del artículo:
 
 ```http
 GET /articles/1/author HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-#### <a href="#fetching-resources-responses" id="fetching-resources-responses" class="headerlink"></a> Responses
+#### <a href="#fetching-resources-responses" id="fetching-resources-responses" class="headerlink"></a> Respuestas
 
 ##### <a href="#fetching-resources-responses-200" id="fetching-resources-responses-200" class="headerlink"></a> 200 OK
 
@@ -553,51 +553,42 @@ Content-Type: application/vnd.api+json
 
 Un servidor **DEBE** responder con  `404 No Encontrado` cuando se está procesando una búsqueda a un solo recurso que no existe, excepto cuando la petición garantiza una respuesta   `200 OK` con`null` como la información primaria ( tal cual descrito anteriormente).
 
-##### <a href="#fetching-resources-responses-other" id="fetching-resources-responses-other" class="headerlink"></a> Other Responses
+##### <a href="#fetching-resources-responses-other" id="fetching-resources-responses-other" class="headerlink"></a> Otras Respuestas
 
-A server **MAY** respond with other HTTP status codes.
-
-A server **MAY** include [error details] with error responses.
-
-A server **MUST** prepare responses, and a client **MUST** interpret
-responses, in accordance with
+Un servidor  **PODRÍA** responder con otros códigos de estado HTTP.
+ 
+Un servidor **PODRÍA** incluir [error details] con respuestas de error.
+ 
+Un servidor **DEBE** preparar respuestas, y un cliente **DEBE** interpretar respuestas, en acordancia con
 [`HTTP semantics`](http://tools.ietf.org/html/rfc7231).
 
-### <a href="#fetching-relationships" id="fetching-relationships" class="headerlink"></a> Fetching Relationships
+### <a href="#fetching-relationships" id="fetching-relationships" class="headerlink"></a> Buscar Relaciones 
 
-A server **MUST** support fetching relationship data for every relationship URL
-provided as a `self` link as part of a relationship's `links` object.
-
-For example, the following request fetches data about an article's comments:
+Un servidor **DEBE** soportar el buscador de relaciones de data para cada URL de relación proveído como una `self` link como parte de una relación objeto `link`. 
 
 ```http
 GET /articles/1/relationships/comments HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-And the following request fetches data about an article's author:
+Por ejemplo, la siguiente petición busca data sobre comentarios de un artículo: 
 
 ```http
 GET /articles/1/relationships/author HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-#### <a href="#fetching-relationships-responses" id="fetching-relationships-responses" class="headerlink"></a> Responses
+#### <a href="#fetching-relationships-responses" id="fetching-relationships-responses" class="headerlink"></a> Respuestas
 
 ##### <a href="#fetching-relationships-responses-200" id="fetching-relationships-responses-200" class="headerlink"></a> 200 OK
 
-A server **MUST** respond to a successful request to fetch a relationship
-with a `200 OK` response.
-
-The primary data in the response document **MUST** match the appropriate
-value for [resource linkage], as described above for
-[relationship objects][relationships].
-
-The top-level [links object][links] **MAY** contain `self` and `related` links,
-as described above for [relationship objects][relationships].
-
-For example, a `GET` request to a URL from a to-one relationship link could
-return:
+Un servidor **DEBE** responder a una petición exitosa para buscar una relación con una respuesta `200 OK`.
+ 
+La data primaria en el documento de respuesta **DEBE** coincidir con el valor apropiado para [resource linkage], cómo está descrito antes en [relationship objects][relationship].
+ 
+El nivel-top [link object][links] **PUEDEN** contener `self` y `related` links, cómo está descrito arriba para [relationship objects] [relationships].
+ 
+Por ejemplo, una petición ‘GET’ a un URL desde to-one la relación del link puede volver: 
 
 ```http
 HTTP/1.1 200 OK

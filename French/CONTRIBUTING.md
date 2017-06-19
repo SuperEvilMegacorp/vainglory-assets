@@ -1,19 +1,19 @@
-## How to contribute to the Vainglory Game Data Service Documentation
+## Comment contribuer à Vainglory Documentation de Service de Données de Jeu
+ 
+#### **Avez-vous trouvé un bug?**
 
-#### **Did you find a bug?**
+* ** S’assurer que le bogue n’a pas déjà été signalé ** en effectuant une recherche sur GitHub sous [problème](https://github.com/madglory/gamelocker-vainglory-docs/issues). 
 
-* **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/madglory/gamelocker-vainglory-docs/issues).
+* Si vous n'arrivez pas à trouver une question ouverte, qui s'adresse au problème, [ouvrir un nouveau](https://github.com/madglory/gamelocker-vainglory-docs/issues/new). Veillez à inclure un **titre et une description claire **,autant d'informations pertinentes que possible.  Il nous aidera à fixer !
 
-* If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/madglory/gamelocker-vainglory-docs/issues/new). Be sure to include a **title and clear description**, as much relevant information as possible.  It will help us fix it!
-
-#### **Did you write a patch that fixes a bug?**
-
-* Open a new GitHub pull request with the patch.
-
-* Ensure the PR description clearly describes the problem and solution. Include the relevant issue number if applicable.
-
-#### **Do you have questions about to use that Game Data Service?**
-
-* Ask any question about how to use on the [Vainglory API Community Discord server](http://discord.me/vaingloryapi).
-
-Thanks! :heart: :heart: :heart:
+#### **Avez-vous écrit un patch qui corrige un bug ?**
+ 
+* Ouvrez une nouvelle demande de traction de GitHub avec le patch. 
+ 
+* Assurer que la description de PR décrit clairement le problème et la solution. Indiquez le nombre de questions pertinentes le cas échéant.
+ 
+#### **Vous avez des questions sur le point d’utiliser ce Service de données de jeu ?**
+ 
+* Poser toutes les questions sur l’utilisation du [Serveur Discord de Communauté Vainglory API] (http://discord.me/vaingloryapi). 
+ 
+Merci ! :heart: :heart: :heart:
