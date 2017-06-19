@@ -7,7 +7,6 @@ Player objects contain aggregated lifetime information about each Player.  At th
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/players/<ID>" \
   -H "Authorization: Bearer <api-key>" \
-  -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 
@@ -74,7 +73,6 @@ This endpoint retrieves a collection of up to 6 players, filtered by name. Playe
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=player1,player2" \
   -H "Authorization: Bearer <api-key>" \
-  -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 

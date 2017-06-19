@@ -73,7 +73,6 @@ not exposed as a standalone resource.
 ```shell
 curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=createdAt&page[limit]=3&filter[createdAt-start]=2017-02-27T13:25:30Z&filter[playerNames]=<playerName>" \
   -H "Authorization: Bearer <api-key>" \
-  -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 ```java
@@ -86,7 +85,6 @@ url = "https://api.dc01.gamelockerapp.com/shards/na/matches"
 
 header = {
     "Authorization": "<api-key>",
-    "X-TITLE-ID": "semc-vainglory",
     "Accept": "application/vnd.api+json"
 }
 
@@ -173,7 +171,6 @@ Remember — a happy match is an authenticated match!
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/matches/<matchID>" \
   -H "Authorization: Bearer <api-key>" \
-  -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 ```java

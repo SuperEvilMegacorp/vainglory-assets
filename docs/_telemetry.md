@@ -2,7 +2,7 @@
 
 The telemtry provides us insights into the match. It gives us details of various events that happened in the match alongwith the time when they happened. Some of the events also have location which can be plotted on a Vainglory Game map. Telemtry is very useful to generate a timeline visualtions of how the match went for replays, or create heatmaps of where a certin hero or ability is  most useful. These are just some of the exmaples of where Telemtry can be used.
 
-> You will get telemtry data as part of the matches endpoint. 
+> You will get telemtry data as part of the matches endpoint.
 
 > And a map of the Halcyon Fold [here!](https://cdn.discordapp.com/attachments/272249149473161216/284388441674874880/vainglory-map.png)
 
@@ -17,7 +17,6 @@ The HTTP Request to get matches is
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
   -H "Authorization: Bearer <api-key>" \
-  -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 
@@ -76,7 +75,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
           "data": []
         }
       }
-    }, 
+    },
  ```
 
 
@@ -115,7 +114,6 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
 
 ```shell
 curl "https://gl-prod-us-east-1.s3.amazonaws.com/assets/semc-vainglory/na/2017/03/17/00/43/b900c179-0aaa-11e7-bb12-0242ac110005-telemetry.json" \
-  -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 
@@ -144,7 +142,7 @@ curl "https://gl-prod-us-east-1.s3.amazonaws.com/assets/semc-vainglory/na/2017/0
        "Damage": 405,
        "Delt":  613,
        "IsHero": 1,
-       "TargetIsHero": 0 
+       "TargetIsHero": 0
      }
    }
 ```
@@ -399,4 +397,3 @@ When a player earns gold from his or her team killing a Kraken released by the e
 Download sample telemetry data [here!](https://cdn.discordapp.com/attachments/272249149473161216/282627164053176320/telemetry_sample.tgz)
 
 ...
-
