@@ -1,10 +1,10 @@
-# Titles
-
-All endpoints require the following `X-TITLE-ID` header in order for us to respond to a request.
+# Titulos 
+ 
+Todos los endpoints requieren el siguiente encabezado `X-TITLE-ID` en orden para nosotros responder el pedido. 
 
 `X-TITLE-ID: semc-vainglory`
-
+ 
 <aside class="notice">
-No no, this isn't a hint at more Super Evil game titles.  The Vainglory Game Data
-Service uses a platform called Gamelocker which system itself can store multiple titles.
+No no, esto no es una pista de más nombre de juegos de Super Evil. El Vainglory Game Data
+Service usa una plataforma llamada Gamelocker, cuyo sistema puede albergar múltiples títulos.
 </aside>

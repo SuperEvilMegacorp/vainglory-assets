@@ -1,19 +1,17 @@
-## How to contribute to the Vainglory Game Data Service Documentation
+##Como contribuir al Servicio de Documentación de Información de Juego de Vainglory 
 
-#### **Did you find a bug?**
+#### **Encontraste un Bug?**
 
-* **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/madglory/gamelocker-vainglory-docs/issues).
+*** Asegurate que el bug no haya sido reportado aún** Buscando en GitHub debajo de [Issues](https://github.com/madglory/gamelocker-vainglory-docs/issues).
+ 
+*Si no puedes encontrar un problema abierto que solucione el problema [ abre uno nuevo](https://github.com/madglory/gamelocker-vainglory-docs/issues/new). Asegúrate de incluir un ** título y una descripción clara**, y tanta información relevante como sea posible. Nos ayudará a resolverlo
+ 
+#### ** Escribiste un parche que arregla un bug?**
+ 
+*  Abre una nueva solicitud de extracción de GitHub con el parche.
+* Asegurate que la descripción PR describe claramente el problema y la solución. Incluye el número del problema relevante si aplica.
 
-* If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/madglory/gamelocker-vainglory-docs/issues/new). Be sure to include a **title and clear description**, as much relevant information as possible.  It will help us fix it!
-
-#### **Did you write a patch that fixes a bug?**
-
-* Open a new GitHub pull request with the patch.
-
-* Ensure the PR description clearly describes the problem and solution. Include the relevant issue number if applicable.
-
-#### **Do you have questions about to use that Game Data Service?**
-
-* Ask any question about how to use on the [Vainglory API Community Discord server](http://discord.me/vaingloryapi).
-
-Thanks! :heart: :heart: :heart:
+#### ** Tienes preguntas sobre cómo usar ese Servicio de Información de Juego?**
+* Has cualquier pregunta sobre cómo usarlo en el [servidor de la comunidad API de Vainglory de Discord](http://discord.me/vaingloryapi).
+ 
+Gracias! :heart: :heart: :heart:

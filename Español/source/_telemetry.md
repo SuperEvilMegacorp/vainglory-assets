@@ -1,17 +1,18 @@
-# Telemetry
+# Telemetría
 
-The telemtry provides us insights into the match. It gives us details of various events that happened in the match alongwith the time when they happened. Some of the events also have location which can be plotted on a Vainglory Game map. Telemtry is very useful to generate a timeline visualtions of how the match went for replays, or create heatmaps of where a certin hero or ability is  most useful. These are just some of the exmaples of where Telemtry can be used.
-
-> You will get telemtry data as part of the matches endpoint. 
-
-> And a map of the Halcyon Fold [here!](https://cdn.discordapp.com/attachments/272249149473161216/284388441674874880/vainglory-map.png)
+La telemetría nos da puntos de vista a la partida. Nos da detalles de varios eventos que ocurrieron en la partida y donde ocurrieron. Algunos de los eventos también tienen una localización que pueden ser puestos en el mapa de juego
+de Vainglory. Telemetría es muy útil para generar una vidualización de una línea de tiempo de cómo fue la partida para replays, o crear mapas de calor de donde un héroe o habilidad en especial es lo más útil. Estos son solo algunos ejemplos de dónde se puede utilizar telemetría.
 
 
-## To get Telemetry data
+> Conseguirás datos de telemetría como parte del endpoint de la partida.
 
-You start by pulling a list of matches using the matches endopoint.
+> Y un mapa del Halcyon Fold [aquí!](https://cdn.discordapp.com/attachments/272249149473161216/284388441674874880/vainglory-map.png)
 
-The HTTP Request to get matches is
+## Para conseguir datos de telemetría
+ 
+Empiezas consiguiendo una lista de partidas utilizando el endpoint de partidas. 
+
+La petición HTTP para conseguir partidas es
 `GET https://api.dc01.gamelockerapp.com/shards/na/matches`
 
 ```shell
@@ -22,7 +23,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
 ```
 
 ```java
-//There are a variety of Java HTTP libraries that support query-parameters.
+//Hay una variedad de librerías Java HTTP que soportan parámetros de pregunta.
 ```
 ```python
 ```
@@ -32,7 +33,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
 ```
 ```go
 ```
-> The above command returns JSON structured like this:
+> El comando arriba devuelve JSON estructurado de la siguiente manera:
 
 ```json
   "data": [
@@ -80,7 +81,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
  ```
 
 
-> You need to look for Assets JSON node which points to telemetry. Check for the following in the response:
+> Tienes que buscar el nodo que lleva a telemetría. You need to look for Assets JSON node which points to telemetry. Busca por los siguientes en la respuesta:
 
 ```json
       "relationships": {
@@ -94,7 +95,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
         },
 ```
 
-> Once you have located this ID, you now have to search for the following JSON segment in the response object. The following response object will provide you a link to the Telemtry data
+> Cuando hayas encontrado esta ID, ahora tienes que buscar por el siguiente segmento JSON en el objeto respuesta. El siguiente objeto respuesta te dará un enlace a los datos de telemetría.
 
 ```json
     {
@@ -111,7 +112,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
     },
 ```
 
-> you can download the data with following commands. Please note that you **do not** need API Key to get this data.
+> Puedes descargar los datos con los siguientes comandos. Por favor ten en cuenta que **no debes** tener la Llave API para conseguir esta información.
 
 ```shell
 curl "https://gl-prod-us-east-1.s3.amazonaws.com/assets/semc-vainglory/na/2017/03/17/00/43/b900c179-0aaa-11e7-bb12-0242ac110005-telemetry.json" \
@@ -120,7 +121,7 @@ curl "https://gl-prod-us-east-1.s3.amazonaws.com/assets/semc-vainglory/na/2017/0
 ```
 
 ```java
-//There are a variety of Java HTTP libraries that support query-parameters.
+//Hay una variedad de librerías Java HTTP que soportan parámetros de pregunta.
 ```
 ```python
 ```
@@ -130,8 +131,7 @@ curl "https://gl-prod-us-east-1.s3.amazonaws.com/assets/semc-vainglory/na/2017/0
 ```
 ```go
 ```
-> this request will return you a response as follows:
-
+> Esta petición devolverá una respuesta de la siguiente manera:
 
 ```json  
    { "time": "2017-02-18T06:37:15+0000",
@@ -149,11 +149,12 @@ curl "https://gl-prod-us-east-1.s3.amazonaws.com/assets/semc-vainglory/na/2017/0
    }
 ```
 
-## Event Data Dictionary
-Telemetry data is classified into several event of interest. Following is a list of every event type with an example.
+## Diccionario de Datos de Eventos
+Datos de telemetría está clasificada en varios eventos de interés. Lo siguiente es una lista de cada tipo de evento con un ejemplo.
 
 ### PlayerFirstSpawn
-At the start of the game when players spawn.
+Al principio de la partida cuando aparecen los jugadores.
+
 
 ```json
   {
@@ -166,8 +167,9 @@ At the start of the game when players spawn.
   }
 ```
 
-### Level Up
-When a player gains a level in the game. In game types Brawl, you will find 9 events at the exact same time.
+### LevelUp
+Cuando un jugador gana un nivel en el juego. En modos de juego Partida rápida, encontrarás 9 eventos en exactamente el mismo tiempo. 
+
 
 ```json
   {
@@ -183,7 +185,8 @@ When a player gains a level in the game. In game types Brawl, you will find 9 ev
 ```
 
 ### BuyItem
-When a player buys an item.
+Cuando un jugador compra un ítem.
+
 
 ```json
   {
@@ -199,7 +202,8 @@ When a player buys an item.
 ```
 
 ### SellItem
-When a player sells an item.
+Cuando un jugador vende un ítem.
+
 ```json
   {
     "time": "2017-03-31T02:49:37+0000",
@@ -214,7 +218,8 @@ When a player sells an item.
 ```
 
 ### LearnAbility
-When a player puts a point into one of the abilities. Please note there can be a time difference between when a player gains a level and learns an ability
+Cuando un jugador pone un punto a uno de las habilidades. Por favor ten en cuenta que puede haber una diferencia de tiempo entre que un jugador gana un nivel y aprende una habilidad.
+
 ```json
   {
     "time": "2017-03-17T00:38:52+0000",
@@ -229,7 +234,8 @@ When a player puts a point into one of the abilities. Please note there can be a
 ```
 
 ### UseAbility
-This event is recorded when a player uses an ability and it will hold information about the hero who used it together with the co-ordinates for the map.
+Este evento es registrado cuando un jugador utiliza una habilidad y tiene información sobre qué héroe lo utilizó junto con las coordenadas para el mapa. 
+
 ```json
  {
     "time": "2017-03-17T00:39:08+0000",
@@ -248,7 +254,8 @@ This event is recorded when a player uses an ability and it will hold informatio
 ```
 
 ### UseItemAbility
-This event is recorded when a player uses an activatable item or a charm/taunt.
+Este evento es registrado cuando un jugador utiliza un ítem activable o un charm/taunt.
+
 ```json
   {
     "time": "2017-03-31T03:10:17+0000",
@@ -273,7 +280,8 @@ This event is recorded when a player uses an activatable item or a charm/taunt.
 ```
 
 ### EarnXP
-This event is recorded when a player gains XP from any source. it could be killing a minion, miner or a hero.
+Este evento es registrado cuando un jugador gana XP de cualquier fuente. Podría ser matar un minion, minero o un héroe.
+
 ```json
   {
     "time": "2017-03-17T00:39:09+0000",
@@ -289,7 +297,8 @@ This event is recorded when a player gains XP from any source. it could be killi
 ```
 
 ### DealDamage
-This event is recorded when any actor (player, turret, minion, etc.) deals damage to any other.
+Este evento es registrado cuando cualquier actor (jugador, torreta, minion, etc.) hace daño a cualquier otro.
+
 ```json
   {
     "time": "2017-03-31T02:47:34+0000",
@@ -308,7 +317,8 @@ This event is recorded when any actor (player, turret, minion, etc.) deals damag
 ```
 
 ### KillActor
-This event is recorded when a player kills anything in game. it could be a a minion, miner or a hero. You will generally see EarnXP and KillActor events come at the sme time.
+Este evento es registrado cuando un jugador mata cualquier cosa en la partida. Puede ser un minion, minero o un héroe. Generalmente verás los eventos EarnXP y KillActor pasando al mismo tiempo.
+
 
 ```json
   {
@@ -332,7 +342,8 @@ This event is recorded when a player kills anything in game. it could be a a min
 ```
 
 ### NPCkillNPC
-When one non-player actor kills another, such as the Kraken or a minion killing a turret.
+Cuando un actor no-jugador mata a otro, como el Kraken o cuando un minion destruye una torreta.
+
 ```json
   {
     "time": "2017-03-31T03:07:21+0000",
@@ -355,7 +366,8 @@ When one non-player actor kills another, such as the Kraken or a minion killing 
 ```
 
 ### GoldFromTowerKill
-When a player earns gold from the destruction of a turret belonging to the enemy team.
+Cuando un jugador gana oro de la destrucción de una torreta que pertenece al equipo contrario.
+
 ```json
   {
     "time": "2017-03-31T02:57:02+0000",
@@ -369,7 +381,8 @@ When a player earns gold from the destruction of a turret belonging to the enemy
 ```
 
 ### GoldFromGoldMine
-When a player earns gold from his or her team capturing the gold miner.
+Cuando un jugador consigue oro de que su equipo captura el minero de oro.
+
 ```json
   {
     "time": "2017-03-31T03:00:43+0000",
@@ -383,7 +396,8 @@ When a player earns gold from his or her team capturing the gold miner.
 ```
 
 ### GoldFromKrakenKill
-When a player earns gold from his or her team killing a Kraken released by the enemy team.
+Cuando un jugador consigue oro de que su equipo mata al Kraken capturado por el equipo enemigo.
+
 ```json
   {
     "time": "2017-03-31T03:07:43+0000",
@@ -396,7 +410,6 @@ When a player earns gold from his or her team killing a Kraken released by the e
   }
 ```
 
-Download sample telemetry data [here!](https://cdn.discordapp.com/attachments/272249149473161216/282627164053176320/telemetry_sample.tgz)
-
+Descarga muestras de datos de telemetría [aquí!](https://cdn.discordapp.com/attachments/272249149473161216/282627164053176320/telemetry_sample.tgz)
 ...
 

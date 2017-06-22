@@ -1,8 +1,8 @@
-# Teams (Coming Soon!)
-
-Team objects contain aggregated lifetime information about each Team.
-
-## Get a collection of Teams
+# Equipos (Disponible pronto!)
+ 
+Objetos equipo contienen información agregada durante la existencia de cada equipo.
+ 
+## Conseguir una colección de equipos 
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/teams?filter[teamNames]=team1" \
@@ -11,28 +11,28 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/teams?filter[teamNames]=team1
   -H "Accept: application/vnd.api+json"
 ```
 
-This endpoint retrieves a collection of up to 6 teams.
+Este endpoint recoge una colección de hasta 6 equipos.
 
 <aside class="warning">
-Important - Team resources are not yet available in the API.
+Importante - Recursos de equipo aún no están disponibles en el API..
 </aside>
 
-### HTTP Request
+### Petición HTTP
 
 `GET https://api.dc01.gamelockerapp.com/teams`
-
-### Query Parameters
-
-Parameter | Default | Description
+ 
+### Parámetros de pregunta
+ 
+Parámetro | Defecto | Descripción
 --------- | ------- | -----------
-filter[teamNames] | none | Filters by team name. Usage: filter[teamNames]=team1
-filter[teamIds] | none | Filter by team id. Usage: filter[teamIds]=12345
+filter[teamNames] | none | Flirta por nombre del equipo. Uso: filter[teamNames]=team1
+filter[teamIds] | none | Filtra por id del equipo. Uso: filter[teamIds]=12345
 
 <aside class="success">
-Remember — a happy team is an authenticated team!
+Recuerda — un equipo autentificado es un equipo feliz!
 </aside>
 
-## Get a single Team
+## Conseguir un Solo Equipo
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/teams/<ID>" \
@@ -43,8 +43,7 @@ curl "https://api.dc01.gamelockerapp.com/teams/<ID>" \
 
 ```python
 ```
-
-> The above command returns JSON structured like this:
+> El comando arriba devuelve JSON estructurado de esta manera:
 
 ```json
 {
@@ -56,14 +55,14 @@ curl "https://api.dc01.gamelockerapp.com/teams/<ID>" \
 }
 ```
 
-This endpoint retrieves a specific team.
+Este endpoint devuelve un equipo específico.
 
-### HTTP Request
+### Petición HTTP
 
 `GET https://api.dc01.gamelockerapp.com/teams/<ID>`
-
-### URL Parameters
-
-Parameter | Description
+ 
+### Parámetros URL
+ 
+Parámetro | Descripción
 --------- | -----------
-ID | The ID of the team to retrieve
+ID | El ID del equipo a recoger

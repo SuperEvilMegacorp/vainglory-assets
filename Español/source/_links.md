@@ -1,6 +1,6 @@
-# Links (Coming Soon!)
+# Enlaces (Disponibles pronto!)
 
-## Get a Link
+## Consigue un enlace
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/link/{id}" \
@@ -8,14 +8,14 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/link/{id}" \
   -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
-
-This endpoint checks to see if a link object exists for a given code.
-
-### HTTP Request
-
+ 
+Este endpoint comprueba que un objeto link existe para un código dado.
+ 
+### Petición HTTP
+ 
 `GET https://api.dc01.gamelockerapp.com/link`
-
-### Query Parameters
-
-Parameter | Default | Description
+ 
+### Parámetros de pregunta
+ 
+Parámetro | Defecto | Descripción
 --------- | ------- | ----------- 

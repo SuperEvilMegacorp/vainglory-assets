@@ -1,31 +1,31 @@
-# Community SDK's
-
-Community contributions are welcome and rewarded with good karma (and swag!) If you are currently working on an API, let us know on the Discord server and we will add a link!
-
+# SDK De La Comunidad
+ 
+Contribuciones de la comunidad son bienvenidos y recompensados con buen karma (y mucho swag!) Si estás trabajando con un API, déjanos saber en el servidor de Discord y añadiremos un enlace! 
+ 
 ##Java
-
-A Java adaptation of the Vainglory API - [DominicGunn/flicker](http://github.com/DominicGunn/flicker)
-
+ 
+Una adaptación Java del API de Vainglory - [DominicGunn/flicker](http://github.com/DominicGunn/flicker)
+ 
 ##Python
-
-Python 3 wrapper for the Gamelocker API - [schneefux/python-gamelocker](http://github.com/schneefux/python-gamelocker)
-
-Python 3 wrapper for the Gamelocker API - [ClarkThyLord/madglory-ezl](https://github.com/ClarkThyLord/madglory-ezl)
-
+ 
+Python 3 wrapper para el Gamelocker API - [schneefux/python-gamelocker](http://github.com/schneefux/python-gamelocker)
+ 
+Python 3 wrapper para el Gamelocker API - [ClarkThyLord/madglory-ezl](https://github.com/ClarkThyLord/madglory-ezl)
+ 
 ##JavaScript
-
-A JavaScript API client - [seripap/vainglory](https://github.com/seripap/vainglory)
-
+ 
+Un cliente JavaScript API - [seripap/vainglory](https://github.com/seripap/vainglory)
+ 
 ##R
-
-A project providing R6 classes (for the R language) for accessing the API - [nathancarter/rvgapi](https://github.com/nathancarter/rvgapi)
-
+ 
+Un proyecto dando clases de R6 (para el lenguaje R) para acceder el API - [nathancarter/rvgapi](https://github.com/nathancarter/rvgapi)
+ 
 ##Go
-
-A proof of concept go client for the Vainglory Developer API - [madglory/vainglory-go-client](https://github.com/madglory/vainglory-go-client)
-
+ 
+Una prueba de un concepto de cliente go para el Vainglory Developer API - [madglory/vainglory-go-client](https://github.com/madglory/vainglory-go-client)
+ 
 ##Ruby
-
-A Ruby gem wrapper for the Vainglory Developer API -
+ 
+Un Ruby gem wrapper para el Vainglory Developer API -
 [Ruby Gem](https://rubygems.org/gems/vainglory-api) | 
 [Github](https://github.com/cbortz/vainglory-api-ruby)

@@ -15,3 +15,22 @@
   "13": "_sdks",
   "14": "_errors"
 }
+
+{
+  "0":  "_introducción",
+  "1":  "_centrosdedatos",
+  "2":  "_autentificación",
+  "3":  "_titulos",
+  "4":  "_solicitudes",
+  "5":  "_respuestas",
+  "6":  "_partidos",
+  "7": "_partidosJSON",
+  "8":  "_jugadores",
+  "9":  "_ejemplos",
+  "10":  "_telemetria",
+  "11": "_equipos",
+  "12": "_links",
+  "13": "_sdks",
+  "14": "_errores"
+}
+

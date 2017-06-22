@@ -1,6 +1,7 @@
 # JSON-P Callbacks
+ 
+Puedes enviar un parámetro ?callback para cualquier llamada GET para tener los resultados envueltos en una función JSON. Esto es típicamente utilizado cuando navegadores quieren empotrar contenido en páginas web pasando problemas de dominio cruzado. La respuesta incluye el mismo output de datos del API regular, más la relevante información de cabecera HTTP.
 
-You can send a ?callback parameter to any GET call to have the results wrapped in a JSON function. This is typically used when browsers want to embed content in web pages by getting around cross domain issues. The response includes the same data output as the regular API, plus the relevant HTTP Header information.
 
 ```shell
 curl https://api.dc01.gamelockerapp.com/status?callback=foo

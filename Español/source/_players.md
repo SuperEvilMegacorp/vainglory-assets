@@ -1,8 +1,8 @@
-# Players
+# Jugadores
+ 
+Objetos jugador contienen información agregada de cada jugador desde su creación. En este momento jugadores son bastante escasos, pero hay planes de añadir más datos cuando se vuelva posible.
 
-Player objects contain aggregated lifetime information about each Player.  At this time Players are fairly sparse, but there are plans to add much richer data as it becomes available.
-
-## Get a single Player
+## Conseguir un solo jugador
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/players/<ID>" \
@@ -12,7 +12,8 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players/<ID>" \
 ```
 
 ```java
-//There are a variety of Java HTTP libraries that support query-parameters.
+//Hay una variedad de librerías Java HTTP que soportan query-parameters.
+
 ```
 
 ```python
@@ -27,7 +28,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players/<ID>" \
 ```go
 ```
 
-> The above command returns JSON structured like this:
+> El comando arriba devuelve JSON estructurado de esta manera:
 
 ```json
 {
@@ -46,31 +47,26 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players/<ID>" \
 }
 ```
 
-This endpoint retrieves a specific player.
+Este endpoint devuelve a un jugador específico.
 
 <aside class="notice">
-Changes Coming! - Player resources are not fully defined at this point, but are
-included so that consumers can get basic info (name, etc.)  This object will have
-additional data added over the next few months, and may change slightly as data
-moves from the `attributes.stats` object to the main `attributes` object.
+Vienen Cambios! - Recursos jugador no están completamente definidos aún, pero son incluidos para que consumidores consigan información básica (nombre, etc.) Este objeto tendrá datos adicionales añadidos en los siguientes meses, y puede cambiar un poco cuando datos se mueven desde el objeto `attributes.stats` al objeto principal `attributes`.
 </aside>
 
-### HTTP Request
+### Petición HTTP
 
 `GET https://api.dc01.gamelockerapp.com/shards/na/players/<ID>`
-
-
-### URL Parameters
-
-Parameter | Description
+ 
+### Parámetros URL 
+ 
+Parámetro | Descripción
 --------- | -----------
-ID | The ID of the player to retrieve
-
-
-## Get a collection of players
-
-This endpoint retrieves a collection of up to 6 players, filtered by name. Player names are specific to each region. If a player has changed names, it is possible that there are multiple ID's for a single player name.
-
+ID | La ID del jugador que se recoge
+ 
+## Consigue un grupo de jugadores
+ 
+Este endpoint recoge un grupo de hasta 6 jugadores, filtrados por nombre. Nombres de jugador son específicos a cada región. Si un jugador ha cambiado de nombre es posible que haya varios ID para un solo nombre de jugador.
+ 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=player1,player2" \
   -H "Authorization: Bearer <api-key>" \
@@ -79,7 +75,8 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=p
 ```
 
 ```java
-//There are a variety of Java HTTP libraries that support query-parameters.
+//Hay una variedad de librerías Java HTTP que soportan query-parameters.
+
 ```
 
 ```python
@@ -94,13 +91,12 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=p
 ```go
 ```
 
-### HTTP Request
-
+### Solicitud HTTP
+ 
 `GET https://api.dc01.gamelockerapp.com/shards/na/players`
 
 ### Query Parameters
 
-
-Parameter | Default | Description
+Parámetro | Por Defecto | Descripción
 --------- | ------- | -----------
-filter[playerNames] | none | Filters by player names. Usage: filter[playerNames]=player1,player2
+filter[playerNames] | ninguno | Filtros por nombre de jugador. Uso: filter[playerNames]=player1,player2

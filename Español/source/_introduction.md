@@ -1,32 +1,26 @@
-# Introduction
+# Introducción 
+ 
+La primera versión de servicio de data del juego Vainglory es un paso excitante hacia delante al hacer más fácil para los usuarios el tener un acceso abierto a data dentro del juego.
+ 
+Construye algo estupendo!
+ 
+Por el momento este servicio es una modalidad **Adelanto Alfa** . Puedes ver muestras de data, probar la interfaz y proveer feedback a nuestro equipo de desarrollo.
+ 
+Mientras inicialmente cogimos una aproximación diferente, basados en respuestas de la comunidad el servidor ahora intenta hacer cada intento de implementar las características necesarias de la especificación
+[JSON-API](http://jsonapi.org/)
+Donde ocurra una desviación, es probablemente involuntario y puede ser reportado a nuestro equipo en nuestro [Discord](https://discord.me/vaingloryapi).
+ 
+Nosotros mostramos muestras de enlaces de idioma usando CURL y planeamos añadir bibliotecas para Ruby, NodeJS, Java, Python y más. Son bienvenidas contribuciones de la comunidad y recompensadas con buen karma (y estilo!) Puedes ver muestras de código en el área negra de la derecha, y puedes cambiar el idioma programado de las muestras con las pestañas en la parte superior derecha.
+ 
+Planeamos sacar la versión 1.0 Q1 2017.
+ 
+## Versiones
+ 
+Seguimos normas [SEMVER](http://semver.org/), utilizando un esquema de versiones MAJOR.MINOR.PATCH. Esto significa que incrementamos las versiones de la siguiente manera:
+ 
+  * MAJOR versión cuando hacemos cambios API incompatibles,
+  * MINOR versión cuando añadimos funcionalidad retro-compatible,
+  * PATCH versión cuando hagamos arreglos de bugs retrocompatibles.
+ 
+Puedes ver la versión actual y la fecha de llegada mirando el [Status](https://api.dc01.gamelockerapp.com/status) endpoint.
 
-The first version of the Vainglory Game Data Service is an exciting step forward
-towards making it easier for users to have open access to in-game data.
-
-Build something great!
-
-At the moment this Service is in **Alpha Preview** mode.  You can see sample data,
-test the interface, and provide feedback to our development team.
-
-While we initially took a different approach, based on community feedback
-the Server now makes every attempt to implement the required features of the
-[JSON-API](http://jsonapi.org/) specification. Where a deviation occurs, it is likely
-unintentional and can be reported to the team in our [Discord](https://discord.me/vaingloryapi).
-
-We show example language bindings using CURL and plan to add libraries for Ruby,
-NodeJS, Java, Python and more.  Community contributions are welcome and rewarded with good
-karma (and swag!) You can view code examples in the dark area to the right, and
-you can switch the programming language of the examples with the tabs in the
-top right.
-
-We're planning to roll out Version 1.0 Q1 2017.
-
-## Versioning
-
-We following [SEMVER](http://semver.org/) standards, using a MAJOR.MINOR.PATCH versioning scheme. This means that we will increment versioning in the following way:
-
-  * MAJOR version when we make incompatible API changes,
-  * MINOR version when we add functionality in a backwards-compatible manner,
-  * PATCH version when we make backwards-compatible bug fixes.
-
-You can see the current version and deploy date by viewing the [Status](https://api.dc01.gamelockerapp.com/status) endpoint.

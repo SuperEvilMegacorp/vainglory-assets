@@ -1,18 +1,17 @@
-# Making Requests
+# Haciendo solicitudes
+ 
+## Negociación de contenido
+ 
+Clientes utilizando el api deberían especificar que aceptan respuestas utilizando el formato
+`application/vnd.api+json`, por conveniencia también aceptamos 
+`application/json`
+porque está por defecto en muchas librerías de cliente populares.
+ 
+El servidor responderá con una cabecera `Content-Type` que imita el formato solicitado por el cliente.
 
-## Content Negotiation
+## Regiones
 
-Clients using the api should specify that they accept responses using the
-`application/vnd.api+json` format, for convenience we will also accept `application/json`
-since it is the default for many popular client libraries.
-
-The Server will respond with a `Content-Type` header that mirrors the format
-requested by the Client.
-
-
-## Regions
-
-> To specify the regions, use this code:
+> Para especificar las regiones, utiliza este código:
 
 ```shell
 "...gamelockerapp.com/shards/<region>/..."
@@ -33,33 +32,33 @@ requested by the Client.
 "...gamelockerapp.com/shards/<region>/..."
 ```
 
-The Vainglory Game Data Service currently supports the following regions:
+El Servicio de Datos de Juego de Vainglory actualmente soporta las siguientes regiones:
 
-***General Region Shards***
+***Shards de regiones generales***
 
-To find data regarding live servers, where all data is found, please use the following shards.
+Para encontrar datos respecto a servidores live, por favor utiliza los siguientes shards.
 
-* **North America:** ```na```
-* **Europe:** ```eu```
-* **South America:** ```sa```
-* **East Asia:** ```ea```
-* **Southeast Asia (SEA):** ```sg```
+* **América del Norte:** ```na```
+* **Europa:** ```eu```
+* **Suramérica:** ```sa```
+* **Asia Este:** ```ea```
+* **Asia Sureste (SEA):** ```sg```
 
-***Tournament Region Shards***
-
-To find data regarding professional eSport, which take place on the private client only, please use the following shards.
-
-* **North America Tournaments:** ```tournament-na```
-* **Europe Tournaments:** ```tournament-eu```
-* **South America Tournaments:** ```tournament-sa```
-* **East Asia Tournaments:** ```tournament-ea```
-* **Southeast Asia Tournaments:** ```tournament-sg```
-
-**Choosing a specific region is currently required**
+***Shards de regiones de torneo***
+ 
+Para encontrar datos respecto a eSports profesionales, los cuales solo pasan en clientes privados, utiliza los siguientes shards.
+ 
+* **Torneos de América del Norte:** 
+* **Torneos de Europa:** 
+* **Torneos de Suramérica:** `
+* **Torneos de Asia Este:** 
+* **Torneos de Asia Sureste:** 
+ 
+**Elegir una región específica es actualmente necesario**
 
 ## GZIP
-
-> To specify the header Accept-Encoding, use this code:
+ 
+> Para especificar la cabecera Accept-Encoding, utiliza este código:
 
 ```shell
 -H "Accept-Encoding: gzip"
@@ -79,30 +78,25 @@ header = {"Accept-Encoding":"gzip"}
 req.Header.Set("Accept-Encoding", "gzip")
 ```
 
-Clients can specify the header `Accept-Encoding: gzip` and the server will compress responses.  
-Responses will be returns with `Content-Encoding: gzip`.
+Clientes pueden especificar la cabecera `Accept-Encoding: gzip` y el servidor compresa respuestas
+Respuestas serán devueltas con `Content-Encoding: gzip`.
+ 
+Dada la grandeza de partidas, esto puede tener mejoras en rendimiento significantes.
+ 
+## Paginación
 
-Given the size of matches, this can have significant performance benefits.
-
-
-## Pagination
-
-
-Where applicable, the server allows requests to limit the number of results
-returned via pagination. To paginate the primary data, supply pagination information
-to the query portion of the request using the limit and offset parameters.  
-To fetch items 2 through 10 you would specify a limit of 8 and an offset of 2:
-
-If not specified, the server will default for matches to`limit=5` and `offset=0`, and for players/samples to `limit=50` and `offset=0`
-
+Donde aplicable, el servidor permite peticiones de limitar el número de resultados via paginación. Para paginar los datos primarios, da información de paginación a la parte de preguntas de la petición utilizando el límite y parámetros offset.
+Para conseguir items 2 hasta 10 tendrias que especificar un límite de 8 y un offset de 2:
+Si no es especificada, el servidor en partidas pondrá por defecto `limit=5` y `offset=0`, y para jugadores/muestras `limit=50` y `offset=0`
+ 
 <aside class="warning">
-Important - Currently the server will not allow responses with over 50 primary data objects
+Importante - Actualmente el servidor no permite más de 50 objetos de datos primarios.
 </aside>
 
-## Sorting
-
->The example below will return the oldest articles first:
-
+## Sortear
+ 
+>El ejemplo debajo devolverá los artículos más antiguos primero:
+ 
 ```shell
 ".../matches?sort=createdAt"
 ```
@@ -122,7 +116,7 @@ Important - Currently the server will not allow responses with over 50 primary d
 ".../matches?sort=createdAt"
 ```
 
->The example below will return the newest articles first.
+>Los ejemplos debajo devolverá los artículos más nuevos primero.
 
 ```shell
 ".../matches?sort=-createdAt"
@@ -142,15 +136,11 @@ Important - Currently the server will not allow responses with over 50 primary d
 ```go
 ".../matches?sort=-createdAt"
 ```
-The default sort order is always ascending. Ascending corresponds to the
-standard order of numbers and letters, i.e. A to Z, 0 to 9).  For dates and times,
-ascending means that earlier values precede later ones e.g. 1/1/2000 will sort
-ahead of 1/1/2001.
-
-All resource collections have a default sort order.  In addition, some resources
-provide the ability to sort according to one or more criteria ("sort fields").
-
-If sort fields are is prefixed with a minus, the order will be changed to descending.
+El orden de sorteo por defecto siempre es ascendiendo. Ascendiendo corresponde a el orden estándar para número de números y letras, es decir, A hasta Z, 0 a 9). Para datos y tiempos, ascendiendo significa que valores anteriores preceden valores posteriores es decir 1/1/2000 estará antes de 1/1/2001.
+ 
+Todas las colecciones de recursos tienen una orden de sorteo que está por defecto. Además, algunos recursos dan la habilidad de sortear acordando a una o más criterios ("sort fields").
+ 
+Si los campos de sorteo (sort fields) están prefixed con un símbolo de menos, el orden será cambiado a descendiente.
 
 ## JSON-P Callbacks
 
@@ -158,7 +148,7 @@ If sort fields are is prefixed with a minus, the order will be changed to descen
 curl -g "https://api.dc01.gamelockerapp.com/status?callback=foo"
 ```
 
-You can send a ?callback parameter to any GET call to have the results wrapped in a JSON function. This is typically used when browsers want to embed content in web pages by getting around cross domain issues. The response includes the same data output as the regular API, plus the relevant HTTP Header information.
+Puedes enviar un parámetro ?callback para cualquier llamada GET para tener los resultados envueltos en una función JSON. Esto es utilizado típicamente cuando navegadores quieren empotrar contenido en páginas web mediante pasarse problemas cross domain. La respuesta include la misma salida de datos que el API regular, más la información de la cabecera HTTP relevante. 
 
 
 ## Cross Origin Resource Sharing
@@ -182,7 +172,7 @@ curl -i https://api.dc01.gamelockerapp.com/status -H "Origin: http://example.com
   Access-Control-Max-Age: 86400
 ```
 
-The API supports Cross Origin Resource Sharing (CORS) for AJAX requests from any origin.
-You can read the CORS W3C Recommendation, or this intro from the HTML 5 Security Guide.
-
-Here's a sample request sent from a browser hitting http://example.com:
+El API soporta Cross Origin Resource Sharing (CORS) para peticiones AJAX de cualquier origen.
+Puedes leer el CORS W3C Recommendation, o esta introducción del HTML 5 Security Guide.
+ 
+Aquí hay una muestra de una petición enviada desde un navegador dándole a http://example.com:

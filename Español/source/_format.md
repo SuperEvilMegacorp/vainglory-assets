@@ -416,7 +416,7 @@ Sin embargo, procesadores JSON API **DEBEN** ignorar completamente @-Miembros (e
  
 Además, las existencias de @-Members **DEBEN** ser ignoradas cuando interpretando todas las definiciones JSON API y procesando instrucciones dadas fuera de esta subsección. Por ejemplo, un [attribute][attributes] es definido arriba como cualquier miembro del objeto atributos. Sin embargo, porque @-Miembros debe ser ignorado cuando interpretando esa definición, un @-Miembro que ocurre en el objeto de un atributo no es un atributo.
  
-> Nota: Junto a otras cosas, “@” miembros puede ser usado para añadir JSON-LD data a un documento JSON API. Estos documentos deberían ser entregados con [un encabezado extra] (http://www.w3.org/TR/json-id/#interpreting-json-as-id) para transmitir a clientes JSON-LD que contengan JSON-LD data. 
+> Nota: Junto a otras cosas, “@” miembros puede ser usado para añadir JSON-LD data a un documento JSON API. Estos documentos deberían ser entregados con [un encabezado extra](http://www.w3.org/TR/json-id/#interpreting-json-as-id) para transmitir a clientes JSON-LD que contengan JSON-LD data. 
 
 ## <a href="#fetching" id="fetching" class="headerlink"></a> Recuperación de Data 
 
@@ -606,8 +606,7 @@ Content-Type: application/vnd.api+json
 }
 ```
 
-If the above relationship is empty, then a `GET` request to the same URL would
-return:
+Si la relación arriba está vacía, una petición `GET` al mismo URL devolvería: 
 
 ```http
 HTTP/1.1 200 OK
@@ -622,7 +621,7 @@ Content-Type: application/vnd.api+json
 }
 ```
 
-A `GET` request to a URL from a to-many relationship link could return:
+Una solicitud `GET` a un URL desde un enlace de relación de to-many podria regresar:
 
 ```http
 HTTP/1.1 200 OK
@@ -640,8 +639,7 @@ Content-Type: application/vnd.api+json
 }
 ```
 
-If the above relationship is empty, then a `GET` request to the same URL would
-return:
+Si la relación de arriba está vacía entonces una solicitud `GET` al mismo URL devolvería:
 
 ```http
 HTTP/1.1 200 OK
@@ -656,127 +654,88 @@ Content-Type: application/vnd.api+json
 }
 ```
 
-##### <a href="#fetching-relationships-responses-404" id="fetching-relationships-responses-404" class="headerlink"></a> 404 Not Found
+##### <a href="#fetching-relationships-responses-404" id="fetching-relationships-responses-404" class="headerlink"></a> 404 No Encontrado
 
-A server **MUST** return `404 Not Found` when processing a request to fetch
-a relationship link URL that does not exist.
+El servidor **DEBE** devolver `404 Not Found` cuando procesa una petición para conseguir un recurso que no existe.
 
-> Note: This can happen when the parent resource of the relationship
-does not exist. For example, when `/articles/1` does not exist, request to
-`/articles/1/relationships/tags` returns `404 Not Found`.
+> Nota: Esto puede pasar cuando el recurso pariente de la relación no existe. Por ejemplo, cuando `/articles/1` no existe, solicitar el `/articles/1/relationships/tags` devuelve` 404 Not Found`.   
+ 
+Si el enlace de la relación URL existe pero la relación está vacía, entonces`200 OK`**DEBE** ser devuelto, como está descrito arriba. 
 
-If a relationship link URL exists but the relationship is empty, then
-`200 OK` **MUST** be returned, as described above.
+##### <a href="#fetching-relationships-responses-other" id="fetching-relationships-responses-other" class="headerlink"></a> Otras Respuestas
 
-##### <a href="#fetching-relationships-responses-other" id="fetching-relationships-responses-other" class="headerlink"></a> Other Responses
+Un servidor **PUEDE**  responder con otro  HTTP código de estado.
+ 
+Un servidor **PUEDE**  incluir [error details] con respuestas de errores 
+ 
+Un servidor **DEBE** preparar respuestas, y un cliente **DEBE** interpretar respuestas, de acuerdo con [`HTTP semantics`](http://tools.ietf.org/html/rfc7231).
 
-A server **MAY** respond with other HTTP status codes.
+### <a href="#fetching-includes" id="fetching-includes" class="headerlink"></a> Inclusión de los Recursos Relacionados
 
-A server **MAY** include [error details] with error responses.
-
-A server **MUST** prepare responses, and a client **MUST** interpret
-responses, in accordance with
-[`HTTP semantics`](http://tools.ietf.org/html/rfc7231).
-
-### <a href="#fetching-includes" id="fetching-includes" class="headerlink"></a> Inclusion of Related Resources
-
-An endpoint **MAY** return resources related to the primary data by default.
-
-An endpoint **MAY** also support an `include` request parameter to allow the
-client to customize which related resources should be returned.
-
-If an endpoint does not support the `include` parameter, it **MUST** respond
-with `400 Bad Request` to any requests that include it.
-
-If an endpoint supports the `include` parameter and a client supplies it,
-the server **MUST NOT** include unrequested [resource objects] in the `included`
-section of the [compound document].
-
-The value of the `include` parameter **MUST** be a comma-separated (U+002C
-COMMA, ",") list of relationship paths. A relationship path is a dot-separated
-(U+002E FULL-STOP, ".") list of [relationship][relationships] names.
-
-If a server is unable to identify a relationship path or does not support
-inclusion of resources from a path, it **MUST** respond with 400 Bad Request.
-
-> Note: For example, a relationship path could be `comments.author`, where
-`comments` is a relationship listed under a `articles` [resource object][resource objects], and
-`author` is a relationship listed under a `comments` [resource object][resource objects].
-
-For instance, comments could be requested with an article:
+Un endpoint **PUEDE** regresar recursos relacionados a los datos primarios por defecto.
+ 
+Un endpoint **PUEDE** también soportar solicitar un parámetro `include` para dejar que el cliente customize cuales recursos relacionados deben volver. 
+ 
+Si un endpoint no soporta de parámetro `include`, eso **DEBE** responder con `400 Bad Request` a cualquier solicitud que la incluya.
+ 
+Si un endpoint soporta el parámetro `include` y el cliente lo envía, el servidor **NO PUEDE** incluir algo no solicitado [resource objects] a la sección `included` del [compound document]. 
+ 
+El valor del parámetro `include` **DEBE** ser una lista de secuencias de relaciones separado por coma (U+002C COMMA, ",") Una secuencia de relaciones es una lista de nombres [relationship][relationships] separado con puntos (U+002E FULL-STOP, ".") 
+ 
+Si un servidor no es capaz de identificar una secuencia de relación o no soporta incluir de recursos de una secuencia, **DEBE** responder con ‘400 Bad request’
+ 
+>Nota: Por ejemplo, una secuencia de las relaciones puede ser `comments.author`, donde `comments` es un relación enumerada bajo `articles` [resource object][resource objects], y `author` es una relación numerada bajo `comments` [resource object][resource objects]. 
+ 
+Por ejemplo, Comentarios podrían ser  solicitados con un artículo:
 
 ```http
 GET /articles/1?include=comments HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-In order to request resources related to other resources, a dot-separated path
-for each relationship name can be specified:
+En orden para pedir recursos relacionados con otros recursos, una secuencia separada por puntos, para cada nombre de relación  puede ser especificado:
+
 
 ```http
 GET /articles/1?include=comments.author HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-> Note: Because [compound documents][compound document] require full linkage
-(except when relationship linkage is excluded by sparse fieldsets), intermediate
-resources in a multi-part path must be returned along with the leaf nodes. For
-example, a response to a request for `comments.author` should include `comments`
-as well as the `author` of each of those `comments`.
-
-> Note: A server may choose to expose a deeply nested relationship such as
-`comments.author` as a direct relationship with an alias such as
-`comment-authors`. This would allow a client to request
-`/articles/1?include=comment-authors` instead of
-`/articles/1?include=comments.author`. By abstracting the nested
-relationship with an alias, the server can still provide full linkage in
-compound documents without including potentially unwanted intermediate
-resources.
-
-Multiple related resources can be requested in a comma-separated list:
-
+>Nota: Porque [compound documents][compound document] requieren enlace completo (excepto cuando el enlace de relación es excluido por conjuntos de campos escasos), recursos intermedios en un camino multi-part deben ser devueltos con los nodos hoja. Por ejemplo, una respuesta a una petición para `comments.author` debería incluir `comments` más a el `author` de cada uno de esos `comments`.
+  
+>Nota: Un servidor podría exponer una relación profundamente anidada como
+`comments.author` Como una relación directa con un alias como `comment-authors`. Esto le permite a un cliente a pedir `/articles/1?include=comment-authors` En vez de 
+`/articles/1?include=comments.author`. Abstrayendo la relación anidada con un alias, el servidor aún puede dar completo enlace en documentos compuestos sin incluir potencialmente recursos intermedios no queridos.
+ 
+Múltiples recursos relacionados pueden ser solicitados en una lista separada por comas:
+ 
 ```http
 GET /articles/1?include=author,comments.author HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-Furthermore, related resources can be requested from a relationship endpoint:
+Además, recursos relacionados pueden ser solicitados desde un endpoint de relación: 
 
 ```http
 GET /articles/1/relationships/comments?include=comments.author HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-In this case, the primary data would be a collection of
-[resource identifier objects][resource identifier object] that represent linkage to comments for an article,
-while the full comments and comment authors would be returned as included data.
+En este caso, los datos primarios serían una colección de [resource identifier objects][resource identifier object]  que representa enlace con los comentarios para un artículo, mientras el comentario y autor del comentario regresaría como datos incluídos  
+ 
+>Nota: Esta sección aplica a cualquier endpoint que responde con datos primarios, independientemente del tipo de petición. Por ejemplo, un servidor puede soportar la inclusión de recursos relacionados seguidos por una solicitud `POST` para crear un recurso o relación.
 
-> Note: This section applies to any endpoint that responds with primary
-data, regardless of the request type. For instance, a server could support
-the inclusion of related resources along with a `POST` request to create a
-resource or relationship.
+### <a href="#fetching-filtering" id="fetching-filtering" class="headerlink"></a> Filtros
 
-### <a href="#fetching-filtering" id="fetching-filtering" class="headerlink"></a> Filtering
+El parámetro de pregunta `filter`  es reservado para filtrar los datos. Filtros son vistas a las colecciones, y servidores y clientes **DEBERÍAN** utilizar esta llave para filtrar operaciones.
+ 
+>Nota:JSON API es agnóstico sobre las estrategias que soporta el servidor. El parámetro de pregunta `filter` puede ser utilizado como la base para cualquier número de estrategias de filtrado.
 
-The `filter` query parameter is reserved for filtering data. Filters are views on collections,
-and can Servers and clients
-**SHOULD** use this key for filtering operations.
+## <a href="#query-parameters" id="query-parameters" class="headerlink"></a> Parámetros de Pregunta 
 
-> Note: JSON API is agnostic about the strategies supported by a server. The
-`filter` query parameter can be used as the basis for any number of filtering
-strategies.
-
-## <a href="#query-parameters" id="query-parameters" class="headerlink"></a> Query Parameters
-
-Implementation specific query parameters **MUST** adhere to the same constraints
-as [member names] with the additional requirement that they **MUST** contain at
-least one non a-z character (U+0061 to U+007A). It is **RECOMMENDED** that a
-U+002D HYPHEN-MINUS, "-", U+005F LOW LINE, "_", or capital letter is used
-(e.g. camelCasing).
-
-If a server encounters a query parameter that does not follow the naming
-conventions above, and the server does not know how to process it as a query
-parameter from this specification, it **MUST** return `400 Bad Request`.
-
-> Note: This is to preserve the ability of JSON API to make additive additions
-to standard query parameters without conflicting with existing implementations. -->
+Parámetros de pregunta de implementación específica**DEBE** adherirse a las mismas limitaciones que[member names] con el requerimiento adicional que **DEBE** contener al menos un carácter que no sea a-z (U+0061 a U+007A). Es **RECOMENDABLE** que sea U+002D Guión-Menos, "-", U+005F Línea baja, "_", o usar una letra mayúscula
+(p.ej. camelCasing).
+ 
+Si un servidor encuentra un parámetro de pregunta que no siga el sistema de nombres convencional arriba, y el servidor no sabe cómo procesarlo como un parámetro de pregunta de esta especificación, **DEBE** responder con `400 Bad Request`.
+ 
+> Nota: Esto es para preservar la habilidad de JSON API de hacer adiciones a parámetros de pregunta estándares sin contradecir a implementaciones ya existentes. -->

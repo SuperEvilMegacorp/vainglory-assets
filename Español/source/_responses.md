@@ -1,8 +1,8 @@
-# Receiving Responses
-
+# Recibiendo Respuestas
+ 
 ## Payload
 
-All Server responses contain a root JSON object.  
+Todas las respuestas de servidor contienen un objeto raíz JSON.  
 
 ~~~.language-json
 {
@@ -28,46 +28,40 @@ All Server responses contain a root JSON object.
 }
 ~~~
 
-A response will contain at least one of the following top-level members:
+Una respuesta contendrá al menos uno de los siguientes miembros top-level:
+ 
+  * `data`: los “datos primarios” de la respuesta
+  * `errors`: una colección de objetos error
+ 
+Una respuesta puede contener cualquiera de estos miembros top-level:
+ 
+  * `links`: un objeto enlace relacionado a los datos primarios.
+  * `included`: Una colección de objetos recurso que están relacionados a los datos primarios y/o entre sí (“included resources”).
 
-  * `data`: the response's “primary data”
-  * `errors`: an array of error objects
+Si un documento no contiene una llave de datos top-level, el miembro incluido no estará presente tampoco.
+ 
+Datos primarios serán uno de los siguientes:
+ 
+  * Un único [resource object][resource objects], Un único [resource identifier object], o `null`
+  * Una colección de [resource objects], una colección de [resource identifier objects][resource identifier object],o una colección vacía (`[]`)
+ 
+Por ejemplo, los siguientes datos primarios son un único objeto recurso (single resource object):
 
-A response may contain any of these top-level members:
-
-  * `links`: a links object related to the primary data.
-  * `included`: an array of resource objects that are related to the primary data and/or each other (“included resources”).
-
-If a document does not contain a top-level data key, the included member will not be present either.
-
-Primary data will be either:
-
-  * a single [resource object][resource objects], a single [resource identifier object], or `null`
-  * an array of [resource objects], an array of [resource identifier objects][resource identifier object], or
-  an empty array (`[]`)
-
-For example, the following primary data is a single resource object:
-
-
-The following primary data is a single [resource identifier object] that
-references the same resource:
-
-
-A logical collection of resources will always be represented as an array, even if
-it only contains one item or is empty.
-
-## Rate Limits
->The rate limit headers are defined as follows:
+Los siguientes datos primarios son un único [resource identifier object] que refiere al mismo recurso:
+ 
+Un grupo de recursos lógico siempre será representada como una colección, incluso si solo contiene un item o si está vacío.
+ 
+## Límites De Ratio
+>Las cabeceras de límite de ratio son definidas de la siguiente manera:
 
 ~~~
-X-RateLimit-Limit - Request limit per day / per minute
-X-RateLimit-Remaining - The number of requests left for the time window
-X-RateLimit-Reset - The remaining window before the rate limit is refilled in UTC epoch nanoseconds.
-* Limit tokens are incrementally filled by 60(sec)/ rate limit. ex: 60(sec)/10(rate) gets rate token every 6 seconds up to max rate limit.  
+X-RateLimit-Limit - Límite de peticiones por día / minuto 
+X-RateLimit-Remaining - El número de peticiones que quedan en ese periodo de tiempo
+X-RateLimit-Reset - El tiempo que queda antes que se rellene el límite de ratio en época UTC nanosegundos.
+* Tokens de límite son incrementalmente llenados por 60(seg)/ límite de ratio. ejemplo: 60(seg)/10(ratio) consigue un token de ratio cada 6 segundos hasta llegar al límite de ratio máximo.    
 ~~~
-Be nice. If you're sending too many requests too quickly, we'll send back a  
-`429` error code (server unavailable).
-
+Se bueno. Si envías demasiadas peticiones demasiado rápido, enviaremos un código de error `429` (servidor no disponible).
+ 
 <aside class="notice">
-Free for non-commercial use for up to 10 requests per minute! To increase your rate limit, please contact api@superevilmegacorp.com
+Gratis para uso no comercial para un máximo de 10 peticiones por minuto! Para incrementar tu límite, por favor contacta api@superevilmegacorp.com
 </aside>

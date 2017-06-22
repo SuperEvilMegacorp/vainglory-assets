@@ -1,103 +1,106 @@
-# ***Match Data Summary***
+# ***Resumen de datos de partidas***
 
-Special thanks to Kashz for helping to create this! GitHub: iAm-Kashif
+Muchas gracias a Kashz por ayudar a crear esto! GitHub: iAm-Kashif
 
-## **Match Object**
 
-| Variable | Type | Description |
+## **Objeto de partida**
+
+| Variable | Tipo | Descripción |
 | :---: | :---: | :---: |
-| type | str | Match |
-| id | str | Match ID |
-| createdAt | str (iso8601) | Time of Match Played |
-| duration | int | Time of match in seconds |
-| gameMode | str | Game Mode |
-| patchVersion | str | Version of API |
-| region | str | Region of match |
-| stats | map | See [Match.stats](#1) |
-| assets | obj | See [Match.assets](#2)  |
-| rosters | obj | See [Rosters](#3) |
+| type | str | Partida |
+| id | str | ID de partida |
+| createdAt | str (iso8601) | Tiempo de la partida jugada |
+| duration | int | Tiempo de la partida en segundos |
+| gameMode | str | Modo de juego |
+| patchVersion | str | Versión del API |
+| region | str | Región de la partida |
+| stats | map | Vea [Match.stats](#1) |
+| assets | obj | Vea [Match.assets](#2)  |
+| rosters | obj | Vea [Rosters](#3) |
 
-### <a name="1"></a> **Match.stats** **(End of game statistics)**
 
-| Variable | Type | Description |
+### <a name="1"></a> **Match.stats** **(Estatísticas de fin de la partida)**
+
+| Variable | Tipo | Descripción |
 | :---: | :---: |:---: |
-| endGameReason | str | "Victory" or "Defeat" |
-| queue | str | Game Mode |
+| endGameReason | str | "Victory" o "Defeat" |
+| queue | str | Modo de juego |
 
-### <a name="2"></a> **Match.assets** **(Telemetry Data)**
+### <a name="2"></a> **Match.assets** **(Datos de telemetría)**
 
-| Variable | Type | Description |
+| Variable | Type | Descripción |
 | :---: | :---: |:---: |
-| type | string | asset |
-| createdAt | str (iso8601) | Time of Telemtry creation
+| type | string | Activo |
+| createdAt | str (iso8601) | Tiempo de la creación de telemetría
 | description | str | "" |
 | filename | str | telemetry.json |
-| id | str | ID of Asset |
+| id | str | ID del activo |
 | contentType | str | application/json |
-| name | str | telemetry |
-| url | str | Link to Telemetry.json file |
+| name | str | telemetría |
+| url | str | Archivo de Enlaces de Telemetry.json |
 
-## <a name="3"></a> **Rosters Object**
+## <a name="3"></a> **Objeto listas**
 
-| Variable | Type | Description |
+| Variable | Tipo| Descripción |
 | :---: | :---: | :---: |
-| id | str | ID of Roster |
-| type | str | Roster
-| participants | obj | See [Participants](#4) |
-| stats | obj | See [Rosters.stats](#5) |
-| team | obj | See [Rosters.team](#6) |
+| id | str | ID de lista |
+| type | str | Lista
+| participants | obj | Vea [Participants](#4) |
+| stats | obj | Vea [Rosters.stats](#5) |
+| team | obj | Vea [Rosters.team](#6) |
 
 ### <a name="5"></a>**Rosters.stats**
+
 | Variable | Type |
 | :---: | :---: |
 | acesEarned | int |
 | gold | int |
 | heroKills | int |
 | krakenCaptures | int |
-| side | Either "right/red" or "left/blue" |
+| side | O "right/red" o "left/blue" |
 | turretKills | int |
 | turretRemaining | int |
 
 ### <a name="6"></a>**Rosters.team**
-| Variable | Type | Description 
+| Variable | Tipo | Descripción 
 | :---: | :---: | :---: |
-| id | str | ID of Team or None |
-| name | str | Name of Team or None |
-| type | str | team |
+| id | str | ID del equipo o nada|
+| name | str | Nombre de equipo o nada |
+| type | str | Equipo |
 
-## <a name="4"></a>**Participants Object**
+## <a name="4"></a>**Participante Objeto**
 
-| Variable | Type | Description |
+| Variable | Tipo | Descripción |
 | :---: | :---: | :---: |
 | actor | str | Hero |
-| id | str | Same as ID of Roster |
-| player | obj |See [Participants.player](#7)|
-| stats | map |See [Participants.stats](#8) |
-| type | str | participants |
+| id | str | Mismo al ID de la lista|
+| player | obj |Vea [Participants.player](#7)|
+| stats | map |Vea [Participants.stats](#8) |
+| type | str | Participantes |
 
 ### <a name="7"></a>**Participants.player**
 
-| Variable | Type |Description |
+| Variable | Tipo |Descripción |
 | :---: | :---: | :---: |
-| id | str | UID of player |
-| name | str | IGN of player |
-| stats | map | See [Participants.player.stats](#9) |
-| type | str | player |
+| id | str | UID de jugador |
+| name | str | IGN de jugador |
+| stats | map | Vea [Participants.player.stats](#9) |
+| type | str | jugador |
 
 ### <a name="8"></a>**Participants.stats**
 
-| Variable |Type |
+| Variable |Tipo |
 | :---: | :---: |
 | assists | int |
 | crystalMineCaptures | int |
 | deaths | int |
 | farm | int |
-| firstAfkTime | int: -1 for no AFK |
+| firstAfkTime | int: -1 para no AFK |
 | goldMineCaptures | int |
-| itemGrants | map of {itemsBought : int} |
-| itemSells | map of {itemsSold : int} |
-| itemUses | map of {itemsUsed : int} |
-| items | list of final build (Len: 6) |
+| itemGrants | mapa de {itemsBought : int} |
+| itemSells | mapa de {itemsSold : int} |
+| itemUses | mapa de {itemsUsed : int} |
+| items | lista de la build final (Len: 6) |
 | jungleKills | int |
 | karmaLevel | int |
 | kills | int |

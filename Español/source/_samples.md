@@ -1,9 +1,8 @@
-# Samples
+# Muestras
 
-The samples endpoint provides an easy way to access hourly batches of random match data to aggregate stats.
+El endpoint de ejemplos da una manera fácil de acceder lotes de datos aleatorios de partidas cada hora para agregar estadísticas.
 
-
-## Get a collection of Samples
+## Conseguir una colección de muestras
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/samples" \
@@ -12,7 +11,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/samples" \
   -H "Accept: application/vnd.api+json"
 ```
 ```java
-//There are a variety of Java HTTP libraries that support query-parameters.
+//Hay una variedad de librerías Java HTTP que soportan parámetros de pregunta.
 ```
 ```python
 ```
@@ -22,7 +21,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/samples" \
 ```
 ```go
 ```
-> The above command returns JSON structured like this:
+> El comando arriba devuelve JSON estructurado de esta manera:
 
 ```json
 {
@@ -44,18 +43,18 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/samples" \
     }
 ```
 
-This endpoint retrieves a collection of randomly selected matches.
+Este endpoint recoge una colección de partidas seleccionadas aleatoriamente. 
 
-### HTTP Request
+### Petición HTTP
 
 `GET https://api.dc01.gamelockerapp.com/shards/na/samples`
-
-### Query Parameters
-
-Parameter | Default | Description |
+ 
+### Parámetros de pregunta
+ 
+Parámetro | Defecto | Descripción |
 --------- | ------- | -----------   
-page[offset] | 0 | Allows paging over results
-page[limit] | 50 | The default (and current maximum) is 50.  Values less than 50 and great than 2 are supported.
-sort | createdAt | By default, samples are sorted by creation time ascending.
-filter[createdAt-Start] | none | Must occur before time. Format is iso8601 Usage: filter[createdAt-end]=2017-01-01T08:25:30Z
-filter[createdAt-End] | none | Must occur after time. Format is iso8601 Usage: filter[createdAt-end]=2017-01-01T13:25:30Z
+page[offset] | 0 | Permite paginación sobre resultados 
+page[limit] | 50 | El defecto (y el máximo) es 50. Valores menores que 50 y mayores 2 son soportados.
+sort | createdAt | Por defecto, muestras son sorteados por tiempo de creación ascendiente. 
+filter[createdAt-Start] | none | Debe ocurrir antes del tiempo. El formato es iso8601 Uso: filter[createdAt-end]=2017-01-01T08:25:30Z
+filter[createdAt-End] | none | Debe ocurrir antes del tiempo. El formato es iso8601 Uso: filter[createdAt-end]=2017-01-01T13:25:30Z
