@@ -123,7 +123,7 @@ res, _ := client.Do(req)
         "duration": 1482195372,
         "gameMode": "casual",
         "patchVersion": "1.0.0",
-        "region": "na",
+        "shardId": "na",
         "stats": "acesEarned: 3, etc..."
       },
       "relationships": {
@@ -197,7 +197,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches/<matchID>" \
       "duration": 1482195372,
       "gameMode": "casual",
       "patchVersion": "1.0.0",
-      "region": "na",
+      "shardId": "na",
       "stats": "acesEarned: 3, etc..."
     },
     "relationships": {

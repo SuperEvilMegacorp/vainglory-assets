@@ -61,7 +61,3 @@ There's no need to create JWTs manually, they will be created for you when you r
 
 In some cases an `X-API-KEY` will give you more access to information, and in all
  cases it means that you are operating under a per-token rate limit.
-
-<aside class="notice">
-Get ready!  Soon you'll be able to register your app and get a shiny new API key using our developer portal.
-</aside>
