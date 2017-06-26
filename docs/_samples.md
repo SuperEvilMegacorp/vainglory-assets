@@ -8,7 +8,6 @@ The samples endpoint provides an easy way to access hourly batches of random mat
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/samples" \
   -H "Authorization: Bearer <api-key>" \
-  -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 ```java

@@ -1,8 +1,6 @@
 # Titles
 
-All endpoints require the following `X-TITLE-ID` header in order for us to respond to a request.
-
-`X-TITLE-ID: semc-vainglory`
+The TitleID for a request is determined by the JWT in the Authorization header automatically and may appear in responses.
 
 <aside class="notice">
 No no, this isn't a hint at more Super Evil game titles.  The Vainglory Game Data

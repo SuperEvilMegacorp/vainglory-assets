@@ -6,7 +6,6 @@
   # With shell, you can just pass the correct header with each request
   curl "<endpoint-url>" \
   -H "Authorization: <api-key>"
-  -H "X-TITLE-ID: semc-vainglory"
   -H "Accept: application/vnd.api+json"
 ```
 
@@ -18,7 +17,6 @@ URL url = new URL("<endpoint-url>");
 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 conn.setRequestMethod("GET");
 conn.setRequestProperty("Authorization","<api-key>");
-conn.setRequestProperty("X-TITLE-ID", "semc-vainglory");
 conn.setRequestProperty("Accept", "application/vnd.api+json");
 
 conn.getInputStream()
@@ -31,7 +29,6 @@ url = "<endpoint-url>"
 
 header = {
     "Authorization": "<api-key>",
-    "X-TITLE-ID": "semc-vainglory",
     "Accept": "application/vnd.api+json"
 }
 
@@ -50,7 +47,6 @@ import "net/http"
 client := &http.Client{}
 req, _ := http.NewRequest("GET","<endpoint-url>",nil)
 req.Header.Set("Authorization", "<api-key>")
-req.Header.Set("X-TITLE-ID", "semc-vainglory")
 req.Header.Set("Accept", "application/vnd.api+json")
 res, _ := client.Do(req)
 ```
