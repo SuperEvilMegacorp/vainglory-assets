@@ -5,9 +5,8 @@ Player objects contain aggregated lifetime information about each Player.  At th
 ## Get a single Player
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/shards/na/players/6abb30de-7cb8-11e4-8bd3-06eb725f8a76" \
+curl "https://api.dc01.gamelockerapp.com/shards/na/players/<ID>" \
   -H "Authorization: Bearer <api-key>" \
-  -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 
@@ -69,12 +68,11 @@ ID | The ID of the player to retrieve
 
 ## Get a collection of players
 
-This endpoint retrieves a collection of up to 6 players, filtered by name. Player names are specific to each region. If a player has changed names, it is possible that there are multiple ID's for a single player name. 
+This endpoint retrieves a collection of up to 6 players, filtered by name. Player names are specific to each region. If a player has changed names, it is possible that there are multiple ID's for a single player name.
 
 ```shell
-curl "https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=<player1,player2...>" \
+curl "https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=player1,player2" \
   -H "Authorization: Bearer <api-key>" \
-  -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 
@@ -103,4 +101,4 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=<
 
 Parameter | Default | Description
 --------- | ------- | -----------
-filter[playerNames] | none | Filters by up to six player names. Usage: filter[playerNames]=<player1,player2>
+filter[playerNames] | none | Filters by player names. Usage: filter[playerNames]=player1,player2

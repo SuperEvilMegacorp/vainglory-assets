@@ -73,7 +73,6 @@ not exposed as a standalone resource.
 ```shell
 curl -g "https://api.dc01.gamelockerapp.com/shards/na/matches?sort=createdAt&page[limit]=3&filter[createdAt-start]=2017-02-27T13:25:30Z&filter[playerNames]=<playerName>" \
   -H "Authorization: Bearer <api-key>" \
-  -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 ```java
@@ -86,7 +85,6 @@ url = "https://api.dc01.gamelockerapp.com/shards/na/matches"
 
 header = {
     "Authorization": "<api-key>",
-    "X-TITLE-ID": "semc-vainglory",
     "Accept": "application/vnd.api+json"
 }
 
@@ -125,7 +123,7 @@ res, _ := client.Do(req)
         "duration": 1482195372,
         "gameMode": "casual",
         "patchVersion": "1.0.0",
-        "region": "na",
+        "shardId": "na",
         "stats": "acesEarned: 3, etc..."
       },
       "relationships": {
@@ -161,7 +159,7 @@ filter[createdAt-start] | 3hrs ago | Must occur before end time.  Format is iso8
 filter[createdAt-end] | Now | Queries search the last 3 hrs. Format is iso8601 i.e. filter[createdAt-end]=2017-01-01T13:25:30Z
 filter[playerNames] | none | Filters by player name. Usage: filter[playerNames]=player1,player2,...
 filter[playerIds] | none | Filters by player Id. Usage: filter[playerIds]=playerId,playerId,...
-filter[teamNames] | none | Filters by team names. Usage: filter[teamNames]=team1,team2,...
+filter[teamNames] | none | Filters by team names. Team names are the same as the in game team tags. Usage: filter[teamNames]=TSM,team2,...
 filter[gameMode] | none | filter by gameMode Usage: filter[gameMode]=casual,ranked,...
 
 <aside class="success">
@@ -173,7 +171,6 @@ Remember — a happy match is an authenticated match!
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/matches/<matchID>" \
   -H "Authorization: Bearer <api-key>" \
-  -H "X-TITLE-ID: semc-vainglory" \
   -H "Accept: application/vnd.api+json"
 ```
 ```java
@@ -200,7 +197,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches/<matchID>" \
       "duration": 1482195372,
       "gameMode": "casual",
       "patchVersion": "1.0.0",
-      "region": "na",
+      "shardId": "na",
       "stats": "acesEarned: 3, etc..."
     },
     "relationships": {

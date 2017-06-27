@@ -12,7 +12,7 @@ Special thanks to Kashz for helping to create this! GitHub: iAm-Kashif
 | duration | int | Time of match in seconds |
 | gameMode | str | Game Mode |
 | patchVersion | str | Version of API |
-| region | str | Region of match |
+| shardId | str | Match Shard |
 | stats | map | See [Match.stats](#1) |
 | assets | obj | See [Match.assets](#2)  |
 | rosters | obj | See [Rosters](#3) |
