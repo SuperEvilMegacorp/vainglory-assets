@@ -257,14 +257,22 @@ When a player gains a level in the game. In game types Brawl, you will find 9 ev
 When a player buys an item.
 
 	{
-		"time": "2017-03-17T00:38:45+0000",
+	
+		"time": "2017-06-26T04:59:47+0000",
 		"type": "BuyItem",
 		"payload": {
-			"Team": "Left",
-			"Actor": "*Vox*",
-			"Item": "Breaking Point",
-			"Cost": 2600
+			"Team": "Right",
+			"Actor": "*Blackfeather*",
+			"Item": "Book Of Eulogies",
+			"Cost": 300,
+			"RemainingGold:": 300,
+			"Position": [
+				83.22,
+				1.5,
+				0.72
+			]
 		}
+	
 	}
 
 #### SellItem
