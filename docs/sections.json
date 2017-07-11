@@ -13,5 +13,6 @@
   "11": "_teams",
   "12": "_links",
   "13": "_sdks",
-  "14": "_errors"
+  "14": "_errors",
+  "15": "_webhooks"
 }
