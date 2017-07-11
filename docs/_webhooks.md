@@ -9,6 +9,7 @@ A topic is composed of a subject, the subject's id, a verb, and an output type. 
 ### Supported Topics
 
 - player.playerId.played.match
+- webhook.webhookId.verify.event
 
 ## Post a Webhook
 
@@ -20,6 +21,8 @@ curl -XPOST "https://api.dc01.gamelockerapp.com/shards/na/webhooks" \
 
 This endpoint creates a webhook
 
+Note: A verification event will be sent to the url (see supported events above). If the request does not succeed, the webhook will not be created.
+
 ### HTTP Request
 
 `POST https://api.dc01.gamelockerapp.com/shards/shard_id/webhooks`
@@ -29,7 +32,6 @@ This endpoint creates a webhook
 Parameter | Default | Description
 --------- | ------- | -----------
 url       |         | The callback url (must be accepting requests when the webhook is stored and will receive a verification event)
-----------|---------|------------
 topic     |         | The subscription topic (i.e. player.ExamplePlayerID.playedMatch)
 
 ## Get Webhooks
