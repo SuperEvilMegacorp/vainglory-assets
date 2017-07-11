@@ -27,7 +27,7 @@ Note: A verification event will be sent to the url (see supported events above).
 
 `POST https://api.dc01.gamelockerapp.com/shards/shard_id/webhooks`
 
-### Query Parameters
+### Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
@@ -52,6 +52,26 @@ This endpoint returns all webhooks
 
 Parameter | Default | Description
 --------- | ------- | -----------
+
+## Delete Webhook
+
+```shell
+curl -XDELETE "https://api.dc01.gamelockerapp.com/webhooks/{id} \
+  -H "Authorization: Bearer <api-key>" \
+  -H "Accept: application/vnd.api+json"
+```
+
+This endpoint removes a webhook
+
+### HTTP Request
+
+`DELETE https://api.dc01.gamelockerapp.com/webhooks/{id}`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+id        |         | The id of the webhook as provided with the POST request to create it.
 
 ## Webhook
 
