@@ -53,6 +53,26 @@ This endpoint returns all webhooks
 Parameter | Default | Description
 --------- | ------- | -----------
 
+## Update Webhook
+
+```shell
+curl -XPUT "https://api.dc01.gamelockerapp.com/webhooks/{id} \
+  -H "Authorization: Bearer <api-key>" \
+  -H "Accept: application/vnd.api+json"
+```
+
+This endpoint updates a webhook
+
+### HTTP Request
+
+`PUT https://api.dc01.gamelockerapp.com/webhooks/{id}`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+id        |         | The id of the webhook as provided with the POST request to create it.
+
 ## Delete Webhook
 
 ```shell
