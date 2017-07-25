@@ -93,6 +93,10 @@ Parameter | Default | Description
 --------- | ------- | -----------
 id        |         | The id of the webhook as provided with the POST request to create it.
 
+## Limits
+
+The number of webhooks that can be created is limited to 100 per app. All create requests after the limit has been exceeded will return a response code of 400.
+
 ## Webhook
 
 ```json
