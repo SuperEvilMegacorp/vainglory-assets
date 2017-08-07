@@ -1,10 +1,12 @@
-We try to categorize all issues, with easy to understand prefixes. If applicable, please prefix your issue title with one of the following:
+We try to categorize all issues, with easy to understand prefixes. Please prefix
+your issue title with one of the following:
 
 - Feature: Request for additional functionality, query parameters, etc.
-- Bug: Problem with API functionality not working as documented
+- Player: Issues with data for the /players endpoint
+- Match: Issues with data for the /matches endpoint
+- Telemetry: Issues with data for telemetry
+
+If you are requesting a change to data, all requests should include both current and
+expected values.
 
 Any general questions should be asked in our [Discord](https://discord.me/vaingloryapi).  Come on in and join the fun!
-
-If this is a bug report, please include:
-- [ ] API Version from [Status](https://api.dc01.gamelockerapp.com/status)
-- [ ] Programming language, operating system, and any information available related to operating environment
