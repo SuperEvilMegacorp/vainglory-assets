@@ -1,6 +1,24 @@
-# Gamelocker Vainglory API Changelog
+# Gamelocker / Vainglory Changelog
 
-## Version 4.2.3
+## [VG DATA] Version (UPCOMING)
+
+The next version of VG will include fixes for the following fields:
+  * xp
+  * levelMinXP
+  * levelMaxXP
+  * level
+  * karmaLevel
+  * wins
+  * completed
+  * completed_casual
+  * completed_ranked
+  * completed_blitz
+  * completed_aral
+
+A bug was introduced whereby these fields showed the pre-match valu, rather
+than the post match value.  
+
+## [GAMELOCKER API] Version 4.2.3
 - Hero name fixes:
 
 ```
@@ -13,7 +31,7 @@ Hero016 *Rona*
 - We are adding an additional field to particpants called "gold". (Gold for the match).
 - In the player object we are fixing "shardId" to have the proper shard instead of being blank.
 
-## Version 4.2.2
+## [GAMELOCKER API] Version 4.2.2
 - TELEMETRY DATA IS LIVE!!
 - New match data reaper: quicker match data availability!
 - Player filters: you can now filter by up to six players
