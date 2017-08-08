@@ -1,5 +1,13 @@
 # Gamelocker / Vainglory Changelog
 
+## [GAMELOCKER API] (UPCOMING)
+
+Data retention will be lowered from 12 to 4 months.
+NOTE: This will happen continuously.
+
+Players that have not been updated since May 1 will be removed.
+NOTE: This is a one time only purge to clear out old players.
+
 ## [VG DATA] Version (UPCOMING)
 
 The next version of VG will include fixes for the following fields:
