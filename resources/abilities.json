@@ -1,400 +1,400 @@
 [
 
     {
-        "name": "HERO_ABILITY_FORTRESS_C_NAME",
-        "friendlyName": "Attack of the Pack"
-    },
-    {
-        "name": "HERO_ABILITY_OZO_C_NAME",
-        "friendlyName": "Bangarang"
-    },
-    {
-        "name": "HERO_ABILITY_HERO036_B_NAME",
-        "friendlyName": "Fairy Dust"
-    },
-    {
-        "name": "HERO_ABILITY_IDRIS_A_NAME",
-        "friendlyName": "Shroudstep"
-    },
-    {
-        "name": "HERO_ABILITY_BARON_B_NAME",
-        "friendlyName": "Jump Jets"
-    },
-    {
-        "name": "HERO_ABILITY_ALPHA_A_NAME",
-        "friendlyName": "Prime Directive"
-    },
-    {
-        "name": "HERO_ABILITY_IDRIS_B_NAME",
-        "friendlyName": "Chakram"
-    },
-    {
-        "name": "HERO_ABILITY_HERO021_B_NAME",
-        "friendlyName": "On Point"
-    },
-    {
-        "name": "HERO_ABILITY_HERO036_A_NAME",
-        "friendlyName": "Binding Light"
-    },
-    {
-        "name": "HERO_ABILITY_SEBA_C_NAME",
-        "friendlyName": "Fearsome Shade"
-    },
-    {
-        "name": "HERO_ABILITY_BARON_C_NAME",
-        "friendlyName": "Ion Cannon"
-    },
-    {
-        "name": "HERO_ABILITY_GRUMPJAW_C_NAME",
-        "friendlyName": "Stuffed"
-    },
-    {
-        "name": "HERO_ABILITY_GWEN_B_NAME",
-        "friendlyName": "Skedaddle"
-    },
-    {
-        "name": "HERO_ABILITY_KESTREL_A_NAME",
-        "friendlyName": "Glimmershot"
-    },
-    {
-        "name": "HERO_ABILITY_PHINN_B_NAME",
-        "friendlyName": "Polite Company"
-    },
-    {
-        "name": "HERO_ABILITY_RONA_B_NAME",
-        "friendlyName": "Foesplitter"
-    },
-    {
-        "name": "HERO_ABILITY_LYRA_A_NAME",
-        "friendlyName": "Imperial Sigil"
-    },
-    {
-        "name": "HERO_ABILITY_VOX_B_NAME",
-        "friendlyName": "Pulse"
-    },
-    {
-        "name": "HERO_ABILITY_ARDAN_B",
-        "friendlyName": "Blood for Blood"
-    },
-    {
-        "name": "HERO_ABILITY_PHINN_C_NAME",
-        "friendlyName": "Forced Accord"
-    },
-    {
-        "name": "HERO_ABILITY_SKYE_B_NAME",
-        "friendlyName": "Suri Strike"
-    },
-    {
-        "name": "HERO_ABILITY_BARON_A_NAME",
-        "friendlyName": "Porcupine Mortar"
-    },
-    {
-        "name": "HERO_ABILITY_GRUMPJAW_B_NAME",
-        "friendlyName": "Hangry"
-    },
-    {
-        "name": "HERO_ABILITY_IDRIS_C_NAME",
-        "friendlyName": "Shimmer Strike"
-    },
-    {
-        "name": "HERO_ABILITY_REIM_A_NAME",
-        "friendlyName": "Winter Spire"
-    },
-    {
-        "name": "HERO_ABILITY_ADAGIO_FRIENDSHIP_NAME",
-        "friendlyName": "Verse of Judgement"
-    },
-    {
-        "name": "HERO_ABILITY_FORTRESS_A_NAME",
-        "friendlyName": "Truth of the Tooth"
-    },
-    {
-        "name": "HERO_ABILITY_SKAARF_B_GOOP",
-        "friendlyName": "Goop"
-    },
-    {
-        "name": "HERO_ABILITY_HERO009_SHIMMERHEART_NAME",
-        "friendlyName": "From Hell's Heart"
-    },
-    {
-        "name": "HERO_ABILITY_ALPHA_C_NAME",
-        "friendlyName": "Termniation Protocol"
-    },
-    {
-        "name": "HERO_ABILITY_RINGO_TWIRLING_SILVER_NAME",
-        "friendlyName": "Twirling Silver"
-    },
-    {
-        "name": "HERO_ABILITY_SAMUEL_C_NAME",
-        "friendlyName": "Oblivion"
-    },
-    {
-        "name": "HERO_ABILITY_SAW_ROADIE_RUN_NAME",
-        "friendlyName": "Roadie Run"
-    },
-    {
-        "name": "HERO_ABILITY_ARDAN_C",
-        "friendlyName": "Gauntlet"
-    },
-    {
-        "name": "HERO_ABILITY_SAW_EXPLOSIVE_TIPPED_SHELLS_NAME",
-        "friendlyName": "Mad Cannon"
-    },
-    {
-        "name": "HERO_ABILITY_JOULE_ORBITAL_NUKE",
-        "friendlyName": "Big Red Button"
-    },
-    {
-        "name": "HERO_ABILITY_ADAGIO_GASOLINE_SOAKED_NAME",
-        "friendlyName": "Agent of Wrath"
-    },
-    {
-        "name": "HERO_ABILITY_REIM_B_NAME",
-        "friendlyName": "Chill Winds"
-    },
-    {
-        "name": "HERO_ABILITY_GWEN_C_NAME",
-        "friendlyName": "Aces High"
-    },
-    {
-        "name": "HERO_ABILITY_GWEN_A_NAME",
-        "friendlyName": "Buckshot Bonanza"
-    },
-    {
-        "name": "HERO_ABILITY_KESTREL_B_NAME",
-        "friendlyName": "Active Camo"
-    },
-    {
-        "name": "HERO_ABILITY_ADAGIO_FORTUNES_SMILE_NAME",
-        "friendlyName": "Gift of Fire"
+        "name": "HERO_ABILITY_HERO042_A_NAME",
+        "friendlyName": "Benediction"
     },
     {
         "name": "HERO_ABILITY_HERO042_B_NAME",
         "friendlyName": "Holy Nova"
     },
     {
-        "name": "HERO_ABILITY_SKAARF_C_DRAGON_BREATH",
-        "friendlyName": "Dragon's Breath"
-    },
-    {
-        "name": "HERO_ABILITY_CELESTE_B_NAME",
-        "friendlyName": "Core Collapse"
-    },
-    {
-        "name": "HERO_ABILITY_HERO042_A_NAME",
-        "friendlyName": "Benediction"
-    },
-    {
-        "name": "HERO_ABILITY_KOSHKA_POUNCE_NAME",
-        "friendlyName": "Pouncy Fun"
-    },
-    {
-        "name": "HERO_ABILITY_KESTREL_C_NAME",
-        "friendlyName": "One Shot One Kill"
-    },
-    {
-        "name": "HERO_ABILITY_SKAARF_A_SPITFIRE",
-        "friendlyName": "Spitfire"
-    },
-    {
-        "name": "HERO_ABILITY_GLAIVE_AFTERBURN_NAME",
-        "friendlyName": "Afterburn"
-    },
-    {
-        "name": "HERO_ABILITY_ALPHA_B_NAME",
-        "friendlyName": "Core Charge"
-    },
-    {
-        "name": "HERO_ABILITY_SAYOC_C",
-        "friendlyName": "X-Retsu"
-    },
-    {
-        "name": "HERO_ABILITY_KOSHKA_FRENZY_NAME",
-        "friendlyName": "Yummy Catnip Frenzy"
-    },
-    {
-        "name": "HERO_ABILITY_JOULE_RHAPSODY_CANNONS",
-        "friendlyName": "Rocket Leap"
-    },
-    {
-        "name": "HERO_ABILITY_FORTRESS_B_NAME",
-        "friendlyName": "Law of the Claw"
-    },
-    {
-        "name": "HERO_ABILITY_OZO_B_NAME",
-        "friendlyName": "Acrobounce"
-    },
-    {
-        "name": "HERO_ABILITY_ARDAN_A",
-        "friendlyName": "Vanguard"
-    },
-    {
-        "name": "HERO_ABILITY_SEBA_B_NAME",
-        "friendlyName": "Ordained"
-    },
-    {
-        "name": "HERO_ABILITY_CATHERINE_ARCANE_SHIELD_NAME",
-        "friendlyName": "Stormguard"
-    },
-    {
         "name": "HERO_ABILITY_HERO042_C_NAME",
         "friendlyName": "Divine Intervention"
-    },
-    {
-        "name": "HERO_ABILITY_CATHERINE_DEADLY_GRACE_NAME",
-        "friendlyName": "Blast Tremor"
-    },
-    {
-        "name": "HERO_ABILITY_HERO021_C_NAME",
-        "friendlyName": "Rose Offensive"
-    },
-    {
-        "name": "HERO_ABILITY_HERO009_BURNING_WOUNDS_NAME",
-        "friendlyName": "Dead Man's Rush"
-    },
-    {
-        "name": "HERO_ABILITY_CELESTE_A_NAME",
-        "friendlyName": "Heliogenesis"
-    },
-    {
-        "name": "HERO_ABILITY_LANCE_B_NAME",
-        "friendlyName": "Gythian Wall"
-    },
-    {
-        "name": "HERO_ABILITY_HERO009_LIFE_FROM_PAIN_NAME",
-        "friendlyName": "Spectral Smite"
     },
     {
         "name": "HERO_ABILITY_CATHERINE_ASSASSINS_CHARGE_NAME",
         "friendlyName": "Merciless Pursuit"
     },
     {
-        "name": "HERO_ABILITY_GRUMPJAW_A_NAME",
-        "friendlyName": "Grumpy"
+        "name": "HERO_ABILITY_CATHERINE_ARCANE_SHIELD_NAME",
+        "friendlyName": "Stormguard"
     },
     {
-        "name": "HERO_ABILITY_JOULE_RHAPSODY_POWERSLIDE",
-        "friendlyName": "Thunder Strike"
+        "name": "HERO_ABILITY_CATHERINE_DEADLY_GRACE_NAME",
+        "friendlyName": "Blast Tremor"
     },
     {
-        "name": "HERO_ABILITY_SAW_SUPPRESSING_FIRE_NAME",
-        "friendlyName": "Suppressing Fire"
+        "name": "HERO_ABILITY_CELESTE_A_NAME",
+        "friendlyName": "Heliogenesis"
     },
     {
-        "name": "HERO_ABILITY_HERO021_A_NAME",
-        "friendlyName": "Feint of Hearth"
+        "name": "HERO_ABILITY_CELESTE_B_NAME",
+        "friendlyName": "Core Collapse"
     },
     {
         "name": "HERO_ABILITY_CELESTE_C_NAME",
         "friendlyName": "Solar Storm"
     },
     {
-        "name": "HERO_ABILITY_KOSHKA_TWIRL_NAME",
-        "friendlyName": "Twirly Death"
+        "name": "HERO_ABILITY_ADAGIO_FORTUNES_SMILE_NAME",
+        "friendlyName": "Gift of Fire"
     },
     {
-        "name": "HERO_ABILITY_RONA_A_NAME",
-        "friendlyName": "Into the Fray"
+        "name": "HERO_ABILITY_ADAGIO_GASOLINE_SOAKED_NAME",
+        "friendlyName": "Agent of Wrath"
     },
     {
-        "name": "HERO_ABILITY_SAMUEL_A_NAME",
-        "friendlyName": "Malice & Verdict"
+        "name": "HERO_ABILITY_ADAGIO_FRIENDSHIP_NAME",
+        "friendlyName": "Verse of Judgement"
     },
     {
-        "name": "HERO_ABILITY_SKYE_A_NAME",
-        "friendlyName": "Forward Barrage"
+        "name": "HERO_ABILITY_SAW_ROADIE_RUN_NAME",
+        "friendlyName": "Roadie Run"
     },
     {
-        "name": "HERO_ABILITY_PHINN_A_NAME",
-        "friendlyName": "Quibble"
+        "name": "HERO_ABILITY_SAW_SUPPRESSING_FIRE_NAME",
+        "friendlyName": "Suppressing Fire"
     },
     {
-        "name": "HERO_ABILITY_SAYOC_B",
-        "friendlyName": "Kaku"
+        "name": "HERO_ABILITY_SAW_EXPLOSIVE_TIPPED_SHELLS_NAME",
+        "friendlyName": "Mad Cannon"
     },
     {
-        "name": "HERO_ABILITY_RINGO_HELLFIRE_SAKE_NAME",
-        "friendlyName": "Hellfire Brew"
+        "name": "HERO_ABILITY_SKAARF_A_SPITFIRE",
+        "friendlyName": "Spitfire"
     },
     {
-        "name": "HERO_ABILITY_OZO_A_NAME",
-        "friendlyName": "Three-Ring Circus"
+        "name": "HERO_ABILITY_SKAARF_B_GOOP",
+        "friendlyName": "Goop"
     },
     {
-        "name": "HERO_ABILITY_GLAIVE_BLOODSONG_NAME",
-        "friendlyName": "Bloodsong"
+        "name": "HERO_ABILITY_SKAARF_C_DRAGON_BREATH",
+        "friendlyName": "Dragon's Breath"
     },
     {
-        "name": "HERO_ABILITY_VOX_C_NAME",
-        "friendlyName": "Wait for It"
+        "name": "HERO_ABILITY_JOULE_RHAPSODY_CANNONS",
+        "friendlyName": "Rocket Leap"
     },
     {
-        "name": "HERO_ABILITY_PETAL_SHOUT_OF_THE_ENTS_NAME",
-        "friendlyName": "Trampoline!"
+        "name": "HERO_ABILITY_JOULE_RHAPSODY_POWERSLIDE",
+        "friendlyName": "Thunder Strike"
+    },
+    {
+        "name": "HERO_ABILITY_JOULE_ORBITAL_NUKE",
+        "friendlyName": "Big Red Button"
+    },
+    {
+        "name": "HERO_ABILITY_GLAIVE_AFTERBURN_NAME",
+        "friendlyName": "Afterburn"
     },
     {
         "name": "HERO_ABILITY_GLAIVE_TWISTED_STROKE_NAME",
         "friendlyName": "Twisted Stroke"
     },
     {
-        "name": "HERO_ABILITY_SEBA_A_NAME",
-        "friendlyName": "Bad Mojo"
-    },
-    {
-        "name": "HERO_ABILITY_LYRA_B_NAME",
-        "friendlyName": "Bright Bulwark"
-    },
-    {
-        "name": "HERO_ABILITY_VOX_A_NAME",
-        "friendlyName": "Sonic Zoom"
-    },
-    {
-        "name": "HERO_ABILITY_RONA_C_NAME",
-        "friendlyName": "Red Mist"
-    },
-    {
-        "name": "HERO_ABILITY_SAYOC_A",
-        "friendlyName": "Kaiten"
-    },
-    {
-        "name": "HERO_ABILITY_SKYE_C_NAME",
-        "friendlyName": "Death From Above"
-    },
-    {
-        "name": "HERO_ABILITY_PETAL_THORNSTORM_NAME",
-        "friendlyName": "Spontaneous Combustion"
-    },
-    {
-        "name": "HERO_ABILITY_REIM_C_NAME",
-        "friendlyName": "Valkyrie"
-    },
-    {
-        "name": "HERO_ABILITY_LYRA_C_NAME",
-        "friendlyName": "Arcane Passage"
+        "name": "HERO_ABILITY_GLAIVE_BLOODSONG_NAME",
+        "friendlyName": "Bloodsong"
     },
     {
         "name": "HERO_ABILITY_PETAL_BRAMBLETHORN_SEED_NAME",
         "friendlyName": "Brambleboom Seeds"
     },
     {
-        "name": "HERO_ABILITY_LANCE_A_NAME",
-        "friendlyName": "Impale"
+        "name": "HERO_ABILITY_PETAL_SHOUT_OF_THE_ENTS_NAME",
+        "friendlyName": "Trampoline!"
+    },
+    {
+        "name": "HERO_ABILITY_PETAL_THORNSTORM_NAME",
+        "friendlyName": "Spontaneous Combustion"
+    },
+    {
+        "name": "HERO_ABILITY_SKYE_A_NAME",
+        "friendlyName": "Forward Barrage"
+    },
+    {
+        "name": "HERO_ABILITY_SKYE_B_NAME",
+        "friendlyName": "Suri Strike"
+    },
+    {
+        "name": "HERO_ABILITY_SKYE_C_NAME",
+        "friendlyName": "Death From Above"
+    },
+    {
+        "name": "HERO_ABILITY_SAYOC_A",
+        "friendlyName": "Kaiten"
+    },
+    {
+        "name": "HERO_ABILITY_SAYOC_B",
+        "friendlyName": "Kaku"
+    },
+    {
+        "name": "HERO_ABILITY_SAYOC_C",
+        "friendlyName": "X-Retsu"
+    },
+    {
+        "name": "HERO_ABILITY_KOSHKA_POUNCE_NAME",
+        "friendlyName": "Pouncy Fun"
+    },
+    {
+        "name": "HERO_ABILITY_KOSHKA_TWIRL_NAME",
+        "friendlyName": "Twirly Death"
+    },
+    {
+        "name": "HERO_ABILITY_KOSHKA_FRENZY_NAME",
+        "friendlyName": "Yummy Catnip Frenzy"
+    },
+    {
+        "name": "HERO_ABILITY_HERO009_BURNING_WOUNDS_NAME",
+        "friendlyName": "Dead Man's Rush"
+    },
+    {
+        "name": "HERO_ABILITY_HERO009_LIFE_FROM_PAIN_NAME",
+        "friendlyName": "Spectral Smite"
+    },
+    {
+        "name": "HERO_ABILITY_HERO009_SHIMMERHEART_NAME",
+        "friendlyName": "From Hell's Heart"
+    },
+    {
+        "name": "HERO_ABILITY_SAMUEL_A_NAME",
+        "friendlyName": "Malice & Verdict"
     },
     {
         "name": "HERO_ABILITY_SAMUEL_B_NAME",
         "friendlyName": "Drifting Dark"
     },
     {
-        "name": "HERO_ABILITY_HERO036_C_NAME",
-        "friendlyName": "Mooncloak"
+        "name": "HERO_ABILITY_SAMUEL_C_NAME",
+        "friendlyName": "Oblivion"
     },
     {
-        "name": "HERO_ABILITY_RINGO_WING_CUT_NAME",
-        "friendlyName": "Achilles Shot"
+        "name": "HERO_ABILITY_REIM_A_NAME",
+        "friendlyName": "Winter Spire"
+    },
+    {
+        "name": "HERO_ABILITY_REIM_B_NAME",
+        "friendlyName": "Chill Winds"
+    },
+    {
+        "name": "HERO_ABILITY_REIM_C_NAME",
+        "friendlyName": "Valkyrie"
+    },
+    {
+        "name": "HERO_ABILITY_LANCE_A_NAME",
+        "friendlyName": "Impale"
+    },
+    {
+        "name": "HERO_ABILITY_LANCE_B_NAME",
+        "friendlyName": "Gythian Wall"
     },
     {
         "name": "HERO_ABILITY_LANCE_C_NAME",
         "friendlyName": "Combat Roll"
     }
+    {
+        "name": "HERO_ABILITY_RINGO_WING_CUT_NAME",
+        "friendlyName": "Achilles Shot"
+    },
+    {
+        "name": "HERO_ABILITY_RINGO_TWIRLING_SILVER_NAME",
+        "friendlyName": "Twirling Silver"
+    },
+    {
+        "name": "HERO_ABILITY_RINGO_HELLFIRE_SAKE_NAME",
+        "friendlyName": "Hellfire Brew"
+    },
+    {
+        "name": "HERO_ABILITY_ARDAN_A",
+        "friendlyName": "Vanguard"
+    },
+    {
+        "name": "HERO_ABILITY_ARDAN_B",
+        "friendlyName": "Blood for Blood"
+    },
+    {
+        "name": "HERO_ABILITY_ARDAN_C",
+        "friendlyName": "Gauntlet"
+    },
+    {
+        "name": "HERO_ABILITY_VOX_A_NAME",
+        "friendlyName": "Sonic Zoom"
+    },
+    {
+        "name": "HERO_ABILITY_VOX_B_NAME",
+        "friendlyName": "Pulse"
+    },
+    {
+        "name": "HERO_ABILITY_VOX_C_NAME",
+        "friendlyName": "Wait for It"
+    },
+    {
+        "name": "HERO_ABILITY_LYRA_A_NAME",
+        "friendlyName": "Imperial Sigil"
+    },
+    {
+        "name": "HERO_ABILITY_LYRA_B_NAME",
+        "friendlyName": "Bright Bulwark"
+    },
+    {
+        "name": "HERO_ABILITY_LYRA_C_NAME",
+        "friendlyName": "Arcane Passage"
+    },
+    {
+        "name": "HERO_ABILITY_RONA_A_NAME",
+        "friendlyName": "Into the Fray"
+    },
+    {
+        "name": "HERO_ABILITY_RONA_B_NAME",
+        "friendlyName": "Foesplitter"
+    },
+    {
+        "name": "HERO_ABILITY_RONA_C_NAME",
+        "friendlyName": "Red Mist"
+    },
+    {
+        "name": "HERO_ABILITY_PHINN_A_NAME",
+        "friendlyName": "Quibble"
+    },
+    {
+        "name": "HERO_ABILITY_PHINN_B_NAME",
+        "friendlyName": "Polite Company"
+    },
+    {
+        "name": "HERO_ABILITY_PHINN_C_NAME",
+        "friendlyName": "Forced Accord"
+    },
+    {
+        "name": "HERO_ABILITY_KESTREL_A_NAME",
+        "friendlyName": "Glimmershot"
+    },
+    {
+        "name": "HERO_ABILITY_KESTREL_B_NAME",
+        "friendlyName": "Active Camo"
+    },
+    {
+        "name": "HERO_ABILITY_KESTREL_C_NAME",
+        "friendlyName": "One Shot One Kill"
+    },
+    {
+        "name": "HERO_ABILITY_GWEN_A_NAME",
+        "friendlyName": "Buckshot Bonanza"
+    },
+    {
+        "name": "HERO_ABILITY_GWEN_B_NAME",
+        "friendlyName": "Skedaddle"
+    },
+    {
+        "name": "HERO_ABILITY_GWEN_C_NAME",
+        "friendlyName": "Aces High"
+    },
+    {
+        "name": "HERO_ABILITY_SEBA_A_NAME",
+        "friendlyName": "Bad Mojo"
+    },
+    {
+        "name": "HERO_ABILITY_SEBA_B_NAME",
+        "friendlyName": "Ordained"
+    },
+    {
+        "name": "HERO_ABILITY_SEBA_C_NAME",
+        "friendlyName": "Fearsome Shade"
+    },
+    {
+        "name": "HERO_ABILITY_GRUMPJAW_A_NAME",
+        "friendlyName": "Grumpy"
+    },
+    {
+        "name": "HERO_ABILITY_GRUMPJAW_B_NAME",
+        "friendlyName": "Hangry"
+    },
+    {
+        "name": "HERO_ABILITY_GRUMPJAW_C_NAME",
+        "friendlyName": "Stuffed"
+    },
+    {
+        "name": "HERO_ABILITY_HERO021_A_NAME",
+        "friendlyName": "Feint of Hearth"
+    },
+    {
+        "name": "HERO_ABILITY_HERO021_B_NAME",
+        "friendlyName": "On Point"
+    },
+    {
+        "name": "HERO_ABILITY_HERO021_C_NAME",
+        "friendlyName": "Rose Offensive"
+    },
+    {
+        "name": "HERO_ABILITY_ALPHA_A_NAME",
+        "friendlyName": "Prime Directive"
+    },
+    {
+        "name": "HERO_ABILITY_ALPHA_B_NAME",
+        "friendlyName": "Core Charge"
+    },
+    {
+        "name": "HERO_ABILITY_ALPHA_C_NAME",
+        "friendlyName": "Termniation Protocol"
+    },
+    {
+        "name": "HERO_ABILITY_BARON_A_NAME",
+        "friendlyName": "Porcupine Mortar"
+    },
+    {
+        "name": "HERO_ABILITY_BARON_B_NAME",
+        "friendlyName": "Jump Jets"
+    },
+    {
+        "name": "HERO_ABILITY_BARON_C_NAME",
+        "friendlyName": "Ion Cannon"
+    },
+    {
+        "name": "HERO_ABILITY_IDRIS_A_NAME",
+        "friendlyName": "Shroudstep"
+    },
+    {
+        "name": "HERO_ABILITY_IDRIS_B_NAME",
+        "friendlyName": "Chakram"
+    },
+    {
+        "name": "HERO_ABILITY_IDRIS_C_NAME",
+        "friendlyName": "Shimmer Strike"
+    },
+    {
+        "name": "HERO_ABILITY_HERO036_A_NAME",
+        "friendlyName": "Binding Light"
+    },
+    {
+        "name": "HERO_ABILITY_HERO036_B_NAME",
+        "friendlyName": "Fairy Dust"
+    },
+    {
+        "name": "HERO_ABILITY_HERO036_C_NAME",
+        "friendlyName": "Mooncloak"
+    },
+    {
+        "name": "HERO_ABILITY_OZO_A_NAME",
+        "friendlyName": "Three-Ring Circus"
+    },
+    {
+        "name": "HERO_ABILITY_OZO_B_NAME",
+        "friendlyName": "Acrobounce"
+    },
+    {
+        "name": "HERO_ABILITY_OZO_C_NAME",
+        "friendlyName": "Bangarang"
+    },
+    {
+        "name": "HERO_ABILITY_FORTRESS_A_NAME",
+        "friendlyName": "Truth of the Tooth"
+    },
+    {
+        "name": "HERO_ABILITY_FORTRESS_B_NAME",
+        "friendlyName": "Law of the Claw"
+    },
+    {
+        "name": "HERO_ABILITY_FORTRESS_C_NAME",
+        "friendlyName": "Attack of the Pack"
+    },
 
 ]
