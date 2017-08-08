@@ -153,17 +153,75 @@ Telemetry data is classified into several event of interest. Following is a list
 ### General Event Info:
 
 #### Team
-In pregame events teams will appear as ```1``` or ```2```, and in-game events teams will apper as ```Left``` or ```Right``` side. Where ```1``` is ```Left``` side and ```2``` is ```Right``` side.
+In pre-match events teams will appear as ```1``` or ```2```, and in match events teams will apper as ```Left``` or ```Right``` side. Where ```1``` is ```Left``` side and ```2``` is ```Right``` side.
 
 #### Position & TargetPosition
 Positions for events are given in vectors holding three values. For example:
 
 	[-17.51, 0.01, 41.63]
 
-Where the first value represents the x cordinate, second value represents the z cordinate, and the third value represents the y cordinate.
+Where the first value represents the x coordinate, second value represents the z coordinate, and the third value represents the y coordinate. In other words, "Horizontal, Height, Vertical".
 
-### Pregame Events
-The following events will only take place pregame, such as in hero selection.
+The following is a list of some of the most important positions on the map:
+
+MAP LANDMARK COORDINATES
+
+==LEFT SIDE==
+
+Base Shop (-88.50, 0.89, 2.00)
+
+Crystal (-76.12, 0.00, 19.90)
+
+Turret 5 (-75.48, 0.00, 11.96)
+Turret 4 (-68.59, 0.00, 19.97)
+Turret 3 (-54.00, 0.00, 2.92)
+Turret 2 (-35.78, 0.00, 1.17)
+Turret 1 (-17.06, 0.00, 1.93)
+
+Top Healer (-40.92, 0.00, 20.25)
+
+Backs 1 (-43.42, 0.00, 31.11)
+Backs 2 (-45, 0.00, 32.23)
+
+Crystal Miner (-35.19, 0.00, 36.03)
+
+Mid Healer (-21.95, 0.00, 24.00)
+
+Fronts 1 (-14.40, 0.00, 37.67)
+Fronts 2 (-12.51, 0.00, 37.67)
+
+==RIGHT SIDE==
+
+Base Shop (88.57, 1.80, 0.51)
+
+Crystal (76.12, 0.10, 19.90)
+
+Turret 5 (75.48, 0.00, 11.96)
+Turret 4 (68.59, 0.00, 19.97)
+Turret 3 (54.00, 0.00, 2.92)
+Turret 2 (35.78, 0.00, 1.17)
+Turret 1 (17.06, 0.00, 1.93)
+
+Top Healer (40.59, 0.00, 20.75)
+
+Backs 1 (43.49, 0.00, 31.28)
+Backs 2 (45.60, 0.00, 32.40)
+
+Crystal Miner (35.20, -0.00, 35.87)
+
+Mid Healer (22.50, 0.00, 23.50)
+
+Fronts 1 (14.85, 0.00, 38.12)
+Fronts 2 (12.89. 0.00, 36.74)
+
+==Miscellaneous==
+Gold Miner / Kraken (0.00, 0.00. 23.60)
+Elder Treant / Jungle Shop (0.20, 0.00, 42,00)
+Compass Center (.092, 0.01, 3.33)
+Map Center (0.00, 0.00, 0.00)
+
+### Pre-Match Events
+The following events will only take place pre-match, such as in hero selection.
 
 #### HeroBan
 Takes place when a hero has been banned, this event will only take place in draft mode.
@@ -192,7 +250,7 @@ Takes place when a hero has been selected by a player, ```Handle``` is the in-ga
 	}
 
 #### HeroSkinSelect
-Takes place when a player has selected a actor skin, this event will typically happen after hero select, if not at the same time, and might appear more then once as a skin is selected once by default may be changed by player.
+Takes place when a player has selected a skin, this event will typically happen after hero select, if not at the same time, and might appear more then once if the skin is changed. A list of all hero skins is present in the [resources folder](https://github.com/madglory/gamelocker-vainglory/tree/master/resources).
 
 	{
 	    "time": "2017-06-26T04:58:29+0000",
@@ -204,7 +262,7 @@ Takes place when a player has selected a actor skin, this event will typically h
 	}
 
 #### HeroSwap
-Takes place when a player has swapped actor with another player, this event will only take place in draft mode. Player is the player's unique id.
+Takes place when a player has swapped heroes with another player, this event will only take place in draft mode. Player is the player's unique id.
 
 	{
 		"time": "2017-06-13T06:41:38+0000",
@@ -223,11 +281,11 @@ Takes place when a player has swapped actor with another player, this event will
 		]
 	}
 
-### In-Game Events
-The following events will only take place in-game.
+### Match Events
+The following events will only take place during a match.
 
 #### PlayerFirstSpawn
-At the start of the game when player actor entities spawn.
+At the start of the game when a player spawns.
 
 	{
 		"time": "2017-03-17T00:38:32+0000",
@@ -239,7 +297,7 @@ At the start of the game when player actor entities spawn.
 	}
 
 #### Level Up
-When a player gains a level in the game. In game types Brawl, you will find 9 events at the exact same time.
+When a player gains a level in the game. Depending on the game mode of the match, you will find multiple events at the exact same time for each player at the beginning of the match.
 
 
 	{
@@ -254,10 +312,9 @@ When a player gains a level in the game. In game types Brawl, you will find 9 ev
 	}
 
 #### BuyItem
-When a player buys an item.
+When a player buys an item. Pro-Tip: Position will help you determine which shop was used to buy the item.
 
 	{
-	
 		"time": "2017-06-26T04:59:47+0000",
 		"type": "BuyItem",
 		"payload": {
@@ -272,7 +329,6 @@ When a player buys an item.
 				0.72
 			]
 		}
-	
 	}
 
 #### SellItem
@@ -282,15 +338,15 @@ When a player sells an item.
 		"time": "2017-03-31T02:49:37+0000",
 		"type": "SellItem",
 		"payload": {
-				"Team": "Left",
-				"Actor": "*Lyra*",
-				"Item": "Flare",
-				"Cost": 15
+			"Team": "Left",
+			"Actor": "*Lyra*",
+			"Item": "Flare",
+			"Cost": 15
 		}
 	}
 
 #### LearnAbility
-When a player puts a point into one of the abilities. Please note there can be a time difference between when a player gains a level and learns an ability
+When a player puts upgrades an ability. Pro-Tip: There can be a time difference between when a player levels up and upgrades an ability.
 
 	{
 		"time": "2017-03-17T00:38:52+0000",
@@ -304,7 +360,7 @@ When a player puts a point into one of the abilities. Please note there can be a
 	}
 
 #### UseAbility
-This event is recorded when a player uses an ability and it will hold information about the hero who used it together with the co-ordinates for the map.
+This event is recorded when a player uses an ability and it will hold information about the hero who used it together with the coordinates for the map.
 
 	{
 		"time": "2017-03-17T00:39:08+0000",
@@ -346,7 +402,7 @@ This event is recorded when a player uses an activatable item or a charm/taunt.
 	}
 
 #### EarnXP
-This event is recorded when a player gains XP from any source. it could be killing a minion, miner or a hero.
+This event is recorded when a player gains XP from any source. it could be killing a minion, miner or a hero. Pro-Tip: This event is not shown for XP trickle(XP gained per second of the match).
 	
 	{
 		"time": "2017-03-17T00:39:09+0000",
