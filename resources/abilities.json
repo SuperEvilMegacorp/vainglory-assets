@@ -191,7 +191,7 @@
     {
         "name": "HERO_ABILITY_LANCE_C_NAME",
         "friendlyName": "Combat Roll"
-    }
+    },
     {
         "name": "HERO_ABILITY_RINGO_WING_CUT_NAME",
         "friendlyName": "Achilles Shot"
@@ -396,5 +396,29 @@
         "name": "HERO_ABILITY_FORTRESS_C_NAME",
         "friendlyName": "Attack of the Pack"
     },
+    {
+        "name": "Ability__Reza__DefaultAttack",
+        "friendlyName": "Default Attack"
+    },
+    {
+        "name": "Ability__Reza__CritAttack",
+        "friendlyName": "Critical Attack"
+    },
+    {
+        "name": "HERO_ABILITY_REZA_A_NAME",
+        "friendlyName": "Scorcher"
+    },
+    {
+        "name": "HERO_ABILITY_REZA_B_NAME",
+        "friendlyName": "Troublemaker"
+    },
+    {
+        "name": "HERO_ABILITY_REZA_C_NAME",
+        "friendlyName": "Netherform Detonator"
+    },
+    {
+        "name": "Ability__Reza__C_NetherformAttack",
+        "friendlyName": "Netherform Detonator 2"
+    }
 
 ]
