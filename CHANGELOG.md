@@ -23,8 +23,28 @@ The next version of VG will include fixes for the following fields:
   * completed_blitz
   * completed_aral
 
-A bug was introduced whereby these fields showed the pre-match valu, rather
+A bug was introduced whereby these fields showed the pre-match value, rather
 than the post match value.  
+
+The following new mappings are required to support the new hero, Reza!
+
+Abilities:
+  * Spell A - HERO_ABILITY_REZA_A_NAME
+  * Spell B - HERO_ABILITY_REZA_B_NAME
+  * Spell C - HERO_ABILITY_REZA_C_NAME
+
+Sources of Damage:
+  * Ability__Reza__DefaultAttack
+  * Ability__Reza__AltAttack
+  * Buff_Reza_Perk_VolatileSparkControl
+  * Buff_Reza_B_EmpoweredAttack
+  * Ability__Reza__C
+  * Ability__Reza__C_NetherformAttack
+
+Skins:
+  * Grace_Skin_Valkyrie
+  * Rona_Skin_Red
+  * Celeste_Skin_Butterfly
 
 ## [GAMELOCKER API] Version 4.2.3
 - Hero name fixes:
