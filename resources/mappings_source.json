@@ -1,23 +1,4 @@
-/* HOLY GODS OF SEMC PLEASE FIX THIS MESS */
-module.exports = {
-    /*
-     * schema:
-     *      *ItemName*, *1000_ItemName* -> "Item Name"
-     *      *HeroName* -> "Heroname"
-     *      Ability__Hero__foobar -> "Hero D"
-     *      Buff_Hero_D_Bar -> "Hero perk"
-     *      HERO_ABILITY_HERO_D_NAME -> "Hero D"
-     *      FoobarMinion -> "Foobar something"
-     *
-     * =>
-     *      item names are many:1 (mapped to ingame name)
-     *      hero names are many:1 (mapped to ingame name)
-     *      ability names are many:1 (strictly mapped to "Hero " + A/B/C/perk)
-     *      NPC names are many:1 (hero specific or "Jungle/Lane Minion",
-     *                            "Kraken", "Turret", …)
-     *
-     */
-
+{
     "Ability__Grace__A": "Grace A",
     "Ability__Grace__AltAttack": "Grace AA",
     "Ability__Grace__B": "Grace B",
