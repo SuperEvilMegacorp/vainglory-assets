@@ -8,7 +8,7 @@ NOTE: This will happen continuously.
 Players that have not been updated since May 1 will be removed.
 NOTE: This is a one time only purge to clear out old players.
 
-## [VG DATA] Version (UPCOMING)
+## [VG DATA] Version 2.7
 
 The next version of VG will include fixes for the following fields:
   * xp
