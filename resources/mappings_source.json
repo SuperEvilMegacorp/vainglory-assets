@@ -21,7 +21,7 @@
     "Ability_Grumpjaw_Eat": "Grumpjaw C",
     "Ability__Idris__A_Blink": "Idris A",
     "Ability__Idris__A_Dash": "Idris A",
-    "Ability_Leap": "Idris C",  // TODO
+    "Ability_Leap": "Idris C",
     "Ability_SelfDestruct": "Alpha C",
     "Ability__Vox__DashAndFire__AnimateAndFire": "Vox A",
     "Ability__Vox__DashAndFire__Dash": "Vox A",
@@ -29,7 +29,7 @@
     "Aegis": "Aegis",
     "Atlas Pauldron": "Atlas Pauldron",
     "Candy - Kissy": "Kissy",
-    "Candy - Pegasus Crash": "Pegasus Crash",  // TODO
+    "Candy - Pegasus Crash": "Pegasus Crash",
     "Candy - Taunt": "Taunt",
     "Contraption": "Contraption",
     "Crucible": "Crucible",
@@ -298,7 +298,7 @@
     "Buff_Item_HitByStormguardBanner": "Stormguard Banner",
     "Buff_Joule_Thunderstrike": "Joule B",
     "Buff_Lyra_ImmuneToWall": "Lyra B",
-    "Buff_Lyra_SpiritFlame": "Lyra AA",  // TODO
+    "Buff_Lyra_SpiritFlame": "Lyra AA",
     "Buff_Reim_B": "Reim B",
     "Buff_Reim_FrostDoT": "Reim perk",
     "Buff_ReimSpawn_A": "Reim A",
