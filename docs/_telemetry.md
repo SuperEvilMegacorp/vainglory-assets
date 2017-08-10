@@ -1,8 +1,8 @@
 # Telemetry
 
-The telemtry provides us insights into the match. It gives us details of various events that happened in the match alongwith the time when they happened. Some of the events also have location which can be plotted on a Vainglory Game map. Telemtry is very useful to generate a timeline visualtions of how the match went for replays, or create heatmaps of where a certin hero or ability is  most useful. These are just some of the exmaples of where Telemtry can be used.
+The telemetry provides us insights into the match. It gives us details of various events that happened in the match alongwith the time when they happened. Some of the events also have location which can be plotted on a Vainglory Game map. Telemetry is very useful to generate a timeline visualization of how the match went for replays, or create heatmaps of where a certain hero or ability is  most useful. These are just some of the examples of where Telemetry can be used.
 
-> You will get telemtry data as part of the matches endpoint.
+> You will get telemetry data as part of the matches endpoint.
 
 > And a map of the Halcyon Fold [here!](https://cdn.discordapp.com/attachments/272249149473161216/284388441674874880/vainglory-map.png)
 
@@ -93,7 +93,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
         },
 ```
 
-> Once you have located this ID, you now have to search for the following JSON segment in the response object. The following response object will provide you a link to the Telemtry data
+> Once you have located this ID, you now have to search for the following JSON segment in the response object. The following response object will provide you a link to the Telemetry data
 
 ```json
     {
@@ -148,7 +148,7 @@ curl "https://gl-prod-us-east-1.s3.amazonaws.com/assets/semc-vainglory/na/2017/0
 ```
 
 ## Event Data Dictionary
-Telemetry data is classified into several event of interest. Following is a list of every event type with an example.
+Telemetry data is classified into several events of interest. Following is a list of every event type with an example.
 
 ### General Event Info:
 
@@ -296,7 +296,7 @@ At the start of the game when a player spawns.
 		}
 	}
 
-#### Level Up
+#### LevelUp
 When a player gains a level in the game. Depending on the game mode of the match, you will find multiple events at the exact same time for each player at the beginning of the match.
 
 
