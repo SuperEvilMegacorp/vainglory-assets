@@ -397,14 +397,6 @@
         "friendlyName": "Attack of the Pack"
     },
     {
-        "name": "Ability__Reza__DefaultAttack",
-        "friendlyName": "Default Attack"
-    },
-    {
-        "name": "Ability__Reza__CritAttack",
-        "friendlyName": "Critical Attack"
-    },
-    {
         "name": "HERO_ABILITY_REZA_A_NAME",
         "friendlyName": "Scorcher"
     },
@@ -415,10 +407,6 @@
     {
         "name": "HERO_ABILITY_REZA_C_NAME",
         "friendlyName": "Netherform Detonator"
-    },
-    {
-        "name": "Ability__Reza__C_NetherformAttack",
-        "friendlyName": "Netherform Detonator 2"
     }
 
 ]
