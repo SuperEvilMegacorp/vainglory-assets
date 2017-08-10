@@ -39,3 +39,4 @@ Special Thanks
   * stormcaller
   * skill4killz
   * SpiesWithin
+  * [ClarkThyLord](https://github.com/ClarkThyLord) :: IGN ClarkthyLord (NA) :: [madglory-ezl](https://github.com/ClarkThyLord/madglory-ezl)
