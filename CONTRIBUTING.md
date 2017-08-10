@@ -1,26 +1,16 @@
 ## How to contribute to the Vainglory Game Data Service Documentation
 
-### **What to expect**
+#### API Requests
 
-Any issues filed here are reviewed by our team and handled as quickly as we can.
+Any bug, question or request regarding the API system should go into one ticket each.
+
 
 #### Data Requests
 
-If the request is related to data being returned by the API, we will verify:
-  * Clarity - Is the request easily understood by someone not familiar with the game.
-    All requests must included a detailed description and may get assigne to new developerd.
-  * Examples - Does the request include examples.  If it is telemetry related, did the
-  requester suggest what the event should look like.  Etc.
+Any feature request or data question should be created as a pull request against [requests_telemetry.md](requests_telemetry.md) (Telemetry), [requests_match.md](requests_match.md) (data returned by `/matches`) or [requests_player.md](requests_player.md) (date returned by `/players`). It must include a detailed description and it should include a data format proposal. If this is not possible, an issue may precede a pull request.
 
-If your request is accepted, we will close it add a link to it in either:
-  * #221 - Telemetry Requests
-  * #223 - /match Requests
-  * #224 - /player Requests
+The pull request is peer reviewed, discussed and critized by other developers. A developer community maintainer or MadGlory employee will merge the pull request, adding, removing or altering the list of feauture request that is presented to game developers regularly as-is.
 
-#### API Requests
-
-Alternatively, if the request is related to the way the API works we will
-review the ticket and, if accepted, assign accordingly.
 
 ### **Do you have questions about to use that Game Data Service?**
 
