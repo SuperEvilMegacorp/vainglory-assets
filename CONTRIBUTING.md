@@ -1,18 +1,28 @@
 ## How to contribute to the Vainglory Game Data Service Documentation
 
-#### **Did you find a bug?**
+### **What to expect**
 
-* **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/madglory/gamelocker-vainglory-docs/issues).
+Any issues filed here are reviewed by our team and handled as quickly as we can.
 
-* If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/madglory/gamelocker-vainglory-docs/issues/new). Be sure to include a **title and clear description**, as much relevant information as possible.  It will help us fix it!
+#### Data Requests
 
-#### **Did you write a patch that fixes a bug?**
+If the request is related to data being returned by the API, we will verify:
+  * Clarity - Is the request easily understood by someone not familiar with the game.
+    All requests must included a detailed description and may get assigne to new developerd.
+  * Examples - Does the request include examples.  If it is telemetry related, did the
+  requester suggest what the event should look like.  Etc.
 
-* Open a new GitHub pull request with the patch.
+If your request is accepted, we will close it add a link to it in either:
+  * #221 - Telemetry Requests
+  * #223 - /match Requests
+  * #224 - /player Requests
 
-* Ensure the PR description clearly describes the problem and solution. Include the relevant issue number if applicable.
+#### API Requests
 
-#### **Do you have questions about to use that Game Data Service?**
+Alternatively, if the request is related to the way the API works we will
+review the ticket and, if accepted, assign accordingly.
+
+### **Do you have questions about to use that Game Data Service?**
 
 * Ask any question about how to use on the [Vainglory API Community Discord server](http://discord.me/vaingloryapi).
 
