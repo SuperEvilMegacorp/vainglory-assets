@@ -40,11 +40,14 @@ Sources of Damage:
   * Buff_Reza_B_EmpoweredAttack
   * Ability__Reza__C
   * Ability__Reza__C_NetherformAttack
+  * Ability__Reza__CritAttack
 
 Skins:
   * Grace_Skin_Valkyrie
   * Rona_Skin_Red
   * Celeste_Skin_Butterfly
+  * Fortress_Skin_Warg
+  * Reza_DefaultSkin
 
 ## [GAMELOCKER API] Version 4.2.3
 - Hero name fixes:
