@@ -47,6 +47,10 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players/<ID>" \
 
 This endpoint retrieves a specific player.
 
+* If a player has changed names, it is possible that there are multiple ID's for a single player name.
+
+* Player renames do not trigger a change on this endpoint. A minimum of 1 match after the rename is required to view the change.
+
 <aside class="notice">
 Changes Coming! - Player resources are not fully defined at this point, but are
 included so that consumers can get basic info (name, etc.)  This object will have
@@ -68,7 +72,7 @@ ID | The ID of the player to retrieve
 
 ## Get a collection of players
 
-This endpoint retrieves a collection of up to 6 players, filtered by name. Player names are specific to each region. If a player has changed names, it is possible that there are multiple ID's for a single player name.
+This endpoint retrieves a collection of up to 6 players, filtered by name. Player names are specific to each region.
 
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=player1,player2" \

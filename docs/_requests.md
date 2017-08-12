@@ -10,9 +10,9 @@ The Server will respond with a `Content-Type` header that mirrors the format
 requested by the Client.
 
 
-## Regions
+## Shards
 
-> To specify the regions, use this code:
+> To specify the regional shard, use this code:
 
 ```shell
 "...gamelockerapp.com/shards/<region>/..."
@@ -39,6 +39,7 @@ The Vainglory Game Data Service currently supports the following regions:
 
 To find data regarding live servers, where all data is found, please use the following shards.
 
+* **China:** ```cn```
 * **North America:** ```na```
 * **Europe:** ```eu```
 * **South America:** ```sa```
@@ -55,7 +56,14 @@ To find data regarding professional eSport, which take place on the private clie
 * **East Asia Tournaments:** ```tournament-ea```
 * **Southeast Asia Tournaments:** ```tournament-sg```
 
-**Choosing a specific region is currently required**
+***Public Beta Environment***
+
+For developers that have signed an agreement with SEMC to access the Public Beta Eniroment (PBE) your key has access to an
+additional shard
+
+* **Public Beta Environment (Coming Soon):** ```pbe```
+
+**Choosing a specific region is required**
 
 ## GZIP
 
