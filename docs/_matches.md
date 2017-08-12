@@ -226,3 +226,22 @@ This endpoint retrieves a specific match.
 Parameter | Description
 --------- | -----------
 ID | The ID of the match to retrieve
+
+## Where is my match?
+
+We purposefully do not allow certain matches to be displayed.  Specifically, for
+ a match to be valid it must meet all of the following requirements.
+
+  1.  The game mode must be one of the following:
+    * ranked
+    * casual
+    * private
+    * private_party_draft_match
+    * private_party_aral_match
+    * private_party_blitz_match
+    * casual_aral
+    * blitz_pvp_ranked
+  1. The match must NOT have ended with one of the following statuses:
+    * exitpractice
+    * notenoughplayers
+  1. In order to allow our pro-players to practice, we also reject matches where there are no ranked players and the game mode is private.

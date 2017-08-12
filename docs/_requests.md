@@ -39,7 +39,7 @@ The Vainglory Game Data Service currently supports the following regions:
 
 To find data regarding live servers, where all data is found, please use the following shards.
 
-* **China (Coming Soon):** ```cn```
+* **China:** ```cn```
 * **North America:** ```na```
 * **Europe:** ```eu```
 * **South America:** ```sa```
