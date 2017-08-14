@@ -1,0 +1,94 @@
+{
+	"Weapon":
+	{
+		"Weapon Blade": [],
+		"Book of Eulogies": [],
+		"Swift Shooter": [],
+		"Minions Foot": [],
+		"Heavy Steel": [["Weapon Blade"]],
+		"Six Sins": [["Weapon Blade"]],
+		"Barbed Needle": [["Book of Eulogies"]],
+		"Piercing Spear": [["Weapon Blade"]],
+		"Blazing Salvo": [["Swift Shooter"]],
+		"Lucky Strike": [["Minions Foot"]],
+		"Sorrowblade": [["Weapon Blade", "Weapon Blade"], ["Heavy Steel", "Six Sins"]],
+		"Serpent Mask": [["Weapon Blade", "Book of Eulogies"], ["Heavy Steel", "Barbed Needle"]],
+		"Poisoned Shiv": [["Book of Eulogies", "Swift Shooter"], ["Barbed Needle", "Blazing Salvo"]],
+		"Breaking Point": [["Weapon Blade", "Swift Shooter"], ["Heavy Steel", "Blazing Salvo"]],
+		"Tension Bow": [["Weapon Blade", "Weapon Blade"], ["Heavy Steel", "Piercing Spear"]],
+		"Bonesaw": [["Weapon Blade", "Swift Shooter"], ["Piercing Spear", "Blazing Salvo"]],
+		"Tornado Trigger": [["Swift Shooter", "Minions Foot"], ["Blazing Salvo", "Lucky Strike"]],
+		"Tyrants Monocle": [["Weapon Blade", "Minions Foot"], ["Six Sins", "Lucky Strike"]]
+	},
+	"Crystal":
+	{
+		"Crystal Bit": [],
+		"Energy Battery": [],
+		"Hourglass": [],
+		"Swift Shooter": [],
+		"Heavy Prism": [["Crystal Bit"]],
+		"Eclipse Prism": [["Crystal Bit"]],
+		"Piercing Shard": [["Crystal Bit"]],
+		"Void Battery": [["Energy Battery"]],
+		"Chronograph": [["Hourglass"]],
+		"Blazing Salvo": [["Swift Shooter"]],
+		"Shatterglass": [["Crystal Bit", "Crystal Bit"], ["Heavy Prism", "Eclipse Prism"]],
+		"Broken Myth": [["Crystal Bit", "Crystal Bit"], ["Heavy Prism", "Piercing Shard"]],
+		"Frostburn": [["Crystal Bit", "Crystal Bit"], ["Heavy Prism", "Eclipse Prism"]],
+		"Eve of Harvest": [["Crystal Bit", "Energy Battery"], ["Heavy Prism", "Void Battery"]],
+		"Echo": [["Energy Battery"], ["Void Battery"]],
+		"Clockwork": [["Energy Battery", "Hourglass"], ["Void Battery", "Chronograph"]],
+		"Aftershock": [["Crystal Bit", "Hourglass"], ["Eclipse Prism", "Chronograph"]],
+		"Alternating Current": [["Crystal Bit", "Swift Shooter"], ["Heavy Prism", "Blazing Salvo"]]
+	},
+	"Defence":
+	{
+		"Oakheart": [],
+		"Light Shield": [],
+		"Light Armor": [],
+		"Dragonheart": [["Oakheart"]],
+		"Lifespring": [["Oakheart"]],
+		"Reflex Block": [["Oakheart"]],
+		"Kinetic Shield": [["Light Shield"]],
+		"Coat of Plates": [["Light Armor"]],
+		"Slumbering Husk": [["Oakheart"], ["Dragonheart"]],
+		"Crucible": [["Oakheart", "Oakheart"], ["Dragonheart", "Reflex Block"]],
+		"Fountain of Renewal": [["Oakheart", "Light Shield"], ["Lifespring", "Kinetic Shield"]],
+		"Aegis": [["Oakheart", "Light Shield"], ["Reflex Block", "Kinetic Shield"]],
+		"Metal Jacket": [["Light Armor"], ["Coat of Plates"]],
+		"Atlas Pauldron": [["Light Shield"], ["Kinetic Shield"]]
+	},
+	"Utility":
+	{
+		"Sprint Boots": [],
+		"Energy Battery": [],
+		"Hourglass": [],
+		"Oakheart": [],
+		"Travel Boots": [["Sprint Boots"]],
+		"Flare Gun": [["Oakheart"]],
+		"Stormguard Banner": [["Oakheart"]],
+		"Void Battery": [["Energy Battery"]],
+		"Chronograph": [["Hourglass"]],
+		"Dragonheart": [["Oakheart"]],
+		"Journey Boots": [["Spring Boots"], ["Travel Boots"]],
+		"War Treads": [["Sprint Boots", "Oakheart"], ["Travel Boots", "Dragonheart"]],
+		"Halcyon Chargers": [["Sprint Boots", "Energy Battery"], ["Travel Boots", "Void Battery"]],
+		"Contraption": [["Hourglass", "Oakheart"], ["Chronograph", ["Flare Gun"]]],
+		"Stormcrown": [["Oakheart", "Hourglass"], ["Stormguard Banner", "Chronograph"]],
+		"Nullwave Gauntlet": [["Hourglass", "Oakheart"], ["Chronograph", "Dragonheart"]],
+		"Shiversteel": [["Oakheart"], ["Dragonheart"]]
+	},
+	"Other":
+	{
+		"Halcyon Potion": [],
+		"Flare": [],
+		"Scout Trap": [],
+		"Minion Candy": [],
+		"Ironguard Contract": [],
+		"Protector Contract": [],
+		"Dragonblood Contract": [],
+		"Weapon Infusion": [],
+		"Crystal Infusion": [],
+		"Gold Pot": []
+	}
+}
