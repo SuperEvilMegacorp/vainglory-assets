@@ -155,8 +155,8 @@ Parameter | Default | Description
 page[offset] | 0 | Allows paging over results
 page[limit] | 50 | The default (and current maximum) is 50.  Values less than 50 and great than 2 are supported.
 sort | createdAt | By default, Matches are sorted by creation time ascending.
-filter[createdAt-start] | 3hrs ago | Must occur before end time.  Format is iso8601  Usage: filter[createdAt-start]=2017-01-01T08:25:30Z
-filter[createdAt-end] | Now | Queries search the last 3 hrs. Format is iso8601 i.e. filter[createdAt-end]=2017-01-01T13:25:30Z
+filter[createdAt-start] | 28 days prior | Must occur before end time.  Format is iso8601  Usage: filter[createdAt-start]=2017-01-01T08:25:30Z
+filter[createdAt-end] | 28 days after or current time | Queries search the last 3 hrs. Format is iso8601 i.e. filter[createdAt-end]=2017-01-01T13:25:30Z
 filter[playerNames] | none | Filters by player name. Usage: filter[playerNames]=player1,player2,...
 filter[playerIds] | none | Filters by player Id. Usage: filter[playerIds]=playerId,playerId,...
 filter[teamNames] | none | Filters by team names. Team names are the same as the in game team tags. Usage: filter[teamNames]=TSM,team2,...
