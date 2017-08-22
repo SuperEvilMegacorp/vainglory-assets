@@ -1,0 +1,17 @@
+{
+  "0":  "_introduction",
+  "1":  "_datacenters",
+  "2":  "_authentication",
+  "3":  "_titles",
+  "4":  "_requests",
+  "5":  "_responses",
+  "6":  "_matches",
+  "7": "_matchesJSON",
+  "8":  "_players",
+  "9":  "_samples",
+  "10":  "_telemetry",
+  "11": "_teams",
+  "12": "_links",
+  "13": "_sdks",
+  "14": "_errors"
+}
