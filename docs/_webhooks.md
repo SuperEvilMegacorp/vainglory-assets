@@ -114,7 +114,7 @@ The number of webhooks that can be created is limited to 100 per app. All create
 
 ### Authorization
 
-For signing requests we use the HMAC authentication scheme (similar to AWS).
+For signing requests we use the HMAC authentication scheme (similar to AWS) with your JWT used as the secret.
 
 The authorization header is in the following format:
 
