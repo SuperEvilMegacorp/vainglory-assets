@@ -1,9 +1,8 @@
 Vainglory Developer API Documentation
 -------------
-This documentation was built with love by the Vainglory Developer Community. 
+This documentation was built with love by the Vainglory Developer Community.
 
 ![Image of OctOPAF](https://github.com/BrianGlory/images/blob/master/octopaf.png)
-
 
 ## Features
 
@@ -14,22 +13,21 @@ This documentation was built with love by the Vainglory Developer Community.
 * Player Profiles
 * Sample Sets
 
-### In-Development Features
+### Roadmap
 
-* Better Data Validation - Open source JSON schema, which is used on backend and shared with community
-* Armory - Stats for in-game items, heros, abilitys, etc.
-* Guilds Data
-* Expanded Team Data
+Contribute to the roadmap by viewing our project board!
 
-### Requested Features
 
-[![Feature Requests](http://feathub.com/madglory/gamelocker-vainglory?format=svg)](http://feathub.com/madglory/gamelocker-vainglory)
+Assets
+--------------------
 
-### Submit a Feature Request
-To submit a feature request, please use our Feature Voting app.
+This repository contains assets useful for using the API.
 
-[![Feature Requests](https://cloud.githubusercontent.com/assets/390379/10127973/045b3a96-6560-11e5-9b20-31a2032956b2.png)](http://feathub.com/madglory/gamelocker-vainglory)
+  * images - High-resolution art provided by the game team.  Enjoy!
+  * schemas - JSON Schema Definitions of API Objects
+  * mappings - English translations of keys.
 
+NOTE: We'd love some pull requests to add support for other languages!
 
 Special Thanks
 --------------------
