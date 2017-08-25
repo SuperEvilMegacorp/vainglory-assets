@@ -112,6 +112,28 @@ The number of webhooks that can be created is limited to 100 per app. All create
 
 ## Event
 
+### Authorization
+
+For signing requests we use the HMAC authentication scheme (similar to AWS).
+
+The authorization header is in the following format:
+
+```
+Authorization: gamelocker APP:SIGNATURE
+```
+
+The signature includes the following:
+
+- request method
+- Content-MD5 header
+- Content-Type header
+- Date header
+- request url path
+
+Note: Content-MD5 is the md5 sum of the request body and can be used to verify that the body has not been modified.
+
+### Payload
+
 ```json
 {
   "attributes": {
