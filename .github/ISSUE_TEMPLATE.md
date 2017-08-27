@@ -9,4 +9,6 @@ your issue title with one of the following:
 If you are requesting a change to data, all requests should include both current and
 expected values.
 
-Any general questions should be asked in our [Discord](https://discord.me/vaingloryapi).  Come on in and join the fun!
+Please report any times in UTC. 
+
+Last, any general questions should be asked in our [Discord](https://discord.me/vaingloryapi).  Come on in and join the fun!
