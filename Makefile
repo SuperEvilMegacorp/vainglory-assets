@@ -19,7 +19,7 @@ images:
 
 filenamefixer:
 	find assets -type f | xargs rename 's/-/_/g' -v; \
-	find assets -type f | xargs rename --force 'y/[A-Z]/[a-z]/' -v; \
+	# find assets -type f | xargs rename --force 'y/[A-Z]/[a-z]/' -v; \
 
 lint:
-	find . -name \*.json -exec xargs jsonlint -qc {} \;
+	find assets/resources -name \*.json -exec xargs jsonlint -c{} \;
