@@ -12,8 +12,8 @@ NOTE: This is a one time only purge to clear out old players.
 
 Skins:
 
-* Glaive_Theme_Lion (Glaive)
-* Ringo_Theme_Cowboy (Ringo)
+* Glaive_Skin_Lion (Glaive)
+* Ringo_Skin_Cowboy (Ringo)
 TBD
 
 ## [VG DATA] Version 2.7
