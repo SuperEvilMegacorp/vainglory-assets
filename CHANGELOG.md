@@ -8,6 +8,10 @@ NOTE: This will happen continuously.
 Players that have not been updated since May 1 will be removed.
 NOTE: This is a one time only purge to clear out old players.
 
+## [GAMELOCKER API] Version 6.8.6
+- PBE data is now available to approved community developers.
+- Future times are now supported
+
 ## [VG DATA] Version 2.7
 
 The next version of VG will include fixes for the following fields:
