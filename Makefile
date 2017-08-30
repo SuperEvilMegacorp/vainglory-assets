@@ -18,7 +18,7 @@ images:
 	find images -type f -name "*.png" | xargs optipng -strip all -o7
 
 filenamefixer:
-	find images -type f | xargs rename 's/-/_/g' -v; \
+	find images -type f | xargs rename 's/_/-/g' -v; \
 	find images -type f | xargs rename --force 'y/[A-Z]/[a-z]/' -v; \
 
 lint:
