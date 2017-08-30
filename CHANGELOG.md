@@ -11,10 +11,13 @@ NOTE: This is a one time only purge to clear out old players.
 ## [VG DATA] Version 2.8
 
 Skins:
-
 * Glaive_Skin_Lion (Glaive)
 * Ringo_Skin_Cowboy (Ringo)
 TBD
+
+## [GAMELOCKER API] Version 6.8.6
+- PBE data is now available to approved community developers.
+- Future times are now supported
 
 ## [VG DATA] Version 2.7
 
