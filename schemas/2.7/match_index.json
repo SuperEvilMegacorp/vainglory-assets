@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Matches::Index",
-  "description": "This is a schema for Match::Index responses in the JSON API format. For more, see http://jsonapi.org",
+  "title": "gamelocker-vainglory::matches ",
+  "description": "This is a schema for responses in the JSON API format. For more, see http://jsonapi.org",
   "oneOf": [
     {
       "$ref": "#/definitions/success"
@@ -136,7 +136,7 @@
             { "$ref": "#/definitions/rosterAttributes" },
             { "$ref": "#/definitions/participantAttributes" },
             { "$ref": "#/definitions/playerAttributes" },
-            { "$ref": "#/definitions/telemetryAttributes"}
+            { "$ref": "#/definitions/assetAttributes"}
           ]
         },
         "relationships": {
@@ -215,6 +215,7 @@
     "participantAttributes": {
         "properties": {
           "actor": {"type": "string"},
+          "shardId": {"type": "string"},
           "stats": {
             "properties":{
               "assists": {"type": "number"},
@@ -243,7 +244,7 @@
             "required": ["assists", "crystalMineCaptures", "deaths", "farm",
             "firstAfkTime", "goldMineCaptures","itemGrants", "itemSells", "itemUses",
           "items", "jungleKills", "karmaLevel", "kills", "krakenCaptures", "level",
-        "minionKills", "nonJungleMinionKills", "skillTier", "turretCaptures", "wentAfk", "winner"]
+        "minionKills", "nonJungleMinionKills", "turretCaptures", "wentAfk", "winner"]
           }
         },
         "additionalProperties": false,
@@ -253,19 +254,27 @@
       "properties": {
         "name": {"type": "string"},
         "shardId": {"type": "string"},
+        "createdAt": {"type": "string"},
+        "patchVersion": {"type": "string"},
         "stats": {
           "properties":{
+            "elo_earned_season_4": {"type": "number"},
+            "elo_earned_season_5": {"type": "number"},
+            "elo_earned_season_6": {"type": "number"},
+            "elo_earned_season_7": {"type": "number"},
+            "karmaLevel": {"type": "number"},
             "level": {"type": "number"},
             "lifetimeGold": {"type": "number"},
             "lossStreak": {"type": "number"},
             "played": {"type": "number"},
             "played_ranked": {"type": "number"},
             "winStreak": {"type": "number"},
+            "skillTier": {"type": "number"},
             "wins": {"type": "number"},
             "xp": {"type": "number"}
           },
-          "required": ["level", "lifetimeGold", "lossStreak", "played",
-            "played_ranked", "winStreak", "wins", "xp"]
+          "required": ["elo_earned_season_4", "elo_earned_season_5", "elo_earned_season_6", "elo_earned_season_7", "karmaLevel", "level",
+            "lifetimeGold", "lossStreak", "played", "played_ranked", "winStreak", "skillTier", "wins", "xp"]
         },
         "titleId": {"type": "string"}
       },
@@ -274,6 +283,8 @@
     },
     "rosterAttributes": {
       "properties": {
+        "shardId": {"type": "string"},
+        "won": {"type": "string"},
         "stats": {
           "properties": {
             "acesEarned": {"type": "number"},
@@ -289,9 +300,9 @@
         }
       },
       "additionalProperties": false,
-      "required": ["stats"]
+      "required": ["stats", "won", "shardId"]
     },
-    "telemetryAttributes": {
+    "assetAttributes": {
       "properties": {
         "URL":{"type": "string"},
         "contentType":{"type": "string"},
