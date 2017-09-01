@@ -12,7 +12,7 @@ To install dependencies:
 
     make deps
 
-NOTE: No support for Windows / Linux is currently provided.  We work on Macs primarily, but We'd love a pull request for this!
+NOTE: No support for Windows / Linux is currently provided.  We work on Macs primarily, but we'd love a pull request for this!
 
 ## Features
 
