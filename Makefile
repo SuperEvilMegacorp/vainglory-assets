@@ -9,7 +9,7 @@ endif
 .PHONY: deps images
 
 deps:
-	brew install jpegoptim optipng rename jsonlint
+	brew install jpegoptim optipng rename jsonlint git git-lfs
 
 build: lint filenamefixer images
 
