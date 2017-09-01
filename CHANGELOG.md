@@ -11,9 +11,13 @@ NOTE: This is a one time only purge to clear out old players.
 ## [VG DATA] Version 2.8
 
 Skins:
-* Glaive_Skin_Lion (Glaive)
-* Ringo_Skin_Cowboy (Ringo)
-TBD
+* `Glaive_Skin_Lion` (Glaive)
+* `Ringo_Skin_Cowboy` (Ringo)
+
+Items:
+* `*Item_HealingFlask*` (Healing Flask)
+* `TBD` (Spellsword)
+
 
 ## [GAMELOCKER API] Version 6.8.6
 - PBE data is now available to approved community developers.
