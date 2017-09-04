@@ -13,7 +13,7 @@ NOTE: This is a one time only purge to clear out old players.
 Skins:
 * `Glaive_Skin_Lion` (Glaive)
 * `Ringo_Skin_Cowboy` (Ringo)
-& `Idris_Skin_Egypt` (Idris)
+* `Idris_Skin_Egypt` (Idris)
 
 Items:
 * `*Item_HealingFlask*` (Healing Flask)
