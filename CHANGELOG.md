@@ -17,7 +17,7 @@ Skins:
 
 Items:
 * `*Item_HealingFlask*` (Healing Flask)
-* `TBD` (Spellsword)
+* `*Item_Spellsword*` (Spellsword)
 
 
 ## [GAMELOCKER API] Version 6.8.6
