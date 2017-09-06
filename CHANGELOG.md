@@ -8,6 +8,18 @@ NOTE: This will happen continuously.
 Players that have not been updated since May 1 will be removed.
 NOTE: This is a one time only purge to clear out old players.
 
+## [VG DATA] Version 2.8
+
+Skins:
+* `Glaive_Skin_Lion` (Glaive)
+* `Ringo_Skin_Cowboy` (Ringo)
+* `Idris_Skin_Egypt` (Idris)
+
+Items:
+* `*Item_HealingFlask*` (Healing Flask)
+* `*Item_Spellsword*` (Spellsword)
+
+
 ## [GAMELOCKER API] Version 6.8.6
 - PBE data is now available to approved community developers.
 - Future times are now supported
