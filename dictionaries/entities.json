@@ -1,0 +1,20 @@
+{
+  "Crystal Sentry": "*JungleMinion_CrystalMiner*",
+  "Gold Miner": "*JungleMinion_GoldMiner*",
+  "Jungle Kraken": "*Kraken_Jungle*",
+  "Away Vain Crystal": "*VainCrystalAway*",
+  "Home Vain Crystal": "*VainCrystalHome*",
+  "Big Jungle Minion": "*Neutral_JungleMinion_DefaultBig*",
+  "Elder Shop Treant": "*JungleMinion_ElderTreeEnt*",
+  "Vain Turret": "*VainTurret*",
+  "Fortress Minion": "*FortressMinion*",
+  "Captured Kraken": "*Kraken_Captured*",
+  "Petal Seed": "*PetalSeed*",
+  "Ranged Lane Minion": "*RangedMinion*",
+  "Lead Lane Minion": "*LeadMinion*",
+  "Small Jungle Minion": "*Neutral_JungleMinion_DefaultSmall*",
+  "Tank Lane Minion": "*TankMinion*",
+  "Turret": "*Turret*",
+  "Petal Minion": "*PetalMinion*",
+  "Treant": "*JungleMinion_TreeEnt*"
+}
