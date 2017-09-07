@@ -16,7 +16,7 @@ Skins:
 
 Items:
 * `*Item_HealingFlask*` (Healing Flask)
-* `*Item_Spellsword*` (Spellsword)
+* `*Item_Spellsword*` `Halcyon Rapier` (Spellsword)
 
 
 ## [GAMELOCKER API] Version 6.8.6
