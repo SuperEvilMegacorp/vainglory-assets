@@ -41,7 +41,7 @@ Join the Unofficial Discord Server
 
 The Discord server is a common hangout for library and app developers alike. It's a great starting point for those looking to dive in and learn how to create things with the Vainglory API.
 
-[![](https://discordapp.com/api/guilds/81384788765712384/embed.png)](https://discord.gg/sD7j8P)
+[![](https://discordapp.com/api/guilds/272248892161261569/embed.png)](https://discord.gg/sD7j8P)
 
 Special Thanks
 --------------------
