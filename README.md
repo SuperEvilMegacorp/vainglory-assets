@@ -12,8 +12,6 @@ To install dependencies:
 
     make deps
 
-NOTE: No support for Windows / Linux is currently provided.  We work on Macs primarily, but we'd love a pull request for this!
-
 ## Features
 
 ### Current Features
@@ -21,7 +19,6 @@ NOTE: No support for Windows / Linux is currently provided.  We work on Macs pri
 * Matches
 * Telemetry
 * Player Profiles
-* Sample Sets
 
 ### Roadmap
 
