@@ -11,7 +11,8 @@
   "9":  "_samples",
   "10":  "_telemetry",
   "11": "_teams",
-  "12": "_links",
-  "13": "_sdks",
-  "14": "_errors"
+  "12": "_webhooks",
+  "13": "_links",
+  "14": "_sdks",
+  "15": "_errors"
 }
