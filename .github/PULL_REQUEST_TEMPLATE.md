@@ -1,7 +1,7 @@
-## Fixes:
+## Fixes
   - #123 - Issue summary
 
-## Changes proposed:
+## Changes proposed
   -
   -
   -
