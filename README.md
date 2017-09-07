@@ -36,6 +36,13 @@ This repository contains assets useful for using the API.
 
 NOTE: We'd love some pull requests to add support for other languages!
 
+Join the Unofficial Discord Server
+--------------------
+
+The Discord server is a common hangout for library and app developers alike. It's a great starting point for those looking to dive in and learn how to create things with the Vainglory API.
+
+[![](https://discordapp.com/api/guilds/81384788765712384/embed.png)](https://discord.gg/sD7j8P)
+
 Special Thanks
 --------------------
   * [BrianGlory](http://twitter.com/BrianGlory) :: IGN Brian (NA) // [VGNY | Vainglory New York](http://www.vgny.org)
