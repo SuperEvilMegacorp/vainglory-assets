@@ -10,41 +10,40 @@ The Server will respond with a `Content-Type` header that mirrors the format
 requested by the Client.
 
 {% method %}
-
-## Shards
-
+## Shards {#shards}
 {% common %}
-> To specify the regional shard, use this code:
-{% sample lang="shell" %}
+To specify the regional shard, use this code:
 
+{% sample lang="shell" %}
 ```shell
 "...gamelockerapp.com/shards/<region>/..."
 ```
-{% sample lang="java" %}
 
+{% sample lang="java" %}
 ```java
 "...gamelockerapp.com/shards/<region>/..."
 ```
-{% sample lang="python" %}
 
+{% sample lang="python" %}
 ```python
 "...gamelockerapp.com/shards/<region>/..."
 ```
-{% sample lang="ruby" %}
 
+{% sample lang="ruby" %}
 ```ruby
 "...gamelockerapp.com/shards/<region>/..."
 ```
-{% sample lang="js" %}
 
+{% sample lang="js" %}
 ```javascript
 "...gamelockerapp.com/shards/<region>/..."
 ```
-{% sample lang="go" %}
 
+{% sample lang="go" %}
 ```go
 "...gamelockerapp.com/shards/<region>/..."
 ```
+
 {% endmethod %}
 
 The Vainglory Game Data Service currently supports the following regions:
@@ -244,4 +243,3 @@ curl -i https://api.dc01.gamelockerapp.com/status -H "Origin: http://example.com
   Access-Control-Max-Age: 86400
 ```
 {% endmethod %}
-
