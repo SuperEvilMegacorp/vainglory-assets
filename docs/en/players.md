@@ -2,30 +2,55 @@
 
 Player objects contain aggregated lifetime information about each Player.  At this time Players are fairly sparse, but there are plans to add much richer data as it becomes available.
 
+{% method %}
 ## Get a single Player
 
+This endpoint retrieves a specific player.
+
+* If a player has changed names, it is possible that there are multiple ID's for a single player name.
+
+* Player renames do not trigger a change on this endpoint. A minimum of 1 match after the rename is required to view the change.
+
+
+**Changes Coming!** - Player resources are not fully defined at this point, but are
+included so that consumers can get basic info (name, etc.)  This object will have
+additional data added over the next few months, and may change slightly as data
+moves from the `attributes.stats` object to the main `attributes` object.
+
+
+{% sample lang="shell" %}
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/players/<ID>" \
   -H "Authorization: Bearer <api-key>" \
   -H "Accept: application/vnd.api+json"
 ```
 
+{% sample lang="java" %}
 ```java
 //There are a variety of Java HTTP libraries that support query-parameters.
 ```
 
+{% sample lang="python" %}
 ```python
+
 ```
 
+{% sample lang="ruby" %}
 ```ruby
+
 ```
 
+{% sample lang="js" %}
 ```javascript
+
 ```
 
+{% sample lang="go" %}
 ```go
+
 ```
 
+{% common %}
 > The above command returns JSON structured like this:
 
 ```json
@@ -44,19 +69,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/players/<ID>" \
 }
 }
 ```
-
-This endpoint retrieves a specific player.
-
-* If a player has changed names, it is possible that there are multiple ID's for a single player name.
-
-* Player renames do not trigger a change on this endpoint. A minimum of 1 match after the rename is required to view the change.
-
-<aside class="notice">
-Changes Coming! - Player resources are not fully defined at this point, but are
-included so that consumers can get basic info (name, etc.)  This object will have
-additional data added over the next few months, and may change slightly as data
-moves from the `attributes.stats` object to the main `attributes` object.
-</aside>
+{% endmethod %}
 
 ### HTTP Request
 
@@ -69,32 +82,44 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the player to retrieve
 
-
+{% method %}
 ## Get a collection of players
 
 This endpoint retrieves a collection of up to 6 players, filtered by name. Player names are specific to each region.
 
+{% sample lang="shell" %}
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=player1,player2" \
   -H "Authorization: Bearer <api-key>" \
   -H "Accept: application/vnd.api+json"
 ```
 
+{% sample lang="java" %}
 ```java
 //There are a variety of Java HTTP libraries that support query-parameters.
 ```
 
+{% sample lang="python" %}
 ```python
+
 ```
 
+{% sample lang="ruby" %}
 ```ruby
+
 ```
 
+{% sample lang="js" %}
 ```javascript
+
 ```
 
+{% sample lang="go" %}
 ```go
+
 ```
+
+{% endmethod %}
 
 ### HTTP Request
 

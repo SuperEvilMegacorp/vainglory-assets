@@ -6,7 +6,7 @@ The telemetry provides us insights into the match. It gives us details of variou
 
 > And a map of the Halcyon Fold [here!](https://cdn.discordapp.com/attachments/272249149473161216/284388441674874880/vainglory-map.png)
 
-
+ {% method %}
 ## To get Telemetry data
 
 You start by pulling a list of matches using the matches endopoint.
@@ -14,23 +14,29 @@ You start by pulling a list of matches using the matches endopoint.
 The HTTP Request to get matches is
 `GET https://api.dc01.gamelockerapp.com/shards/na/matches`
 
+{% sample lang="shell" %}
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
   -H "Authorization: Bearer <api-key>" \
   -H "Accept: application/vnd.api+json"
 ```
-
+{% sample lang="java" %}
 ```java
 //There are a variety of Java HTTP libraries that support query-parameters.
 ```
+{% sample lang="python" %}
 ```python
 ```
+{% sample lang="ruby" %}
 ```ruby
 ```
+{% sample lang="js" %}
 ```javascript
 ```
+{% sample lang="go" %}
 ```go
 ```
+{% common %}
 > The above command returns JSON structured like this:
 
 ```json
@@ -112,22 +118,28 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/matches" \
 
 > you can download the data with following commands. Please note that you **do not** need API Key to get this data.
 
+{% sample lang="shell" %}
 ```shell
 curl "https://gl-prod-us-east-1.s3.amazonaws.com/assets/semc-vainglory/na/2017/03/17/00/43/b900c179-0aaa-11e7-bb12-0242ac110005-telemetry.json" \
   -H "Accept: application/vnd.api+json"
 ```
-
+{% sample lang="java" %}
 ```java
 //There are a variety of Java HTTP libraries that support query-parameters.
 ```
+{% sample lang="python" %}
 ```python
 ```
+{% sample lang="ruby" %}
 ```ruby
 ```
+{% sample lang="js" %}
 ```javascript
 ```
+{% sample lang="go" %}
 ```go
 ```
+{% common %}
 > this request will return you a response as follows:
 
 
@@ -146,6 +158,7 @@ curl "https://gl-prod-us-east-1.s3.amazonaws.com/assets/semc-vainglory/na/2017/0
      }
    }
 ```
+{% endmethod %}
 
 ## Event Data Dictionary
 Telemetry data is classified into several events of interest. Following is a list of every event type with an example.
@@ -164,11 +177,11 @@ Where the first value represents the x coordinate, second value represents the z
 
 The following is a list of some of the most important positions on the map:
 
-MAP LANDMARK COORDINATES
+##### MAP LANDMARK COORDINATES
 
-==LEFT SIDE==
+**==LEFT SIDE==**
 
-Base Shop (-88.50, 0.89, 2.00)
+```Base Shop (-88.50, 0.89, 2.00)
 
 Crystal (-76.12, 0.00, 19.90)
 
@@ -189,9 +202,10 @@ Mid Healer (-21.95, 0.00, 24.00)
 
 Fronts 1 (-14.40, 0.00, 37.67)
 Fronts 2 (-12.51, 0.00, 37.67)
+```
 
-==RIGHT SIDE==
-
+**==RIGHT SIDE==**
+```
 Base Shop (88.57, 1.80, 0.51)
 
 Crystal (76.12, 0.10, 19.90)
@@ -213,12 +227,14 @@ Mid Healer (22.50, 0.00, 23.50)
 
 Fronts 1 (14.85, 0.00, 38.12)
 Fronts 2 (12.89. 0.00, 36.74)
-
-==Miscellaneous==
+```
+**==Miscellaneous==**
+```
 Gold Miner / Kraken (0.00, 0.00. 23.60)
 Elder Treant / Jungle Shop (0.20, 0.00, 42,00)
 Compass Center (.092, 0.01, 3.33)
 Map Center (0.00, 0.00, 0.00)
+```
 
 ### Pre-Match Events
 The following events will only take place pre-match, such as in hero selection.
@@ -236,7 +252,7 @@ Takes place when a hero has been banned, this event will only take place in draf
 	}
 
 #### HeroSelect
-Takes place when a hero has been selected by a player, ```Handle``` is the in-game name of the player.
+Takes place when a hero has been selected by a player, `Handle` is the in-game name of the player.
 
 	{
 	    "time": "2017-06-26T04:58:29+0000",

@@ -4,7 +4,7 @@
 
 All Server responses contain a root JSON object.  
 
-~~~.language-json
+```jsonjson
 {
   "data": {
     "type": "match",
@@ -17,16 +17,16 @@ All Server responses contain a root JSON object.
     }
   }
 }
-~~~
+```
 
-~~~.language-json
+```json
 {
   "data": {
     "type": "match",
     "id": "1"
   }
 }
-~~~
+```
 
 A response will contain at least one of the following top-level members:
 
@@ -59,12 +59,12 @@ it only contains one item or is empty.
 ## Rate Limits
 >The rate limit headers are defined as follows:
 
-~~~
+```
 X-RateLimit-Limit - Request limit per day / per minute
 X-RateLimit-Remaining - The number of requests left for the time window
 X-RateLimit-Reset - The remaining window before the rate limit is refilled in UTC epoch nanoseconds.
 * Limit tokens are incrementally filled by 60(sec)/ rate limit. ex: 60(sec)/10(rate) gets rate token every 6 seconds up to max rate limit.  
-~~~
+```
 Be nice. If you're sending too many requests too quickly, we'll send back a  
 `429` error code (server unavailable).
 

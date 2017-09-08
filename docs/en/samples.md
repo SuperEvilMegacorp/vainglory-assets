@@ -2,25 +2,44 @@
 
 The samples endpoint provides an easy way to access hourly batches of random match data to aggregate stats.
 
-
+{% method %}
 ## Get a collection of Samples
 
+This endpoint retrieves a collection of randomly selected matches.
+
+{% sample lang="shell" %}
 ```shell
 curl "https://api.dc01.gamelockerapp.com/shards/na/samples" \
   -H "Authorization: Bearer <api-key>" \
   -H "Accept: application/vnd.api+json"
 ```
+
+{% sample lang="java" %}
 ```java
 //There are a variety of Java HTTP libraries that support query-parameters.
 ```
+
+{% sample lang="python" %}
 ```python
+
 ```
+
+{% sample lang="ruby" %}
 ```ruby
+
 ```
+
+{% sample lang="js" %}
 ```javascript
+
 ```
+
+{% sample lang="go" %}
 ```go
+
 ```
+
+{% common %}
 > The above command returns JSON structured like this:
 
 ```json
@@ -42,8 +61,7 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/samples" \
       }
     }
 ```
-
-This endpoint retrieves a collection of randomly selected matches.
+{% endmethod %}
 
 ### HTTP Request
 
