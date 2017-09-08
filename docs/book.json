@@ -1,4 +1,5 @@
 {
+  "root": "docs",
   "plugins": [
     "theme-api"
   ],
