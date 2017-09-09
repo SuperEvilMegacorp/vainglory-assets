@@ -1,10 +1,13 @@
 {
-  "root": "docs",
+  "title": "Vainglory API Documentation",
+  "author": "MadGlory Interactive, LLC.",
+  "description": "Vainglory API Documentation",
   "plugins": [
     "theme-api"
   ],
   "pluginsConfig": {
     "theme-api": {
+      "split": true,
       "languages": [
         {
           "lang": "js",

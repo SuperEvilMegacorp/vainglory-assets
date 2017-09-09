@@ -8,7 +8,11 @@ This documentation was built with love by the Vainglory Developer Community.
 
 We provide a `Makefile` with various bits of automation for working with this repository.
 
-To install dependencies:
+To read about what tools are available, simple type:
+
+    make
+
+For instance, to install dependencies:
 
     make deps
 
