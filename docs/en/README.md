@@ -4,7 +4,7 @@ The first version of the Vainglory Game Data Service is an exciting step forward
 
 Build something great!
 
-At the moment this Service is in **Alpha Preview **mode. You can see sample data, test the interface, and provide feedback to our development team.
+At the moment this Service is in **Alpha Preview** mode. You can see sample data, test the interface, and provide feedback to our development team.
 
 While we initially took a different approach, based on community feedback the Server now makes every attempt to implement the required features of the [JSON-API](http://jsonapi.org/) specification. Where a deviation occurs, it is likely unintentional and can be reported to the team in our [Discord](https://discord.me/vaingloryapi).
 
