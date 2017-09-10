@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/mern-starter
+    docker:
+      - image: circleci/node:8.4.0
+    steps:
+      - checkout
+      # - run:
+      #     name: update-npm
+      #     command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install-npm
+          command: yarn
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: build-docs
+          command: |
+            pushd docs &&
+            ../node_modules/.bin/gitbook install &&
+            ../node_modules/.bin/gitbook build &&
+            popd &&
+            git checkout gh-pages &&
+            git pull origin gh-pages --rebase &&
+            cp -R docs/_book/* . &&
+            git clean -fx node_modules &&
+            git clean -fx docs &&
+            git add . &&
+            git commit -a -m "Update docs" &&
+            git push origin gh-pages
