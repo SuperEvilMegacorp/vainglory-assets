@@ -7,7 +7,7 @@
   ],
   "pluginsConfig": {
     "theme-api": {
-      "split": true,
+      "split": false,
       "languages": [
         {
           "lang": "js",
