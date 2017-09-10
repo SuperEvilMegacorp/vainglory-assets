@@ -1,0 +1,822 @@
+
+<!DOCTYPE HTML>
+<html lang="es" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Resumen De Datos De Partidas · Vainglory API Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="MadGlory Interactive, LLC.">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="players.html" />
+    
+    
+    <link rel="prev" href="matches.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escribe para buscar" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="datacenters.html">
+            
+                <a href="datacenters.html">
+            
+                    
+                    Centros De Datos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="titles.html">
+            
+                <a href="titles.html">
+            
+                    
+                    Titulos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="requests.html">
+            
+                <a href="requests.html">
+            
+                    
+                    Haciendo Solicitudes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="responses.html">
+            
+                <a href="responses.html">
+            
+                    
+                    Recibiendo Respuestas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="matches.html">
+            
+                <a href="matches.html">
+            
+                    
+                    Partidas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="matchesJSON.html">
+            
+                <a href="matchesJSON.html">
+            
+                    
+                    Resumen De Datos De Partidas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="players.html">
+            
+                <a href="players.html">
+            
+                    
+                    Jugadores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="telemetry.html">
+            
+                <a href="telemetry.html">
+            
+                    
+                    Telemetría
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="sdks.html">
+            
+                <a href="sdks.html">
+            
+                    
+                    SDK De La Communidad
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    Errores
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Publicado con GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Resumen De Datos De Partidas</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="resumen-de-datos-de-partidas"><strong><em>Resumen de datos de partidas</em></strong></h1>
+<p>Muchas gracias a Kashz por ayudar a crear esto! GitHub: iAm-Kashif</p>
+<h2 id="objeto-de-partida"><strong>Objeto de partida</strong></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Variable</th>
+<th style="text-align:center">Tipo</th>
+<th style="text-align:center">Descripci&#xF3;n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">type</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">Partida</td>
+</tr>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">ID de partida</td>
+</tr>
+<tr>
+<td style="text-align:center">createdAt</td>
+<td style="text-align:center">str (iso8601)</td>
+<td style="text-align:center">Tiempo de la partida jugada</td>
+</tr>
+<tr>
+<td style="text-align:center">duration</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Tiempo de la partida en segundos</td>
+</tr>
+<tr>
+<td style="text-align:center">gameMode</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">Modo de juego</td>
+</tr>
+<tr>
+<td style="text-align:center">patchVersion</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">Versi&#xF3;n del API</td>
+</tr>
+<tr>
+<td style="text-align:center">region</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">Regi&#xF3;n de la partida</td>
+</tr>
+<tr>
+<td style="text-align:center">stats</td>
+<td style="text-align:center">map</td>
+<td style="text-align:center">Vea <a href="#1">Match.stats</a></td>
+</tr>
+<tr>
+<td style="text-align:center">assets</td>
+<td style="text-align:center">obj</td>
+<td style="text-align:center">Vea <a href="#2">Match.assets</a></td>
+</tr>
+<tr>
+<td style="text-align:center">rosters</td>
+<td style="text-align:center">obj</td>
+<td style="text-align:center">Vea <a href="#3">Rosters</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="matchstats-estat&#xED;sticas-de-fin-de-la-partida"><a name="1"></a> <strong>Match.stats</strong> <strong>(Estat&#xED;sticas de fin de la partida)</strong></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Variable</th>
+<th style="text-align:center">Tipo</th>
+<th style="text-align:center">Descripci&#xF3;n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">endGameReason</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">&quot;Victory&quot; o &quot;Defeat&quot;</td>
+</tr>
+<tr>
+<td style="text-align:center">queue</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">Modo de juego</td>
+</tr>
+</tbody>
+</table>
+<h3 id="matchassets-datos-de-telemetr&#xED;a"><a name="2"></a> <strong>Match.assets</strong> <strong>(Datos de telemetr&#xED;a)</strong></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Variable</th>
+<th style="text-align:center">Type</th>
+<th style="text-align:center">Descripci&#xF3;n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">type</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">Activo</td>
+</tr>
+<tr>
+<td style="text-align:center">createdAt</td>
+<td style="text-align:center">str (iso8601)</td>
+<td style="text-align:center">Tiempo de la creaci&#xF3;n de telemetr&#xED;a</td>
+</tr>
+<tr>
+<td style="text-align:center">description</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:center">filename</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">telemetry.json</td>
+</tr>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">ID del activo</td>
+</tr>
+<tr>
+<td style="text-align:center">contentType</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">application/json</td>
+</tr>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">telemetr&#xED;a</td>
+</tr>
+<tr>
+<td style="text-align:center">url</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">Archivo de Enlaces de Telemetry.json</td>
+</tr>
+</tbody>
+</table>
+<h2 id="objeto-listas"><a name="3"></a> <strong>Objeto listas</strong></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Variable</th>
+<th style="text-align:center">Tipo</th>
+<th style="text-align:center">Descripci&#xF3;n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">ID de lista</td>
+</tr>
+<tr>
+<td style="text-align:center">type</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">Lista</td>
+</tr>
+<tr>
+<td style="text-align:center">participants</td>
+<td style="text-align:center">obj</td>
+<td style="text-align:center">Vea <a href="#4">Participants</a></td>
+</tr>
+<tr>
+<td style="text-align:center">stats</td>
+<td style="text-align:center">obj</td>
+<td style="text-align:center">Vea <a href="#5">Rosters.stats</a></td>
+</tr>
+<tr>
+<td style="text-align:center">team</td>
+<td style="text-align:center">obj</td>
+<td style="text-align:center">Vea <a href="#6">Rosters.team</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="rostersstats"><a name="5"></a><strong>Rosters.stats</strong></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Variable</th>
+<th style="text-align:center">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">acesEarned</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">gold</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">heroKills</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">krakenCaptures</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">side</td>
+<td style="text-align:center">O &quot;right/red&quot; o &quot;left/blue&quot;</td>
+</tr>
+<tr>
+<td style="text-align:center">turretKills</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">turretRemaining</td>
+<td style="text-align:center">int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rostersteam"><a name="6"></a><strong>Rosters.team</strong></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Variable</th>
+<th style="text-align:center">Tipo</th>
+<th style="text-align:center">Descripci&#xF3;n </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">ID del equipo o nada</td>
+</tr>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">Nombre de equipo o nada</td>
+</tr>
+<tr>
+<td style="text-align:center">type</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">Equipo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="participante-objeto"><a name="4"></a><strong>Participante Objeto</strong></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Variable</th>
+<th style="text-align:center">Tipo</th>
+<th style="text-align:center">Descripci&#xF3;n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">actor</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">Hero</td>
+</tr>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">Mismo al ID de la lista</td>
+</tr>
+<tr>
+<td style="text-align:center">player</td>
+<td style="text-align:center">obj</td>
+<td style="text-align:center">Vea <a href="#7">Participants.player</a></td>
+</tr>
+<tr>
+<td style="text-align:center">stats</td>
+<td style="text-align:center">map</td>
+<td style="text-align:center">Vea <a href="#8">Participants.stats</a></td>
+</tr>
+<tr>
+<td style="text-align:center">type</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">Participantes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="participantsplayer"><a name="7"></a><strong>Participants.player</strong></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Variable</th>
+<th style="text-align:center">Tipo</th>
+<th style="text-align:center">Descripci&#xF3;n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">UID de jugador</td>
+</tr>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">IGN de jugador</td>
+</tr>
+<tr>
+<td style="text-align:center">stats</td>
+<td style="text-align:center">map</td>
+<td style="text-align:center">Vea <a href="#9">Participants.player.stats</a></td>
+</tr>
+<tr>
+<td style="text-align:center">type</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">jugador</td>
+</tr>
+</tbody>
+</table>
+<h3 id="participantsstats"><a name="8"></a><strong>Participants.stats</strong></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Variable</th>
+<th style="text-align:center">Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">assists</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">crystalMineCaptures</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">deaths</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">farm</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">firstAfkTime</td>
+<td style="text-align:center">int: -1 para no AFK</td>
+</tr>
+<tr>
+<td style="text-align:center">goldMineCaptures</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">itemGrants</td>
+<td style="text-align:center">mapa de {itemsBought : int}</td>
+</tr>
+<tr>
+<td style="text-align:center">itemSells</td>
+<td style="text-align:center">mapa de {itemsSold : int}</td>
+</tr>
+<tr>
+<td style="text-align:center">itemUses</td>
+<td style="text-align:center">mapa de {itemsUsed : int}</td>
+</tr>
+<tr>
+<td style="text-align:center">items</td>
+<td style="text-align:center">lista de la build final (Len: 6)</td>
+</tr>
+<tr>
+<td style="text-align:center">jungleKills</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">karmaLevel</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">kills</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">krakenCaptures</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">level</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">minionKills</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">nonJungleMinionKills</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">skillTier</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">skinKey</td>
+<td style="text-align:center">str</td>
+</tr>
+<tr>
+<td style="text-align:center">turretCaptures</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">wentAfk</td>
+<td style="text-align:center">bool</td>
+</tr>
+<tr>
+<td style="text-align:center">winner</td>
+<td style="text-align:center">bool</td>
+</tr>
+</tbody>
+</table>
+<h3 id="participantsplayerstats"><a name="9"></a> <strong>Participants.player.stats</strong></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Variable</th>
+<th style="text-align:center">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">level</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">lifetimeGold</td>
+<td style="text-align:center">float</td>
+</tr>
+<tr>
+<td style="text-align:center">lossStreak</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">played</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">played_ranked</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">winStreak</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">wins</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">xp</td>
+<td style="text-align:center">int</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Resumen De Datos De Partidas","level":"1.8","depth":1,"next":{"title":"Jugadores","level":"1.9","depth":1,"path":"players.md","ref":"players.md","articles":[]},"previous":{"title":"Partidas","level":"1.7","depth":1,"path":"matches.md","ref":"matches.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-api"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-api":{"languages":[{"lang":"js","name":"JavaScript","default":true},{"lang":"go","name":"Go"},{"lang":"java","name":"Java"},{"lang":"shell","name":"Shell"},{"lang":"python","name":"Python"},{"lang":"ruby","name":"Ruby"}],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"MadGlory Interactive, LLC.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vainglory API Documentation","language":"es","gitbook":"*","description":"Vainglory API Documentation"},"file":{"path":"matchesJSON.md","mtime":"2017-09-08T18:00:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-10T21:08:55.779Z"},"basePath":".","book":{"language":"es"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

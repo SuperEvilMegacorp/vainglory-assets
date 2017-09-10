@@ -1,0 +1,831 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Telemetry · Vainglory API Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="MadGlory Interactive, LLC.">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="sdks.html" />
+    
+    
+    <link rel="prev" href="players.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="datacenters.html">
+            
+                <a href="datacenters.html">
+            
+                    
+                    Datacenters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="titles.html">
+            
+                <a href="titles.html">
+            
+                    
+                    Titles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="requests.html">
+            
+                <a href="requests.html">
+            
+                    
+                    Making Requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="responses.html">
+            
+                <a href="responses.html">
+            
+                    
+                    Receiving Responses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="matches.html">
+            
+                <a href="matches.html">
+            
+                    
+                    Matches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="matchesJSON.html">
+            
+                <a href="matchesJSON.html">
+            
+                    
+                    Match Data Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="players.html">
+            
+                <a href="players.html">
+            
+                    
+                    Players
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="telemetry.html">
+            
+                <a href="telemetry.html">
+            
+                    
+                    Telemetry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="sdks.html">
+            
+                <a href="sdks.html">
+            
+                    
+                    Community SDK's
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Telemetry</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="telemetry">Telemetry</h1>
+<p>The telemetry provides us insights into the match. It gives us details of various events that happened in the match alongwith the time when they happened. Some of the events also have location which can be plotted on a Vainglory Game map. Telemetry is very useful to generate a timeline visualization of how the match went for replays, or create heatmaps of where a certain hero or ability is  most useful. These are just some of the examples of where Telemetry can be used.</p>
+<blockquote>
+<p>You will get telemetry data as part of the matches endpoint.</p>
+<p>And a map of the Halcyon Fold <a href="https://cdn.discordapp.com/attachments/272249149473161216/284388441674874880/vainglory-map.png" target="_blank">here!</a></p>
+</blockquote>
+ <div class="api-method"><div class="api-method-definition"><h2 id="to-get-telemetry-data">To get Telemetry data</h2>
+<p>You start by pulling a list of matches using the matches endopoint.</p>
+<p>The HTTP Request to get matches is
+<code>GET https://api.dc01.gamelockerapp.com/shards/na/matches</code></p>
+</div><div class="api-method-code"><div class="api-method-sample" data-lang="shell" data-name="Shell"><pre><code class="lang-shell">curl &quot;https://api.dc01.gamelockerapp.com/shards/na/matches&quot; \
+  -H &quot;Authorization: Bearer &lt;api-key&gt;&quot; \
+  -H &quot;Accept: application/vnd.api+json&quot;
+</code></pre>
+</div><div class="api-method-sample" data-lang="java" data-name="Java"><pre><code class="lang-java"><span class="hljs-comment">//There are a variety of Java HTTP libraries that support query-parameters.</span>
+</code></pre>
+</div><div class="api-method-sample" data-lang="python" data-name="Python"><pre><code class="lang-python">```
+{% sample lang=<span class="hljs-string">&quot;ruby&quot;</span> %}
+```ruby
+</code></pre>
+</div><div class="api-method-sample" data-lang="js" data-name="JavaScript"><pre><code class="lang-javascript"><span class="hljs-string">``</span><span class="hljs-string">`
+{% sample lang=&quot;go&quot; %}
+`</span><span class="hljs-string">``</span>go
+</code></pre>
+</div><div class="api-method-example"><blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="lang-json">  <span class="hljs-string">&quot;data&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;match&quot;</span>,
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;f5373c40-0aa9-11e7-bcff-0667892d829e&quot;</span>,
+      <span class="hljs-string">&quot;attributes&quot;</span>: {
+        <span class="hljs-string">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;2017-03-17T00:38:00Z&quot;</span>,
+        <span class="hljs-string">&quot;duration&quot;</span>: <span class="hljs-number">259</span>,
+        <span class="hljs-string">&quot;gameMode&quot;</span>: <span class="hljs-string">&quot;blitz_pvp_ranked&quot;</span>,
+        <span class="hljs-string">&quot;patchVersion&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;shardId&quot;</span>: <span class="hljs-string">&quot;na&quot;</span>,
+        <span class="hljs-string">&quot;stats&quot;</span>: {
+          <span class="hljs-string">&quot;endGameReason&quot;</span>: <span class="hljs-string">&quot;victory&quot;</span>,
+          <span class="hljs-string">&quot;queue&quot;</span>: <span class="hljs-string">&quot;blitz_pvp_ranked&quot;</span>
+        },
+        <span class="hljs-string">&quot;titleId&quot;</span>: <span class="hljs-string">&quot;semc-vainglory&quot;</span>
+      },
+      <span class="hljs-string">&quot;relationships&quot;</span>: {
+        <span class="hljs-string">&quot;assets&quot;</span>: {
+          <span class="hljs-string">&quot;data&quot;</span>: [
+            {
+              <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;asset&quot;</span>,
+              <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;b900c179-0aaa-11e7-bb12-0242ac110005&quot;</span>
+            }
+          ]
+        },
+        <span class="hljs-string">&quot;rosters&quot;</span>: {
+          <span class="hljs-string">&quot;data&quot;</span>: [
+            {
+              <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;roster&quot;</span>,
+              <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;b8f6640a-0aaa-11e7-bb12-0242ac110005&quot;</span>
+            },
+            {
+              <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;roster&quot;</span>,
+              <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;b8f65271-0aaa-11e7-bb12-0242ac110005&quot;</span>
+            }
+          ]
+        },
+        <span class="hljs-string">&quot;rounds&quot;</span>: {
+          <span class="hljs-string">&quot;data&quot;</span>: []
+        }
+      }
+    },
+</code></pre>
+<blockquote>
+<p>You need to look for Assets JSON node which points to telemetry. Check for the following in the response:</p>
+</blockquote>
+<pre><code class="lang-json">      <span class="hljs-string">&quot;relationships&quot;</span>: {
+        <span class="hljs-string">&quot;assets&quot;</span>: {
+          <span class="hljs-string">&quot;data&quot;</span>: [
+            {
+              <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;asset&quot;</span>,
+              <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;b900c179-0aaa-11e7-bb12-0242ac110005&quot;</span>
+            }
+          ]
+        },
+</code></pre>
+<blockquote>
+<p>Once you have located this ID, you now have to search for the following JSON segment in the response object. The following response object will provide you a link to the Telemetry data</p>
+</blockquote>
+<pre><code class="lang-json">    {
+      <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;asset&quot;</span>,
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;b900c179-0aaa-11e7-bb12-0242ac110005&quot;</span>,
+      <span class="hljs-string">&quot;attributes&quot;</span>: {
+        <span class="hljs-string">&quot;URL&quot;</span>: <span class="hljs-string">&quot;https://gl-prod-us-east-1.s3.amazonaws.com/assets/semc-vainglory/na/2017/03/17/00/43/b900c179-0aaa-11e7-bb12-0242ac110005-telemetry.json&quot;</span>,
+        <span class="hljs-string">&quot;contentType&quot;</span>: <span class="hljs-string">&quot;application/json&quot;</span>,
+        <span class="hljs-string">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;2017-03-17T00:43:22Z&quot;</span>,
+        <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;filename&quot;</span>: <span class="hljs-string">&quot;telemetry.json&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;telemetry&quot;</span>
+      }
+    },
+</code></pre>
+<blockquote>
+<p>you can download the data with following commands. Please note that you <strong>do not</strong> need API Key to get this data.</p>
+</blockquote>
+</div><div class="api-method-sample" data-lang="shell" data-name="Shell"><pre><code class="lang-shell">curl &quot;https://gl-prod-us-east-1.s3.amazonaws.com/assets/semc-vainglory/na/2017/03/17/00/43/b900c179-0aaa-11e7-bb12-0242ac110005-telemetry.json&quot; \
+  -H &quot;Accept: application/vnd.api+json&quot;
+</code></pre>
+</div><div class="api-method-sample" data-lang="java" data-name="Java"><pre><code class="lang-java"><span class="hljs-comment">//There are a variety of Java HTTP libraries that support query-parameters.</span>
+</code></pre>
+</div><div class="api-method-sample" data-lang="python" data-name="Python"><pre><code class="lang-python">```
+{% sample lang=<span class="hljs-string">&quot;ruby&quot;</span> %}
+```ruby
+</code></pre>
+</div><div class="api-method-sample" data-lang="js" data-name="JavaScript"><pre><code class="lang-javascript"><span class="hljs-string">``</span><span class="hljs-string">`
+{% sample lang=&quot;go&quot; %}
+`</span><span class="hljs-string">``</span>go
+</code></pre>
+</div><div class="api-method-example"><blockquote>
+<p>this request will return you a response as follows:</p>
+</blockquote>
+<pre><code class="lang-json">   { <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2017-02-18T06:37:15+0000&quot;</span>,
+     <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;DealDamage&quot;</span>,
+     <span class="hljs-string">&quot;payload&quot;</span>: {
+       <span class="hljs-string">&quot;Team&quot;</span>: <span class="hljs-string">&quot;Left&quot;</span>,
+       <span class="hljs-string">&quot;Actor&quot;</span>: <span class="hljs-string">&quot;*Ringo*&quot;</span>,
+       <span class="hljs-string">&quot;Target&quot;</span>: <span class="hljs-string">&quot;*Turret*&quot;</span>,
+       <span class="hljs-string">&quot;Source&quot;</span>: <span class="hljs-string">&quot;Unknown&quot;</span>,
+       <span class="hljs-string">&quot;Damage&quot;</span>: <span class="hljs-number">405</span>,
+       <span class="hljs-string">&quot;Delt&quot;</span>:  <span class="hljs-number">613</span>,
+       <span class="hljs-string">&quot;IsHero&quot;</span>: <span class="hljs-number">1</span>,
+       <span class="hljs-string">&quot;TargetIsHero&quot;</span>: <span class="hljs-number">0</span>
+     }
+   }
+</code></pre>
+</div></div></div>
+
+<h2 id="event-data-dictionary">Event Data Dictionary</h2>
+<p>Telemetry data is classified into several events of interest. Following is a list of every event type with an example.</p>
+<h3 id="general-event-info">General Event Info:</h3>
+<h4 id="team">Team</h4>
+<p>In pre-match events teams will appear as <code>1</code> or <code>2</code>, and in match events teams will apper as <code>Left</code> or <code>Right</code> side. Where <code>1</code> is <code>Left</code> side and <code>2</code> is <code>Right</code> side.</p>
+<h4 id="position--targetposition">Position &amp; TargetPosition</h4>
+<p>Positions for events are given in vectors holding three values. For example:</p>
+<pre><code>[-17.51, 0.01, 41.63]
+</code></pre><p>Where the first value represents the x coordinate, second value represents the z coordinate, and the third value represents the y coordinate. In other words, &quot;Horizontal, Height, Vertical&quot;.</p>
+<p>The following is a list of some of the most important positions on the map:</p>
+<h5 id="map-landmark-coordinates">MAP LANDMARK COORDINATES</h5>
+<p><strong>==LEFT SIDE==</strong></p>
+<p>```Base Shop (-88.50, 0.89, 2.00)</p>
+<p>Crystal (-76.12, 0.00, 19.90)</p>
+<p>Turret 5 (-75.48, 0.00, 11.96)
+Turret 4 (-68.59, 0.00, 19.97)
+Turret 3 (-54.00, 0.00, 2.92)
+Turret 2 (-35.78, 0.00, 1.17)
+Turret 1 (-17.06, 0.00, 1.93)</p>
+<p>Top Healer (-40.92, 0.00, 20.25)</p>
+<p>Backs 1 (-43.42, 0.00, 31.11)
+Backs 2 (-45, 0.00, 32.23)</p>
+<p>Crystal Miner (-35.19, 0.00, 36.03)</p>
+<p>Mid Healer (-21.95, 0.00, 24.00)</p>
+<p>Fronts 1 (-14.40, 0.00, 37.67)
+Fronts 2 (-12.51, 0.00, 37.67)</p>
+<pre><code>
+**==RIGHT SIDE==**
+</code></pre><p>Base Shop (88.57, 1.80, 0.51)</p>
+<p>Crystal (76.12, 0.10, 19.90)</p>
+<p>Turret 5 (75.48, 0.00, 11.96)
+Turret 4 (68.59, 0.00, 19.97)
+Turret 3 (54.00, 0.00, 2.92)
+Turret 2 (35.78, 0.00, 1.17)
+Turret 1 (17.06, 0.00, 1.93)</p>
+<p>Top Healer (40.59, 0.00, 20.75)</p>
+<p>Backs 1 (43.49, 0.00, 31.28)
+Backs 2 (45.60, 0.00, 32.40)</p>
+<p>Crystal Miner (35.20, -0.00, 35.87)</p>
+<p>Mid Healer (22.50, 0.00, 23.50)</p>
+<p>Fronts 1 (14.85, 0.00, 38.12)
+Fronts 2 (12.89. 0.00, 36.74)</p>
+<pre><code>**==Miscellaneous==**
+</code></pre><p>Gold Miner / Kraken (0.00, 0.00. 23.60)
+Elder Treant / Jungle Shop (0.20, 0.00, 42,00)
+Compass Center (.092, 0.01, 3.33)
+Map Center (0.00, 0.00, 0.00)
+```</p>
+<h3 id="pre-match-events">Pre-Match Events</h3>
+<p>The following events will only take place pre-match, such as in hero selection.</p>
+<h4 id="heroban">HeroBan</h4>
+<p>Takes place when a hero has been banned, this event will only take place in draft mode.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-06-17T18:19:52+0000&quot;,
+    &quot;type&quot;: &quot;HeroBan&quot;,
+    &quot;payload&quot;: {
+        &quot;Hero&quot;: &quot;*Grumpjaw*&quot;,
+        &quot;Team&quot;: &quot;1&quot;
+    }
+}
+</code></pre><h4 id="heroselect">HeroSelect</h4>
+<p>Takes place when a hero has been selected by a player, <code>Handle</code> is the in-game name of the player.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-06-26T04:58:29+0000&quot;,
+    &quot;type&quot;: &quot;HeroSelect&quot;,
+    &quot;payload&quot;: {
+        &quot;Hero&quot;: &quot;*Blackfeather*&quot;,
+        &quot;Team&quot;: &quot;2&quot;,
+        &quot;Player&quot;: &quot;cc4069da-982b-11e4-9bf4-06eb725f8a76&quot;,
+        &quot;Handle&quot;: &quot;CrownNorth&quot;
+    }
+}
+</code></pre><h4 id="heroskinselect">HeroSkinSelect</h4>
+<p>Takes place when a player has selected a skin, this event will typically happen after hero select, if not at the same time, and might appear more then once if the skin is changed. A list of all hero skins is present in the <a href="https://github.com/madglory/gamelocker-vainglory/tree/master/resources" target="_blank">resources folder</a>.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-06-26T04:58:29+0000&quot;,
+    &quot;type&quot;: &quot;HeroSkinSelect&quot;,
+    &quot;payload&quot;: {
+        &quot;Hero&quot;: &quot;*Blackfeather*&quot;,
+        &quot;Skin&quot;: &quot;Blackfeather_Skin_Dynasty_T1&quot;
+    }
+}
+</code></pre><h4 id="heroswap">HeroSwap</h4>
+<p>Takes place when a player has swapped heroes with another player, this event will only take place in draft mode. Player is the player&apos;s unique id.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-06-13T06:41:38+0000&quot;,
+    &quot;type&quot;: &quot;HeroSwap&quot;,
+    &quot;payload&quot;: [
+        {
+            &quot;Hero&quot;: &quot;*Glaive*&quot;,
+            &quot;Team&quot;: &quot;2&quot;,
+            &quot;Player&quot;: &quot;85d05694-2ab2-11e5-8d94-06f4ee369f53&quot;
+        },
+        {
+            &quot;Hero&quot;: &quot;*Catherine*&quot;,
+            &quot;Team&quot;: &quot;2&quot;,
+            &quot;Player&quot;: &quot;292e51d6-9640-11e4-a597-06eb725f8a76&quot;
+        }
+    ]
+}
+</code></pre><h3 id="match-events">Match Events</h3>
+<p>The following events will only take place during a match.</p>
+<h4 id="playerfirstspawn">PlayerFirstSpawn</h4>
+<p>At the start of the game when a player spawns.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-03-17T00:38:32+0000&quot;,
+    &quot;type&quot;: &quot;PlayerFirstSpawn&quot;,
+    &quot;payload&quot;: {
+        &quot;Team&quot;: &quot;Right&quot;,
+        &quot;Actor&quot;: &quot;*Alpha*&quot;
+    }
+}
+</code></pre><h4 id="levelup">LevelUp</h4>
+<p>When a player gains a level in the game. Depending on the game mode of the match, you will find multiple events at the exact same time for each player at the beginning of the match.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-03-17T00:38:32+0000&quot;,
+    &quot;type&quot;: &quot;LevelUp&quot;,
+    &quot;payload&quot;: {
+        &quot;Team&quot;: &quot;Right&quot;,
+        &quot;Actor&quot;: &quot;*Alpha*&quot;,
+        &quot;Level&quot;: 1,
+        &quot;LifetimeGold&quot;: 0
+    }
+}
+</code></pre><h4 id="buyitem">BuyItem</h4>
+<p>When a player buys an item. Pro-Tip: Position will help you determine which shop was used to buy the item.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-06-26T04:59:47+0000&quot;,
+    &quot;type&quot;: &quot;BuyItem&quot;,
+    &quot;payload&quot;: {
+        &quot;Team&quot;: &quot;Right&quot;,
+        &quot;Actor&quot;: &quot;*Blackfeather*&quot;,
+        &quot;Item&quot;: &quot;Book Of Eulogies&quot;,
+        &quot;Cost&quot;: 300,
+        &quot;RemainingGold:&quot;: 300,
+        &quot;Position&quot;: [
+            83.22,
+            1.5,
+            0.72
+        ]
+    }
+}
+</code></pre><h4 id="sellitem">SellItem</h4>
+<p>When a player sells an item.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-03-31T02:49:37+0000&quot;,
+    &quot;type&quot;: &quot;SellItem&quot;,
+    &quot;payload&quot;: {
+        &quot;Team&quot;: &quot;Left&quot;,
+        &quot;Actor&quot;: &quot;*Lyra*&quot;,
+        &quot;Item&quot;: &quot;Flare&quot;,
+        &quot;Cost&quot;: 15
+    }
+}
+</code></pre><h4 id="learnability">LearnAbility</h4>
+<p>When a player puts upgrades an ability. Pro-Tip: There can be a time difference between when a player levels up and upgrades an ability.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-03-17T00:38:52+0000&quot;,
+    &quot;type&quot;: &quot;LearnAbility&quot;,
+    &quot;payload&quot;: {
+        &quot;Team&quot;: &quot;Right&quot;,
+        &quot;Actor&quot;: &quot;*Sayoc*&quot;,
+        &quot;Ability&quot;: &quot;HERO_ABILITY_SAYOC_C&quot;,
+        &quot;Level&quot;: 1
+    }
+}
+</code></pre><h4 id="useability">UseAbility</h4>
+<p>This event is recorded when a player uses an ability and it will hold information about the hero who used it together with the coordinates for the map.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-03-17T00:39:08+0000&quot;,
+    &quot;type&quot;: &quot;UseAbility&quot;,
+    &quot;payload&quot;: {
+        &quot;Team&quot;: &quot;Right&quot;,
+        &quot;Actor&quot;: &quot;*Kestrel*&quot;,
+        &quot;Ability&quot;: &quot;HERO_ABILITY_KESTREL_A_NAME&quot;,
+        &quot;Position&quot;: [
+            39.39,
+            0.01,
+            27.26
+        ]
+    }
+}
+</code></pre><h4 id="useitemability">UseItemAbility</h4>
+<p>This event is recorded when a player uses an activatable item or a charm/taunt.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-03-31T03:10:17+0000&quot;,
+    &quot;type&quot;: &quot;UseItemAbility&quot;,
+    &quot;payload&quot;: {
+        &quot;Team&quot;: &quot;Left&quot;,
+        &quot;Actor&quot;: &quot;*Lyra*&quot;,
+        &quot;Ability&quot;: &quot;Travel Boots&quot;,
+        &quot;Position&quot;: [
+            -17.51,
+            0.01,
+            41.63
+        ],
+        &quot;TargetActor&quot;: &quot;None&quot;,
+        &quot;TargetPosition&quot;: [
+            -17.51,
+            0.01,
+            41.63
+        ]
+    }
+}
+</code></pre><h4 id="earnxp">EarnXP</h4>
+<p>This event is recorded when a player gains XP from any source. it could be killing a minion, miner or a hero. Pro-Tip: This event is not shown for XP trickle(XP gained per second of the match).</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-03-17T00:39:09+0000&quot;,
+    &quot;type&quot;: &quot;EarnXP&quot;,
+    &quot;payload&quot;: {
+        &quot;Team&quot;: &quot;Left&quot;,
+        &quot;Actor&quot;: &quot;*Koshka*&quot;,
+        &quot;Source&quot;: &quot;*JungleMinion_TreeEnt*&quot;,
+        &quot;Amount&quot;: 67,
+        &quot;Shared With&quot;: 1
+    }
+}
+</code></pre><h4 id="dealdamage">DealDamage</h4>
+<p>This event is recorded when any actor (player, turret, minion, etc.) deals damage to any other.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-03-31T02:47:34+0000&quot;,
+    &quot;type&quot;: &quot;DealDamage&quot;,
+    &quot;payload&quot;: {
+          &quot;Team&quot;: &quot;Left&quot;,
+          &quot;Actor&quot;: &quot;*Skaarf*&quot;,
+          &quot;Target&quot;: &quot;*Vox*&quot;,
+          &quot;Source&quot;: &quot;Unknown&quot;,
+          &quot;Damage&quot;: 105,
+          &quot;Delt&quot;: 80,
+          &quot;IsHero&quot;: 1,
+          &quot;TargetIsHero&quot;: 1
+    }
+}
+</code></pre><h4 id="killactor">KillActor</h4>
+<p>This event is recorded when a player kills anything in game. it could be a a minion, miner or a hero. You will generally see EarnXP and KillActor events come at the same time.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-03-17T00:39:09+0000&quot;,
+    &quot;type&quot;: &quot;KillActor&quot;,
+    &quot;payload&quot;: {
+        &quot;Team&quot;: &quot;Left&quot;,
+        &quot;Actor&quot;: &quot;*Koshka*&quot;,
+        &quot;Killed&quot;: &quot;*JungleMinion_TreeEnt*&quot;,
+        &quot;KilledTeam&quot;: &quot;Neutral&quot;,
+        &quot;Gold&quot;: &quot;80&quot;,
+        &quot;IsHero&quot;: 1,
+        &quot;TargetIsHero&quot;: 0,
+        &quot;Position&quot;: [
+            -21.95,
+            0,
+            24
+        ]
+    }
+}
+</code></pre><h4 id="npckillnpc">NPCkillNPC</h4>
+<p>When one non-player actor kills another, such as the Kraken or a minion killing a turret.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-03-31T03:07:21+0000&quot;,
+    &quot;type&quot;: &quot;NPCkillNPC&quot;,
+    &quot;payload&quot;: {
+        &quot;Team&quot;: &quot;Left&quot;,
+        &quot;Actor&quot;: &quot;*Kraken_Captured*&quot;,
+        &quot;Killed&quot;: &quot;*Turret*&quot;,
+        &quot;KilledTeam&quot;: &quot;Right&quot;,
+        &quot;Gold&quot;: &quot;300&quot;,
+        &quot;IsHero&quot;: 0,
+        &quot;TargetIsHero&quot;: 0,
+        &quot;Position&quot;: [
+            54,
+            0,
+            2.92
+            ]
+    }
+}
+</code></pre><h4 id="executed">Executed</h4>
+<p>When a non-player kills a player, such as Kraken or a minion killing a player.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-06-13T06:43:40+0000&quot;,
+    &quot;type&quot;: &quot;Executed&quot;,
+    &quot;payload&quot;: {
+        &quot;Team&quot;: &quot;Left&quot;,
+        &quot;Actor&quot;: &quot;*JungleMinion_TreeEnt*&quot;,
+        &quot;Killed&quot;: &quot;*Samuel*&quot;,
+        &quot;KilledTeam&quot;: &quot;Left&quot;,
+        &quot;Gold&quot;: &quot;0&quot;,
+        &quot;IsHero&quot;: 0,
+        &quot;TargetIsHero&quot;: 1,
+        &quot;Position&quot;: [
+            -41.82,
+            0.01,
+            27.02
+        ]
+    }
+}
+</code></pre><h4 id="goldfromtowerkill">GoldFromTowerKill</h4>
+<p>When a player earns gold from the destruction of a turret belonging to the enemy team.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-03-31T02:57:02+0000&quot;,
+    &quot;type&quot;: &quot;GoldFromTowerKill&quot;,
+    &quot;payload&quot;: {
+        &quot;Team&quot;: &quot;Left&quot;,
+        &quot;Actor&quot;: &quot;*Idris*&quot;,
+        &quot;Amount&quot;: 300
+    }
+}
+</code></pre><h4 id="goldfromgoldmine">GoldFromGoldMine</h4>
+<p>When a player earns gold from his or her team capturing the gold miner.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-03-31T03:00:43+0000&quot;,
+    &quot;type&quot;: &quot;GoldFromGoldMine&quot;,
+    &quot;payload&quot;: {
+        &quot;Team&quot;: &quot;Left&quot;,
+        &quot;Actor&quot;: &quot;*Idris*&quot;,
+        &quot;Amount&quot;: 300
+    }
+}
+</code></pre><h4 id="goldfromkrakenkill">GoldFromKrakenKill</h4>
+<p>When a player earns gold from his or her team killing a Kraken released by the enemy team.</p>
+<pre><code>{
+    &quot;time&quot;: &quot;2017-03-31T03:07:43+0000&quot;,
+    &quot;type&quot;: &quot;GoldFromKrakenKill&quot;,
+    &quot;payload&quot;: {
+        &quot;Team&quot;: &quot;Right&quot;,
+        &quot;Actor&quot;: &quot;*Kestrel*&quot;,
+        &quot;Amount&quot;: 500
+    }
+}
+</code></pre><p>Download a sample of telemetry data <a href="https://cdn.discordapp.com/attachments/272249149473161216/282627164053176320/telemetry_sample.tgz" target="_blank">here!</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Telemetry","level":"1.10","depth":1,"next":{"title":"Community SDK's","level":"1.11","depth":1,"path":"sdks.md","ref":"sdks.md","articles":[]},"previous":{"title":"Players","level":"1.9","depth":1,"path":"players.md","ref":"players.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-api"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-api":{"languages":[{"lang":"js","name":"JavaScript","default":true},{"lang":"go","name":"Go"},{"lang":"java","name":"Java"},{"lang":"shell","name":"Shell"},{"lang":"python","name":"Python"},{"lang":"ruby","name":"Ruby"}],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"MadGlory Interactive, LLC.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vainglory API Documentation","language":"en","gitbook":"*","description":"Vainglory API Documentation"},"file":{"path":"telemetry.md","mtime":"2017-09-08T18:00:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-10T21:08:55.779Z"},"basePath":".","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

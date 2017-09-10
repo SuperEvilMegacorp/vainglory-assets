@@ -1,0 +1,418 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Authorization · Vainglory API Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="MadGlory Interactive, LLC.">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="titles.html" />
+    
+    
+    <link rel="prev" href="datacenters.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="datacenters.html">
+            
+                <a href="datacenters.html">
+            
+                    
+                    Datacenters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="titles.html">
+            
+                <a href="titles.html">
+            
+                    
+                    Titles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="requests.html">
+            
+                <a href="requests.html">
+            
+                    
+                    Making Requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="responses.html">
+            
+                <a href="responses.html">
+            
+                    
+                    Receiving Responses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="matches.html">
+            
+                <a href="matches.html">
+            
+                    
+                    Matches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="matchesJSON.html">
+            
+                <a href="matchesJSON.html">
+            
+                    
+                    Match Data Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="players.html">
+            
+                <a href="players.html">
+            
+                    
+                    Players
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="telemetry.html">
+            
+                <a href="telemetry.html">
+            
+                    
+                    Telemetry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="sdks.html">
+            
+                <a href="sdks.html">
+            
+                    
+                    Community SDK's
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Authorization</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="api-method"><div class="api-method-definition"><h1 id="authorization">Authorization</h1>
+<p>We require a JSON Web Token (<a href="https://jwt.io/" target="_blank">JWT</a>) be sent along with your request via the <code>Authorization</code> header.<br>JWTs are passed as bearer tokens in the Authorization header, and look like the following:</p>
+<p><code>Authorization: &lt;Enter your API Key&gt;</code></p>
+<p>There&apos;s no need to create JWTs manually, they will be created for you when you register for the API - <a href="https://developer.vainglorygame.com/users/sign_in" target="_blank">Register Here!</a></p>
+<p>In some cases an <code>X-API-KEY</code> will give you more access to information, and in all cases it means that you are operating under a per-token rate limit.</p>
+</div><div class="api-method-code"><div class="api-method-sample" data-lang="shell" data-name="Shell"><blockquote>
+<p>To specify the Headers, use this code:</p>
+</blockquote>
+<pre><code class="lang-shell">  # With shell, you can just pass the correct header with each request
+  curl &quot;&lt;endpoint-url&gt;&quot; \
+  -H &quot;Authorization: &lt;api-key&gt;&quot;
+  -H &quot;Accept: application/vnd.api+json&quot;
+</code></pre>
+</div><div class="api-method-sample" data-lang="java" data-name="Java"><pre><code class="lang-java"><span class="hljs-keyword">import</span> java.io.*;
+<span class="hljs-keyword">import</span> java.net.*;
+
+URL url = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">&quot;&lt;endpoint-url&gt;&quot;</span>);
+HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+conn.setRequestMethod(<span class="hljs-string">&quot;GET&quot;</span>);
+conn.setRequestProperty(<span class="hljs-string">&quot;Authorization&quot;</span>,<span class="hljs-string">&quot;&lt;api-key&gt;&quot;</span>);
+conn.setRequestProperty(<span class="hljs-string">&quot;Accept&quot;</span>, <span class="hljs-string">&quot;application/vnd.api+json&quot;</span>);
+
+conn.getInputStream()
+</code></pre>
+</div><div class="api-method-sample" data-lang="python" data-name="Python"><pre><code class="lang-python"><span class="hljs-keyword">import</span> requests
+
+url = <span class="hljs-string">&quot;&lt;endpoint-url&gt;&quot;</span>
+
+header = {
+    <span class="hljs-string">&quot;Authorization&quot;</span>: <span class="hljs-string">&quot;&lt;api-key&gt;&quot;</span>,
+    <span class="hljs-string">&quot;Accept&quot;</span>: <span class="hljs-string">&quot;application/vnd.api+json&quot;</span>
+}
+
+r = requests.get(url, headers=header)
+</code></pre>
+</div><div class="api-method-sample" data-lang="ruby" data-name="Ruby"><pre><code class="lang-ruby"><span class="hljs-string">``</span><span class="hljs-string">`
+{% sample lang=&quot;js&quot; %}
+`</span><span class="hljs-string">``</span>javascript
+</code></pre>
+</div><div class="api-method-sample" data-lang="go" data-name="Go"><pre><code class="lang-go"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;net/http&quot;</span>
+
+client := &amp;http.Client{}
+req, _ := http.NewRequest(<span class="hljs-string">&quot;GET&quot;</span>,<span class="hljs-string">&quot;&lt;endpoint-url&gt;&quot;</span>,<span class="hljs-literal">nil</span>)
+req.Header.Set(<span class="hljs-string">&quot;Authorization&quot;</span>, <span class="hljs-string">&quot;&lt;api-key&gt;&quot;</span>)
+req.Header.Set(<span class="hljs-string">&quot;Accept&quot;</span>, <span class="hljs-string">&quot;application/vnd.api+json&quot;</span>)
+res, _ := client.Do(req)
+</code></pre>
+</div></div></div>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Authorization","level":"1.3","depth":1,"next":{"title":"Titles","level":"1.4","depth":1,"path":"titles.md","ref":"titles.md","articles":[]},"previous":{"title":"Datacenters","level":"1.2","depth":1,"path":"datacenters.md","ref":"datacenters.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-api"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-api":{"languages":[{"lang":"js","name":"JavaScript","default":true},{"lang":"go","name":"Go"},{"lang":"java","name":"Java"},{"lang":"shell","name":"Shell"},{"lang":"python","name":"Python"},{"lang":"ruby","name":"Ruby"}],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"MadGlory Interactive, LLC.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vainglory API Documentation","language":"en","gitbook":"*","description":"Vainglory API Documentation"},"file":{"path":"authorization.md","mtime":"2017-09-08T18:00:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-10T21:08:55.779Z"},"basePath":".","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+
