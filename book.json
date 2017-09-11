@@ -3,9 +3,15 @@
   "author": "MadGlory Interactive, LLC.",
   "description": "Vainglory API Documentation",
   "plugins": [
-    "theme-api"
+    "theme-api",
+    "scripts"
   ],
   "pluginsConfig": {
+    "scripts": {
+        "files": [
+            "./ga.js"
+        ]
+    },
     "theme-api": {
       "split": false,
       "languages": [
