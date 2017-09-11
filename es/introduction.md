@@ -1,4 +1,6 @@
-# Introducción
+# Vainglory Developer API Guide
+
+![](../cover.png)
 
 La primera versión de servicio de data del juego Vainglory es un paso excitante hacia delante al hacer más fácil para los usuarios el tener un acceso abierto a data dentro del juego.
 
@@ -12,14 +14,16 @@ Donde ocurra una desviación, es probablemente involuntario y puede ser reportad
 
 Nosotros mostramos muestras de enlaces de idioma usando CURL y planeamos añadir bibliotecas para Ruby, NodeJS, Java, Python y más. Son bienvenidas contribuciones de la comunidad y recompensadas con buen karma (y estilo!) Puedes ver muestras de código en el área negra de la derecha, y puedes cambiar el idioma programado de las muestras con las pestañas en la parte superior derecha.
 
-Planeamos sacar la versión 1.0 Q1 2017.
+***
 
-## Versiones
+Download a .pdf, .epub, or .mobi file from:
 
-Seguimos normas [SEMVER](http://semver.org/), utilizando un esquema de versiones MAJOR.MINOR.PATCH. Esto significa que incrementamos las versiones de la siguiente manera:
+https://www.gitbook.com/book/gamelocker/vainglory/details
 
-  * MAJOR versión cuando hacemos cambios API incompatibles,
-  * MINOR versión cuando añadimos funcionalidad retro-compatible,
-  * PATCH versión cuando hagamos arreglos de bugs retrocompatibles.
+Contribute content, suggestions, and fixes via either:
+  * [https://www.gitbook.com/book/gamelocker/vainglory](https://www.gitbook.com/book/gamelocker/vainglory)
+  * [https://github.com/gamelocker/vainglory](https://github.com/gamelocker/vainglory)
 
-Puedes ver la versión actual y la fecha de llegada mirando el [Status](https://api.dc01.gamelockerapp.com/status) endpoint.
+***
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>

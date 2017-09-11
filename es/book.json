@@ -1,3 +1,7 @@
 {
-  "language": "es"
+  "language": "es",
+  "structure": {
+    "readme": "introduction.md",
+    "summary": "summary.md"
+  }
 }

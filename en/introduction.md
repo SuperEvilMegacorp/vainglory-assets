@@ -1,5 +1,7 @@
 # Vainglory Developer API Guide
 
+![](../cover.png)
+
 The first version of the Vainglory Game Data Service is an exciting step forward towards making it easier for users to have open access to in-game data.
 
 Build something great!
@@ -17,8 +19,8 @@ Download a .pdf, .epub, or .mobi file from:
 https://www.gitbook.com/book/gamelocker/vainglory/details
 
 Contribute content, suggestions, and fixes via either:
-  * [Gitbook](https://www.gitbook.com/book/gamelocker/vainglory)
-  * [Github](https://github.com/gamelocker/vainglory)
+  * [https://www.gitbook.com/book/gamelocker/vainglory](https://www.gitbook.com/book/gamelocker/vainglory)
+  * [https://github.com/gamelocker/vainglory](https://github.com/gamelocker/vainglory)
 
 ***
 
