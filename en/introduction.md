@@ -1,8 +1,8 @@
 # Vainglory Developer API Guide
 
-![](../cover.png)
+![](/assets/cover.png)
 
-The first version of the Vainglory Game Data Service is an exciting step forward towards making it easier for users to have open access to in-game data.
+The Vainglory Game Data Service makes it easy for players and developers to access to in-game data.
 
 Build something great!
 
