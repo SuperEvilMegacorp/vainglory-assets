@@ -1,6 +1,6 @@
 # Vainglory Developer API Guide
 
-![](../cover.png)
+![](/assets/cover.png)
 
 La primera versión de servicio de data del juego Vainglory es un paso excitante hacia delante al hacer más fácil para los usuarios el tener un acceso abierto a data dentro del juego.
 
