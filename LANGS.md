@@ -11,10 +11,11 @@
 
 Download a .pdf, .epub, or .mobi file from:
 
-https://www.gitbook.com/book/frontendmasters/front-end-handbook-2017/details
-Contribute content, suggestions, and fixes on github:
+https://www.gitbook.com/book/gamelocker/vainglory/details
 
-https://github.com/FrontendMasters/front-end-handbook-2017
+Contribute content, suggestions, and fixes via either:
+  * [https://www.gitbook.com/book/gamelocker/vainglory](https://www.gitbook.com/book/gamelocker/vainglory)
+  * [https://github.com/gamelocker/vainglory](https://github.com/gamelocker/vainglory)
 
 ***
 
