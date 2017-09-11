@@ -1,5 +1,6 @@
 # Summary
 
+* [Versioning](versioning.md)
 * [Datacenters](datacenters.md)
 * [Authorization](authorization.md)
 * [Titles](titles.md)
