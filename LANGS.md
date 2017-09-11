@@ -1,6 +1,6 @@
 # Vainglory Developer API Guide
 
-![](../cover.png)
+![](/assets/cover.png)
 
 ## Languages
 
