@@ -9,6 +9,21 @@ Changes
 
 ## [VG DATA] Version 2.8
 
+Telemetry:
+* `DealDamage` Delt was renamed to Dealt inside payload object
+TBD
+
+Skins:
+TBD
+
+Items: 
+TBD
+
+Heroes:
+TBD
+
+## [VG DATA] Version 2.8
+
 Skins:
 * `Glaive_Skin_Lion` (Glaive)
 * `Ringo_Skin_Cowboy` (Ringo)
