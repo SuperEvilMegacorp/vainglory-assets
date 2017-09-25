@@ -11,6 +11,7 @@ Changes
 
 Telemetry:
 * `DealDamage` Delt was renamed to Dealt inside payload object
+* Kraken damage is now included in `DealDamage`
 * `HealTarget` event added to Telemetry
 TBD
 
