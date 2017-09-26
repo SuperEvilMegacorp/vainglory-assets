@@ -324,6 +324,36 @@ moves from the <code>attributes.stats</code> object to the main <code>attributes
 
 </code></pre>
 </div><div class="api-method-sample" data-lang="go" data-name="Go"><pre><code class="lang-go">
+    
+</code></pre>
+</div><div class="api-method-sample" data-lang="swift" data-name="Swift"><pre><code class="lang-swift">
+import</span> Foundation
+
+let urlString = <span class="hljs-string">&quot;https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=TennantTheVast&quot;</span>
+
+let url = NSURL(string: urlString)
+var downloadTask = URLRequest(url: (url as URL?)!, cachePolicy: URLRequest.CachePolicy.ReloadIgnoringCacheData, timeoutInterval: 20)
+
+downloadTask.httpMethod = <span class="hljs-string">&quot;GET&quot;</span>
+
+downloadTask.addValue(<span class="hljs-string">&quot;apiKey&quot;</span>, forHTTPHeaderField: <span class="hljs-string">&quot;Authorization&quot;</span>)
+downloadTask.addValue(<span class="hljs-string">&quot;application/vnd.api+json&quot;</span>, forHTTPHeaderField: <span class="hljs-string">&quot;Accept&quot;</span>)
+
+URLSession.shared.dataTask(with: downloadTask) { (data, response, error) in
+if let response = response {
+    print(response)
+}
+
+if let data = data {
+    do {
+    let jsonData = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? NSDictionary
+    print(jsonData!.value(forKey: <span class="hljs-string">&quot;data&quot;</span>) as Any)
+    } catch {
+    print(error)
+    }
+}
+}.resume()
+
 
 </code></pre>
 </div><div class="api-method-example"><blockquote>
