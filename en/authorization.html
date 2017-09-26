@@ -340,6 +340,35 @@ req, _ := http.NewRequest(<span class="hljs-string">&quot;GET&quot;</span>,<span
 req.Header.Set(<span class="hljs-string">&quot;Authorization&quot;</span>, <span class="hljs-string">&quot;&lt;api-key&gt;&quot;</span>)
 req.Header.Set(<span class="hljs-string">&quot;Accept&quot;</span>, <span class="hljs-string">&quot;application/vnd.api+json&quot;</span>)
 res, _ := client.Do(req)
+
+</code></pre>
+</div><div class="api-method-sample" data-lang="swift" data-name="Swift"><pre><code class="lang-swift"><span class="hljs-keyword">
+import</span> Foundation
+
+let urlString = <span class="hljs-string">&quot;endpoint-url&quot;</span>
+
+let url = NSURL(string: urlString)
+var downloadTask = URLRequest(url: (url as URL?)!, cachePolicy: URLRequest.CachePolicy.ReloadIgnoringCacheData, timeoutInterval: 20)
+
+downloadTask.httpMethod = <span class="hljs-string">&quot;GET&quot;</span>
+
+downloadTask.addValue(<span class="hljs-string">&quot;apiKey&quot;</span>, forHTTPHeaderField: <span class="hljs-string">&quot;Authorization&quot;</span>)
+downloadTask.addValue(<span class="hljs-string">&quot;application/vnd.api+json&quot;</span>, forHTTPHeaderField: <span class="hljs-string">&quot;Accept&quot;</span>)
+
+URLSession.shared.dataTask(with: downloadTask) { (data, response, error) in
+if let response = response {
+    print(response)
+}
+
+if let data = data {
+    do {
+    let jsonData = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? NSDictionary
+    print(jsonData!.value(forKey: <span class="hljs-string">&quot;data&quot;</span>) as Any)
+    } catch {
+    print(error)
+    }
+}
+}.resume()
 </code></pre>
 </div></div></div>
 
