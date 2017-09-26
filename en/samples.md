@@ -39,6 +39,38 @@ curl "https://api.dc01.gamelockerapp.com/shards/na/samples" \
 
 ```
 
+{% sample lang="swift" %}
+```swift
+    let urlString = "https://api.dc01.gamelockerapp.com/shards/na/samples"
+
+func downloadJsonWithTask() {
+        let url = NSURL(string: urlString)
+        
+        var downloadTask = URLRequest(url: (url as URL?)!, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 20)
+        
+        downloadTask.httpMethod = "GET"
+        downloadTask.addValue("APIKey", forHTTPHeaderField: "Authorization")
+        downloadTask.addValue("application/vnd.api+json", forHTTPHeaderField: "Accept")
+        
+        URLSession.shared.dataTask(with: downloadTask) { (data, response, error) in
+            if let response = response {
+                print(response)
+            }
+            
+            if let data = data {
+                do {
+            let jsonData = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? NSDictionary
+            print(jsonData!.value(forKey: "data") as Any)
+                } catch {
+                    print(error)
+                }
+            }
+        }.resume()
+    }
+
+
+```
+
 {% common %}
 > The above command returns JSON structured like this:
 
