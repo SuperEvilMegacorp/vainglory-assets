@@ -1,0 +1,152 @@
+{
+  "0": {
+    "title": "Just Beginning Bronze",
+    "starts": 0,
+    "ends": 108.9
+  },
+  "1": {
+    "title": "Just Beginning Silver",
+    "starts": 109,
+    "ends": 217.9
+  },
+  "2": {
+    "title": "Just Beginning Gold",
+    "starts": 218,
+    "ends": 326.9
+  },
+  "3": {
+    "title": "Getting There Bronze",
+    "starts": 327,
+    "ends": 435.9
+  },
+  "4": {
+    "title": "Getting There Silver",
+    "starts": 436,
+    "ends": 544.9
+  },
+  "5": {
+    "title": "Getting There Gold",
+    "starts": 545,
+    "ends": 653.9
+  },
+  "6": {
+    "title": "Rock Solid Bronze",
+    "starts": 654,
+    "ends": 762.9
+  },
+  "7": {
+    "title": "Rock Solid Silver",
+    "starts": 763,
+    "ends": 871.9
+  },
+  "8": {
+    "title": "Rock Solid Gold",
+    "starts": 872,
+    "ends": 980.9
+  },
+  "9": {
+    "title": "Worthy Foe Bronze",
+    "starts": 981,
+    "ends": 1089.9
+  },
+  "10": {
+    "title": "Worthy Foe Silver",
+    "starts": 1090,
+    "ends": 1199.9
+  },
+  "11": {
+    "title": "Worthy Foe Gold",
+    "starts": 1200,
+    "ends": 1299.9
+  },
+  "12": {
+    "title": "Got Swagger Bronze",
+    "starts": 1250,
+    "ends": 1299.9
+  },
+  "13": {
+    "title": "Got Swagger Silver",
+    "starts": 1300,
+    "ends": 1349.9
+  },
+  "14": {
+    "title": "Got Swagger Gold",
+    "starts": 1350,
+    "ends": 1399.9
+  },
+  "15": {
+    "title": "Credible Threat Bronze",
+    "starts": 1400,
+    "ends": 1466.9
+  },
+  "16": {
+    "title": "Credible Threat Silver",
+    "starts": 1467,
+    "ends": 1532.9
+  },
+  "17": {
+    "title": "Credible Threat Gold",
+    "starts": 1533,
+    "ends": 1599.9
+  },
+  "18": {
+    "title": "Hotness Bronze",
+    "starts": 1600,
+    "ends": 1666.9
+  },
+  "19": {
+    "title": "Hotness Silver",
+    "starts": 1667,
+    "ends": 1732.9
+  },
+  "20": {
+    "title": "Hotness Gold",
+    "starts": 1733,
+    "ends": 1799.9
+  },
+  "21": {
+    "title": "Simply Amazing Bronze",
+    "starts": 1800,
+    "ends": 1866.9
+  },
+  "22": {
+    "title": "Simply Amazing Silver",
+    "starts": 1867,
+    "ends": 1932.9
+  },
+  "23": {
+    "title": "Simply Amazing Gold",
+    "starts": 1933,
+    "ends": 1999.9
+  },
+  "24": {
+    "title": "Pinnacle of Awesome Bronze",
+    "starts": 2000,
+    "ends": 2133.9
+  },
+  "25": {
+    "title": "Pinnacle of Awesome Silver",
+    "starts": 2134,
+    "ends": 2266.9
+  },
+  "26": {
+    "title": "Pinnacle of Awesome Gold",
+    "starts": 2267,
+    "ends": 2399.9
+  },
+  "27": {
+    "title": "Vainglorious Bronze",
+    "starts": 2400,
+    "ends": 2599.9
+  },
+  "28": {
+    "title": "Vainglorious Silver",
+    "starts": 2600,
+    "ends": 2799.9
+  },
+  "29": {
+    "title": "Vainglorious Gold",
+    "starts": 2800,
+    "ends": 3000
+  }
+}
