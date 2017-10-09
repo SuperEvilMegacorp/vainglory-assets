@@ -7,7 +7,7 @@ Changes
 * API will no longer 504 if requests are sent for time periods where data doesn't exist [#248](https://github.com/madglory/gamelocker-vainglory/issues/248)
 * played_aral and played_blitz datapoints are now available [#270](https://github.com/madglory/gamelocker-vainglory/issues/270)
 
-## [VG DATA] Version 2.8
+## [VG DATA] Version 2.9
 [#308](https://github.com/gamelocker/vainglory-assets/pull/308)
 
 ## [VG DATA] Version 2.8
