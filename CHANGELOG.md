@@ -8,7 +8,7 @@ Changes
 * played_aral and played_blitz datapoints are now available [#270](https://github.com/madglory/gamelocker-vainglory/issues/270)
 
 ## [VG DATA] Version 2.8
-https://github.com/gamelocker/vainglory-assets/pull/308
+[#308](https://github.com/gamelocker/vainglory-assets/pull/308)
 
 ## [VG DATA] Version 2.8
 
