@@ -103,5 +103,8 @@
   "HERO_ABILITY_REZA_C_NAME": "Netherform Detonator",
   "HERO_ABILITY_LORELAI_A_NAME": "Fish Food",
   "HERO_ABILITY_LORELAI_B_NAME": "Splashdown",
-  "HERO_ABILITY_LORELAI_C_NAME": "Waterwall"
+  "HERO_ABILITY_LORELAI_C_NAME": "Waterwall",
+  "HERO_ABILITY_VARYA_A_NAME": "Stormforged Spear",
+  "HERO_ABILITY_VARYA_B_NAME": "Arc Recursion",
+  "HERO_ABILITY_VARYA_C_NAME": "Anvil's Hammer"
 }
