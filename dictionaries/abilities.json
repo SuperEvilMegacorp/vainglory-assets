@@ -100,5 +100,8 @@
   "HERO_ABILITY_FORTRESS_C_NAME": "Attack of the Pack",
   "HERO_ABILITY_REZA_A_NAME": "Scorcher",
   "HERO_ABILITY_REZA_B_NAME": "Troublemaker",
-  "HERO_ABILITY_REZA_C_NAME": "Netherform Detonator"
+  "HERO_ABILITY_REZA_C_NAME": "Netherform Detonator",
+  "HERO_ABILITY_LORELAI_A_NAME": "Fish Food",
+  "HERO_ABILITY_LORELAI_B_NAME": "Splashdown",
+  "HERO_ABILITY_LORELAI_C_NAME": "Waterwall"
 }
